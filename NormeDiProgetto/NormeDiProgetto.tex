@@ -1,19 +1,26 @@
 \newcommand{\lastversion}{0.1.0}%versione del documento
 \newcommand{\doctitle}{Norme di progetto}%nome documento
 \newcommand{\info}{\doctitle\ v\lastversion}
+\input{../macro.tex}% macro
 \input{../modello/layout.tex}% layout
 \begin{document}
-\input{../modello/firstpage.tex}%pagina del titolo
+\input{../modello/firstpage.tex}% pagina del titolo
 \input{../modello/info.tex}
 
-\input{Capitolo-1.tex}
+\setlength\parindent{0pt}
 
-%\input{Capitolo2.tex}
 
-%\input{Capitolo3.tex}
+\pagenumbering{arabic}%numeri di pagina arabi
+\setcounter{page}{1}
 
-%\input{Capitolo4.tex} 
+\input{Introduzione.tex}
 
-%\input{Capitolo5.tex}
+\input{Documentazione.tex}
+
+\input{Collaborazione.tex}
+
+\input{Requisiti.tex} 
+
+\input{Ambiente.tex}
 
 \end{document}
