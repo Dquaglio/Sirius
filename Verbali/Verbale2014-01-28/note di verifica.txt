@@ -1,0 +1,10 @@
+# Note di veridica del Verbale del 2014-01-28
+
+Essendo il documento interno, le informazioni del documento (InfoDoc.txt)  non devono contenere 
+dei testinatari esterni (prof.tullio) perciò ho commentato la riga dei destinatari.
+
+Ho apportato altre correzioni minori; non so se avrei dovuto solo segnalarle.
+Penso sia necessario normare le prodecure di verifica.
+
+Eliminata cartella Verbali/Modello; ho perciò cambiato i path.
+Per raggiungere il path delle immagini serve aggiungere il codice "\graphicspath{{../}}"
