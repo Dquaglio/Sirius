@@ -1,13 +1,16 @@
-\newcommand{\lastversion}{0.1.1}%versione del documento
-\newcommand{\doctitle}{Verbale riunione del 2014-01-28}%nome documento
-\newcommand{\info}{\doctitle\ v\lastversion}
-\input{../../macro.tex}
+\input{../../modello/macro.tex}% macro
+\newcommand{\lastversion}{\lastversionVa}%versione del documento
+\newcommand{\doctitle}{\doctitleVa}%nome documento
+\newcommand{\info}{\infoVa}
+
 \input{../../modello/layout.tex}% layout
+\graphicspath{{../}}
+
 \begin{document}
-\graphicspath{{../}} % premette ../ nel path delle immagini
 \input{../../modello/firstpage.tex}%pagina del titolo
 \input{../../modello/info.tex}
 \pagenumbering{arabic}
-\include{Capitolo-1}
+\include{Introduzione}
+\include{ArgomentiTrattati}
 
 \end{document}
