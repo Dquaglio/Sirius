@@ -1,19 +1,29 @@
-\newcommand{\lastversion}{0.1.0}%versione del documento
-\newcommand{\doctitle}{Norme di progetto}%nome documento
-\newcommand{\info}{\doctitle\ v\lastversion}
+\input{../modello/macro.tex}% macro
+
+\newcommand{\lastversion}{\lastversionNDP}%versione del documento
+\newcommand{\doctitle}{\doctitleNDP}%nome documento
+\newcommand{\info}{\infoNDP}
 \input{../modello/layout.tex}% layout
+
+%\includeonly{Introduzione,Documentazione,Collaborazione,Requisiti,Ambiente}
+
 \begin{document}
-\input{../modello/firstpage.tex}%pagina del titolo
+
+\input{../modello/firstpage.tex}% pagina del titolo
 \input{../modello/info.tex}
-\pagenumbering{arabic}%numeri di pagina arabi
-\input{Capitolo-1.tex}
 
-%\input{Capitolo2.tex}
+\pagenumbering{arabic}%numeri di pagina  arabi
 
-%\input{Capitolo3.tex}
+\include{Introduzione}
 
-%\input{Capitolo4.tex} 
+\include{Cooperazione}
 
-%\input{Capitolo5.tex}
+\include{Ruoli}
+
+\include{Documentazione}
+
+\include{Sviluppo}
+
+\include{Ambiente}
 
 \end{document}
