@@ -6,6 +6,7 @@
 *.toc
 *.out
 *.dvi
+*.*~
 # but do track lib.a, even though you're ignoring .a files above
 #!lib.a
 # only ignore the root TODO file, not subdir/TODO
