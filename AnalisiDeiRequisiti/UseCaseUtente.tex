@@ -1,32 +1,32 @@
  \section{Casi d'uso}
 
 \iffalse
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:]
-\item[Precondizione:]
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:}
+\item \textbf{Precondizione:}
+\item \textbf{Scenario principale:}\
 \begin{enumerate}
 \item
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:]
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:}
+\end{itemize}
 \fi
 
 \subsection{Ambito utente}
 
 \subsubsection{UCU 0: Caso base utente }
 
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente, utente autenticato;
-\item[Descrizione:] l'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
+\begin{itemize}
+\item \textbf{Attori:} utente, utente autenticato;
+\item \textbf{Descrizione:} l'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
 L'utente non autenticato può registrarsi oppure effettuare il login se è già registrato diventando utente autenticato.
 L'utente autenticato può gestire il proprio account, gestire un insieme di processi ed effettuare il logout, ritornando allo stato di utente non autenticato;
-\item[Precondizione:] il sistema è attivo e l'utente ha iniziato ad interfacciarcisi;
-\item[Scenario principale:]\
+\item \textbf{Precondizione:} il sistema è attivo e l'utente ha iniziato ad interfacciarcisi;
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item l'utente può effettuare la registrazione;
 \item l'utente può effettuare il login e diventare autenticato;
@@ -34,25 +34,356 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \item l'utente autenticato può gestire i processi disponibili;
 \item l'utente autenticato può effettuare il logout diventando utente.
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-\item[Postcondizione:] il sistema ha eseguito le operazioni desiderate dall'utente, salvando eventuali modifiche effettuate all'account e ai processi gestiti.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni desiderate dall'utente, salvando eventuali modifiche effettuate all'account e ai processi gestiti.
+\end{itemize}
 
 \subsubsection{UCU 1: Registrazione}
+\begin{itemize}
+	\item \textbf{Attori:} utente.
+	\item \textbf{Descrizione: } l'utente vuole registrarsi nel sistema, inserisce quindi i suoi dati e verrà registrato dopo aver ricevuto conferma avvenuta registrazione da parte del sistema .
+	\item \textbf{Precondizione:} il sistema é operativo e l'utente richiede la registrazione.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce lo username scelto;
+		\item l'utente inserisce la password scelta;
+		\item l'utente inserisce il proprio nome;
+		\item l'utente inserisce il proprio cognome;
+		\item l'utente inserisce la data di nascità
+		\item l'utente, a sua discrezione, inserisce il proprio numero di telefono;
+l'utente viene registrato
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\begin{itemize}
+		\item Un altro utente possiede l'username scelta dall'utente, che verrà avvisato dell'errore e potrà scegliere un username diverso.
+		\item La password e la relativa conferma risultano diverse, allorà l'utente verrà avvisato dell'errore e potrà reinserire i dati.
+	\end{itemize}
+	\item \textbf{Postcondizione:} la registrazione e stata effeffettuata, il sistema ha salvato i dati immessi dall'utente ed ora e al punto iniziale
+\end{itemize}
+
+\subsubsection{UCU 1.1: Inserisci username per registrazione}
+\begin{itemize}
+	\item \textbf{Attori:} utente.
+	\item \textbf{Descrizione: } l'utente inserisce il proprio username.
+	\item \textbf{Precondizione:} l'utente richiede la registrazione e vuole procedere con 				l'inserimento dell'username scelto.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce lo username da lui scelto
+	\end{itemize}
+	\item \textbf{Postcondizione:}  l'username é stato inserito, il sistema procede con la 			procedura di registrazione.
+\end{itemize}
+
+\subsubsection{UCU 1.2: Inserisci password per registrazione}
+\begin{itemize}
+	\item \textbf{Attori: } utente.
+	\item \textbf{Descrizione: } l'utente inserisce la propria password.
+	\item \textbf{Precondizione: } l'utente richiede la registrazione e vuole procedere con 				l'inserimento della password.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce la password da lui scelta.
+	\end{itemize}
+	\item \textbf{Postcondizione: }la password e stata inserita, il sistema procede con la 			procedura di registrazione.
+\end{itemize}
+
+\subsubsection{UCU 1.3: Inserisci nome per registrazione}
+\begin{itemize}
+	\item \textbf{Attori: } utente.
+	\item \textbf{Descrizione: } l'utente inserisce il proprio nome.
+	\item \textbf{Precondizione: } l'utente richiede la registrazione e vuole procedere con l'inserimento del proprio nome.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il proprio nome.
+	\end{itemize}
+	\item \textbf{Postcondizione: } il nome é stato inserito, il sistema procede con la procedura di registrazione.
+\end{itemize}
+
+\subsubsection{UCU 1.4: Inserisci cognome per registrazione}
+\begin{itemize}
+	\item \textbf{Attori: } utente.
+	\item \textbf{Descrizione: } l'utente inserisce il proprio cognome.
+	\item \textbf{Precondizione: } l'utente richiede la registrazione e vuole procedere con l'inserimento del proprio cognome.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il proprio cognome.
+	\end{itemize}
+	\item \textbf{Postcondizione: } il cognome é stato inserito, il sistema procede con la procedura di registrazione.
+\end{itemize}
+
+\subsubsection{UCU 1.5: Inserisci la data di nascita}
+\begin{itemize}
+	\item \textbf{Attori: } utente.
+	\item \textbf{Descrizione: } l'utente inserisce la propria data di nascita.
+	\item \textbf{Precondizione: } l'utente richiede la registrazione e procede con l'inserimento della propria data di nascita.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce la data di nascita.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\begin{itemize}
+    \item l'utente inserisce una data di nascita futura, rispetto alla data di registrazione; quindi l'utente verrà avvisato con un errore e potrà inserire la data di nascita corretta
+    \end{itemize}
+	\item \textbf{Postcondizione: } la data di nascita è stata inserita, il sistema procede con la procedura di registrazione.
+\end{itemize}
+
+\subsubsection{UCU 1.6: Inserisci numero di telefono per registrazione}
+\begin{itemize}
+	\item \textbf{Attori: } utente.
+	\item \textbf{Descrizione: } l'utente inserisce il proprio numero di telefono.
+	\item \textbf{Precondizione: } l'utente richiede la registrazione e procede con l'inserimento del proprio numero di telefono.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il proprio numero di telefono.
+	\end{itemize}
+\item \textbf{Postcondizione: } il numero di telefono e stato inserito, il sistema procede con la procedura di registrazione.
+\end{itemize}
 
 \subsubsection{UCU 2: Login}
+\begin{itemize}
+\item \textbf{Attori: }utente, utente autenticato.
+\item \textbf{Descrizione: } l'utente inserisce i propri dati d'accesso, ossia l'username e la propria password. Se l'username appartiene all'insieme degli utenti del  sistema, e la relativa password è corretta, allora l'utente verrà autenticato al sistema
+\item \textbf{Precondizione:} il sistema é funzionante, l'utente non ancora autenticato vuole loggarsi
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente inserisce il proprio username (UC 2.1);
+\item l'utente inserisce la propria password (UC 2.2);
+\item l'utente viene autenticato al sistema;
+\end{itemize}
+\item \textbf{Scenario alternativo:}
+\begin{itemize}
+\item le credenziali non risultano essere corrette e viene data la possibilità all'utente di reinserire la propria username e password
+\end{itemize}
+\item \textbf{Postcondizione:} l'utente non autentificato viene loggato al sistema diventando quindi utente autenticato ed entra. L'utente autentificato ora potrà gestire il proprio account, visualizzare i processi disponibili e selezionarli.
+\end{itemize}
 
-\subsubsection{UCU 3: Gestione dell'account}
+\subsubsection{UC 2.1: Inserisci username login}
+\begin{itemize}
+\item \textbf{Attori: } utente.
+\item \textbf{Descrizione: } l'utente inserisce il proprio username.
+\item \textbf{Precondizione:} l'utente é pronto ad inserire il proprio username.
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item L'utente inserisce il proprio username.
+\end{itemize}
+\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
+\end{itemize}
+
+\subsubsection{UC 2.2: Inserisci password login}
+\begin{itemize}
+\item \textbf{Attori: } utente.
+\item \textbf{Descrizione: } l'utente inserisca la propria password.
+\item \textbf{Precondizione:} l'utente é pronto ad inserire la propria password per il login.
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente inserisce la propria password.
+\end{itemize}
+\item \textbf{Postcondizione:} l'utente ha inserito la propria password.
+\end{itemize}
+
+\subsubsection{UCU 3: Gestione dell'account} %opt
+\begin{itemize}
+	\item \textbf{Attori: } primari: utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza i suoi dati ed, eventualmente, puo modicarli.
+	\item \textbf{Precondizione:} il sistema é funzionante, l'utente autenticato vuole visualizzare e/o modicare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente puo visualizzare e/o modicare i suoi dati.
+	\end{itemize}
+	\item \textbf{Postcondizione:} l'utente ha visualizzato e/o ha modicato i suoi dati, solo dopo aver memorizzato eventuali modiche dei dati dell'utente, il sistema
+si ritrova allo stato successivo al login 
+\end{itemize}
+
+\subsubsection{UCU 3.1: Visualizzazione dei dati dell'utente}
+\begin{itemize}
+	\item \textbf{Attori: } primari: utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza i suoi dati.
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i suoi dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente visualizza i propri dati personali
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha mostrato all'utente i suoi dati personali
+\end{itemize}
+
+\subsubsection{UCU 3.1.1: Visualizza username}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza il suo username.
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente visualizza il proprio username.
+	\end{itemize}
+\item \textbf{Postcondizione:} il sistema ha mostrato all'utente la sua username.
+\end{itemize}
+
+\subsubsection{UCU 3.1.2: Visualizza nome}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza il proprio nome.
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente visualizza il proprio nome.
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha mostrato all'utente il proprio nome.
+\end{itemize}
+
+\subsubsection{UCU 3.1.3: Visualizza cognome}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza il suo cognome.
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente visualizza il proprio cognome.
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha mostrato all'utente il suo cognome.
+\end{itemize}
+
+\subsubsection{UCU 3.1.4: Visualizza data di nascita}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza la sua data di nascita
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente visualizza la sua data di nascita
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha mostrato all'utente la propria data di nascita
+\end{itemize}
+
+\subsubsection{UCU 3.1.5: Visualizza numero di telefono}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente visualizza il suo numero di telefono.
+	\item \textbf{Precondizione: } l'utente vuole visualizzare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+	 \item l'utente visualizza il proprio numero di telefono.
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha mostrato all'utente il proprio numero di telefono, ora il sistema ha finito di visualizzare i dati personali dell'utente
+\end{itemize}
+
+ 
+\subsubsection{UCU 3.2: Modica dati utente} %opt
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente vuole modicare i propri dati; se i dati immessi dall'utente sono corretti il sistema salverà le modifiche.
+	\item \textbf{Precondizione: } l'utente vuole modicare i propri dati.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente sceglie il dato da modicare;
+		\item l'utente dopo aver scelto il dato da modicare, procede con il cambiamento;
+il sistema cambia il dato con quello indicato dall'utente.
+	\end{itemize}
+\item \textbf{Postcondizione:} il sistema ha salvato le modiche dei dati dell'utente.
+\end{itemize}
+
+\subsubsection{UCU 3.2.1: Modica username}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce il proprio username, e se l'username risulta non é gia stato utilizzato da un altro utente, allora la modifica verrà salvata dal sistema
+	\item \textbf{Precondizione: } l'utente vuole modicare il suo username.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il nuovo username scelto.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\begin{itemize}
+		\item il nuovo username è gia presente nel sistema, ne viene data comunicazione dell'errore e della possibilità di reinserire un username diverso.
+	\end{itemize}
+\item \textbf{Postcondizione:} il cambiamento di username viene salvato dal sistema.
+\end{itemize}
+
+\subsubsection{UCU 3.2.2: Modica password}
+\begin{itemize}
+	\item \textbf{Attori: }  utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce la vecchia password, la nuova password e la conferma della nuova password. Se la vecchia password è corretta ed la nuova password e la conferma sono uguali, allora il sistema salverà le modifiche 
+	\item \textbf{Precondizione: } l'utente vuole modicare la sua password.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce la vecchia password;
+		\item l'utente inserisce la nuova password scelta;
+		\item l'utente inserisce la conferma della password scelta.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\begin{itemize}
+		\item la password corrente non corrisponde alla vecchia password , l'utente riceve la notifica dell'errore e puço reinserire il dato.
+		\item le due nuove password inserite (la nuova password e la conferma) non combaciano, ne viene data comunicazione all'utente che può reinserire i dati.
+	\end{itemize}
+	\item \textbf{Postcondizione:} il sistema ha effettuato il salvaggio della nuova password al  posto della vecchia
+\end{itemize}
+
+\subsubsection{UCU 3.2.2.1: Inserisci vecchia password}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce la vecchia password.
+	\item \textbf{Precondizione: } l'utente vuole modicare la sua password.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce la sua vecchia password.
+	\end{itemize}
+	\item \textbf{Postcondizione:} la vecchia password e stata digitata.
+\end{itemize}
+
+\subsubsection{UCU 3.2.2.2 Inserisci nuova password}
+\begin{itemize}
+	\item \textbf{Attori: } primari: utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce la nuova password scelta.
+	\item \textbf{Precondizione: } l'utente vuole modicare la propria password.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce la nuova password scelta.
+	\end{itemize}
+	\item \textbf{Postcondizione:} la nuova password è stata digitata.
+\end{itemize}
+
+\subsubsection{UCU 3.2.2.3 Modica nome}
+\begin{itemize}
+	\item \textbf{Attori: } utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce il nuovo nome, il sistema procede con il salvataggio delle modifiche
+	\item \textbf{Precondizione: } l'utente vuole modicare il suo nome salvato nel sistema.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il nuovo nome scelto.
+	\end{itemize}
+	\item \textbf{Postcondizione:} la modifica del nome viene salvato dal sistema.
+\end{itemize}
+
+\subsubsection{UCU 3.2.2.4  Modica cognome}
+\begin{itemize}
+	\item \textbf{Attori: }  utente autenticato.
+	\item \textbf{Descrizione: } l'utente inserisce il nuovo cognome, il sistema procede con il salvataggio del dato.
+	\item \textbf{Precondizione: } l'utente vuole cambiare il suo cognome salvato nel sistema.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il nuovo cognome scelto.
+	\end{itemize}
+	\item \textbf{Postcondizione:} il nuovo cognome viene salvato dal sistema.
+\end{itemize}
+
+\subsubsection{UCU 3.2.2.5  Modica numero di telefono}
+\begin{itemize}
+\item \textbf{Attori: } utente autenticato.
+\item \textbf{Descrizione: }l'utente inserisce il nuovo numero di telefono, il sistema procede con la modifica.
+\item \textbf{Precondizione: } l'utente vuole modicare il suo numero di telefono salvato nel sis-
+tema.
+\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente inserisce il nuovo numero di telefono.
+	\end{itemize}
+\item \textbf{Postcondizione:} il nuovo di numero di telefono viene salvato dal sistema.
+\end{itemize}
 
 \subsubsection{UCU 4: Gestione dei processi}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può scegliere un processo per gestirlo.
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può scegliere un processo per gestirlo.
 Se l'utente non è iscritto al processo può iscrivervisi, altrimenti può eseguirlo o disiscrivervisi.
 Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
-\item[Precondizione:] l'utente autenticato vuole gestire i processi a cui può partecipare;
-\item[Scenario principale:]\
+\item \textbf{Precondizione:} l'utente autenticato vuole gestire i processi a cui può partecipare;
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item l'utente può scegliere un processo;
 \item l'utente può visualizzare informazioni su un processo;
@@ -60,229 +391,260 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \item l'utente può eseguire un processo a cui è iscritto;
 \item l'utente può disiscriversi da un processo a cui è iscritto.
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni desiderate dall'utente sui processi selezionati.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni desiderate dall'utente sui processi selezionati.
+\end{itemize}
 
 \subsubsection{UCU 4.1: Scelta di un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può selezionare un processo da una lista selezionata o da i risultati di una ricerca;
-\item[Precondizione:] l'utente autenticato vuole gestire un processo tra quelli a cui può partecipare;
-\item[Flusso principale degli eventi:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può selezionare un processo da una lista selezionata o da i risultati di una ricerca;
+\item \textbf{Precondizione:} l'utente autenticato vuole gestire un processo tra quelli a cui può partecipare;
+\item \textbf{Flusso principale degli eventi:}\
 \begin{enumerate}
 \item l'utente può aprire una lista di processi;
 \item l'utente può selezionare un processo.
 \end{enumerate}
-\item[Estensioni:] l'utente può effettuare la ricerca di un processo;
-%\item[Inclusioni:]
-\item[Postcondizione:] il sistema ha aperto la pagina di gestione del processo scelto.
-%\item[Scenario alternativo:]
-\end{description}
+\item \textbf{Estensioni:} l'utente può effettuare la ricerca di un processo;
+%\item \textbf{Inclusioni:}
+\item \textbf{Postcondizione:} il sistema ha aperto la pagina di gestione del processo scelto.
+%\item \textbf{Scenario alternativo:}
+\end{itemize}
 
 \subsubsection{UCU 4.1.1: Apertura di una lista di processi}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può scegliere e aprire una lista di processi;
-\item[Precondizione:] l'utente vuole scegliere un processo tra quelli a cui può partecipare;
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può scegliere e aprire una lista di processi;
+\item \textbf{Precondizione:} l'utente vuole scegliere un processo tra quelli a cui può partecipare;
+\item \textbf{Scenario principale:}\
 \begin{enumerate}
 \item l'utente può aprire la lista dei processi a cui è iscritto;
 \item l'utente può aprire la lista dei processi a cui non è iscritto;
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha visualizzato la lista dei processi scelta dall'utente.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi scelta dall'utente.
+\end{itemize}
 
 \subsubsection{UCU 4.1.1.1: Apertura lista dei processi in esecuzione}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può aprire e visualizzare la lista dei processi in esecuzione, cioè quelli a cui è già iscritto. 
-\item[Precondizione:] l'utente vuole visualizzare una lista di processi;
-\item[Scenario principale:] l'utente può visualizzare la lista dei processi a cui è iscritto;
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha visualizzato la lista dei processi a cui l'utente è iscritto.
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi in esecuzione, cioè quelli a cui è già iscritto. 
+\item \textbf{Precondizione:} l'utente vuole visualizzare una lista di processi;
+\item \textbf{Scenario principale:} l'utente può visualizzare la lista dei processi a cui è iscritto;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente è iscritto.
+\end{itemize}
 
 \subsubsection{UCU 4.1.1.2: Apertura lista dei processi disponibili}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto. 
-\item[Precondizione:] l'utente vuole visualizzare una lista di processi;
-\item[Scenario principale:] l'utente può visualizzare la lista dei processi a cui non è iscritto;
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto. 
+\item \textbf{Precondizione:} l'utente vuole visualizzare una lista di processi;
+\item \textbf{Scenario principale:} l'utente può visualizzare la lista dei processi a cui non è iscritto;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
+\end{itemize}
 
 \subsubsection{UCU 4.1.2: Selezione di un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può selezionare un processo dalla lista dei processi precedentemente aperta;
-\item[Precondizione:] l'utente sta visualizzando una lista di uno o più processi;
-\item[Scenario principale:] l'utente può selezionare un processo dalla lista;
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha aperto la pagina di gestione del processo scelto.
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può selezionare un processo dalla lista dei processi precedentemente aperta;
+\item \textbf{Precondizione:} l'utente sta visualizzando una lista di uno o più processi;
+\item \textbf{Scenario principale:} l'utente può selezionare un processo dalla lista;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha aperto la pagina di gestione del processo scelto.
+\end{itemize}
 
 \subsubsection{UCU 4.1.3: Ricerca di un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può ricercare uno insieme dei processi tra tutti quelli a cui può partecipare;
-\item[Precondizione:] l'utente vuole cercare un processo tra quelli a cui può partecipare;
-\item[Scenario principale:] l'utente può ricercare un processo inserendone il nome;
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può ricercare uno insieme dei processi tra tutti quelli a cui può partecipare;
+\item \textbf{Precondizione:} l'utente vuole cercare un processo tra quelli a cui può partecipare;
+\item \textbf{Scenario principale:} l'utente può ricercare un processo inserendone il nome;
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
+\end{itemize}
 
 \subsubsection{UCU 4.2: Visualizzazione delle informazioni di un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può visualizzare la descrizione del processo, i suoi criteri di terminazione e la sua data di crezione.
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo;
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare la descrizione del processo, i suoi criteri di terminazione e la sua data di crezione.
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo;
+\item \textbf{Scenario principale:}\
 \begin{enumerate}
 \item l'utente può visualizzare la descrizione del processo;
 \item l'utente può visualizzare i criteri di terminazione del processo; UCA??
 \item l'utente può visualizzare la data di creazione del processo;
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha visualizzato le informazioni del processo gestito.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato le informazioni del processo gestito.
+\end{itemize}
 
 \subsubsection{UCU 4.3: Iscrizione ad un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può iscriversi ad un processo a cui non è ancora iscritto;
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente non è iscritto ad esso;
-\item[Scenario principale:] l'utente può iscriversi al processo gestito;
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] l'utente è iscritto al processo gestito;
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può iscriversi ad un processo a cui non è ancora iscritto;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente non è iscritto ad esso;
+\item \textbf{Scenario principale:} l'utente può iscriversi al processo gestito;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente è iscritto al processo gestito;
+\end{itemize}
 
 \subsubsection{UCU 4.4: Esecuzione di un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può eseguire un processo sequenziale o non ordinato;
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può eseguire un processo sequenziale o non ordinato;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item \textbf{Scenario principale:}\
 \begin{enumerate}
 \item l'utente può eseguire un processo sequenziale;
 \item l'utento può eseguire un processo non ordinato.
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{itemize}
 
 \subsubsection{UCU 4.4.1: Esecuzione di un processo sequenziale}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo sequenziale e l'utente è iscritto ad esso;
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo sequenziale e l'utente è iscritto ad esso;
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item l'utente può visualizzare lo stato dell'esecuzione del processo;
 \item l'utente può eseguire il passo in corso.
 \end{enumerate}
-\item[Scenario alternativo:] tutti i passi sono stati conclusi e il sistema visualizza una notifica che segnala che il processo è stato terminato; 
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
-\end{description}
+\item \textbf{Scenario alternativo:} tutti i passi sono stati conclusi e il sistema visualizza una notifica che segnala che il processo è stato terminato; 
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}\end{itemize}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{itemize}
 
-\subsection{UCU 4.4.1.1: Visualizzazione dello stato del processo}
+\subsubsection{UCU 4.4.1.1: Visualizzazione dello stato del processo}
 
 \subsubsection{UCU 4.4.1.2: Esecuzione di un passo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo sequenziale, l'utente è iscritto ad esso e non lo ha concluso;
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo sequenziale, l'utente è iscritto ad esso e non lo ha concluso;
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item visualizzazione dei criteri di superamento del passo in corso;
 \item inserimento dei dati richiesti;
 \item invio dei dati;
-\end{enumerate}
-%\item[Scenario alternativo:]
-\item[Inclusioni:] Visualizzazione notifiche;
-%\item[Estensioni:]
-\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
-\end{description}
+\end{enumerate}\begin{description} \textbf{leftmargin=0cm}
+%\item \textbf{Scenario alternativo:}
+\item \textbf{Inclusioni:} Visualizzazione notifiche;
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{itemize}
 
 \subsubsection{UCU 4.4.1.2.1: Visualizzazione dei criteri di superamento del passo in corso} UCA??
 
 \subsubsection{UCU 4.4.1.2.2: Inserimento dei dati richiesti - tutti i dati possono richiedere l'approvazione?}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può inserire i dati richiesti per l'esecuzione del passo in corso. Può essere richiesto il caricamento di una foto scattata dall'utente, l'inserimento di testo e l'inserimento di dati numerici.
-\item[Precondizione:] il sistema sta visualizzando all'utente i dati di esecuzione di un passo, ed esso richiede l'inserimento uno o più dati da parte dell'utente.
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inserire i dati richiesti per l'esecuzione del passo in corso. Può essere richiesto il caricamento di una foto scattata dall'utente, l'inserimento di testo e l'inserimento di dati numerici.
+\item \textbf{Precondizione:} il sistema sta visualizzando all'utente i dati di esecuzione di un passo, ed esso richiede l'inserimento uno o più dati da parte dell'utente.
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item caricamento di una foto;
 \item inserimento di testo;
 \item inserimento di dati numerici;
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] l'utente ha inserito dei dati che sono pronti per essere inviati al sistema.
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente ha inserito dei dati che sono pronti per essere inviati al sistema.
+\end{itemize}
 
 \subsubsection{UCU 4.4.1.2.3: Invio dei dati richiesti}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può inviare 
-\item[Precondizione:]
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare 
+\item \textbf{Precondizione:}
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:]
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:}
+\end{itemize}
 
 \subsubsection{UCU 4.4.1.2.4: Visualizzazione di notifiche}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:]
-\item[Precondizione:]
-\item[Scenario principale:]\
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:}
+\item \textbf{Precondizione:}
+\item \textbf{Scenario principale:}
 \begin{enumerate}
 \item
 \end{enumerate}
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:]
-\end{description}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:}
+\end{itemize}
+
+\subsubsection{UCU 4.4.1.2.5: Salto del passo corrente} %da estendere a 4.4.1.2.1; opt
+\begin{itemize}
+	\item \textbf{Attori: } primari: utente autenticato
+	\item \textbf{Descrizione: }: l'utente autenticato riceve la notifica che è possibile saltare in esecuzione
+	\item \textbf{Precondizione:} L'utente autentificato ha selezionato un processo, sta eseguendo il passo e riceve la comunicazione che il passo è saltabile
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item l'utente autentificato riceve la notifica che il passo può essere saltato
+		\item l'utente autentificato conferma di voler saltare il passo
+		\item l'utente ha saltato il passo con successo ed è pronto con il successivo
+	\end{enumerate}
+	\item \textbf{Scenario alternativo}
+	\begin{itemize}
+		\item l'utente autentificato riceve la notifica e decide di non saltare il passo
+	\end{itemize}
+	\item \textbf{Postcondizione:}: L'utente autentificato ha saltato con successo il passo corrente ed è pronto a proseguire con il passo successivo
+\end{itemize}
 
 \subsubsection{UCU 4.5: Disiscrizione da un processo}
-\begin{description}[leftmargin=0cm]
-\item[Attori:] utente autenticato;
-\item[Descrizione:] l'utente può disiscriversi da un processo a cui non è ancora iscritto;
-\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
-\item[Scenario principale:] l'utente può disiscriversi dal processo gestito;
-%\item[Scenario alternativo:]
-%\item[Inclusioni:]
-%\item[Estensioni:]
-\item[Postcondizione:] l'utente non è iscritto al processo gestito;
-\end{description}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può disiscriversi da un processo a cui non è ancora iscritto;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item \textbf{Scenario principale:} l'utente può disiscriversi dal processo gestito;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente non è iscritto al processo gestito;
+\end{itemize}
 
 \subsubsection{UCU 5: Logout}
+\begin{itemize}
+	\item \textbf{Attori:} utente,utente autenticato.
+	\item \textbf{Descrizione:} l'utente autenticato richiede di terminare la propria sessione e uscire
+	dal sistema diventando nuovamente utente.
+	\item \textbf{Precondizione:} l'utente autenticato vuole uscire dal sistema.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item l'utente richiede di terminare la propria sessione;
+		\item l'utente e uscito dal sistema;
+		\item l'utente autenticato e diventato utente.
+	\end{itemize}
+	\item \textbf{Postcondizione:} l'utente autenticato é uscito dal sistema ridiventando utente.
+\end{itemize}
