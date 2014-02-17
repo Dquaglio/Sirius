@@ -1,1 +1,288 @@
-\section{Casi d'uso}
+ \section{Casi d'uso}
+
+\iffalse
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:]
+\item[Precondizione:]
+\item[Scenario principale:]\
+\begin{enumerate}
+\item
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:]
+\end{description}
+\fi
+
+\subsection{Ambito utente}
+
+\subsubsection{UCU 0: Caso base utente }
+
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente, utente autenticato;
+\item[Descrizione:] l'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
+L'utente non autenticato può registrarsi oppure effettuare il login se è già registrato diventando utente autenticato.
+L'utente autenticato può gestire il proprio account, gestire un insieme di processi ed effettuare il logout, ritornando allo stato di utente non autenticato;
+\item[Precondizione:] il sistema è attivo e l'utente ha iniziato ad interfacciarcisi;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può effettuare la registrazione;
+\item l'utente può effettuare il login e diventare autenticato;
+\item l'utente autenticato può gestire il proprio account;
+\item l'utente autenticato può gestire i processi disponibili;
+\item l'utente autenticato può effettuare il logout diventando utente.
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+\item[Postcondizione:] il sistema ha eseguito le operazioni desiderate dall'utente, salvando eventuali modifiche effettuate all'account e ai processi gestiti.
+\end{description}
+
+\subsubsection{UCU 1: Registrazione}
+
+\subsubsection{UCU 2: Login}
+
+\subsubsection{UCU 3: Gestione dell'account}
+
+\subsubsection{UCU 4: Gestione dei processi}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può scegliere un processo per gestirlo.
+Se l'utente non è iscritto al processo può iscrivervisi, altrimenti può eseguirlo o disiscrivervisi.
+Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
+\item[Precondizione:] l'utente autenticato vuole gestire i processi a cui può partecipare;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può scegliere un processo;
+\item l'utente può visualizzare informazioni su un processo;
+\item l'utente può iscriversi a un processo a cui non è già iscritto;
+\item l'utente può eseguire un processo a cui è iscritto;
+\item l'utente può disiscriversi da un processo a cui è iscritto.
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni desiderate dall'utente sui processi selezionati.
+\end{description}
+
+\subsubsection{UCU 4.1: Scelta di un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può selezionare un processo da una lista selezionata o da i risultati di una ricerca;
+\item[Precondizione:] l'utente autenticato vuole gestire un processo tra quelli a cui può partecipare;
+\item[Flusso principale degli eventi:]\
+\begin{enumerate}
+\item l'utente può aprire una lista di processi;
+\item l'utente può selezionare un processo.
+\end{enumerate}
+\item[Estensioni:] l'utente può effettuare la ricerca di un processo;
+%\item[Inclusioni:]
+\item[Postcondizione:] il sistema ha aperto la pagina di gestione del processo scelto.
+%\item[Scenario alternativo:]
+\end{description}
+
+\subsubsection{UCU 4.1.1: Apertura di una lista di processi}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può scegliere e aprire una lista di processi;
+\item[Precondizione:] l'utente vuole scegliere un processo tra quelli a cui può partecipare;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può aprire la lista dei processi a cui è iscritto;
+\item l'utente può aprire la lista dei processi a cui non è iscritto;
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha visualizzato la lista dei processi scelta dall'utente.
+\end{description}
+
+\subsubsection{UCU 4.1.1.1: Apertura lista dei processi in esecuzione}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può aprire e visualizzare la lista dei processi in esecuzione, cioè quelli a cui è già iscritto. 
+\item[Precondizione:] l'utente vuole visualizzare una lista di processi;
+\item[Scenario principale:] l'utente può visualizzare la lista dei processi a cui è iscritto;
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha visualizzato la lista dei processi a cui l'utente è iscritto.
+\end{description}
+
+\subsubsection{UCU 4.1.1.2: Apertura lista dei processi disponibili}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto. 
+\item[Precondizione:] l'utente vuole visualizzare una lista di processi;
+\item[Scenario principale:] l'utente può visualizzare la lista dei processi a cui non è iscritto;
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
+\end{description}
+
+\subsubsection{UCU 4.1.2: Selezione di un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può selezionare un processo dalla lista dei processi precedentemente aperta;
+\item[Precondizione:] l'utente sta visualizzando una lista di uno o più processi;
+\item[Scenario principale:] l'utente può selezionare un processo dalla lista;
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha aperto la pagina di gestione del processo scelto.
+\end{description}
+
+\subsubsection{UCU 4.1.3: Ricerca di un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può ricercare uno insieme dei processi tra tutti quelli a cui può partecipare;
+\item[Precondizione:] l'utente vuole cercare un processo tra quelli a cui può partecipare;
+\item[Scenario principale:] l'utente può ricercare un processo inserendone il nome;
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
+\end{description}
+
+\subsubsection{UCU 4.2: Visualizzazione delle informazioni di un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può visualizzare la descrizione del processo, i suoi criteri di terminazione e la sua data di crezione.
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può visualizzare la descrizione del processo;
+\item l'utente può visualizzare i criteri di terminazione del processo; UCA??
+\item l'utente può visualizzare la data di creazione del processo;
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha visualizzato le informazioni del processo gestito.
+\end{description}
+
+\subsubsection{UCU 4.3: Iscrizione ad un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può iscriversi ad un processo a cui non è ancora iscritto;
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente non è iscritto ad esso;
+\item[Scenario principale:] l'utente può iscriversi al processo gestito;
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] l'utente è iscritto al processo gestito;
+\end{description}
+
+\subsubsection{UCU 4.4: Esecuzione di un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può eseguire un processo sequenziale o non ordinato;
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può eseguire un processo sequenziale;
+\item l'utento può eseguire un processo non ordinato.
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{description}
+
+\subsubsection{UCU 4.4.1: Esecuzione di un processo sequenziale}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo sequenziale e l'utente è iscritto ad esso;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item l'utente può visualizzare lo stato dell'esecuzione del processo;
+\item l'utente può eseguire il passo in corso.
+\end{enumerate}
+\item[Scenario alternativo:] tutti i passi sono stati conclusi e il sistema visualizza una notifica che segnala che il processo è stato terminato; 
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{description}
+
+\subsection{UCU 4.4.1.1: Visualizzazione dello stato del processo}
+
+\subsubsection{UCU 4.4.1.2: Esecuzione di un passo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può visualizzare lo stato di avanzamento del processo e procedere all'esecuzione del passo in corso:
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo sequenziale, l'utente è iscritto ad esso e non lo ha concluso;
+\item[Scenario principale:]\
+\begin{enumerate}
+\item visualizzazione dei criteri di superamento del passo in corso;
+\item inserimento dei dati richiesti;
+\item invio dei dati;
+\end{enumerate}
+%\item[Scenario alternativo:]
+\item[Inclusioni:] Visualizzazione notifiche;
+%\item[Estensioni:]
+\item[Postcondizione:] il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{description}
+
+\subsubsection{UCU 4.4.1.2.1: Visualizzazione dei criteri di superamento del passo in corso} UCA??
+
+\subsubsection{UCU 4.4.1.2.2: Inserimento dei dati richiesti - tutti i dati possono richiedere l'approvazione?}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può inserire i dati richiesti per l'esecuzione del passo in corso. Può essere richiesto il caricamento di una foto scattata dall'utente, l'inserimento di testo e l'inserimento di dati numerici.
+\item[Precondizione:] il sistema sta visualizzando all'utente i dati di esecuzione di un passo, ed esso richiede l'inserimento uno o più dati da parte dell'utente.
+\item[Scenario principale:]\
+\begin{enumerate}
+\item caricamento di una foto;
+\item inserimento di testo;
+\item inserimento di dati numerici;
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] l'utente ha inserito dei dati che sono pronti per essere inviati al sistema.
+\end{description}
+
+\subsubsection{UCU 4.4.1.2.3: Invio dei dati richiesti}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può inviare 
+\item[Precondizione:]
+\item[Scenario principale:]\
+\begin{enumerate}
+\item
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:]
+\end{description}
+
+\subsubsection{UCU 4.4.1.2.4: Visualizzazione di notifiche}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:]
+\item[Precondizione:]
+\item[Scenario principale:]\
+\begin{enumerate}
+\item
+\end{enumerate}
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:]
+\end{description}
+
+\subsubsection{UCU 4.5: Disiscrizione da un processo}
+\begin{description}[leftmargin=0cm]
+\item[Attori:] utente autenticato;
+\item[Descrizione:] l'utente può disiscriversi da un processo a cui non è ancora iscritto;
+\item[Precondizione:] il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item[Scenario principale:] l'utente può disiscriversi dal processo gestito;
+%\item[Scenario alternativo:]
+%\item[Inclusioni:]
+%\item[Estensioni:]
+\item[Postcondizione:] l'utente non è iscritto al processo gestito;
+\end{description}
+
+\subsubsection{UCU 5: Logout}
