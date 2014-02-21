@@ -1,17 +1,12 @@
-\input{../modello/macro.tex}% macro
-
-\newcommand{\lastversion}{\lastversionAR}%versione del documento
-\newcommand{\doctitle}{\doctitleAR}%nome documento
-\newcommand{\info}{\infoAR}
+\newcommand{\lastversion}{0.1.0}%versione del documento
+\newcommand{\doctitle}{Analisi dei requisiti}%nome documento
+\newcommand{\info}{\doctitle\ v\lastversion}
 \input{../modello/layout.tex}% layout
-
+\input{../modello/macro.tex}% macro
 \begin{document}
-
-\input{../modello/firstpage.tex}% pagina del titolo
+\input{../modello/firstpage.tex}%pagina del titolo
 \input{../modello/info.tex}
-
-\pagenumbering{arabic}%numeri di pagina  arabi
-
+\pagenumbering{arabic}%numeri di pagina arabi
 \include{Introduzione}
 \include{DescrizioneGenerale}
 \setcounter{secnumdepth}{5} % aggiungere numero nei paragrafi e sottoparagrafi
