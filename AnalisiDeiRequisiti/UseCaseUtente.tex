@@ -267,7 +267,7 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 	\begin{itemize}
 	 \item l'utente visualizza la propria email.
 	\end{itemize}
-	\item \textbf{Postcondizione:} il sistema ha visualizzato il numero di telefono dell'utente.
+	\item \textbf{Postcondizione:} il sistema ha visualizzato l'email dell'utente.
 \end{itemize}
 
  
@@ -377,17 +377,637 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \item \textbf{Postcondizione:} il sistema ha salvato la nuova email scelta dall'utente.
 \end{itemize}
 
+\paragraph{UCL 2: Gestione dei processi}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può scegliere un processo per gestirlo.
+Se l'utente non è iscritto al processo può iscrivervisi, altrimenti può eseguirlo o disiscriversi da esso.
+Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
+\item \textbf{Precondizione:} l'utente autenticato vuole gestire i processi a cui può partecipare;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può scegliere un processo;
+\item l'utente può visualizzare la descrizione di un processo;
+\item l'utente può iscriversi a un processo a cui non è già iscritto;
+\item l'utente può eseguire un processo a cui è iscritto;
+\item l'utente può disiscriversi da un processo a cui è iscritto.
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni desiderate dall'utente sui processi selezionati.
+\end{itemize}
+
+\subparagraph{UCL 2.1: Scelta di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può selezionare un processo da una lista selezionata o da i risultati di una ricerca;
+\item \textbf{Precondizione:} l'utente autenticato vuole gestire un processo tra quelli a cui può partecipare;
+\item \textbf{Flusso principale degli eventi:}
+\begin{enumerate}
+\item l'utente può aprire una lista di processi;
+\item l'utente può selezionare un processo.
+\end{enumerate}
+\item \textbf{Estensioni:} l'utente può effettuare la ricerca di un processo;
+%\item \textbf{Inclusioni:}
+\item \textbf{Postcondizione:} il sistema è pronto per la gestione del processo scelto.
+%\item \textbf{Scenario alternativo:}
+\end{itemize}
+
+\subparagraph{UCL 2.1.1: Apertura di una lista di processi}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può scegliere e aprire una lista di processi;
+\item \textbf{Precondizione:} l'utente vuole scegliere un processo tra quelli a cui può partecipare;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può aprire la lista dei processi a cui è iscritto;
+\item l'utente può aprire la lista dei processi a cui non è iscritto;
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi scelta dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.1.1.1: Apertura lista dei processi in esecuzione}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi in esecuzione, cioè quelli a cui è già iscritto. 
+\item \textbf{Precondizione:} l'utente vuole aprire la lista dei processi a cui è iscritto;
+%\item \textbf{Scenario alternativo:}
+\item \textbf{Inclusioni:} i processi in attesa di terminazione vengono segnalati all'utente;
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente è iscritto.
+\end{itemize}
+
+\subparagraph{UCL 2.1.1.1.1: Segnalazione dei processi terminabili}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} i processi terminati presenti nella lista dei processi in esecuzione, vengono segnalati all'utente. 
+\item \textbf{Precondizione:} l'ha sta visualizzando la lista dei processi in esecuzione;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha evidenziato i processi terminabili dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.1.1.2: Apertura lista dei processi disponibili}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto;
+\item \textbf{Precondizione:} l'utente vuole aprire la lista dei processi disponibili;
+%\item \textbf{Scenario alternativo:}
+\item \textbf{Inclusioni:} i nuovi processi vengono segnalati all'utente;
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
+\end{itemize}
+
+\subparagraph{UCL 2.1.1.1.1: Segnalazione dei nuovi processi}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} i processi mai aperti dall'utente, vengono segnalati come nuovi. 
+\item \textbf{Precondizione:} l'ha sta visualizzando la lista dei processi disponibili;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha evidenziato i nuovi processi disponibili all'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.1.2: Selezione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può selezionare un processo dalla lista dei processi precedentemente aperta;
+\item \textbf{Precondizione:} l'utente sta visualizzando una lista di uno o più processi;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema è pronto per la gestione del processo scelto.
+\end{itemize}
+
+\subparagraph{UCL 2.1.3: Ricerca di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può ricercare uno insieme dei processi tra tutti quelli a cui può partecipare;
+\item \textbf{Precondizione:} l'utente vuole cercare un processo tra quelli a cui può partecipare;
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
+\end{itemize}
+
+\subparagraph{UCL 2.2: Visualizzazione della descrizione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} nella pagina di gestione di un processo selezionato l'utente può visualizzarne la descrizione, che spiega lo scopo del processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo;
+%\item \textbf{Estensioni:} 
+%\item \textbf{Inclusioni:} 
+%\item \textbf{Scenario alternativo:} 
+\item \textbf{Postcondizione:}
+\end{itemize} il sistema ha visualizzato la descrizione del processo gestito.
+
+\subparagraph{UCL 2.3: Iscrizione ad un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può iscriversi ad un processo a cui non è ancora iscritto;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente non è iscritto ad esso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente è iscritto al processo gestito e il sistema è pronto per la sua esecuzione.
+\end{itemize}
+
+\subparagraph{UCL 2.4: Esecuzione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare lo stato di avanzamento e i criteri di terminazione del processo e procedere all'esecuzione di un passo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item \textbf{Flusso principale degli eventi:}
+\begin{enumerate}
+\item l'utente può visualizzazione i criteri di terminazione del processo;
+\item l'utente può visualizzare lo stato dell'esecuzione del processo;
+\item l'utente può visualizzare la lista dei passi in corso;
+\item l'utente può eseguire un passo del processo.
+\item l'utente può concludere l'esecuzione di un processo;
+\end{enumerate} 
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.1: Visualizzazione dei criteri di terminazione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare i criteri di terminazione del processo selezionato. Questi criteri sono il completamento del processo da parte di un certo numero di utenti ed eventualmente una precisa data di scadenza;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo non terminato e l'utente è iscritto ad esso;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può visualizzare il numero di completamenti che causano la terminazione del processo;
+\item l'utente può visualizzare l'eventuale data di scadenza del processo.
+\end{itemize}
+%\item \textbf{Estensioni:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Scenario alternativo:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i criteri di terminazione del processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.1.1: Visualizzazione massimo numero possibile di completamenti del processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il numero di completamenti del processo, necessario e sufficiente per causarne la terminazione;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo non terminato e l'utente è iscritto ad esso;
+%\item \textbf{Estensioni:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Scenario alternativo:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato il numero di completamenti che causano la terminazione del processo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.1.2: Visualizzazione data di scadenza del processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare l'eventuale data di scadenza del processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo  non terminato e con una data di scadenza, e l'utente è iscritto ad esso;
+%\item \textbf{Estensioni:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Scenario alternativo:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato la data di scadenza del processo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.2: Visualizzazione dello stato del processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare informazioni sullo stato di avanzamento del processo. In particolare può visualizzare il numero di passi completati, il totale dei passi, il numero di utenti che hanno completato il processo e il numero di utenti iscritti al processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\begin{itemize}
+\item l'utente visualizza il numero di passi che ha completato;
+\item l'utente visualizza il numero totale di passi del processo;
+\item l'utente visualizza il numero di utenti che hanno completato il processo;
+\item l'utente visualizza il numero di utenti iscritti al processo.
+\end{itemize}
+%\item \textbf{Estensioni:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Scenario alternativo:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato le informazioni sullo stato di avanzamento del processo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.2.1: visualizzazione numero di passi completati}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il numero di passi completati del processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato il numero di passi del processo gestito completati dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.2.2: visualizzazione numero totale dei passi}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il numero di passi del processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato il numero dei passi del processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.2.3: visualizzazione numero di completamenti del processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il numero di utenti che hanno completato il processo gestito;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato di utenti che hanno completato il processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.2.4: visualizzazione numero di iscritti al processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il numero di utenti iscritti al processo;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato il numero di utenti iscritti al processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.3: visualizzazione della lista dei passi in corso}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare la lista passi non ancora conclusi, immediatamente successivi agli ultimi passi superati;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo non terminato, l'utente è iscritto ad esso e non lo ha concluso;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei passo in corso ed è pronto per gestirli.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4: Esecuzione di un passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare i criteri di terminazione di un passo del processo, inserire i dati richiesti e procedere all'invio dei dati immessi. In seguito all'invio dei dati l'utente riceverà una notifica;
+\item \textbf{Precondizione:} l'utente sta visualizzando la lista dei passi in corso e il sistema è pronto alla loro gestione;
+\item \textbf{Flusso principale degli eventi:}
+\begin{enumerate}
+\item l'utente può visualizzare le informazioni sul passo;
+\item l'utente può visualizzare i vincoli di un passo;
+\item l'utente può inserire i dati richiesti da un passo;
+\item l'utente può inviare al sistema i dati richiesti da un passo;
+\item l'utente può concludere un passo.
+\end{enumerate}
+%\item \textbf{Scenario alternativo:}
+\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+\item \textbf{Estensioni:} l'utente può saltare i passi opzionali;
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul passo eseguito e ritorna alla gestione del processo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.1: Visualizzazione delle informazioni di un passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare l'eventuale descrizione del passo e le eventuali descrizioni dei dati richiesti;
+\item \textbf{Precondizione:} il sistema è pronto alla gestione dei passi del processo;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato le informazioni sul passo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.2: Visualizzazione dei vincoli di un passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare i vincoli sui dati richiesti e sull'approvazione del passo;
+\item \textbf{Precondizione:} il sistema è pronto alla gestione dei passi del processo;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può visualizzare i vincoli sull'approvazione del passo;
+\item l'utente può visualizzare i vincoli sulle coordinate;
+\item l'utente può visualizzare i vincoli temporali;
+\item l'utente può visualizzare i vincoli sui dati numerici.
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i vincoli sui dati da inserire.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.2.1: Visualizzazione dei vincoli sull'approvazione}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare se il passo gestito richiede l'approvazione dell'amministratore per essere concluso;
+\item \textbf{Precondizione:} il sistema è pronto alla gestione dei passi del processo;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i vincoli sull'approvazione del passo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.2.2: Visualizzazione dei vincoli sulle coordinate}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare i vincoli sui dati geografici richiesti. Questi vincoli sono espressi tramite l'indicazione di un luogo preciso e di un'eventuale raggio di tolleranza rispetto al luogo indicato;
+\item \textbf{Precondizione:} il sistema di gestione del passo gestito richiede l'invio delle coordinate geografiche dell'utente;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i vincoli sulle coordinate richieste dal passo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.2.3: Visualizzazione dei vincoli temporali}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare gli intervalli temporali in cui l'utente può inviare i dati;
+\item \textbf{Precondizione:} il sistema di gestione del passo gestito richiede la data e l'ora dell'invio dei dati;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i vincoli sui tempi di invio dei dati.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.2.4: Visualizzazione dei vincoli sui dati numerici}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare i vincoli sui dati numerici che possono essere il numero di cifre, la possibilità di inserire cifre decimali o meno, e un eventuale limite superiore o inferiore;
+\item \textbf{Precondizione:} il sistema di gestione del passo gestito richiede l'inserimento di un valore numerico;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:} l'utente dopo aver inviato i dati può visualizzare l'esito dell'esecuzione del passo;
+%\item \textbf{Estensioni:} 
+\item \textbf{Postcondizione:} il sistema ha visualizzato i vincoli sui dati numerici richiesti dal passo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3: Inserimento dei dati richiesti}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inserire i dati richiesti per l'esecuzione del passo in corso. Può essere richiesto il caricamento di foto, di testo o di dati numerici; 
+\item \textbf{Precondizione:} il sistema di gestione del passo richiede l'inserimento di uno o più dati;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può inserire un'immagine;
+\item l'utente può inserire del testo;
+\item l'utente può inserire dei dati numerici.
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} i dati inseriti dall'utente sono pronti per essere inviati al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3.1: Inserimento di un'immagine}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inserire un'immagine scattando una foto o caricandola dai propri file;
+\item \textbf{Precondizione:} il sistema di gestione del passo richiede l'inserimento di uno o più immagini;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può inserire un'immagine scattando una foto;
+\item l'utente può inserire un'immagine caricandola dai propri file;
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'immagine inserita dall'utente è pronta per essere inviata al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3.1.1: Inserimento di una foto scattata}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può scattare una foto per inserire l'immagine richiesta dal passo in corso;
+\item \textbf{Precondizione:} l'utente vuole scattare una foto per inserire l'immagine richiesta dal passo gestito;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} la foto scattata dall'utente è pronta per essere inviata al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3.1.2: Inserimento di un'immagine da file}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può caricare un'immagine dai suoi file per soddisfare la richiesta del passo in corso;
+\item \textbf{Precondizione:} l'utente vuole scattare una foto per inserire l'immagine richiesta dal passo gestito;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} la foto scattata dall'utente è pronta per essere inviata al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3.2: Inserimento di dati testuali}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inserire i dati testuali richiesti dal passo in corso;
+\item \textbf{Precondizione:} il sistema di gestione del passo richiede l'inserimento di dati testuali;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il testo inserito dall'utente è pronto per essere inviato al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.3.3: Inserimento di dati numerici}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inserire i dati numerici richiesti dal passo in corso;
+\item \textbf{Precondizione:} il sistema di gestione del passo richiede l'inserimento di dati numerici;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} i dati numerici inseriti dall'utente sono pronti per essere inviati al sistema.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4: Invio dei dati richiesti}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare i dati richiesti che possono essere le immagini, il testo e i valori numerici inseriti dall'utente, oppure informazioni sul contesto di invio. In particolare può essere inviata la data, l'ora e la posizione geografica dell'utente al momento dell'invio;
+\item \textbf{Precondizione:} l'utente vuole inviare al sistema i dati richiesti dal passo gestito;
+\item \textbf{Scenario principale:}
+\begin{itemize}
+\item l'utente può inviare al sistema i dati testuali inseriti;
+\item l'utente può inviare al sistema le immagini inserite;
+\item l'utente può inviare al sistema i valori numerici inseriti;
+\item l'utente può inviare al sistema le coordinate geografiche della sua posizione;
+\item l'utente può inviare al sistema la data e l'ora correnti.
+\end{itemize}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto i dati richiesti per l'esecuzione del passo gestito dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4.1: Invio di dati testuali}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare al sistema i dati testuali inseriti;
+\item \textbf{Precondizione:} l'utente ha inserito i dati testuali richiesti e vuole inviarli al sistema;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto i dati testuali inseriti dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4.2: Invio di immagini}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare al sistema le immagini inserite;
+\item \textbf{Precondizione:} l'utente ha inserito le immagini richieste e vuole inviarle al sistema;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto le immagini inserite dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4.3: Invio di dati numerici}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare al sistema i dati numerici inseriti;
+\item \textbf{Precondizione:} l'utente ha inserito i dati numerici inseriti e vuole inviarli al sistema;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto i dati numerici inseriti dall'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4.4: Invio della posizione geografica}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare al sistema le coordinate geografiche della sua posizione;
+\item \textbf{Precondizione:} l'utente vuole inviare al sistema le coordinate della sua posizione;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto le coordinate geografiche della posizione dell'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.4.5: Invio della data e dell'ora}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può inviare al sistema la data e l'ora al momento della richiesta di invio dati;
+\item \textbf{Precondizione:} l'utente vuole inviare al sistema la data e l'ora della sua richiesta di invio dati;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha ricevuto la data e l'ora inviate dell'utente.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.5: Visualizzazione dell'esito dell'esecuzione del passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente dopo visualizza l'esito dell'esecuzione del passo. Il sistema notifica all'utente se i dati che ha inviato sono corretti, se non soddisfano i vincoli specificati, o se i dati sono in attesa dell'approvazione dell'amministratore.
+Eventuali errori sui dati vengono specificati all'utente che potrà correggerli e inviarli nuovamente; 
+\item \textbf{Precondizione:} il sistema ha ricevuto i dati richiesti per l'esecuzione del passo gestito dall'utente;
+\item \textbf{Scenario alternativo:}
+\begin{itemize}
+\item i dati inviati dall'utente richiedono approvazione, perciò l'utente viene avvisato tramite una notifica, e dovrà attendere che l'amministratore controlli i dati prima di visualizzare l'esito dell'esecuzione e proseguire con la gestione del processo.
+\end{itemize}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato l'esito dell'invio dei dati ed è pronto per proseguire la procedura di esecuzione del passo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.6: Conclusione del passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente che ha ricevuto la notifica che i dati inviati soddisfano i requisiti imposti, può concludere l'esecuzione del passo. Il sistema riprenderà la procedura di gestione del processo, aggiornando i dati presenti;
+\item \textbf{Precondizione:} il sistema ha approvato i dati inviati dall'utente o il passo gestito è facoltativo;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+\item \textbf{Estensioni:} l'utente può saltare un passo facoltativo;
+\item \textbf{Postcondizione:} il sistema ha concluso l'esecuzione del passo gestito e ha aggiornato i dati sulla gestione del processo in esecuzione.
+\end{itemize}
+
+\subparagraph{UCL 2.4.4.7: Salto di un passo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente per concludere un passo facoltativo, può saltarlo;
+\item \textbf{Precondizione:} il sistema sta gestendo un passo facoltativo e l'utente vuole saltarlo;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha concluso l'esecuzione del passo gestito e ha aggiornato i dati sulla gestione del processo in esecuzione.
+\end{itemize}
+
+\subparagraph{UCL 2.4.5: Conclusione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare un report dell'esecuzione di un processo terminato o del quale ha eseguito con successo tutti i passi. Può inoltre concluderlo definitivamente, rimuovendolo quindi dalla lista dei processi in esecuzione;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo terminato o del quale l'utente ha eseguito tutti i passi, ma di cui non ha ancora richiesto la conclusione;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+\item l'utente può visualizzare e salvare un report sull'esecuzione del processo;
+\item l'utente può chiudere il processo.
+\end{enumerate}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha eseguito e salvato le operazioni effettuate dall'utente sul processo gestito concluso.
+\end{itemize}
+
+\subparagraph{UCL 2.4.5.1: Creazione report finale}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare e salvare un report dell'esecuzione di un processo terminato o del quale ha eseguito con successo tutti i passi. Tale report contiene il responso sull'esecuzione del processo e il riepilogo di tutti i dati inviati dall'utente al sistema durante l'esecuzione dei passi;
+\item \textbf{Precondizione:} l'utente vuole visualizzare il report di un processo terminato o del quale ha eseguito tutti i passi, ma di cui non ha ancora richiesto la conclusione;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+\item l'utente può visualizzare un report dell'esecuzione del processo;
+\item l'utente può salvare il report dell'esecuzione del processo.
+\end{enumerate}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha creato un report dell'esecuzione del processo e può riprendere la procedura di conclusione del processo.
+\end{itemize}
+
+\subparagraph{UCL 2.4.5.1.1: Visualizzazione del report finale}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può visualizzare il report dell'esecuzione del processo gestito;
+\item \textbf{Precondizione:} l'utente vuole visualizzare il report finale del processo gestito;
+%\item \textbf{Scenario principale:}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato il report finale del processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.5.1.2: Salvataggio del report finale}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può salvare il report dell'esecuzione del processo gestito;
+\item \textbf{Precondizione:} l'utente vuole salvare il report finale del processo gestito;
+%\item \textbf{Scenario principale:}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente ha salvato le informazione del report finale del processo gestito.
+\end{itemize}
+
+\subparagraph{UCL 2.4.5.2: Chiusura di un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può eliminare dalla lista dei processi gestiti, un processo terminato o del quale ha eseguito con successo tutti i passi;
+\item \textbf{Precondizione:} l'utente vuole chiudere un processo terminato o del quale ha eseguito tutti i passi, ma di cui non ha ancora richiesto la conclusione;
+%\item \textbf{Scenario principale:}
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il processo non fa più parte dei processi gestiti dall'utente e il sistema ritorna dalla gestione dei processi.
+\end{itemize}
+
+\subparagraph{UCL 2.5: Disiscrizione da un processo}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può disiscriversi da un processo a cui non è ancora iscritto;
+\item \textbf{Precondizione:} il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
+\item \textbf{Scenario principale:} l'utente può disiscriversi dal processo gestito;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} l'utente non è più iscritto al processo gestito;
+\end{itemize}
+
 \paragraph{UCL 3: Logout}
 \begin{itemize}
-	\item \textbf{Attori:} utente,utente autenticato.
-	\item \textbf{Descrizione:} l'utente autenticato richiede di terminare la propria sessione e uscire
-	dal sistema diventando nuovamente utente.
+	\item \textbf{Attori:} utente autenticato.
+	\item \textbf{Descrizione:} l'utente autenticato richiede di terminare la propria sessione e uscire dal sistema diventando nuovamente utente generico;
 	\item \textbf{Precondizione:} l'utente autenticato vuole uscire dal sistema.
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-		\item l'utente richiede di terminare la propria sessione;
-		\item l'utente e uscito dal sistema;
-		\item l'utente autenticato e diventato utente.
-	\end{itemize}
-	\item \textbf{Postcondizione:} l'utente autenticato è uscito dal sistema ridiventando utente.
+	\item \textbf{Postcondizione:} l'utente autenticato è uscito dal sistema diventando utente generico.
 \end{itemize}
