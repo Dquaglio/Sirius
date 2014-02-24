@@ -21,7 +21,7 @@
 \begin{itemize}
 \item \textbf{Attori:} amministratore;
 \item \textbf{Descrizione:} l'amministratore può creare dei nuovi processi e gestire i processi creati;
-\item \textbf{Precondizione:} il sistema è attivo e l'amministratore ha iniziato ad interfacciarcisi;
+\item \textbf{Precondizione:} il sistema è attivo e l'amministratore ha iniziato ad interfacciarvisi;
 \item \textbf{Scenario principale:} 
 \begin{itemize}
 \item l'amministratore può creare un nuovo processo;
@@ -249,7 +249,8 @@ l'amministratore vuole aggiungere un criterio di superamento del passo in creazi
 \end{enumerate}
 \item \textbf{Scenario alternativo:}
 \begin{itemize}
-\item le condizioni definite non sono disgiunte dalle condizioni precedentemente create, quindi l'utente viene avvisato dell'errore e può correggere i vincoli inseriti;
+\item le condizioni definite non sono disgiunte da quelle inserite in altri criteri di superamento, quindi l'utente viene avvisato dell'errore e può correggere i vincoli inseriti;
+\item tra le condizioni di avanzamento definite è stata scelta la possibilità di saltare il passo, ma esiste già un criterio di superamento che lo permette. L'utente viene avvisato dell'errore e può correggere i vincoli inseriti.
 \end{itemize}
 \item \textbf{Postcondizione:}
 il criterio di superamento definito dall'amministratore è stato aggiunto e il sistema prosegue con la creazione del passo.
@@ -261,7 +262,7 @@ il criterio di superamento definito dall'amministratore è stato aggiunto e il s
 amministratore;
 \item \textbf{Descrizione:} 
 l'amministratore può decidere le condizioni che determinano il criterio di superamento in definizione.
-Può inserire delle condizioni sull'approvazione del passo, sui dati numerici e sulla data, l'ora e la posizione geografica dell'utente al momento dell'invio dei dati richiesti.
+Può inserire delle condizioni sull'approvazione e sulla facoltatività del passo, sui dati numerici, e sulla data, l'ora e la posizione geografica dell'utente al momento dell'invio dei dati richiesti.
 \item \textbf{Precondizione:} 
 l'amministratore sta definendo un nuovo criterio di superamento del passo in creazione;
 \item \textbf{Scenario principale:} 
@@ -269,7 +270,8 @@ l'amministratore sta definendo un nuovo criterio di superamento del passo in cre
 \item l'amministratore può definire i vincoli sull'approvazione del passo;
 \item l'amministratore può definire i vincoli sulle coordinate;
 \item l'amministratore può definire i vincoli temporali;
-\item l'amministratore può definire i vincoli sui dati numerici.
+\item l'amministratore può definire i vincoli sui dati numerici;
+\item l'amministratore può definire i vincoli sulla facoltatività del passo.
 \end{itemize}
 \item \textbf{Postcondizione:}
 le condizioni definite dall'amministratore sono state aggiunte e il sistema prosegue con la definizione del criterio di superamento del passo.
@@ -321,6 +323,18 @@ l'amministratore può inserire i vincoli sui dati numerici che possono essere il
 esiste almeno un dato numerico nel passo in creazione e l'amministratore vuole definirne i vincoli;
 \item \textbf{Postcondizione:}
 i vincoli sui dati numerici del passo sono stati inseriti e il sistema prosegue con la definizione del criterio di superamento del passo.
+\end{itemize}
+
+\paragraph{UCA 1.3.1.3.1.5: Inserimento dei vincoli sulla facoltatività del passo}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può decidere se l'utente potrà decidere di saltare il passo in creazione;
+\item \textbf{Precondizione:} 
+l'amministratore vuole definire i vincoli sulla facoltatività del passo in creazione;
+\item \textbf{Postcondizione:}
+i vincoli sulla facoltatività del passo sono stati inseriti e il sistema prosegue con la definizione del criterio di superamento del passo.
 \end{itemize}
 
 \paragraph{UCA 1.3.1.3.2: Definizione passo successivo}
@@ -409,6 +423,7 @@ l'amministratore vuole modificare un criterio di superamento del passo gestito;
 \item \textbf{Scenario alternativo:}
 \begin{itemize}
 \item le condizioni definite non sono disgiunte dalle altre condizioni presenti, quindi l'utente viene avvisato dell'errore e può correggere i vincoli modificati;
+\item tra le condizioni di avanzamento definite è stata scelta la possibilità di saltare il passo, ma esiste già un criterio di superamento che lo permette. L'utente viene avvisato dell'errore e può correggere i vincoli modificati.
 \end{itemize}
 \item \textbf{Postcondizione:}
 le modifiche effettuate dall'amministratore sui criteri di superamento del passo gestito sono state eseguite e il sistema prosegue con la modifica del passo. 
@@ -420,7 +435,7 @@ le modifiche effettuate dall'amministratore sui criteri di superamento del passo
 amministratore;
 \item \textbf{Descrizione:} 
 l'amministratore può modificare le condizioni che determinano il criterio di superamento in definizione.
-Può modificare le condizioni sull'approvazione del passo, sui dati numerici e sulla data, l'ora e la posizione geografica dell'utente al momento dell'invio dei dati richiesti.
+Può modificare le condizioni sull'approvazione e la facoltatività del passo, sui dati numerici, e sulla data, l'ora e la posizione geografica dell'utente al momento dell'invio dei dati richiesti.
 \item \textbf{Precondizione:}
 l'amministratore vuole modificare le condizioni di avanzamento del passo gestito;
 \item \textbf{Scenario principale:} 
@@ -428,7 +443,8 @@ l'amministratore vuole modificare le condizioni di avanzamento del passo gestito
 \item l'amministratore può modificare i vincoli sull'approvazione del passo;
 \item l'amministratore può modificare i vincoli sulle coordinate;
 \item l'amministratore può modificare i vincoli temporali;
-\item l'amministratore può modificare i vincoli sui dati numerici.
+\item l'amministratore può modificare i vincoli sui dati numerici;
+\item l'amministratore può modificare i vincoli sulla facoltatività.
 \end{itemize}
 \item \textbf{Postcondizione:}
 le modifiche effettuate dall'amministratore sulle condizioni di avanzamento del passo gestito sono state eseguite e il sistema prosegue con la modifica dei criteri di superamento. 
@@ -482,6 +498,18 @@ esiste almeno un dato numerico nel passo gestito e l'amministratore vuole modifi
 i vincoli sui dati numerici del passo sono stati modificati e il sistema prosegue con la modifica del criterio di superamento del passo.
 \end{itemize}
 
+\paragraph{UCA 1.3.3.3.1.5: Modifica dei vincoli sulla facoltatività del passo}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può modificare i vincoli sulla facoltatività del passo gestito;
+\item \textbf{Precondizione:} 
+l'amministratore vuole modificare i vincoli sulla facoltatività del passo in gestione;
+\item \textbf{Postcondizione:}
+i vincoli sulla facoltatività del passo sono stati modificati e il sistema prosegue con la definizione del criterio di superamento del passo.
+\end{itemize}
+
 \paragraph{UCA 1.3.3.3.2: Modifica del passo successivo}
 \begin{itemize}
 \item \textbf{Attori:} 
@@ -518,210 +546,292 @@ l'amministratore ha definito un processo con almeno un passo;
 il processo creato dall'utente è stato avviato, il sistema lo ha aggiunto ai passi creati e ritorna allo stato iniziale.
 \end{itemize}
 
-\subsubsection{2: Gestione processi creati}
+\subsubsection{UCA 2: Gestione dei processi creati}
 \begin{itemize}
 \item \textbf{Attori:} 
 amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore dall'interfaccia del programma server può gestire i processi precedentemente creati e in corso, invitando utenti a parteciparvi, monitorando i risultati e qualora fosse necessario permette ad alcuni utenti di completare dei passi che richiedano il suo intervento (come ad esempio valutare una fotografia);
+l'amministratore può gestire i processi precedentemente creati, invitando utenti a parteciparvi, monitorando i risultati e, qualora fosse necessario, permette ad alcuni utenti di completare dei passi che richiedano il suo intervento;
 \item \textbf{Precondizione:} 
-Interfaccia programma server aperta dall'amministratore;
-\item \textbf{Scenario principale:} 
-\begin{itemize}
-\item l'amministratore può recuperare informazioni su un processo (UCA 1.1);
-\item l'amministratore può selezionare quali utenti possono partecipare ad un processo (UCA 1.2);
-\item l'amministratore può permettere l'avanzamento di passi che richiedono il suo diretto intervento (UCA 1.3).
-\end{itemize}
+l'amministratore vuole gestire i processi creati e ne esiste almeno uno;
+\item \textbf{Flusso principale degli eventi:} 
+\begin{enumerate}
+\item l'amministratore può scegliere un processo da gestire;
+\item l'amministratore può selezionare quali utenti possono partecipare al processo;
+\item l'amministratore può consultare informazioni sull'esecuzione un processo;
+\item l'amministratore può permettere l'avanzamento di passi che richiedono il suo diretto intervento;
+\item l'amministratore può richiedere la terminazione del processo;
+\item l'amministratore può eliminare il processo.
+\end{enumerate}
 \item \textbf{Postcondizione:} 
-L'Amministratore ha concluso le operazioni che desiderava fare sui processi esistenti. Il sistema si trova nello stato iniziale dell'interfaccia appena aperta, pronto ad eseguire nuove operazioni.
+l'amministratore ha concluso le operazioni che desiderava fare sui processi esistenti e il sistema si trova nello stato iniziale, pronto ad eseguire nuove operazioni.
 \end{itemize}
 
-\paragraph{UCA 1.1: Recupera informazioni su un processo}
+\subparagraph{UCA 2.1: Scelta di un processo}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} l'amministratore può selezionare un processo da una lista o da i risultati di una ricerca;
+\item \textbf{Precondizione:} l'amministratore vuole gestire un processo creato;
+\item \textbf{Flusso principale degli eventi:}
+\begin{enumerate}
+\item l'amministratore può aprire la lista di processi;
+\item l'amministratore può selezionare un processo.
+\end{enumerate}
+\item \textbf{Estensioni:} l'amministratore può effettuare la ricerca di un processo;
+%\item \textbf{Inclusioni:}
+\item \textbf{Postcondizione:} il sistema è pronto per la gestione del processo scelto.
+%\item \textbf{Scenario alternativo:}
+\end{itemize}
+
+\subparagraph{UCA 2.1.1: Apertura della lista dei processi}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} l'amministratore può aprire e visualizzare la lista dei processi. 
+\item \textbf{Precondizione:} l'amministratore vuole aprire la lista dei processi;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi creati dall'amministratore.
+\end{itemize}
+
+\subparagraph{UCA 2.1.2: Selezione di un processo}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} l'amministratore può selezionare un processo dalla lista dei processi visualizzata;
+\item \textbf{Precondizione:} l'amministratore sta visualizzando una lista di uno o più processi;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema è pronto per la gestione del processo scelto.
+\end{itemize}
+
+\subparagraph{UCA 2.1.3: Ricerca di un processo}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} l'amministratore può ricercare un insieme di processi tra quelli creati;
+\item \textbf{Precondizione:} l'amministratore vuole cercare un processo tra quelli creati;
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
+\end{itemize}
+
+\paragraph{UCA 2.2: Scelta degli utenti partecipanti}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può scegliere gli utenti a cui permettere l'iscrizione al processo gestito;
+\item \textbf{Precondizione:} 
+il sistema ha aperto la pagina di gestione di un processo e l'amministratore vuole scegliere gli utenti che possono parteciparvi;
+\item \textbf{Scenario principale:} 
+\begin{itemize}
+\item l'amministratore può visualizzare la lista degli utenti registrati che non hanno il diritto di iscrizione al processo;
+\item l'amministratore può aggiungere degli utenti a quelli che possono iscriversi al processo.
+\end{itemize}
+\item \textbf{Scenari alternativi:}
+\begin{enumerate}
+\item non sono presenti utenti registrati senza diritto di iscrizione al processo, perciò il sistema rimane nello stato precedente.
+\end{enumerate}
+\item \textbf{Postcondizione:} 
+l'amministratore ha permesso a determinati utenti registrati l'iscrizione al processo gestito, e il sistema continua la gestione del processo.
+\end{itemize}
+
+\paragraph{UCA 2.2.1: Visualizzazione della lista degli utenti}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può visualizzare la lista degli utenti registrati al sistema che non hanno il diritto di iscrizione al processo gestito; 
+\item \textbf{Precondizione:} 
+l'utente vuole scegliere gli utenti a cui consentire il diritto di iscrizione al processo gestito; 
+\item \textbf{Postcondizione:} 
+il sistema ha visualizzato la lista degli utenti registrati che non hanno il diritto di iscrizione al processo gestito, e può continuare la procedura di scelta degli utenti partecipanti.
+\end{itemize}
+
+\paragraph{UCA 2.2.2: Selezione degli utenti da aggiungere}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può selezionare uno o più utenti dalla lista visualizzata, per consentire loro l'iscrizione al processo gestito; 
+\item \textbf{Precondizione:} 
+l'utente sta visualizzando una lista di uno o più utenti, e vuole consentire ad alcuni di essi l'iscrizione al processo gestito; 
+\item \textbf{Postcondizione:} 
+il sistema ha aggiunto il processo gestito alla lista dei processi disponibili degli utenti selezionati, e può continuare la procedura di scelta degli utenti partecipanti.
+\end{itemize}
+
+\paragraph{UCA 2.3: Consultazione di informazioni sull'esecuzione del processo}
 \begin{itemize}
 \item \textbf{Attori:} amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore può scegliere un processo precedentemente creato e recuperare informazioni sul suo avanzamento e eventuali dati raccolti; 
+l'amministratore può scegliere un processo precedentemente creato per recuperare informazioni sui suoi dati di creazione, sullo stato della sua esecuzione e su eventuali dati raccolti; 
 \item \textbf{Precondizione:} 
-L'interfaccia di amministrazione é pronta e si vuole recuperare informazioni su un processo precedentemente creato;
-\item \textbf{Flusso principale degli eventi:} 
-\begin{enumerate}
-\item Consultazione delle informazioni sul processo (UCA 1.1.1).
-\end{enumerate}
-\item \textbf{Scenari alternativi:}
-\begin{enumerate}
-\item Non sono presenti processi precedentemente creati, il sistema rimane nello stato precedente.
-\end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{enumerate}
-\item Selezione di un processo esistente (UCA 1.4);
-\item Conferma selezione del processo (UCA 1.5).
-\end{enumerate}
-\item \textbf{Postcondizione:} 
-l'amministratore ha recuperato e potuto consultare le informazioni su un processo precedentemente creato. Il sistema si trova nello stato iniziale dell'interfaccia appena aperta, pronto ad eseguire nuove operazioni.
-\end{itemize}
-
-\paragraph{UCA 1.1.1: Consultazione delle informazioni sul processo}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può consultare le informazioni sul processo precedentemente selezionato recuperate dal sistema; 
-\item \textbf{Precondizione:} 
-l'amministratore ha selezionato e confermato un processo da cui recuperare le informazioni;
-\item \textbf{Postcondizione:} 
-l'amministratore ha consultato le informazioni desiderate.
-\end{itemize}
-
-\paragraph{UCA 1.2: Selezione di quali utenti possono partecipare ad un processo}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può scegliere un processo precedentemente creato e ad esso permettere la partecipazione di alcuni utenti registrati;
-\item \textbf{Precondizione:} 
-L'interfaccia di amministrazione é pronta e si vuole permettere la partecipazione di alcuni utenti registrati ad un processo precedentemente creato;
-\item \textbf{Flusso principale degli eventi:} 
-\begin{enumerate}
-\item Selezione degli utenti che possono partecipare al processo (UCA 1.2.1);
-\item Conferma selezione degli utenti (UCA 1.2.2).
-\end{enumerate}
-\item \textbf{Scenari alternativi:}
-\begin{enumerate}
-\item Non sono presenti processi precedentemente creati, il sistema rimane nello stato precedente;
-\item Non sono presenti utenti registrati, il sistema rimane nello stato precedente.
-\end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{enumerate}
-\item Selezione di un processo esistente (UCA 1.4);
-\item Conferma selezione del processo (UCA 1.5).
-\end{enumerate}
-\item \textbf{Postcondizione:} 
-l'amministratore ha permesso a determinati utenti registrati la partecipazione ad un processo precedentemente creato. Il sistema si trova nello stato iniziale dell'interfaccia appena aperta, pronto ad eseguire nuove operazioni.
-\end{itemize}
-
-\paragraph{UCA 1.2.1: Selezione degli utenti che possono partecipare al processo}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può scegliere degli utenti da una lista di utenti registrati; 
-\item \textbf{Precondizione:} 
-Il sistema presenta una lista di utenti registrarti e resta in attesa che l'amministratore selezioni o deselezioni alcuni di questi per permettergli o meno la partecipazione al processo precedentemente scelto;
-\item \textbf{Postcondizione:} 
-l'amministratore ha selezionato gli utenti registrati a cui permettere o meno la partecipazione al processo precedentemente selezionato e il sistema resta in attesa della conferma.
-\end{itemize}
-
-\paragraph{UCA 1.2.2: Conferma selezione degli utenti}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può confermare la selezione degli utenti registrati a cui permettere o meno la partecipazione al processo precedentemente selezionato; 
-\item \textbf{Precondizione:} 
-l'amministratore ha selezionato un processo a cui permettere o meno la partecipazione ad alcuni utenti registrati e ha selezionato gli utenti registrati a cui permettere o meno la partecipazione a tale processo;
-\item \textbf{Postcondizione:} 
-l'amministratore ha confermato la selezione degli utenti registrati a cui permettere o meno la partecipazione al processo precedentemente selezionato.
-\end{itemize}
-
-\paragraph{UCA 1.3: Permetti completamento passi che richiedono intervento umano}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può permettere di completare eventuali passi (di un processo in attesa) che richiedono il suo diretto controllo sui dati comunicati dall'utente che sta aspettando che vengano verificati;
-\item \textbf{Precondizione:} 
-L'interfaccia di amministrazione é pronta e si vuole permettere di completare, o richiederne la ripetizione, di eventuali passi che richiedono il diretto controllo dell'amministratore sui dati comunicati dall'utente che sta aspettando che vengano verificati. Il processo contente il passo da verificare è detto "in attesa";
-\item \textbf{Flusso principale degli eventi:} 
-\begin{enumerate}
-\item Consultazione delle informazioni inserite (UCA 1.3.1);
-\item Gestione del processo in attesa (UCA 1.3.2).
-\end{enumerate}
-\item \textbf{Scenari alternativi:}
-\begin{enumerate}
-\item Non sono presenti processi precedentemente in attesa, il sistema rimane nello stato precedente.
-\end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{enumerate}
-\item Selezione di un processo esistente (UCA 1.4);
-\item Conferma selezione del processo (UCA 1.5).
-\end{enumerate}
-\item \textbf{Postcondizione:} 
-l'amministratore ha controllato le informazioni inserite dall'utente relative al passo del processo in attesa e ha voluto permetterne il completamento o richiesto che il passo venga ripetuto. Il sistema si trova nello stato iniziale dell'interfaccia appena aperta, pronto ad eseguire nuove operazioni.
-\end{itemize}
-
-\paragraph{UCA 1.3.1: Consultazione delle informazioni inserite}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può consultare le informazioni inserite dall'utente relative al passo i cui dati devono essere verificati manualmente del processo in attesa precedentemente scelto; 
-\item \textbf{Precondizione:} 
-l'amministratore ha confermato la selezione del processo di cui si vuole permettere l'avanzamento o richiedere la ripetizione del passo i cui dati devono essere verificati manualmente;
-\item \textbf{Postcondizione:} 
-l'amministratore ha consultato le le informazioni inserite dall'utente relative al passo i cui dati devono essere verificati manualmente del processo in attesa precedentemente scelto.
-\end{itemize}
-
-\paragraph{UCA 1.3.2: Gestione del processo in attesa}
-\begin{itemize}
-\item \textbf{Attori:} 
-amministratore;
-\item \textbf{Descrizione:} 
-l'amministratore può decidere, in base alle informazioni consultate, se permettere il superamento o richiedere la ripetizione del passo i cui dati sono stati verificati manualmente del processo in attesa precedentemente scelto;
-\item \textbf{Precondizione:} 
-l'amministratore ha consultato le le informazioni inserite dall'utente relative al passo i cui dati devono essere verificati manualmente del processo in attesa precedentemente scelto e può scegliere se può essere superato o deve essere ripetuto;
+il sistema ha aperto la pagina di gestione di un processo;
 \item \textbf{Scenario principale:} 
 \begin{itemize}
-\item Avanzamento concesso (UCA 1.3.4.1);
-\item Richiesta ripetizione (UCA 1.3.4.2).
+\item l'amministratore può recuperare le informazioni sui dati di creazione del processo;
+\item l'amministratore può visualizzare lo stato del processo;
+\item l'amministratore può consultare i dati ricevuti dagli utenti.
 \end{itemize}
 \item \textbf{Postcondizione:} 
-l'amministratore ha deciso, in base alle informazioni consultate, se permettere il superamento o richiedere la ripetizione del passo i cui dati sono stati verificati manualmente del processo in attesa precedentemente scelto.
+l'amministratore ha consultato le informazioni sul processo scelto e il sistema continua la sua gestione.
 \end{itemize}
 
-\paragraph{UCA 1.3.4.1: Avanzamento concesso}
+\paragraph{UCA 2.3.1: Recupero di informazioni sul processo}
 \begin{itemize}
 \item \textbf{Attori:} 
 amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore ha scelto , in base alle informazioni consultate, di permettere il superamento del passo i cui dati sono stati verificati manualmente del processo in attesa precedentemente scelto;
+l'amministratore può consultare le informazioni sul processo gestito. In particolare può visualizzare la descrizione del processo, i suoi criteri di terminazione, e i dati e le condizioni di superamento dei passi; 
 \item \textbf{Precondizione:} 
-l'amministratore ha consultato le le informazioni inserite dall'utente relative al passo i cui dati devono essere verificati manualmente del processo in attesa precedentemente scelto e ha scelto che può essere superato;
+l'amministratore vuole recuperare le informazioni generali sul processo gestito;
 \item \textbf{Postcondizione:} 
-Il sistema aggiorna i propri dati considerando il passo superato.
+il sistema ha visualizzato le informazioni generali sul processo gestito e continua la procedura di consultazione di informazioni.
 \end{itemize}
 
-\paragraph{UCA 1.3.4.2: Richiesta ripetizione}
+\paragraph{UCA 2.3.2: Visualizzazione dello stato del processo}
 \begin{itemize}
 \item \textbf{Attori:} 
 amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore ha scelto , in base alle informazioni consultate, di richiedere la ripetizione del passo i cui dati sono stati verificati manualmente del processo in attesa precedentemente scelto;
+l'amministratore può visualizzare il numero di utenti iscritti al processo e il numero di utenti che lo hanno completato; 
 \item \textbf{Precondizione:} 
-l'amministratore ha consultato le le informazioni inserite dall'utente relative al passo i cui dati devono essere verificati manualmente del processo in attesa precedentemente scelto e ha scelto che deve essere ripetuto;
+l'amministratore vuole visualizzare lo stato del processo gestito;
+\item \textbf{Scenario principale:} 
+\begin{itemize}
+\item l'amministratore può visualizzare il numero di utenti iscritti al processo gestito;
+\item l'amministratore può visualizzare il numero di utenti che hanno completato il processo gestito.
+\end{itemize}
 \item \textbf{Postcondizione:} 
-Il sistema aggiorna i propri dati richiedendo la ripetizione del passo.
+il sistema ha visualizzato le informazioni sullo stato del processo gestito e continua la procedura di consultazione di informazioni.
 \end{itemize}
 
-\paragraph{UCA 1.4: Selezione di un processo esistente}
+\paragraph{UCA 2.3.2.1: Visualizzazione del numero di utenti iscritti}
 \begin{itemize}
 \item \textbf{Attori:} 
 amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore può scegliere un processo precedentemente creato da una lista di processi; 
+l'amministratore può visualizzare il numero di utenti iscritti al processo gestito; 
 \item \textbf{Precondizione:} 
-Il sistema presenta una lista di processi e resta in attesa che l'amministratore selezioni un processo precedentemente creato;
+l'amministratore vuole visualizzare lo stato del processo gestito;
 \item \textbf{Postcondizione:} 
-l'amministratore ha selezionato un processo precedentemente creato.
+il sistema ha visualizzato il numero di utenti iscritti al processo gestito e continua la visualizzazione dello stato del processo.
 \end{itemize}
 
-\paragraph{UCA 1.5: Conferma selezione del processo}
+\paragraph{UCA 2.3.2.2: Visualizzazione del numero di completamenti}
 \begin{itemize}
 \item \textbf{Attori:} 
 amministratore;
 \item \textbf{Descrizione:} 
-l'amministratore può confermare la selezione del processo precedentemente creato; 
+l'amministratore può visualizzare il numero di utenti che hanno completato il processo gestito; 
 \item \textbf{Precondizione:} 
-l'amministratore ha selezionato un processo da precedentemente creato;
+l'amministratore vuole visualizzare lo stato del processo gestito;
 \item \textbf{Postcondizione:} 
-l'amministratore ha confermato la selezione del processo precedentemente creato.
+il sistema ha visualizzato il numero di utenti che hanno completato il processo gestito e continua la visualizzazione dello stato del processo.
+\end{itemize}
+
+\paragraph{UCA 2.3.3: Consultazione dei dati ricevuti}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può consultare i dati inviati dagli utenti al sistema che hanno comportato il superamento di un passo;
+\item \textbf{Precondizione:} 
+il sistema ha aperto la pagina di gestione di un processo e vuole consultare i dati inviati dagli utenti;
+\item \textbf{Postcondizione:} 
+il sistema ha visualizzato i dati ricevuti dagli utenti e continua la procedura di consultazione di informazioni.
+\end{itemize}
+
+\paragraph{UCA 2.4: Controllo dei dati che richiedono approvazione}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può permettere l'avanzamento eventuali passi che richiedono l'approvazione dei dati inviati dall'utente.
+Il responso dell'attività di controllo viene inviato all'utente che potrà visualizzare l'esito del passo e continuare la procedura di esecuzione del passo;
+\item \textbf{Precondizione:} 
+il sistema ha aperto la pagina di gestione di un processo in cui esiste almeno un insieme di dati inviati al sistema che richiedono il controllo dell'amministratore;
+\item \textbf{Flusso principale degli eventi:} 
+\begin{enumerate}
+\item l'amministratore può consultare le informazioni inviate dagli utenti che richiedono la sua approvazione;
+\item l'amministratore può inviare l'esito del controllo di uno o più dati consultati.
+\end{enumerate}
+\item \textbf{Postcondizione:}
+il sistema ha eseguito e salvato le operazioni effettuate dall'amministratore sui dati che richiedevano approvazione.
+\end{itemize}
+
+\paragraph{UCA 2.4.1: Consultazione delle informazioni ricevute}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può consultare le informazioni testuali, numeriche, geografiche, temporali e le immagini inviate dagli utenti, relative ad un passo che richiede l'approvazione manuale per essere superato; 
+\item \textbf{Precondizione:} 
+l'amministratore vuole consultare le informazioni inviate dagli utenti che richiedono approvazione, relative al processo gestito;
+\item \textbf{Postcondizione:} 
+il sistema ha visualizzato le informazioni inviate dagli utenti che richiedono l'approvazione dell'amministratore, e continua la procedura di controllo dei dati ricevuti.
+\end{itemize}
+
+\paragraph{UCA 2.4.2: Invio dell'esito del controllo}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può decidere di approvare o respingere i dati ricevuti da un utente che richiedono approvazione.
+Il responso dell'attività di controllo viene inviato all'utente che potrà visualizzare l'esito del passo e continuare la procedura di esecuzione del passo;
+\item \textbf{Precondizione:} 
+l'amministratore ha consultato le informazioni inviate dagli utenti che richiedono approvazione e vuole inviare l'esito del controllo;
+\item \textbf{Scenario principale:} 
+\begin{itemize}
+\item l'amministratore può approvare i dati ricevuti;
+\item l'amministratore può richiedere la ripetizione del passo.
+\end{itemize}
+\item \textbf{Postcondizione:} 
+l'esito del controllo è stato notificato all'utente e il sistema continua la procedura di controllo dei dati ricevuti.
+\end{itemize}
+
+\paragraph{UCA 2.4.2.1: Approvazione dei dati}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può scegliere di approvare i dati ricevuti da un utente. Il sistema notifica la decisione dell'amministratore all'utente, che può concludere il passo in corso;
+\item \textbf{Precondizione:} 
+l'amministratore ha consultato le informazioni inviate dagli utenti e vuole approvarle;
+\item \textbf{Postcondizione:} 
+il sistema notifica all'utente l'esito positivo del controllo, è pronto per consentire all'utente la conclusione del passo, e continua la procedura di controllo dei dati ricevuti.
+\end{itemize}
+
+\paragraph{UCA 2.4.2.2: Richiesta ripetizione del passo}
+\begin{itemize}
+\item \textbf{Attori:} 
+amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può scegliere di respingere i dati ricevuti da un utente. Il sistema notifica la decisione dell'amministratore all'utente, che può rieseguire il passo in corso e modificare i dati da inviare;
+\item \textbf{Precondizione:} 
+l'amministratore ha consultato le informazioni inviate dagli utenti e vuole respingerle;
+\item \textbf{Postcondizione:} 
+il sistema notifica all'utente l'esito negativo del controllo, consente all'utente il reinserimento dei dati, e continua la procedura di controllo dei dati ricevuti.
+\end{itemize}
+
+\paragraph{UCA 2.5: Terminazione del processo}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può terminare forzatamente il processo gestito. Gli utenti iscritti al processo non potranno più eseguirne i passi, ma potranno svolgere le funzionalità di conclusione del processo; 
+\item \textbf{Precondizione:} 
+l'amministratore vuole terminare il processo gestito;
+\item \textbf{Postcondizione:} 
+il processo gestito è terminato. L'amministratore può eliminarlo e gli utenti iscritti ad esso possono svolgere le funzionalità di conclusione del processo.
+\end{itemize}
+
+\paragraph{UCA 2.6: Eliminazione del processo}
+\begin{itemize}
+\item \textbf{Attori:} amministratore;
+\item \textbf{Descrizione:} 
+l'amministratore può eliminare un processo dall'insieme dei processi creati.
+Può eliminare un processo terminato forzatamente o al verificarsi dei criteri di terminazione.
+Il processo eliminato non sarà più accessibile e gestibile dall'amministratore, ma sarà accessibile agli utenti iscritti ad esso, se non l'hanno ancora chiuso, per svolgere le funzionalità di conclusione del processo;
+\item \textbf{Precondizione:} 
+il processo gestito è terminato, e l'amministratore vuole eliminarlo;
+\item \textbf{Postcondizione:} 
+il processo gestito non è più accessibile dall'amministratore. Gli utenti iscritti ad esso che non lo hanno ancora chiuso, possono svolgere le funzionalità di conclusione del processo.
 \end{itemize}

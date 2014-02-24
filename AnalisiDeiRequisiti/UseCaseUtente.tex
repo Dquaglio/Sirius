@@ -22,22 +22,18 @@
 \subsubsection{UCU 0: Caso base utente generico}
 
 \begin{itemize}
-\item \textbf{Attori:} utente, utente autenticato;
+\item \textbf{Attori:} utente;
 \item \textbf{Descrizione:} l'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
 L'utente non autenticato può registrarsi oppure effettuare il login se è già registrato diventando utente autenticato.
-L'utente autenticato può gestire il proprio account, gestire un insieme di processi ed effettuare il logout, ritornando allo stato di utente non autenticato;
 \item \textbf{Precondizione:} il sistema è operativo e l'utente ha iniziato ad interfacciarvisi;
 \item \textbf{Scenario principale:}
 \begin{itemize}
 \item l'utente può effettuare la registrazione;
 \item l'utente può effettuare il login e diventare autenticato;
-\item l'utente autenticato può gestire il proprio account;
-\item l'utente autenticato può gestire i processi disponibili;
-\item l'utente autenticato può effettuare il logout diventando utente.
 \end{itemize}
 %\item \textbf{Scenario alternativo:}
 %\item \textbf{Inclusioni:}
-\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni desiderate dall'utente, salvando eventuali modifiche effettuate all'account e ai processi gestiti.
+\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni desiderate dall'utente.
 \end{itemize}
 
 \paragraph{UCU 1: Registrazione}
@@ -100,11 +96,6 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 	\item \textbf{Attori:} utente;
 	\item \textbf{Descrizione:} l'utente può inserire la propria data di nascita;
 	\item \textbf{Precondizione:} l'utente ha richiesto la registrazione e vuole inserire la propria data di nascita;
-	\item \textbf{Scenario principale:}
-	\item \textbf{Scenario alternativo:}
-	\begin{itemize}
-    \item l'utente inserisce una data di nascita futura rispetto alla data di registrazione, quindi viene avvisato con un errore e può inserire la data di nascita corretta.
-    \end{itemize}
 	\item \textbf{Postcondizione:} la data di nascita è stata inserita e il sistema prosegue con la registrazione.
 \end{itemize}
 
@@ -163,18 +154,15 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \subsubsection{UCL 0: Caso base utente autenticato}
 
 \begin{itemize}
-\item \textbf{Attori:} utente, utente autenticato;
+\item \textbf{Attori:} utente autenticato;
 \item \textbf{Descrizione:} l'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
-L'utente non autenticato può registrarsi oppure effettuare il login se è già registrato diventando utente autenticato.
 L'utente autenticato può gestire il proprio account, gestire un insieme di processi ed effettuare il logout, ritornando allo stato di utente non autenticato;
-\item \textbf{Precondizione:} il sistema è operativo e l'utente ha iniziato ad interfacciarvisi;
+\item \textbf{Precondizione:} il sistema è operativo, l'utente autenticato ha iniziato ad interfacciarvisi;
 \item \textbf{Scenario principale:}
 \begin{itemize}
-\item l'utente può effettuare la registrazione;
-\item l'utente può effettuare il login e diventare autenticato;
 \item l'utente autenticato può gestire il proprio account;
 \item l'utente autenticato può gestire i processi disponibili;
-\item l'utente autenticato può effettuare il logout diventando utente.
+\item l'utente autenticato può effettuare il logout diventando utente generico.
 \end{itemize}
 %\item \textbf{Scenario alternativo:}
 %\item \textbf{Inclusioni:}
@@ -424,7 +412,11 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \item l'utente può aprire la lista dei processi a cui non è iscritto;
 \end{itemize}
 %\item \textbf{Scenario alternativo:}
-%\item \textbf{Inclusioni:}
+\item \textbf{Inclusioni:}
+\begin{itemize}
+\item i processi in attesa di terminazione vengono segnalati all'utente;
+\item i nuovi processi vengono segnalati all'utente;
+\end{itemize}
 %\item \textbf{Estensioni:}
 \item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi scelta dall'utente.
 \end{itemize}
@@ -435,12 +427,21 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi in esecuzione, cioè quelli a cui è già iscritto. 
 \item \textbf{Precondizione:} l'utente vuole aprire la lista dei processi a cui è iscritto;
 %\item \textbf{Scenario alternativo:}
-\item \textbf{Inclusioni:} i processi in attesa di terminazione vengono segnalati all'utente;
 %\item \textbf{Estensioni:}
 \item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente è iscritto.
 \end{itemize}
 
-\subparagraph{UCL 2.1.1.1.1: Segnalazione dei processi terminabili}
+\subparagraph{UCL 2.1.1.2: Apertura lista dei processi disponibili}
+\begin{itemize}
+\item \textbf{Attori:} utente autenticato;
+\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto;
+\item \textbf{Precondizione:} l'utente vuole aprire la lista dei processi disponibili;
+%\item \textbf{Scenario alternativo:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
+\end{itemize}
+
+\subparagraph{UCL 2.1.1.3: Segnalazione dei processi terminabili}
 \begin{itemize}
 \item \textbf{Attori:} utente autenticato;
 \item \textbf{Descrizione:} i processi terminati presenti nella lista dei processi in esecuzione, vengono segnalati all'utente. 
@@ -451,18 +452,7 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \item \textbf{Postcondizione:} il sistema ha evidenziato i processi terminabili dall'utente.
 \end{itemize}
 
-\subparagraph{UCL 2.1.1.2: Apertura lista dei processi disponibili}
-\begin{itemize}
-\item \textbf{Attori:} utente autenticato;
-\item \textbf{Descrizione:} l'utente può aprire e visualizzare la lista dei processi disponibili, cioè quelli a cui non è iscritto;
-\item \textbf{Precondizione:} l'utente vuole aprire la lista dei processi disponibili;
-%\item \textbf{Scenario alternativo:}
-\item \textbf{Inclusioni:} i nuovi processi vengono segnalati all'utente;
-%\item \textbf{Estensioni:}
-\item \textbf{Postcondizione:} il sistema ha visualizzato la lista dei processi a cui l'utente non è iscritto.
-\end{itemize}
-
-\subparagraph{UCL 2.1.1.1.1: Segnalazione dei nuovi processi}
+\subparagraph{UCL 2.1.1.4: Segnalazione dei nuovi processi}
 \begin{itemize}
 \item \textbf{Attori:} utente autenticato;
 \item \textbf{Descrizione:} i processi mai aperti dall'utente, vengono segnalati come nuovi. 
@@ -487,7 +477,7 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \subparagraph{UCL 2.1.3: Ricerca di un processo}
 \begin{itemize}
 \item \textbf{Attori:} utente autenticato;
-\item \textbf{Descrizione:} l'utente può ricercare uno insieme dei processi tra tutti quelli a cui può partecipare;
+\item \textbf{Descrizione:} l'utente può ricercare un insieme di processi tra tutti quelli a cui può partecipare;
 \item \textbf{Precondizione:} l'utente vuole cercare un processo tra quelli a cui può partecipare;
 %\item \textbf{Inclusioni:}
 %\item \textbf{Estensioni:}
@@ -890,16 +880,13 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \subparagraph{UCL 2.4.4.5: Visualizzazione dell'esito dell'esecuzione del passo}
 \begin{itemize}
 \item \textbf{Attori:} utente autenticato;
-\item \textbf{Descrizione:} l'utente dopo visualizza l'esito dell'esecuzione del passo. Il sistema notifica all'utente se i dati che ha inviato sono corretti, se non soddisfano i vincoli specificati, o se i dati sono in attesa dell'approvazione dell'amministratore.
-Eventuali errori sui dati vengono specificati all'utente che potrà correggerli e inviarli nuovamente; 
+\item \textbf{Descrizione:} l'utente, dopo l'invio dei dati, visualizza l'esito dell'esecuzione del passo. Il sistema notifica all'utente se i dati che ha inviato sono corretti o se non soddisfano i vincoli di superamento del passo.
+Eventuali errori sui dati vengono specificati all'utente che potrà correggerli e inviarli nuovamente.
+Se inviati dall'utente richiedono approvazione, l'utente viene avvisato tramite una notifica, e dovrà attendere che l'amministratore controlli i dati prima di visualizzare l'esito dell'esecuzione e proseguire con la gestione del processo.
 \item \textbf{Precondizione:} il sistema ha ricevuto i dati richiesti per l'esecuzione del passo gestito dall'utente;
-\item \textbf{Scenario alternativo:}
-\begin{itemize}
-\item i dati inviati dall'utente richiedono approvazione, perciò l'utente viene avvisato tramite una notifica, e dovrà attendere che l'amministratore controlli i dati prima di visualizzare l'esito dell'esecuzione e proseguire con la gestione del processo.
-\end{itemize}
 %\item \textbf{Inclusioni:}
 %\item \textbf{Estensioni:}
-\item \textbf{Postcondizione:} il sistema ha visualizzato l'esito dell'invio dei dati ed è pronto per proseguire la procedura di esecuzione del passo.
+\item \textbf{Postcondizione:} il sistema ha visualizzato l'esito dell'invio dei dati ed è pronto per continuare la procedura di esecuzione del passo.
 \end{itemize}
 
 \subparagraph{UCL 2.4.4.6: Conclusione del passo}
@@ -909,7 +896,6 @@ Eventuali errori sui dati vengono specificati all'utente che potrà correggerli 
 \item \textbf{Precondizione:} il sistema ha approvato i dati inviati dall'utente o il passo gestito è facoltativo;
 %\item \textbf{Scenario alternativo:}
 %\item \textbf{Inclusioni:}
-\item \textbf{Estensioni:} l'utente può saltare un passo facoltativo;
 \item \textbf{Postcondizione:} il sistema ha concluso l'esecuzione del passo gestito e ha aggiornato i dati sulla gestione del processo in esecuzione.
 \end{itemize}
 
