@@ -5,7 +5,21 @@
 \newcommand{\info}{\infoAR}
 \input{../modello/layout.tex}% layout
 
+\setcounter{secnumdepth}{2} % aggiungere numero nei paragrafi e sottoparagrafi
+\setcounter{tocdepth}{5}
+
 \begin{document}
+
+%\iffalse
+\makeatletter
+%\renewcommand{\l@subsection}{\@dottedtocline{1}{1.6em}{4.7em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{1}{3.8em}{4.7em}}
+\renewcommand{\l@paragraph}{\@dottedtocline{1}{3.8em}{4.7em}}
+\renewcommand{\l@subparagraph}{\@dottedtocline{1}{3.8em}{4.7em}}
+\makeatother
+%\fi
+
+
 
 \input{../modello/firstpage.tex}% pagina del titolo
 \input{../modello/info.tex}
@@ -14,8 +28,6 @@
 
 \include{Introduzione}
 \include{DescrizioneGenerale}
-\setcounter{secnumdepth}{5} % aggiungere numero nei paragrafi e sottoparagrafi
-\setcounter{tocdepth}{5}
 \include{UseCaseUtente}
 \include{UseCaseAmministratore}
 
