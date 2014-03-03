@@ -10,12 +10,17 @@
 \input{../modello/firstpage.tex}% pagina del titolo
 \input{../modello/info.tex}
 
+\listoftables
+\listoffigures
 \pagenumbering{arabic}%numeri di pagina  arabi
 
 \include{Introduzione}
 \include{DescrizioneGenerale}
 \hypersetup{bookmarksdepth=2}%negli UC per ogni subsubsection i segnalibri vengono definiti a mano
+\include{UseCase}
 \include{UseCaseUtente}
 \include{UseCaseAmministratore}
 \hypersetup{bookmarksdepth}
+\include{Requisiti}
+\include{Tracciamento}
 \end{document}

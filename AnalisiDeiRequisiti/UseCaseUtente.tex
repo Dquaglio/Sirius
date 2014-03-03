@@ -1,10 +1,14 @@
-\section{Casi d'uso}
-
 \subsection{Ambito utente}
 
 \hypertarget{U0}{}
 \bookmark[dest=U0,level=3]{UCU 0: Caso base utente generico}
 \subsubsection{UCU 0: Caso base utente generico}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/U0}
+\caption{UCU 0: Caso base utente generico}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente;
 \item \textbf{Descrizione:} L'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
@@ -23,6 +27,13 @@ L'utente non autenticato può registrarsi oppure effettuare il login se è già 
 \hypertarget{U1}{}
 \bookmark[dest=U1,level=4]{UCU 1: Registrazione}
 \subsubsection{UCU 1: Registrazione}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
+\textwidth]
+{./grafici/U1}
+\caption{UCU 1: Registrazione}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori:} Utente;
 	\item \textbf{Descrizione:} L'utente può registrarsi inserendo i dati richiesti dal sistema;
@@ -107,6 +118,12 @@ L'utente non autenticato può registrarsi oppure effettuare il login se è già 
 \hypertarget{U2}{}
 \bookmark[dest=U2,level=4]{UCU 2: Login}
 \subsubsection{UCU 2: Login}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/U2}
+\caption{UCU 2: Login}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente;
 \item \textbf{Descrizione:} L'utente può inserire i propri dati d'accesso, ossia lo username e la propria password. Se lo username appartiene all'insieme degli utenti del sistema e la relativa password è corretta, allora l'utente viene autenticato;
@@ -146,6 +163,12 @@ L'utente non autenticato può registrarsi oppure effettuare il login se è già 
 \hypertarget{L0}{}
 \bookmark[dest=L0,level=3]{UCL 0: Caso base utente autenticato}
 \subsubsection{UCL 0: Caso base utente autenticato}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L0}
+\caption{UCL 0: Caso base utente autenticato}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente accede alla pagina principale e, per poter accedere alle principali funzionalità, deve autenticarsi.
@@ -162,9 +185,15 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \item \textbf{Postcondizione:} Il sistema ha eseguito le operazioni desiderate dall'utente, salvando eventuali modifiche effettuate all'account e ai processi gestiti.
 \end{itemize}
 
-\hypertarget{L}{}
+\hypertarget{L1}{}
 \bookmark[dest=L1,level=4]{UCL 1: Gestione dell'account}
 \subsubsection{UCL 1: Gestione dell'account} %opt
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L1}
+\caption{UCL 1: Gestione dell'account}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Descrizione:} L'utente visualizza i dati salvati nel sistema relativi al suo account e può modificarli;
@@ -180,6 +209,12 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \hypertarget{L1.1}{}
 \bookmark[dest=L1.1,level=5]{UCL 1.1: Visualizzazione dei dati dell'utente}
 \subsubsection{UCL 1.1: Visualizzazione dei dati dell'utente}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L11}
+\caption{UCL 1.1: Visualizzazione dei dati dell'utente}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Descrizione:} L'utente può visualizzare i dati salvati nel sistema relativi al suo account;
@@ -243,17 +278,19 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 	\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Descrizione:} L'utente può visualizzare la sua email salvata nel sistema;
 	\item \textbf{Precondizione:} L'utente vuole visualizzare i suoi dati;
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-	 \item L'utente visualizza la propria email.
-	\end{itemize}
 	\item \textbf{Postcondizione:} Il sistema ha visualizzato l'email dell'utente.
 \end{itemize}
 
  
 \hypertarget{L1.2}{}
 \bookmark[dest=L1.2,level=5]{UCL 1.2: Modifica dati utente}
-\subsubsection{UCL 1.2: Modifica dati utente} %opt
+\subsubsection{UCL 1.2: Modifica dati utente}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L12}
+\caption{UCL 1.2: Modifica dati utente}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Descrizione:} L'utente vuole modificare i dati salvati nel sistema relativi al suo account;
@@ -273,8 +310,13 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \hypertarget{L1.2.1}{}
 \bookmark[dest=L1.2.1,level=5]{UCL 1.2.1: Modifica password}
 \subsubsection{UCL 1.2.1: Modifica password}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L121}
+\caption{UCL 1.2.1: Modifica password}
+\end{figure}
 \begin{itemize}
-	\item I\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Attori:} Utente autenticato;
 	\item \textbf{Descrizione:} Per modificare la password d'accesso, l'utente deve inserire la password corrente e la nuova password scelta. Se i dati immessi risultano corretti vengono salvati dal sistema, altrimenti l'errore viene segnalato all'utente che dovrà correggerli;
 	\item \textbf{Precondizione:} L'utente vuole modificare la sua password;
@@ -323,6 +365,12 @@ L'utente autenticato può gestire il proprio account, gestire un insieme di proc
 \hypertarget{L2}{}
 \bookmark[dest=L2,level=4]{UCL 2: Gestione dei processi}
 \subsubsection{UCL 2: Gestione dei processi}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L2}
+\caption{UCL 2: Gestione dei processi}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può scegliere un processo per gestirlo.
@@ -345,6 +393,13 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.1}{}
 \bookmark[dest=L2.1,level=5]{UCL 2.1: Scelta di un processo}
 \subsubsection{UCL 2.1: Scelta di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
+\textwidth]
+{./grafici/L21}
+\caption{UCL 2.1: Scelta di un processo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può selezionare un processo da una lista selezionata o da i risultati di una ricerca;
@@ -363,6 +418,13 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.1.1}{}
 \bookmark[dest=L2.1.1,level=5]{UCL 2.1.1: Apertura di una lista di processi}
 \subsubsection{UCL 2.1.1: Apertura di una lista di processi}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
+\textwidth]
+{./grafici/L211}
+\caption{UCL 2.1.1: Apertura di una lista di processi}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può scegliere e aprire una lista di processi;
@@ -486,6 +548,12 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4}{}
 \bookmark[dest=L2.4,level=5]{UCL 2.4: Esecuzione di un processo}
 \subsubsection{UCL 2.4: Esecuzione di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L24}
+\caption{UCL 2.4: Esecuzione di un processo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare lo stato di avanzamento e i criteri di terminazione del processo e procedere all'esecuzione di un passo;
@@ -506,6 +574,12 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.1}{}
 \bookmark[dest=L2.4.1,level=5]{UCL 2.4.1: Visualizzazione dei criteri di terminazione di un processo}
 \subsubsection{UCL 2.4.1: Visualizzazione dei criteri di terminazione di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L241}
+\caption{UCL 2.4.1: Visualizzazione dei criteri di terminazione di un processo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare i criteri di terminazione del processo selezionato. Questi criteri sono il completamento del processo da parte di un certo numero di utenti ed eventualmente una precisa data di scadenza;
@@ -550,6 +624,12 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.2}{}
 \bookmark[dest=L2.4.2,level=5]{UCL 2.4.2: Visualizzazione dello stato del processo}
 \subsubsection{UCL 2.4.2: Visualizzazione dello stato del processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L242}
+\caption{UCL 2.4.2: Visualizzazione dello stato del processo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare informazioni sullo stato di avanzamento del processo. In particolare può visualizzare il numero di passi completati, il totale dei passi, il numero di utenti che hanno completato il processo e il numero di utenti iscritti al processo;
@@ -634,6 +714,13 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.4}{}
 \bookmark[dest=L2.4.4,level=5]{UCL 2.4.4: Esecuzione di un passo}
 \subsubsection{UCL 2.4.4: Esecuzione di un passo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
+\textwidth]
+{./grafici/L244}
+\caption{UCL 2.4.4: Esecuzione di un passo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare i criteri di terminazione di un passo del processo, inserire i dati richiesti e procedere all'invio dei dati immessi. In seguito all'invio dei dati l'utente riceverà una notifica;
@@ -740,6 +827,14 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.4.3}{}
 \bookmark[dest=L2.4.4.3,level=5]{UCL 2.4.4.3: Inserimento dei dati richiesti}
 \subsubsection{UCL 2.4.4.3: Inserimento dei dati richiesti}
+\iffalse
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L2443}
+\caption{UCL 2.4.4.3: Inserimento dei dati richiesti}
+\end{figure}
+\fi
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può inserire i dati richiesti per l'esecuzione del passo in corso. Può essere richiesto il caricamento di foto, di testo o di dati numerici; 
@@ -759,6 +854,14 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.4.3.1}{}
 \bookmark[dest=L2.4.4.3.1,level=5]{UCL 2.4.4.3.1: Inserimento di un'immagine}
 \subsubsection{UCL 2.4.4.3.1: Inserimento di un'immagine}
+\iffalse
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L24431}
+\caption{UCL 2.4.4.3.1: Inserimento di un'immagine}
+\end{figure}
+\fi
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può inserire un'immagine scattando una foto o caricandola dai propri file;
@@ -829,6 +932,14 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \hypertarget{L2.4.4.4}{}
 \bookmark[dest=L2.4.4.4,level=5]{UCL 2.4.4.4: Invio dei dati richiesti}
 \subsubsection{UCL 2.4.4.4: Invio dei dati richiesti}
+\iffalse
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L2444}
+\caption{UCL 2.4.4.4: Invio dei dati richiesti}
+\end{figure}
+\fi
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può inviare i dati richiesti che possono essere le immagini, il testo e i valori numerici inseriti dall'utente, oppure informazioni sul contesto di invio. In particolare può essere inviata la data, l'ora e la posizione geografica dell'utente al momento dell'invio;
@@ -954,6 +1065,12 @@ Se inviati dall'utente richiedono approvazione, l'utente viene avvisato tramite 
 \hypertarget{L2.4.5}{}
 \bookmark[dest=L2.4.5,level=5]{UCL 2.4.5: Conclusione di un processo}
 \subsubsection{UCL 2.4.5: Conclusione di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L245}
+\caption{UCL 2.4.5: Conclusione di un processo}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare un report dell'esecuzione di un processo terminato o del quale ha eseguito con successo tutti i passi. Può inoltre concluderlo definitivamente, rimuovendolo quindi dalla lista dei processi in esecuzione;
@@ -972,6 +1089,12 @@ Se inviati dall'utente richiedono approvazione, l'utente viene avvisato tramite 
 \hypertarget{L2.4.5.1}{}
 \bookmark[dest=L2.4.5.1,level=5]{UCL 2.4.5.1: Creazione report finale}
 \subsubsection{UCL 2.4.5.1: Creazione report finale}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./grafici/L2451}
+\caption{UCL 2.4.5.1: Creazione report finale}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può visualizzare e salvare un report dell'esecuzione di un processo terminato o del quale ha eseguito con successo tutti i passi. Tale report contiene il responso sull'esecuzione del processo e il riepilogo di tutti i dati inviati dall'utente al sistema durante l'esecuzione dei passi;
@@ -1036,8 +1159,6 @@ Se inviati dall'utente richiedono approvazione, l'utente viene avvisato tramite 
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può disiscriversi da un processo a cui è iscritto;
 \item \textbf{Precondizione:} Il sistema ha aperto la pagina di gestione di un processo e l'utente è iscritto ad esso;
-\item \textbf{Scenario principale:}
-\item L'utente può disiscriversi dal processo gestito;
 %\item \textbf{Scenario alternativo:}
 %\item \textbf{Inclusioni:}
 %\item \textbf{Estensioni:}
