@@ -1,0 +1,180 @@
+\begin{longtable}{lXp{0.14\textwidth}}
+\toprule
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
+\toprule
+FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&Capitolato\\
+\midrule
+FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema &Capitolato\\
+\midrule
+FOBU 1.1.1&L'utente dovrà inserire un \textit{username} composto da almeno 6 caratteri &Interna\\
+\midrule
+FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&Capitolato\\
+\midrule
+FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&Interna\\
+\midrule
+FOBU 1.3&L'utente dovrà inserire il proprio nome&Interna\\
+\midrule
+FOBU 1.4&L'utente dovrà inserire il proprio cognome&Interna\\
+\midrule
+FOBU 1.5&L'utente dovrà inserire la propria data di nascita&Interna\\
+\midrule
+FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&Interna\\
+\midrule
+FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&Interna\\
+\midrule
+FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&Interna\\
+\midrule
+FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&Capitolato\\
+\midrule
+FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&Interna\\
+\midrule
+FOBU 2.2&L'utente dovrà inserire il proprio \textit{username} per autenticarsi&Interna\\
+\midrule
+FOBU 2.3&L'utente dovrà inserire la propria \textit{password} per autenticarsi&Interna\\
+\midrule
+FOPL 3&Il sistema dovrà permettere all'utente autenticato di gestire le proprie credenziali&Interna\\
+\midrule
+FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&Interna\\
+\midrule
+FOPL 3.1.1&L'utente autenticato visualizzerà il proprio \textit{username}&Interna\\
+\midrule
+FOPL 3.1.2&L'utente autenticato visualizzerà il proprio nome&Interna\\
+\midrule
+FOPL 3.1.3&L'utente autenticato visualizzerà il proprio cognome&Interna\\
+\midrule
+FOPL 3.1.4&L'utente autenticato visualizzerà la propria data di nascita&Interna\\
+\midrule
+FOPL 3.1.5&L'utente autenticato visualizzerà la propria \textit{email}&Interna\\
+\midrule
+FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&Interna\\
+\midrule
+FOPL 3.2.1&Il sistema dovrà permettere all'utente autenticato di modificare la propria \textit{password}&Interna\\
+\midrule
+FOPL 3.2.1.1&L'utente autenticato potrà inserire la nuova \textit{password}&Interna\\
+\midrule
+FOPL 3.2.1.2&L'utente autenticato potrà inserire la \textit{password} corrente&Interna\\
+\midrule
+FOPL 3.2.1.3&Il sistema dovrà comunicare all'utente autenticato se la \textit{password} inserita non è corretta&Interna\\
+\midrule
+FOBL 4&Il sistema dovrà permettere all'utente autenticato di gestire i processi disponibili&Capitolato\\
+\midrule
+FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&Capitolato\\
+\midrule
+FOBL 4.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire una lista di processi&Capitolato\\
+\midrule
+FOBL 4.1.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi in esecuzione&Capitolato\\
+\midrule
+FOBL 4.1.1.2&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi disponibili&Capitolato\\
+\midrule
+FDEL 4.1.1.3&L'utente autenticato riceverà da parte del sistema la segnalazione di processi terminabili&Interna\\
+\midrule
+FDEL 4.1.1.4&L'utente autenticato riceverà da parte del sistema la segnalazione dei nuovi processi disponibili&Interna\\
+\midrule
+FOBL 4.1.2&L'utente autenticato potrà selezionare un processo dalla lista di processi aperta&Capitolato\\
+\midrule
+FDEL 4.1.3&Il sistema dovrà permettere all'utente autenticato di ricercare dei processi fra tutti quelli a cui può partecipare&Interna\\
+\midrule
+FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&Interna\\
+\midrule
+FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&Capitolato\\
+\midrule
+FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&Capitolato\\
+\midrule
+FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&Capitolato\\
+\midrule
+FOBL 4.4.1.1&L'utente autenticato potrà visualizzare il numero di completamenti del processo necessari e sufficienti a causarne la terminazione&Interna\\
+\midrule
+FOBL 4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale data di scadenza del processo selezionato&Capitolato\\
+\midrule
+FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&Interna\\
+\midrule
+FOBL 4.4.2.1&L'utente autenticato potrà visualizzare il numero di passi già completati del processo selezionato&Interna\\
+\midrule
+FOBL 4.4.2.2&L'utente autenticato potrà visualizzare il numero di totale dei passi del processo selezionato&Interna\\
+\midrule
+FOBL 4.4.2.3&L'utente autenticato potrà visualizzare il numero di utenti autenticati che hanno già terminato il processo selezionato&Interna\\
+\midrule
+FOBL 4.4.2.4&L'utente autenticato potrà visualizzare il numero di utenti iscritti al processo selezionato&Interna\\
+\midrule
+FOBL 4.4.3&L'utente autenticato potrà visualizzare la lista dei passi in corso, cioè quelli iniziali o quelli immediatamente successivi agli ultimi passi superati &Interna\\
+\midrule
+FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&Capitolato\\
+\midrule
+FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&Capitolato\\
+\midrule
+FOBL 4.4.4.1.1&L'utente autenticato potrà visualizzare la descrizione del passo in esecuzione&Interna\\
+\midrule
+FOBL 4.4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale nome dei dati del passo esecuzione&Interna\\
+\midrule
+FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&Capitolato\\
+\midrule
+FOBL 4.4.4.2.1&L'utente autenticato potrà visualizzare se il passo in esecuzione richiede l'approvazione dell'amministratore per essere concluso&Verbale 2014-02-03\\
+\midrule
+FOBL 4.4.4.2.2&L'utente autenticato potrà visualizzare i vincoli sui dati geografici richiesti&Capitolato\\
+\midrule
+FOBL 4.4.4.2.2.1&L'utente autenticato potrà visualizzare la posizione in cui dovrà trovarsi durante l'invio dei dati del passo in esecuzione&Capitolato\\
+\midrule
+FOPL 4.4.4.2.2.2&L'utente autenticato potrà visualizzare l'eventuale raggio di tolleranza rispetto alla posizione geografica richiesta per l'esecuzione del passo&Interna\\
+\midrule
+FOBL 4.4.4.2.3&L'utente autenticato potrà visualizzare l'eventuale intervallo temporale in cui può inviare i dati&Interna\\
+\midrule
+FDEL 4.4.4.2.4&L'utente autenticato potrà visualizzare i vincoli sui dati numerici&Interna\\
+\midrule
+FOPL 4.4.4.2.4.1&L'utente autenticato potrà visualizzare il numero minimo e massimo di cifre dei valori numerici richiesti&Interna\\
+\midrule
+FDEL 4.4.4.2.4.2&L'utente autenticato potrà visualizzare se i valori numerici richiesti possono contenere cifre decimali&Interna\\
+\midrule
+FOPL 4.4.4.2.4.3&L'utente autenticato potrà visualizzare l'eventuale limite superiore e inferiore dei valori numerici richiesti&Interna\\
+\midrule
+FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+\midrule
+FOBL 4.4.4.3.1&Il sistema dovrà permettere all'utente autenticato l'inserimento di una immagine richiesta&Capitolato\\
+\midrule
+FDEL 4.4.4.3.1.1&Il sistema dovrà permettere all'utente autenticato di scattare una foto per inserire l'immagine richiesta&Interna\\
+\midrule
+FOBL 4.4.4.3.1.2&Il sistema dovrà permettere all'utente autenticato di inserire una immagine caricandola dai suoi file&Capitolato\\
+\midrule
+FOBL 4.4.4.3.2&L'utente può inserire dati testuali richiesti dal passo in esecuzione&Capitolato\\
+\midrule
+FOBL 4.4.4.3.3&Il sistema dovrà permettere all'utente autenticato di inserire dati numerici richiesti dal passo in esecuzione&Capitolato\\
+\midrule
+FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+\midrule
+FOBL 4.4.4.4.1&L'utente autenticato potrà inviare al sistema i dati dati testuali inseriti&Capitolato\\
+\midrule
+FOBL 4.4.4.4.2&L'utente autenticato potrà inviare al sistema le immagini inserite&Capitolato\\
+\midrule
+FOBL 4.4.4.4.3&L'utente autenticato potrà inviare al sistema i dati numerici inseriti&Capitolato\\
+\midrule
+FOBL 4.4.4.4.4&L'utente autenticato potrà inviare al sistema le coordinate della sua posizione&Capitolato\\
+\midrule
+FOBL 4.4.4.4.5&L'utente autenticato potrà inviare al sistema la data e ora al momento della richiesta di invio dati&Capitolato\\
+\midrule
+FOPL 4.4.4.4.6&Il sitema dovrà permettere all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&Capitolato\\
+\midrule
+FOPL 4.4.4.4.6.1&Il sitema, in assenza di connessione, dovrà permettere all'utente autenticato di salvare i dati richiesti dal passo esecuzione&Capitolato\\
+\midrule
+FOPL 4.4.4.4.6.2&Il sistema, in presenza di connessione, dovrà permettere all'utente autenticato di inviare i dati precedentemente salvati&Capitolato\\
+\midrule
+FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&Verbale 2014-02-03\\
+\midrule
+FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dall'amministratore&Capitolato\\
+\midrule
+FOPL 4.4.4.7&Il sistema dovrà permettere all'utente autenticato di saltare il passo in esecuzione se facoltativo&Capitolato\\
+\midrule
+FOBL 4.4.5&Il sistema dovrà permettere all'utente autenticato di concludere un processo terminato o del quale ha eseguito tutti i passi&Capitolato\\
+\midrule
+FOPL 4.4.5.1&Il sistema dovrà permettere all'utente autenticato la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi&Capitolato\\
+\midrule
+FOPL 4.4.5.1.1&Il sistema dovrà permettere all'utente autenticato di visualizzare il report finale creato&Capitolato\\
+\midrule
+FOPL 4.4.5.1.2&Il sistema dovrà permettere all'utente autenticato di salvare in formato \textit{PDF\ped{G}} il report finale creato&Capitolato\\
+\midrule
+FOBL 4.4.5.2&Il sistema dovrà permettere all'utente autenticato di eliminare un processo un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&Capitolato\\
+\midrule
+FOBL 4.5&Il sistema dovrà permettere all'utente autenticato di disiscriversi da un processo a cui è iscritto&Capitolato\\
+\midrule
+FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&Capitolato\\
+\bottomrule
+\caption{Tabella dei requisiti utente}
+\end{longtable}

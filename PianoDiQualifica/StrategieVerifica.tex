@@ -1,0 +1,135 @@
+\section{Visione generale della strategia di verifica}
+\subsection{Introduzione}
+Il team \gruppo ~ha deciso di porre al centro di ogni fase l'attivit\'a di verifica in quanto essa certifica la qualit\'a del prodotto. L'attivit\'a di verifica sar\'a continua in tutte le fasi del progetto.\\
+\subsection{Risorse}
+\subsubsection{Risorse umane e responsabilit\'a}
+Il responsabile delle relazioni con il committente \'e il \textit{Responsabile di Progetto} il quale \'e responsabile anche dell'operato dei \textit{Verificatori}. Mentre i \textit{Verificatori} sono a loro volta responsabili delle attivit\'a di verifica e delle procedure di controllo qualit\'a . Il \textit{Verificatore}, inoltre, avr\'a un ruolo attivo in tutto il ciclo di vita del prodotto software, ma esso dovr\'a evitare di influire in modo troppo pesante sui processi software per evitare un rapporto costi/benefici troppo elevato. Compito dell' \textit{Amministratore} \'a quello di supporto a tutte le attivit\'a fornendo una solida infrastruttura software anche per il processo di verifica in ogni fase lavorativa.
+Per una descrizione pi\'u approfondita di ruoli e responsabilit\'a si rimanda a \infoNDP.\\
+\subsubsection{Risorse software}
+Al fine di effettuare la fase di verifica e validazione nel podo più sistematico possibile sono stati messi a disposizione di tutti i \textit{Verificatori} dall' \textit{Amministratore} un pacchetto di prodotti software il pi\'u specifico possibile rispetto alle esigenze del team. Inoltre, \'e sempre compito dell' \textit{Amministratore} formare ogni verificatore all'utilizzo dei prodotti che permettano la verifica, evidenziando, se richiesto le funzionalit\'a non utilizzate per ogni prodotto. \gruppo{} ha deciso di adottare questo tipo di formazione per valorizzare il lavoro di chi effettivamente utilizza i prodotti di verifica, dando la possibilit\'a che proprio da queste figure nascano idee e proposte di miglioramento che saranno poi valutate dal \textit{Responsabile di progetto} congiuntamente all'\textit{Amministratore}.
+Per tutti i riferimenti relativi ai software da utilizzare si rimanda a \infoNDP.
+\subsection{Organizzazione}
+Il processo di qualifica accompagner\'a tutte le fasi di ciclo di vita del software. Ogni procedura di verifica sar\'a schedulata attraverso appositi strumenti e i risultati saranno analizzati in questo documento. Tramite il diario delle modifiche \'e possibile tenere traccia dell'attivit\'a di verifica effettuata ed operare delle verifiche circoscritte ai soli cambiamenti.
+\gruppo ~ha deciso di adottare una politica per lo sviluppo del progetto a ciclo di vita incrementale; tale scelta ha portato ad organizzare le attività di verifica nei periodi temporali antecedenti le revisioni.
+\subsection{Pianificazione strategica generale}
+Al fine di rispettare in modo ristretto le scadenze citate di seguito e spiegate in modo approfondito in \infoPDP, \gruppo ~ha deciso di pianificare in modo approfondito e sistematico l'attivit\'a di verifica. Facendo in modo di rilevare e risolvere nel pi\'u breve tempo possibile gli errori che vengono rilevati per evitare che questi possano creare maggiori problematiche nell' avanzamento del prodotto software. Le scadenze sono di due tipi:
+\begin{itemize}
+\item Scadenze formali
+\begin{itemize}
+\item Revisione dei requisiti (RR): \textit{2014-03-05};
+\item Revisione di accettazione (RA): \textit{2014-07-18}.
+\end{itemize}
+\item Scadenze di avanzamento
+\begin{itemize}
+\item Revisione di progettazione (RP): \textit{2014-04-02};
+\item Revisione di qualifica (RQ): \textit{2014-07-02}.
+\end{itemize}
+\end{itemize}
+\subsubsection{Descrizione della procedura di pianificazione adottata}
+Per gestire al meglio la pianificazione, \gruppo ~prevede l'attivit\'a di verifica in tutti e quattro i periodi di avanzamento del prodotto, che sono paralleli alle scadenze definite in \infoPDP.
+\begin{itemize}
+\item \textbf{Analisi}: in questa prima fase il compito del \textit{Verificatore} \'e innanzitutto relativo alla documentazione e alla correttezza del tracciamento dei requisiti. Ogni documento che servir\'a per la consegna della RR, una volta ultimata la fase di redazione, verr\'a verificato in modo definitivo seguendo la procedura cos\'i definita:
+\begin{enumerate}
+\item Verr\'a controllata la correttezza dei contenuti rispetto alle aspettative del documento tramite una rilettura accurata;
+\item Verr\'a controllata la correttezza grammaticale;
+\item Verr\'a controllato che il documento rispetti le norme definite in \infoNDP ~tramite la lista di controllo presente in tale documento.
+\item Verr\'a verificato che ogni requisito funzionale rilevato abbia una corrispondenza in almeno un caso d'uso e che questo sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare;
+\item Verr\'a verificato che ogni requisito di vincolo e di qualit\'a sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare.
+\end{enumerate}
+\item \textbf{Progettazione}: il \textit{Verificatore} ha l'importante compito di controllare il soddisfacimento dei requisiti indicati in fase di analisi, oltre ad una continua analisi della forma e correttezza dei relativi documenti redatti o modificati;
+\item \textbf{Programmazione}: il \textit{Verificatore} provveder\'a a controlli periodici e pianificati di porzioni di codice, inizialmente di tipo statico per poi passare a dei controlli di tipo dinamico per valutare la correttezza del software;
+\item \textbf{Collaudo}: in questa fase le verifiche saranno esclusivamente di tipo dinamico per garantire che il prodotto risponda a tutti i requisiti indicati e a tutte le richieste del committente: sia implicite che esplicite.
+\end{itemize}
+Per i diversi periodi l'attivit\'a di verifica sar\'a diversa in base alla tipologia di lavoro svolta. Essa verter\'a sulla verifica della documentazione all'analisi del prodotto software garantendo che il risultato sia efficace\ped{G} rispetto alla procedura analizzata, non perdendo di efficienza\ped{G} contrattuale. 
+\subsubsection{Slack}
+\gruppo, conscio della poca esperienza nella pianificazione e gestione di progetti di questo tipo, ha deciso di inserire degli \textit{slack}\ped{G} temporale durante la pianificazione delle attivit\'a. Tale scelta \'e approfondita in \infoNDP ~che ne definisce la quanti\'a e in \infoPDP ~che ne analizza le motivazioni.
+L'aggiunta di slack temporali, oltre a portare al progetto una pianificazione pi\'u precisa, comporta un aumento dei costi che \'e per\'o commisurato all'aumento della qualit\'a finale.
+\subsection{Obiettivi}
+Per definire degli obiettivi misurabili \gruppo ~ha deciso di partire dalle caratteristiche principale che deve avere la documentazione prodotta:
+\begin{itemize}
+\item \textbf{Completezza}: tutti di documenti devono fornire tutte le informazioni da esso descritte;
+\item \textbf{Correttezza}: non devono esserci ambiguità od errori;
+\item \textbf{Consistenza}: non vi devono essere contraddizioni nella documentazione ogni termine usato deve avere lo stesso significato in ogni documento allegato;
+\item \textbf{Comprensibilit\'a}: ogni documento deve essere facilmente comprensibile;
+\item \textbf{Apprendibilit\'a}: deve facilitare l’apprendimento d'uso e le revisioni del prodotto.
+\end{itemize}
+\gruppo{} ha deciso di definire obiettivi di accettazione che siano misurabili raggiungibili e ben definiti. Ognuno di questi obiettivi verr\'a valutato al termine del processo di verifica per avere dei risultati da analizzare. La valutazione dei risultati ottenuti \'e molto importante, soprattuto nei primi momenti di creazione del gruppo, in quanto questo deve essere un punto di partenza per modificare, creare o ridefinire le procedure in modo da evitare il ripercuotersi sistematico degli errori.
+Le metriche definite in seguito serviranno a valutare i seguenti parametri:
+\begin{itemize}
+\item Livello di maturit\'a del processo;
+\item Indice di \textit{Gulpease} dei documenti: che valuter\'a il livello di complessit\'a dei documenti;
+\item Numero di procedure riviste: che sar\'a proporzionale al livello di maturit\'a raggiunto;
+\item Analisi dello scostamento tra SV e BV: valorizzando l'analisi del \textit{lead time} da parte dell' \textit{Amministratore di progetto}.
+\end{itemize}
+\section{Strumenti, Tecniche e Metodi}
+Il processo di verifica deve essere \textbf{preciso}, \textbf{definito} e \textbf{quantificabile}.
+\subsection{Strumenti}
+Al momento sono disponibili solamente strumenti per la verifica della documentazione redatta. Gli strumenti utilizzati sono i seguenti:
+\begin{itemize}
+\item \textit{Texmaker}: che \'e lo strumento che \gruppo ~ha deciso di utilizzare per la stesura dei testi in latex, integra un pacchetto di che si occupa del controllo sintattico dei termini;
+\item \textit{Aspell}: strumento tramite la quale \gruppo ~verificher\'a la correttezza grammaticale dei documenti;
+\item \textit{Tracciamento}: \gruppo ~ha reso disponibile un applicativo per il tracciamento dei requisiti, questo per evitare che in fase di analisi vengano tralasciati requisiti richiesti esplicitamente o implicitamente dal capitolato del committente;
+\item \textit{Checklist}: al termine delle prime verifiche dei documenti, \gruppo ~ha rilevato particolari errori ricorrenti e ha deciso di stendere una checklist di verifica dei documenti.
+\end{itemize}
+Per lo studio della scelta e le specifiche tecniche si rimanda a \infoNDP. 
+\subsection{Tecniche}
+Le tecniche per l'analisi statica e dinamica del prodotto saranno definite al momento della pianificazione dell'attivit\'a che le utilizza.
+\subsubsection{Inspection}
+Questa tecnica, di analisi statica, consiste nella verifica di sezioni ben definite di un documento o del codice. Questo tipo di controlli per i documenti sono usualmente definiti tramite una lista di controllo (checklist) redatta anticipatamente rispetto all'attivit\'a di verifica da intraprendere. Per la verifica dei documenti, la lista di controllo \'e stata elaborata a seguito di analisi eseguite tramite \textit{walkthrough}, ed evidenziando gli errori più ricorrenti riscontrati.
+\subsubsection{Walkthrough}
+Walkthrough \'e una tecnica di analisi statica che consiste nella lettura critica a largo raggio di tutto il documento. In questa tipologia di analisi il \textit{Verificatore} utilizza molto tempo per la lettura e correzione del documento o codice. Questa tecnica viene di solito utilizzata nella prima parte dello sviluppo di progetti in quanto, la poca esperienza del \textit{Verificatore} non permette un'altro tipo di verifica. Al termine di questo primo set di analisi \textit{walkthrough} viene usualmente definita una lista di controllo che permetta di ricercare in primo luogo gli errori pi\'u ricorrenti, e maggiormente riscontrati.
+\subsection{Misure e metriche}
+I dati rilevati dal processo di verifica devono essere analizzati tramite precise metriche.
+Con questo termine si intende l'insieme di parametri misurabili su un processo. Qualora le metriche definite in questo documento siano approssimative e/o ambigue, queste dovranno essere ridefinite in modo specifico e seguiranno in modo incrementale il ciclo di vita del prodotto.
+Per ogni metrica sono definiti due diverse tipologie di intervalli:
+\begin{itemize}
+\item Accettazione: intervallo di valori affinché il prodotto sia accettato;
+\item Ottimale: all'interno dell'intervallo di accettazione viene definito l'intervallo ottimale all'interno del quale si dovrebbe posizionare la misurazione effettuata. Tale intervallo non \'e vincolante ma fortemente consigliato.
+\end{itemize}
+\subsubsection{Metriche per i processi}
+Le metriche dei processi ne stabiliscono la qualit\'a che \'e definita come connubio di \textit{capability}\ped{G}, \textit{maturity}\ped{G} e i miglioramenti. Queste caratteristiche di qualit\'a si possono individuare in tre classi di misure di processo:
+\begin{itemize}
+\item \textbf{Tempo}: il tempo richiesto per il completamento di un particolare processo;
+\item \textbf{Risorse}: le risorse richieste per un particolare processo, in genere vengono definite risorse-uomo, per le risorse software si fa riferimento a \infoNDP;
+\item \textbf{Occorrenze}: il numero di volte che capita un particolare evento, che pu\'o essere il numero di difetti scoperti durante l'attivit\'a di verifica.
+\end{itemize}
+Per rilevare questi dati \gruppo{} ha deciso di utilizzare, per il controllo dei processi, indici che valutano i tempi e i costi del processo. La scelta di queste metriche \'e dettata anche dal loro possibile utilizzo anche durante lo svolgimento del processo, per capire in modo semplice se lo stato del processo \'e conforme a quanto pianificato, mantenendo quindi il processo in controllo. In \infoPDP ~viene specificato come sono stati pianificati questi indici nello stato di avanzamento.
+\begin{itemize}
+\item \textbf{(SV) \textit{Schedule Variance}, in ore}\\
+Indica se si è in linea, in anticipo o in ritardo rispetto alla pianificazione temporale delle
+attività citata in \infoPDP.
+È un indicatore di efficacia.
+Se SV $>$ 0 significa che il gruppo di lavoro sta producendo con maggior velocit\'a rispetto a quanto pianificato, viceversa se negativo.\\
+Parametri utilizzati:
+\begin{itemize}
+\item Accettazione: [$>$-(ore preventivo fase x5\%)];
+\item Ottimale: [$>$0].
+\end{itemize}
+
+\item \textbf{(BV) \textit{Budget Variance} in euro}\\
+Indica se allo stato attuale si \'e speso pi\'u o meno rispetto a quanto pianificato.
+È un indicatore che ha valore contabile e finanziario.
+Se BV $>$ 0 significa che l’attuazione del progetto sta consumando il proprio budget con minor velocit\'a rispetto a quanto pianificato, viceversa se negativo.
+Parametri utilizzati:\\
+\begin{itemize}
+\item Accettazione: [$>$-(costo preventivo fase x10\%)];
+\item Ottimale: [$>$0].
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Metriche per i documenti}
+Come metrica per la verifica dei documenti \gruppo{} ha deciso di utilizzare l’indice di leggibilit\'a.
+Vi sono a disposizione molti indici di leggibilit\'a, ma i più importanti sono per la lingua inglese. Si \'e deciso quindi di adottare un indice di leggibilit\'a per la lingua italiana.
+L’indice \textit{Gulpease} \'e un indice di leggibilit\'a di un testo tarato sulla lingua italiana. Rispetto ad altri indici, esso ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzich\'e in sillabe, semplificandone il calcolo automatico. Permette di misurare la complessit\'a dello stile di scrittura di un documento.
+L’indice viene calcolato utilizzando la formula citata nelle \infoNDP~.
+I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilit\'a più alta e 0 la leggibilit\'a pi\'u bassa. In generale risulta che testi con un indice:
+\begin{itemize}
+\item Inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+\item Inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+\item Inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+\end{itemize}
+Parametri utilizzati:
+\begin{itemize}
+\item Accettazione: [40-100];
+\item Ottimale: [50-100].
+\end{itemize}

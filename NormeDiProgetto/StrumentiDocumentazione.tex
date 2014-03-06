@@ -1,0 +1,54 @@
+\section{Strumenti per la documentazione}
+\subsection{LaTeX}
+Per la stesura dei documenti il team \gruppo{} ha deciso di adottare il linguaggio di markup\ped{G} \LaTeX la scelta è stata effettuata prevalentemente per le seguenti ragioni:
+\begin{itemize}
+\item Facilità di separazione tra contenuto
+e formattazione;
+\item Possibilità di definire macro ed incorporare scripts;
+\item Software open source;
+\item Grande quantità di pacchetti disponibili, possibilità quindi di implementare semplicemente le funzionalità comuni.
+\end{itemize}
+Gli altri software valutati (Open office, Microsoft Office, Google Docs) non erano in grado di fornire il più delle sopracitate funzionalità, di conseguenza sono stati scartati. Inoltre come editor è consigliato ma non obbligato l'uso di TeXstudio.
+
+\subsection{Macros}
+Al fine di velocizzare il lavoro di stesura documenti, il team \gruppo{} ha deciso di creare delle apposite macro, qui vengono riportate le principali assieme ad una breve spiegazione delle loro funzionalità:
+\begin{itemize}
+\item \verb+\+gruppo riporta il nome del team \gruppo;
+\item \verb+\+progetto riporta il nome del progetto: \progetto;
+\item \verb+\+lastversion+sigla-del-documento riporta il nome del documento che appare in sigla (NDP, AR, etc..) aggiornato alla versione più recente.
+
+\end{itemize}
+\subsection{Scripts}
+Al fine di implementare una funzionalità quale l'inserimento automatico dei pedici in tutte le parole dei documenti formali che comparivano anche nel glossario, è stato creato uno script apposito in Pyton\ped{G}. Tale script può essere essere eseguito solamente con una versione di Pyton non superiore alla 2.7.6.
+Per il corretto funzionamento dello script il glossario è stato organizzato tramite tag \LaTeX elemento{"parola del glossario"}, la definizione è riportata a capo-riga rispetto alla suddetta parola. 
+
+\subsection{Correttezza}
+\subsubsection{Correttezza ortografica}
+Per evitare di compiere errori di tipo ortografico devono essere adottate due precauzioni:
+\begin{itemize}
+\item Verifica delle parole durante la stesura stessa del documento tramite lo spell checker\ped{G} di TeXstudio;
+\item Verifica finale tramite lo spell checker Aspell.
+\end{itemize}
+Lo spell checker di TeXstudio è una sua feature\ped{G} molto utile che sfrutta dizionari Open Office per sottolineare eventuali parole scorrette, dizionari sufficientemente completi che assicurano quindi un grado piuttosto elevato di correttezza già durante la stesura del testo. \\
+Al fine poi di assicurarsi il massimo grado possibile di correttezza viene effettuata una verifica ulteriore tramite il software open source GNU Aspell
+(\href{http://www.aspell.net/}{www.aspell.net}).
+ 
+\subsubsection{Lista controllo errori}
+Il team ha stilato una lista di controllo al fine di riassumere gli errori più ricorrenti in ogni documento, i suddetti saranno catalogati e descritti nella seguente sezione.
+\subsubsection{Errori stilistici e di punteggiatura}
+I principali errori rilevati sono i seguenti:
+\begin{itemize}
+\item Le figure di rilievo non vengono scritte in corsivo;
+\item Negli elenchi puntati la prima parola non compare con la prima lettera maiuscola;
+\item Negli elenchi puntati alcuni elementi centrali non terminano con un punto e virgola ma con un punto fermo;
+\item Alcune date vengono erroneamente scritte senza seguire lo standard \textbf{ISO G 8601:2004};
+\item La parola LaTeX compare senza l'utilizzo del comando \verb+\+LaTeX (\LaTeX).
+\end{itemize}
+\subsubsection{Errori ortografici e di sintassi}
+\begin{itemize}
+\item La è accentata compare (erroneamente) come una e apostrofata;
+\item Utilizzando le seguenti macro \verb+\+gruppo e \verb+\+progetto, le quali scrivono testualmente e rispettivamente il nome del team ed il nome del capitolato, non compaiono separate dalla parola successiva, anche se la spaziatura è presente;
+\item Non viene utilizzata (erroneamente) la terza persona per la stesura dei documenti.
+\end{itemize}
+\subsection{UML}
+Per la modellazione dei diagrammi User Case (UC\ped{G}) sono stati presi in considerazione tre editor: Dia, Microsoft Visio, Astah. Infine il team ha optato per adottare Astah come strumento definitivo in quanto si tratta di un software open source, con supporto di Unified Modeling Language (UML\ped{G}) 2.x  e secondo l'analisi del team dotato di un interfaccia più responsiva ed intuitiva degli altri software.

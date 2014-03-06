@@ -1,0 +1,59 @@
+\section{Descrizione generale}
+
+\subsection{Contesto d'uso del prodotto}
+Lo scopo del progetto \progetto{}, è di fornire un servizio di gestione di processi definiti da una serie di passi da eseguirsi in sequenza o senza un ordine predefinito.\\
+Il sistema dovrà consentire la creazione di tali processi, e la loro esecuzione da parte di utenti dotati di dispositivo mobili di tipo \textit{smartphone} o \textit{tablet}, ricevendo da questi la richiesta di completamento di un passo del processo accompagnata da vari dati.\\
+Il sistema dovrà essere in grado di determinare se il passo è stato eseguito con successo o meno in base ai dati forniti.
+
+\subsection{Funzionalità del prodotto}
+Il prodotto dovrà fornire un'interfaccia utilizzabile dagli utenti atta alla gestione ed esecuzione di processi, ed un'altra dedicata al solo amministratore, tramite cui potrà creare dei processi e monitorarne l'esecuzione da parte degli utenti.\\
+Le principali funzionalità dedicate agli utenti, saranno fruibili ai soli utenti autenticati, perciò dovrà essere consentita la registrazione e l'autenticazione al sistema.\\
+Agli utenti autenticati sarà permesso di:
+
+\begin{itemize}
+\item Visualizzare informazioni sui processi disponibili;
+\item Effettuare l'iscrizione ad un processo disponibile;
+\item Gestire i processi a cui sono iscritti:
+\begin{itemize}
+\item Visualizzare lo stato di avanzamento dei processi;
+\item Visualizzare i criteri di superamento dei passi in corso;
+\item Inserire eventuali dati richiesti;
+\item Inviare i dati richiesti.
+\end{itemize}
+\end{itemize}
+
+L'amministratore, tramite un'interfaccia dedicata, potrà:
+
+\begin{itemize}
+\item Creare nuovi processi:
+\begin{itemize}
+\item Definire nome e descrizione di nuovo processo;
+\item Creare i passi del nuovo processo:
+\begin{itemize}
+\item Definire i dati che dovranno essere inseriti o raccolti;
+\item Definire le condizioni di avanzamento del passo;
+\item Definire se il passo può essere saltato.
+\end{itemize}
+\item Definire i criteri di terminazione dell'intero processo.
+\end{itemize}
+\item Gestire i processi precedentemente creati:
+\begin{itemize}
+\item Ottenere informazioni sul loro avanzamento;
+\item Concedere il diritto di inscrizione al processo a determinati utenti;
+\item Consultare la raccolta dei dati inviati dagli utenti;
+\item Far avanzare passi che richiedono intervento umano.
+\end{itemize}
+\end{itemize}
+
+\subsection{Caratteristiche degli utenti}
+Il programma è rivolto principalmente ad utenti con conoscenze di base nell'utilizzo di \textit{smartphone} o \textit{tablet}.\\
+L'uso dell'interfaccia richiede competenze informatiche di base, in particolare riguardanti l'utilizzo di un \textit{browser\ped{G}}.
+
+\subsection{Vincoli generali}
+Il progetto dovrà rispettare i seguenti vincoli generali:
+\begin{itemize}
+\item utilizzo di una componente \textit{server\ped{G}} sviluppata con il linguaggio \textit{Java\ped{G}};
+\item utilizzo dei linguaggi \textit{HTML5\ped{G}}, \textit{Javascript\ped{G}} e \textit{CSS\ped{G}} per lo sviluppo dell'interfaccia;
+\item utilizzo di un \textit{browser\ped{G}} per interagire con l'interfaccia utente;
+\item accessibilità dell'interfaccia utente da \textit{smartphone} e \textit{tablet}.
+\end{itemize}
