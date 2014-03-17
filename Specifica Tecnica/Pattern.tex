@@ -1,0 +1,110 @@
+\section{Design pattern}
+
+\subsection{Design pattern architetturali}
+
+\subsubsection{Model View Presenter}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} architetturale \textit{Model View Presenter} (MVP) è un derivato del \textit{Model View Controller} (MVC), focalizzato sulla valorizzazione della logica della presentazione. Entrambi i pattern hanno lo sopo di disaccoppiare la logica dell'applicazione dalla rappresentazione grafica.\\
+Il \textit{pattern\ped{G}} MVP prevede la suddivisione dell'applicazione in tre componenti:
+\begin{itemize}
+\item \textbf{Model:} Definisce il modello dati e le regole di accesso e di modifica;
+\item \textbf{View:} Si occupa della rappresentazione dell'interfaccia utente;
+\item \textbf{Presenter:} Contiene la logica dell'applicazione, si occupa delle comunicazioni tra vista e modello e dell'aggiornamento della vista.
+\end{itemize}
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsection{Design pattern strutturali}
+\subsubsection{Adapter}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} strutturale \textit{Adapter} permette di utilizzare un componente software la cui interfaccia deve essere adattata per potersi integrare ad un'altra presente nell'applicazione esistente.\\
+Tale \textit{pattern\ped{G}} può essere basato sia su classi che su oggetti, perciò, l'istanza della classe da adattare, può derivare tramite ereditarietà o composizione.
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Decorator}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} strutturale \textit{Decorator} permette di aggiungere dinamicamente funzionalità ad un oggetto base, con la possibilità di comporle arbitrariamente.\\
+Tale \textit{pattern\ped{G}} si pone come alternativa all'uso dell'ereditarietà singola o multipla;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Facade}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} strutturale \textit{Facade} prevede l'utilizzo di un'interfaccia unica e semplice per un sottosistema complesso, diminuendo la complessità del sistema;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Proxy}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} strutturale \textit{Proxy} viene utilizzato per accedere ad un un oggetto complesso di cui si vogliono controllare gli accessi, tramite un oggetto semplice, che espone gli stessi metodi dell'oggetto che maschera;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsection{Design pattern creazionali}
+\subsubsection{Singleton}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} creazionale \textit{Singleton} viene utilizzato quando si ha la necessità di avere una sola istanza di una classe e di avere un punto di accesso globale ad essa;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Abstract Factory}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} creazionale \textit{Abstract Factory} fornisce un'interfaccia per creare famiglie di prodotti senza specificare classi concrete. Le classi che concretizzano tale interfaccia, vengono costruite una sola volta, e consentono di utilizzare una varietà di elementi che presentano le stesse funzionalità con diverse implementazioni;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsection{Design pattern comportamentali}
+\subsubsection{Command}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} comportamentale \textit{Command} permette di separare l'invocazione di un comando dai suoi dettagli implementativi;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Iterator}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} comportamentale \textit{Iterator} fornisce l'accesso sequenziale agli elementi di un aggregato senza esporne l'implementazione;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Observer}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} comportamentale \textit{Observer} viene utilizzato quando si vuole realizzare una dipendenza tra un soggetto e più oggetti, in cui il cambiamento di stato del un soggetto, viene notificato a tutti gli oggetti dipendenti;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Strategy}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} comportamentale \textit{Strategy} viene utilizzato per definire una famiglia di algoritmi, incapsularli e renderli intercambiabili;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
+
+\subsubsection{Template method}
+\begin{itemize}
+\item \textbf{Scopo:}
+Il \textit{pattern\ped{G}} comportamentale \textit{Template method} viene utilizzato per definire lo scheletro di un algoritmo, lasciando l'implementazione di alcuni passi alle sottoclassi. In particolare consente di specificare l'ordine delle operazioni da effettuare ma di delegare la loro implementazione o parte di essa alle sottoclassi;
+
+\item \textbf{Contesto d'uso:}
+\end{itemize}
