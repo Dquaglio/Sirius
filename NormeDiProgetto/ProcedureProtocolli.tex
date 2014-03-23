@@ -1,23 +1,6 @@
-\section{Processo di sviluppo dell'applicazione}
-\subsection{Gestione di progetto}
-Al fine di gestire rigorosamente lo sviluppo del progetto il team \gruppo{} ha adottato l'utilizzo del software \textit{TeamWorkPM} (\href{http://www.teamwork.com}{www.teamwork.com}), tale strumento fornisce le seguenti funzionalità:
-
-\begin{itemize}
-\item Creazione di \textit{ticket\ped{G}}, \textit{milestone\ped{G}} e liste di attività;
-\item Creazione ed assegnazione di attività;
-\item Calendario di progetto;
-\item \textit{Report} automatico giornaliero delle attività svolte ed in ritardo inviato tramite \textit{e-mail};
-\item Gestione dei ruoli;
-\item Generazione di grafici \textit{Gantt\ped{G}} a partire dalle \textit{task-list};
-\item Monitoraggio dei tempi;
-\item Registro dei rischi.
-\end{itemize}
-
-Sono stati valutati altri software come ad esempio \textit{Redmine}, il quale fu ritenuto quasi altrettanto completo ed intuitivo. Tuttavia si è optato per \textit{TeamWorkPM} data la sua estrema semplicità di utilizzo.\\
-Il \textit{Responsabile di Progetto} per garantire il regolare svolgimento delle attività dovrà necessariamente verificare con cadenza giornaliera se sono presenti \textit{ticket} scaduti e non ancora completati, nel caso citato infatti sarà obbligato a richiedere informazioni (o in caso di ritardi gravi convocare l'interessato) circa la causa del ritardo.\\
-Infine, il \textit{Responsabile di Progetto} dovrà tenere nota che l'assegnazione di \textit{ticket} la cui scadenza è prevista per il giorno successivo può avvenire solo se il lavoro da svolgere non supera le 2 ore lavorative.
-
-\subsection{Utilizzo del ticketing}
+\section{Procedure e protocolli}
+\subsection{Protocollo di sviluppo del progetto}
+\subsubsection{Utilizzo del ticketing}
 Le figure che avranno accesso al sistema di \textit{ticketing} sono le seguenti:
 
 \begin{itemize}
@@ -40,7 +23,7 @@ lo svolgimento dell'insieme di tutti i ticket di una \textit{task-list} non port
 
 Ogni membro del \textit{team} sarà tenuto ad utilizzare la barra di avanzamento di stato del \textit{ticket} fornita dall'interfaccia di \textit{TeamWorkPM}, evitando così superflue norme aggiuntive atte a determinare lo stato del \textit{ticket}.
 
-\subsection{Creazione di una milestone}
+\subsubsection{Creazione di una milestone}
 Il \textit{Responsabile di Progetto} dovrà creare una \textit{milestone}, essa indica la data della revisione a cui il gruppo \gruppo{} intende presentarsi, è possibile visualizzare lo stato di avanzamento che tiene conto del numero di \textit{ticket} completati rispetto al numero di \textit{ticket} complessivi.
 Per la creazione di una nuova \textit{milestone} il \textit{Responsabile di Progetto} dovrà seguire i seguenti passi:
 \begin{enumerate}
@@ -58,7 +41,7 @@ Completati questi passaggi apparirà il seguente \textit{form\ped{G}} (fig 1) ch
 \label{fig:Immagine}
 \end{figure}
 
-\subsection{Procedura di creazione ticket} 
+\subsubsection{Procedura di creazione ticket} 
 Il \textit{Responsabile di Progetto} dovrà attenersi alla seguente procedura per la creazione di una nuova task-list, ovvero la concretizzazione di un macro-attività e delle sue relative task (ticket). Si ricorda che TeamWorkPM prevede la possibilità di indicare interdipendenze tra task-list.
 \begin{enumerate}
 \item Dall'interfaccia \textit{web} accedere al progetto \progetto{}, e selezionare dal \textit{menù} principale il comando: \emph{"Task"};
@@ -87,7 +70,7 @@ Nella task è necessario specificare \textbf{obbligatoriamente}:
 
 Compilati i seguenti campi, il \textit{ticket} sarà creato ed inviato regolamentarmene.
 
-\subsection{Procedura di terminazione ticket}
+\subsubsection{Procedura di terminazione ticket}
 Se un \textit{ticket} sarà completato è necessario applicare questa procedura di accertamento:
 \begin{enumerate}
 \item Il membro del \textit{team} a cui è stato assegnato il \textit{ticket} dovrà spuntare la casella di terminazione su \textit{TeamWorkPM};
@@ -98,7 +81,7 @@ Se un \textit{ticket} sarà completato è necessario applicare questa procedura 
 
 \end{enumerate}
 
-\subsection{Procedura per la modifica o riassegnazione ticket} 
+\subsubsection{Procedura per la modifica o riassegnazione ticket} 
 Durante il suo ciclo di vita un \textit{ticket} per varie ragioni può andare in contro a modifiche, è necessario quindi normare la seguente procedura:
 \begin{enumerate}
 \item Aprire il progetto dall'interfaccia \textit{web} di \textit{TeamWorkPM};
@@ -107,3 +90,24 @@ Durante il suo ciclo di vita un \textit{ticket} per varie ragioni può andare in
 \item Aggiungere una descrizione riguardo la modifica effettuata;
 \item Avvertire l'interessato che è stata effettuata una modifica inserendo: "(MOD)" sul titolo del \textit{ticket}, e qualora fosse necessario reimpostandone la sua priorità.
 \end{enumerate}
+
+\subsection{Protocollo di pianificazione}
+Il \textit{responsabile di progetto} per ogni attività indicata nel documento \textit{Piano di Progetto} dovrà creare un nuovo progetto seguendo la procedura qui descritta:
+
+\begin{enumerate}
+\item Inserire una milestone\ped{G};
+\item Inserire le attività da svolgere;
+\item Inserire le rispettive sotto-attività;
+\item Calcolare ed inserire i periodi di slack\ped{G} qualora fosse necessario;
+\item Creare le risorse;
+\item Assegnare le risorse create ad ogni attività;
+\item Salvare la baseline\ped{G}.
+\end{enumerate}
+
+Sarà decisa a discrezione del \textit{Responsabile di Progetto} per ogni attività la possibilità di assegnare un surplus di ore, queste ore supplementari verranno scelte basandosi sulla criticità dell'attività considerata.
+
+\begin{itemize}
+\item Per le attività non critiche non è previsto alcun surplus di ore;
+\item Per le attività di media criticità il surplus di ore potrà essere del 15\%;
+\item Per le attività di criticità massima il surplus di ore potrà essere del 30\%.
+\end{itemize}
