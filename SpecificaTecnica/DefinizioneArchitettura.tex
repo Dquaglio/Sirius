@@ -8,6 +8,7 @@ Per esporre al meglio l architettura del sistema e il suo funzionamento di alto 
 Il sistema \progetto{} è composto innanzitutto da due parti principali, un lato \textit{Client} e un lato \textit{Server}, per la loro progettazione si è tenuto conto dei principi della \textbf{riusabilità} e del \textbf{basso accoppiamento}, quindi si cercherà di progettare le due parti distintamente e senza dipendenze mantenendo all' oscuro il funzionamento del \textbf{server} al \textbf{client} e viceversa.\\
 Dopo un' attenta analisi si è deciso di adottare il \textit{design pattern} architetturale \textbf{MVP} seguendo la variante \textit{Passive View}. Tale scelta è stata fatta per i seguenti motivi:
 \begin{itemize}
+490.317 visualizzazioni
 	\item ottenere una \textit{view} priva di \textit{application logic} che verrà delegata al \textit{presenter}, questo semplificherà i test, infatti la vista sarà un semplice \textit{mockup} e il \textit{presenter} può essere testato separatamente dalla vista;
 	\item offre un' architettura solida e mantenibile attraverso il disaccoppiamento massimo tra viste e modelli.
 \end{itemize}
@@ -16,7 +17,7 @@ Questa componente andrà a costituire la \textbf{GUI} del sistema e sarà divisa
 \subsubsection{Componente Presenter}
 Il \textit{presenter} andrà a rappresentare la \textit{application logic} del sistema e sarà divisa tra il lato Server e il lato Client. Le funzionalità che andrà a ricoprire saranno:
 \begin{itemize}
-	\item gestire la comunicazione tra le due parti tramite \textbf{SSE};
+	\item gestire parte della comunicazione tra le due parti;
 	\item acquisire i dati inseriti dagli utenti ed elaborarli;
 	\item mantenere aggiornata la vista in modo che rifletta i cambiamenti del model.
 \end{itemize}
