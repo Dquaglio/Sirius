@@ -9,7 +9,7 @@ Il sistema \progetto{} è composto innanzitutto da due parti principali, un lato
 Dopo un' attenta analisi si è deciso di adottare il \textit{design pattern} architetturale \textbf{MVP} seguendo la variante \textit{Passive View}. Tale scelta è stata fatta per i seguenti motivi:
 \begin{itemize}
 	\item ottenere una \textit{view} priva di \textit{application logic} che verrà delegata al \textit{presenter}, questo semplificherà i test, infatti la vista sarà un semplice \textit{mockup} e il \textit{presenter} può essere testato separatamente dalla vista;
-	\item offre un' architettura solida e manuntenibile attraverso il disaccoppiamento massimo tra viste e modelli.
+	\item offre un' architettura solida e mantenibile attraverso il disaccoppiamento massimo tra viste e modelli.
 \end{itemize}
 \subsubsection{Componente View}
 Questa componente andrà a costituire la \textbf{GUI} del sistema e sarà divisa in due parti, lato amministratore e quello utente. Entrambe le parti non dovranno fare altro che offrire un' interfaccia agli utenti del sistema utilizzando HTML5, CSS e Javascript.
@@ -20,5 +20,18 @@ Il \textit{presenter} andrà a rappresentare la \textit{application logic} del s
 	\item acquisire i dati inseriti dagli utenti ed elaborarli;
 	\item mantenere aggiornata la vista in modo che rifletta i cambiamenti del model.
 \end{itemize}
-La maggior parte delle funzionalità saranno ricoperte dal \textit{presenter} lato client, in quanto sarà responsabile di aggiornare le viste dell' utente e dell' amministratore, controllare i dati inseriti 
+La maggior parte delle funzionalità saranno ricoperte dal \textit{presenter} lato \textit{client}, in quanto sarà responsabile di:
+\begin{itemize}
+	\item aggiornare le viste dell' utente e dell' amministratore;
+	\item controllare i dati inseriti dall' utente e quando possibile elaborarli;
+	\item passare i dati che necessitano di elaborazione lato \textit{server} al \textit{presenter} dello stesso;
+	\item ricevere le risposte dal lato \textit{server} e fornire all' utente la vista aggiornata.
+\end{itemize}
+I ruoli del \textit{presenter} lato \textit{server} sono:
+\begin{itemize}
+ \item ricevere le richieste dal \textit{presenter} lato \textit{client} ed elaborarle, restituendo poi il risultato sotto forma di \textbf{JSON};
+ \item informare il lato client delle modifiche effettuate sul model.
+\end{itemize}
 \subsubsection{Componente Model}
+Questa componente andrà a rappresentare la \textit{business logic} del sistema, e sarà suddivisa tra \textit{client} in minima parte e \textit{server}.
+I ruoli del componente lato \textit{client} saranno di mantenere traccia dell' utente autenticato e di salvare, qualora si decida di implementare questa funzionalità, i dati come per esempio coordinate gps e immagini quando il dispositivo non disporrà di connessione internet.
