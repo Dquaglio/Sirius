@@ -1,0 +1,182 @@
+\subsection{Descrizione singoli componenti}
+\subsubsection{Package sequenziatore.client.view}
+\paragraph{Package sequenziatore.client.view.admin}
+Interfacce \\
+\begin{description}
+	\item[imainUser] 
+  	\hfill \\
+  	Nome: imainUser\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.admin\\
+	Descrizione: interfaccia che permette la gestione delle varie componenti 	dell'interfaccia grafica dell'utente
+\end{description}
+
+\begin{description}
+	\item[ilogin] 
+  	\hfill \\
+  	Nome: ilogin\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette di richiedere l'accesso oppure terminazione al sistema Sequenziatore da parte dell’utente generico
+\end{description}
+
+\begin{description}
+	\item[iregister] 
+  	\hfill \\
+  	Nome: iregister\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette la visualizzazione su richiesta del presenter del widget\ped{G} per la registrazione di un nuovo utente al sistema Sequenziatore
+\end{description}
+
+\begin{description}
+	\item[iviewData] 
+  	\hfill \\
+  	Nome: iviewData\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette la realizzazione su richiesta del presenter del widget per la visualizzazione dei dati dell'utente
+\end{description}
+
+\begin{description}
+	\item[isetData] 
+  	\hfill \\
+  	Nome: isetData\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette alle classi che la implementano di creare, su richiesta del presenter,il widget per la modifica dei dati personali dell'utente loggato
+\end{description}
+
+\begin{description}
+	\item[imanaPro] 
+  	\hfill \\
+  	Nome: imanaPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia realizzare il widget per la gestione dei processi, la visualizzazione dei propri dati e per disautenticarsi dal sistema Sequenziatore
+\end{description}
+
+\begin{description}
+	\item[iopenPro] 
+  	\hfill \\
+  	Nome: iopenPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per la visualizzazione dei processi iscrivibili e iscritti dell'utente loggato, oltre a fornire la funzionalità di ricerca per nome
+\end{description}
+
+\begin{description}
+	\item[imanaselecPro] 
+  	\hfill \\
+  	Nome: imanaselecPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia realizzare il widget per visualizzare il stato corrente del processo selezionato nel widget che implementa iopenPro, i vincoli per concludere il passo e la possibilità di saltare il passo se opzionale
+\end{description}
+
+\begin{description}
+	\item[isendData] 
+  	\hfill \\
+  	Nome: isendData\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare i dati richiesti per la conclusione del passo
+\end{description}
+
+\begin{description}
+	\item[isendData] 
+  	\hfill \\
+  	Nome: isendData\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare i dati richiesti per la conclusione del passo
+\end{description}
+
+\begin{description}
+	\item[isendText] 
+  	\hfill \\
+  	Nome: isendText\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inserire il testo da inviare per concludere il passo
+\end{description}
+
+\begin{description}
+	\item[isendNumb] 
+  	\hfill \\
+  	Nome: isendNumb\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette di realizzare il widget per inviare i dati numerici richiesti per la conclusione del passo
+\end{description}
+
+\begin{description}
+	\item[isendPos] 
+  	\hfill \\
+  	Nome: isendPos\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per invio della posizione geografica per la conclusione del passo. Il widget oltre a permettere l'invio, visualizza il messaggio di avvenuto invio in caso di posizione corretta altrimenti visualizza un messaggio di errore
+\end{description}
+
+\begin{description}
+	\item[isendImage] 
+  	\hfill \\
+  	Nome: isendImage\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare l'immagine richiesta dal passo per la sua conclusione
+\end{description}
+
+\begin{description}
+	\item[isendPhoto] 
+  	\hfill \\
+  	Nome: isendPhoto\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che realizza il widget, dove possibile di fotografare la foto da inviare per la conclusione del passo
+\end{description}
+
+\begin{description}
+	\item[iendselecPro] 
+  	\hfill \\
+  	Nome: iendselecPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per visualizzare l'esito di fine processo, oltre a garantire la possibilità di visualizzare e salvare il report da parte dell'utente loggato
+\end{description}
+
+\begin{description}
+	\item[iprintPro] 
+  	\hfill \\
+  	Nome: iprintPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che realizza, agli oggetti che la implementano,  il widget per il salvataggio del report di fine processo
+\end{description}
+
+\begin{description}
+	\item[ipreviewPro] 
+  	\hfill \\
+  	Nome: ipreviewPro\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che realizza, agli oggetti che la implementano,  il widget per visualizzare l'anteprima del report salvato di fine percorso
+\end{description}
+
+\begin{description}
+	\item[istatitics] 
+  	\hfill \\
+  	Nome: istatitics\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che permette di realizzare il widget per la visualizzazione delle statistiche del processo selezionato dall'utente amministratore nel widget di selezione processo
+\end{description}
+\begin{description}
+	\item[iinviteUser] 
+  	\hfill \\
+  	Nome: iinviteUser\\
+  	Tipo: interface\\
+	Package: sequenziatore.client.view.user\\
+	Descrizione: interfaccia che realizza il widget per invitare utenti al processo selezionato dall'utente amministratore
+\end{description}
