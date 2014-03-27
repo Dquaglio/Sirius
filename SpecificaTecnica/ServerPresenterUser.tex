@@ -1,0 +1,62 @@
+\subsubsection{Package sequenziatore::server::presenter::iuser}
+\paragraph{IAccountManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IAccountManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iuser
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{IUserProcessManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IUserProcessManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iuser
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei processi di un utente;
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{IUserStepManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IUserStepManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iuser
+		\item \textbf{Descrizione:} Interfaccia che gestisce l' esecuzione di un passo da parte di un utente.
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{IReport}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IReport};
+		\item \textbf{Package:} sequenziatore::server::presenter::iuser
+		\item \textbf{Descrizione:} Interfaccia che permette la creazione del report per l' utente.
+	\end{itemize}
+%000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
+\subsubsection{Package sequenziatore::server::presenter::user}
+\paragraph{AccountManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{AccountManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::user
+		\item \textbf{Descrizione:} classe che permette la modifica dei dati e il controllo del \textit{log in} di un utente;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{UserProcessManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{UserProcessManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::user
+		\item \textbf{Descrizione:} classe che permette l' inoltro della richiesta di un utente a iscriversi o disiscriversi a un processo;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{UserStepManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{UserStepManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::user
+		\item \textbf{Descrizione:} Gestisce l' esecuzione di un passo da parte di un utente inoltrando la richiesta di inserire i dati nel \textit{database} e in caso sia richiesto notifica l' amministratore che deve controllare se il passo è stato completato;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%
+\paragraph{Report}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{Report};
+		\item \textbf{Package:} sequenziatore::server::presenter::user
+		\item \textbf{Descrizione:} Classe che genera il report dell' utente riferito al processo richiesto;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%-----------------------------------------------------------------------------------------------%

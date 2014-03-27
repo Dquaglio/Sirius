@@ -1,0 +1,72 @@
+\subsection{Package sequenziatore::server::presenter}
+\subsubsection{Package sequenziatore::server::presenter::icommunication}
+\paragraph{IHttpCommunication}
+	\begin{itemize}
+		\item \textbf{Nome:} IHttpCommunication;
+		\item \textbf{Tipo:} Interface;
+		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+\paragraph{IWebsocketCommunication}
+	\begin{itemize}
+		\item \textbf{Nome:} IWebsocketCommunication;
+		\item \textbf{Tipo:} Interface;
+		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+\paragraph{IDataFormatter}
+	\begin{itemize}
+		\item \textbf{Nome:} IDataFormatter;
+		\item \textbf{Tipo:} Interface;
+		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
+	\end{itemize}
+
+%----------------------------------------------------------------------------------------------%
+\paragraph{IChooser}
+	\begin{itemize}
+		\item \textbf{Nome:} IChooser;
+		\item \textbf{Tipo:} Interface;
+		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
+	\end{itemize}
+%0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
+\subsubsection{Package sequenziatore::server::presenter::communication}
+\paragraph{HttpCommunication}
+	\begin{itemize}
+		\item \textbf{Nome:} HttpCommunication;
+		\item \textbf{Tipo:} Class;
+		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite richieste http;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+\paragraph{WebsocketCommunication}
+	\begin{itemize}
+		\item \textbf{Nome:} WebsocketCommunication;
+		\item \textbf{Tipo:} Class;
+		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite WebSocket;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+\paragraph{XXXX}
+	\begin{itemize}
+		\item \textbf{Nome:} XXX;
+		\item \textbf{Tipo:} Class;
+		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Descrizione:} XXX;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+
+%----------------------------------------------------------------------------------------------%
+\paragraph{Chooser}
+	\begin{itemize}
+		\item \textbf{Nome:} Chooser;
+		\item \textbf{Tipo:} Class;
+		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Descrizione:} classe che decide in base alla richiesta ricevuta, se tale richiesta è stata ricevuta da un \textit{ProcessOwner} o da un \textit{User} e a chi assegnarne l' elaborazione di conseguenza;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}

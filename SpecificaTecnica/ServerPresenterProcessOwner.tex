@@ -1,0 +1,66 @@
+\subsubsection{Package sequenziatore::server::presenter::iprocessowner}
+\paragraph{IProcessManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IProcessManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei processi al \textit{process owner};
+	\end{itemize}
+
+%----------------------------------------------------------------------------------------------%
+
+\paragraph{IStepManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IStepManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei passi al \textit{process owner};
+	\end{itemize}
+
+%----------------------------------------------------------------------------------------------%
+\paragraph{IUserManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IUserManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Interfaccia per la gestione degli utenti iscritti ai processi;
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+
+\paragraph{IReport}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{IReport};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei report al \textit{process owner};
+	\end{itemize}
+
+%0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
+\subsubsection{Package sequenziatore::server::presenter::processowner}
+
+\paragraph{ProcessManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{ProcessManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Descrizione:} Classe che riceve le richieste del \textit{process owner} per la gestione dei processi come creazione,modifica e eliminazione degli stessi;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+%----------------------------------------------------------------------------------------------%
+\paragraph{StepManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{StepManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di passi;
+		\item \textbf{Relazione con altre componenti:}
+	\end{itemize}
+	%----------------------------------------------------------------------------------------------%
+\paragraph{UserManager}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{UserManager};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Classe che permette la gestione degli utenti iscritti alla piattaforma, permettendogli di rimuovere utenti da processi,;
+	\end{itemize}
+
+%----------------------------------------------------------------------------------------------%
+\paragraph{Report}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{Report};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Classe che permette la gestione delle richieste dei report al \textit{process owner}, permettendogli di visualizzare i risultati raggiunti in un processo;
+	\end{itemize}
