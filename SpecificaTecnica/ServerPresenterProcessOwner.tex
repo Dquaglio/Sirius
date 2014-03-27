@@ -39,7 +39,10 @@
 		\item \textbf{Nome:} \texttt{ProcessManager};
 		\item \textbf{Package:} sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che riceve le richieste del \textit{process owner} per la gestione dei processi come creazione,modifica e eliminazione degli stessi;
-		\item \textbf{Relazione con altre componenti:}
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IProcessManager ed invoca i metodi delle classi:
+		\begin{itemize}
+			\item \textcolor{red}{manca}
+		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
 \paragraph{StepManager}
@@ -47,7 +50,10 @@
 		\item \textbf{Nome:} \texttt{StepManager};
 		\item \textbf{Package:} sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di passi;
-		\item \textbf{Relazione con altre componenti:}
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IStepManager ed invoca i metodi delle classi:
+		\begin{itemize}
+			\item \textcolor{red}{manca}
+		\end{itemize}
 	\end{itemize}
 	%----------------------------------------------------------------------------------------------%
 \paragraph{UserManager}
@@ -55,6 +61,10 @@
 		\item \textbf{Nome:} \texttt{UserManager};
 		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
 		\item \textbf{Descrizione:} Classe che permette la gestione degli utenti iscritti alla piattaforma, permettendogli di rimuovere utenti da processi,;
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IUserManager ed invoca i metodi delle classi:
+		\begin{itemize}
+			\item \textcolor{red}{manca}
+		\end{itemize}
 	\end{itemize}
 
 %----------------------------------------------------------------------------------------------%
@@ -63,4 +73,8 @@
 		\item \textbf{Nome:} \texttt{Report};
 		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
 		\item \textbf{Descrizione:} Classe che permette la gestione delle richieste dei report al \textit{process owner}, permettendogli di visualizzare i risultati raggiunti in un processo;
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IReport ed invoca i metodi delle classi:
+		\begin{itemize}
+			\item \textcolor{red}{manca}
+		\end{itemize}
 	\end{itemize}
