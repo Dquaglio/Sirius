@@ -1,0 +1,71 @@
+\subsection{Package sequenziatore::client::ipresenter}
+\input{DescrizioneIUserPresenter}
+\input{DescrizioneIAdminPresenter}
+
+\subsubsection{sequenziatore::client::ipresenter::iservercommunication}
+
+\paragraph{IHttpCommunication}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{IHttpCommunication};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Interfaccia che permette di gestire l'invio e ricezione di dati al \textit{server\ped{G}} tramite protocollo HTTP\ped{G}.
+\end{itemize}
+
+\paragraph{IWebsocketCommunication}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{IWebsocketCommunication};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Interfaccia che permette di gestire l'invio e ricezione di dati dal \textit{server\ped{G}} tramite \textit{websocket\ped{G}}.
+\end{itemize}
+
+\paragraph{IDataFormatter}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{IDataFormatter};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Interfaccia che permette di gestire la formattazione dei dati da inviare e ricevuti dal \textit{server\ped{G}}.
+\end{itemize}
+
+\subsection{Package sequenziatore::client::presenter}
+\input{DescrizioneUserPresenter}
+\input{DescrizioneAdminPresenter}
+
+\subsubsection{sequenziatore::client::presenter::servercommunication}
+
+\paragraph{HttpCommunication}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{HttpCommunication};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Classe che permette di gestire l'invio e ricezione di dati al \textit{server\ped{G}} tramite protocollo HTTP\ped{G};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iServerCommunication{}::I\fshyp{}Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e formatta i dati da inviare e ricevuti tramite la classe \texttt{\serverCommunication{}::JSON\fshyp{}For\fshyp{}mat\fshyp{}ter}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{WebsocketCommunication}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{WebsocketCommunication};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Classe che permette di gestire l'invio e ricezione di dati dal \textit{server\ped{G}} tramite \textit{websocket\ped{G}};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iServerCommunication{}::I\fshyp{}Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e formatta i dati da inviare e ricevuti tramite la classe \texttt{\serverCommunication{}::JSON\fshyp{}For\fshyp{}mat\fshyp{}ter}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{JSONFormatter}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{JSONFormatter};
+\item \textbf{Package:} \texttt{\serverCommunication{}};
+\item \textbf{Descrizione:} Classe che permette di gestire la formattazione dei dati da inviare e ricevuti dal \textit{server\ped{G}};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iServerCommunication{}::I\fshyp{}Da\fshyp{}ta\fshyp{}For\fshyp{}mat\fshyp{}ter}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}

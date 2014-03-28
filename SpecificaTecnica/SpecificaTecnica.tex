@@ -3,6 +3,24 @@
 \newcommand{\doctitle}{\doctitleST}%nome documento
 \newcommand{\info}{\infoST}
 \input{../modello/layout.tex}% layout
+
+\makeatletter
+\renewcommand*{\BreakableSlash}{%
+  \leavevmode
+  \prw@zbreak
+  %
+  \discretionary{-}{}{}%
+  \prw@zbreak
+}
+
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+
 \begin{document}
 \input{../modello/firstpage.tex}%pagina del titolo
 \input{../modello/info.tex}
@@ -10,14 +28,20 @@
 %\listoffigures
 \pagenumbering{arabic}%numeri di pagina  arabi
 
+\input{PackageCommands.tex}
+
 \include{Introduzione}
 \include{DefinizioneArchitettura}
 \include{DiagrammaPackage}
-\section{Descrizione singoli componenti}%aka descrizione singole componenti
-%inserire i vari view presenter model , ecc
+
+\section{Descrizione singoli componenti}
+\include{ClientView}
+\include{ClientPresenter}
 \include{ServerPresenterCommunication}%deve stare prima di:1 e 2
-\include{ServerPresenterUser}             %1
-\include{ServerPresenterProcessOwner}   %2
+\include{ServerPresenterUser}%1
+\include{ServerPresenterProcessOwner}%2
 \include{ServerModel}
+
 \include{Pattern}
+
 \end{document}
