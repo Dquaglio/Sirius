@@ -1,4 +1,19 @@
 \subsubsection{Package sequenziatore::server::presenter::iuser}
+\paragraph{ProcessOwnerFacade}
+	\begin{itemize}
+		\item \textbf{Nome:} ProcessOwnerFacade;
+		\item \textbf{Tipo:} abstract;
+		\item \textbf{Package:} sequenziatore::server::presenter::iuser
+		\item \textbf{Descrizione:} classe che decide in base alla richiesta ricevuta a che classe assegnarne l' elaborazione di tale richiesta all' interno del package processowner
+		\item \textbf{Relazione con altre componenti:} la classe richiama metodi delle classi:
+		\begin{itemize}
+			\item sequenziatore::server::presenter::user::AccountManager tramite l' interfaccia			sequenziatore::server::presenter::user::IAccountManager;
+			\item sequenziatore::server::presenter::user::UserProcessManager tramite l' interfaccia sequenziatore::server::presenter::user::IUserProcessManager;
+			\item sequenziatore::server::presenter::user::UserStepManager tramite l' interfaccia sequenziatore::server::presenter::user::IUserStepManager;
+			\item sequenziatore::server::presenter::user::Report tramite l' interfaccia sequenziatore::server::presenter::user::IReport;
+		\end{itemize}
+	\end{itemize}
+%------------------------------------------------------------------------------------------------%	
 \paragraph{IAccountManager}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IAccountManager};
@@ -26,6 +41,7 @@
 		\item \textbf{Package:} sequenziatore::server::presenter::iuser
 		\item \textbf{Descrizione:} Interfaccia che permette la creazione del report per l' utente.
 	\end{itemize}
+	
 %000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
 \subsubsection{Package sequenziatore::server::presenter::user}
 \paragraph{AccountManager}
@@ -35,8 +51,7 @@
 		\item \textbf{Descrizione:} classe che permette la modifica dei dati e il controllo del \textit{log in} di un utente;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::presenter::iuser::IAccountManager e richiama i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::dao::daouser::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daouser::IObjectTransfer
-			\item sequenziatore::server::model::dao::daouser::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daouser::IDataAccessObject
+			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
@@ -47,10 +62,7 @@
 		\item \textbf{Descrizione:} classe che permette l' inoltro della richiesta di un utente a iscriversi o disiscriversi a un processo;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::presenter::iuser::IUserProcessManager e richiama i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::dao::daoprocess::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daoprocess::IObjectTransfer
-			\item sequenziatore::server::model::dao::daoprocess::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daoprocess::IDataAccessObject
-			\item sequenziatore::server::model::dao::daouser::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daouser::IObjectTransfer
-			\item sequenziatore::server::model::dao::daouser::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daouser::IDataAccessObject
+			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
@@ -61,10 +73,7 @@
 		\item \textbf{Descrizione:} Gestisce l' esecuzione di un passo da parte di un utente inoltrando la richiesta di inserire i dati nel \textit{database} e in caso sia richiesto notifica l' amministratore che deve controllare se il passo è stato completato;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::presenter::iuser::IUserStepManager e richiama i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::dao::daostep::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daostep::IObjectTransfer
-			\item sequenziatore::server::model::dao::daostep::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daostep::IDataAccessObject
-			\item sequenziatore::server::model::dao::daouser::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daouser::IObjectTransfer
-			\item sequenziatore::server::model::dao::daouser::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daouser::IDataAccessObject
+			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
@@ -75,12 +84,7 @@
 		\item \textbf{Descrizione:} Classe che genera il report dell' utente riferito al processo richiesto;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::presenter::iuser::IReport e richiama i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::dao::daostep::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daostep::IObjectTransfer
-			\item sequenziatore::server::model::dao::daostep::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daostep::IDataAccessObject
-			\item sequenziatore::server::model::dao::daouser::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daouser::IObjectTransfer
-			\item sequenziatore::server::model::dao::daouser::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daouser::IDataAccessObject
-			\item sequenziatore::server::model::dao::daoprocess::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daoprocess::IObjectTransfer
-			\item sequenziatore::server::model::dao::daoprocess::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daoprocess::IDataAccessObject
+			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%

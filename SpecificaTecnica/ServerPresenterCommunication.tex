@@ -1,8 +1,21 @@
 \subsection{Package sequenziatore::server::presenter}
+\paragraph{PresenterFacade}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{PresenterFacade}
+		\item \textbf{Tipo:} Abstract;
+		\item \textbf{Package:} sequenziatore::server::presenter
+		\item \textbf{Descrizione:} Classe astratta che ha il ruolo di decidere a che pacchetto inoltrare le richieste;
+		\item \textbf{Relazione con altre componenti:} la classe richiama metodi delle classi:
+		\begin{itemize}
+			\item sequenziatore::server::presenter::iprocessowner::ProcessOwnerFacade;
+			\item sequenziatore::server::presenter::iprocessowner::UserFacade.
+		\end{itemize}
+	\end{itemize}
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
 \subsubsection{Package sequenziatore::server::presenter::icommunication}
 \paragraph{ICommunication}
 	\begin{itemize}
-		\item \textbf{Nome:} ICommunication;
+		\item \textbf{Nome:} \texttt{ICommunication};
 		\item \textbf{Tipo:} Interface;
 		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
 		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il \textit{presenter} lato \textit{client};
@@ -11,15 +24,6 @@
 \paragraph{IDataFormatter}
 	\begin{itemize}
 		\item \textbf{Nome:} IDataFormatter;
-		\item \textbf{Tipo:} Interface;
-		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
-		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
-	\end{itemize}
-
-%----------------------------------------------------------------------------------------------%
-\paragraph{IChooser}
-	\begin{itemize}
-		\item \textbf{Nome:} IChooser;
 		\item \textbf{Tipo:} Interface;
 		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
 		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
@@ -34,8 +38,7 @@
 		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite richieste http;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::communication::ICommunication} e richiama metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::presenter::communication::Chooser, tramite l' interfaccia sequenziatore::server::presenter::icommunication::IChooser;
-			\item sequenziatore::server::presenter::communication::JSONFormatter tramite l' interfaccia sequenziatore::server::presenter::icommunication::IDataFormatter.
+			\item sequenziatore::server::presenter::PresenterFacade.
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
@@ -47,28 +50,7 @@
 		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite WebSocket;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::communication::ICommunication} e richiama metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::presenter::communication::Chooser, tramite l' interfaccia sequenziatore::server::presenter::icommunication::IChooser;
-			\item sequenziatore::server::presenter::communication::JSONFormatter tramite l' interfaccia sequenziatore::server::presenter::icommunication::IDataFormatter.
+			\item sequenziatore::server::presenter::PresenterFacade.
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
-\paragraph{Chooser}
-	\begin{itemize}
-		\item \textbf{Nome:} Chooser;
-		\item \textbf{Tipo:} Class;
-		\item \textbf{Package:} sequenziatore::server::presenter::communication
-		\item \textbf{Descrizione:} classe che decide in base alla richiesta ricevuta, se tale richiesta è stata ricevuta da un \textit{ProcessOwner} o da un \textit{User} e a chi assegnarne l' elaborazione di conseguenza;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia:\texttt{sequenziatore::server::presenter::communication::IChooser} e richiama metodi delle classi:
-		\begin{itemize}
-			\item sequenziatore::server::presenter::processowner::Login tramite l' interfaccia sequenziatore::server::presenter::processowner::ILogin;
-			\item sequenziatore::server::presenter::processowner::ProcessManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IProcessManager;
-			\item sequenziatore::server::presenter::processowner::StepManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IStepManager;
-			\item sequenziatore::server::presenter::processowner::UserManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IUserManager;
-			\item sequenziatore::server::presenter::processowner::Report tramite l' interfaccia
-sequenziatore::server::presenter::processowner::IReport;
-			\item sequenziatore::server::presenter::user::AccountManager tramite l' interfaccia			sequenziatore::server::presenter::user::IAccountManager;
-			\item sequenziatore::server::presenter::user::UserProcessManager tramite l' interfaccia sequenziatore::server::presenter::user::IUserProcessManager;
-			\item sequenziatore::server::presenter::user::UserStepManager tramite l' interfaccia sequenziatore::server::presenter::user::IUserStepManager;
-			\item sequenziatore::server::presenter::user::Report tramite l' interfaccia sequenziatore::server::presenter::user::IReport;
-		\end{itemize}
-	\end{itemize}
