@@ -1,0 +1,66 @@
+\begin{longtable}{lXXr}%p{0.1\textwidth}}
+\toprule
+\textbf{Test} & \textbf{Requisito} & \textbf{Descrizione} & \textbf{Stato}\\
+\toprule
+test&FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&Capitolato\\
+\midrule
+test&FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema &Capitolato\\
+\midrule
+test&FOBU 1.1.1&L'utente dovrà inserire un \textit{username} composto da almeno 6 caratteri &Interna\\
+\midrule
+test&FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&Capitolato\\
+test&FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&Interna\\
+\midrule
+test&FOBU 1.5&L'utente dovrà inserire la propria data di nascita&Interna\\
+test&FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&Interna\\
+\midrule
+test&FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&Interna\\
+test&FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&Interna\\
+\midrule
+test&FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&Capitolato\\
+test&FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&Interna\\
+\midrule
+test&FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&Interna\\
+\midrule
+test&FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&Interna\\
+\midrule
+test&FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&Capitolato\\
+\midrule
+test&FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&Interna\\
+\midrule
+test&FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&Capitolato\\
+\midrule
+test&FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&Capitolato\\
+\midrule
+test&FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&Capitolato\\
+\midrule
+test&FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&Interna\\
+\midrule
+test&FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&Capitolato\\
+\midrule
+test&FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&Capitolato\\
+\midrule
+test&FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&Capitolato\\
+\midrule
+test&FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+\midrule
+test&FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+\midrule
+test&FOPL 4.4.4.4.6&Il sistema dovrà permettere all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&Capitolato\\
+\midrule
+test&FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&Verbale 2014-02-03\\
+\midrule
+test&FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dall'amministratore&Capitolato\\
+\midrule
+test&FOPL 4.4.4.7&Il sistema dovrà permettere all'utente autenticato di saltare il passo in esecuzione se facoltativo&Capitolato\\
+\midrule
+test&FOPL 4.4.5.1&Il sistema dovrà permettere all'utente autenticato la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi&Capitolato\\
+\midrule
+test&FOBL 4.4.5.2&Il sistema dovrà permettere all'utente autenticato di eliminare un processo un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&Capitolato\\
+\midrule
+test&FOBL 4.5&Il sistema dovrà permettere all'utente autenticato di disiscriversi da un processo a cui è iscritto&Capitolato\\
+\midrule
+test&FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&Capitolato\\
+\bottomrule
+\caption{Tabella dei requisiti utente}
+\end{longtable}

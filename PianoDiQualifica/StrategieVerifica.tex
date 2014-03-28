@@ -1,11 +1,12 @@
 \section{Visione generale della strategia di verifica}
 \subsection{Introduzione}
-Il team \gruppo ~ha deciso di porre al centro di ogni fase l'attivit\'a di verifica in quanto essa certifica la qualit\'a del prodotto. L'attivit\'a di verifica sar\'a continua in tutte le fasi del progetto.\\
+Il team \gruppo ~ha deciso di porre al centro di ogni fase l'attività di verifica in quanto essa certifica la qualità del prodotto. L'attività di verifica sarà continua in tutte le fasi del progetto.\\
 \subsection{Organizzazione}
-Il processo di qualifica accompagner\'a tutte le fasi di ciclo di vita del software. Ogni procedura di verifica sar\'a schedulata attraverso appositi strumenti e i risultati saranno analizzati in questo documento. Tramite il diario delle modifiche \'e possibile tenere traccia dell'attivit\'a di verifica effettuata ed operare delle verifiche circoscritte ai soli cambiamenti.
-\gruppo ~ha deciso di adottare una politica per lo sviluppo del progetto a ciclo di vita incrementale; tale scelta ha portato ad organizzare le attività di verifica nei periodi temporali antecedenti le revisioni.
+Il processo di qualifica accompagnerà tutte le fasi di ciclo di vita del software. Ogni procedura di verifica sarà schedulata attraverso appositi strumenti e i risultati saranno analizzati in questo documento. Tramite il diario delle modifiche è possibile tenere traccia dell'attività di verifica effettuata ed operare delle verifiche circoscritte ai soli cambiamenti.
+\gruppo ~ha deciso di adottare una politica per lo sviluppo del progetto a ciclo di vita incrementale, come definito meglio in \infoPDP; tale scelta ha portato ad organizzare le attività di verifica nei periodi temporali antecedenti le revisioni.
+In particolare le operazioni di controllo verranno istanziate quando il prodotto da analizzare avrà raggiunto uno stato in cui presenti differenze sostanziali rispetto allo stato precedente.
 \subsection{Pianificazione strategica temporale}
-Al fine di rispettare in modo ristretto le scadenze citate di seguito e spiegate in modo approfondito in \infoPDP, \gruppo ~ha deciso di pianificare in modo approfondito e sistematico l'attivit\'a di verifica. Facendo in modo di rilevare e risolvere nel pi\'u breve tempo possibile gli errori che vengono rilevati per evitare che questi possano creare maggiori problematiche nell' avanzamento del prodotto software. Le scadenze sono di due tipi:
+Al fine di rispettare in modo ristretto le scadenze citate di seguito e spiegate in modo approfondito in \infoPDP, \gruppo ~ha deciso di pianificare in modo approfondito e sistematico l'attività di verifica. Facendo in modo di rilevare e risolvere nel più breve tempo possibile gli errori che vengono rilevati per evitare che questi possano creare maggiori problematiche nell' avanzamento del prodotto software. Le scadenze sono di due tipi:
 \begin{itemize}
 \item Scadenze formali
 \begin{itemize}
@@ -19,207 +20,131 @@ Al fine di rispettare in modo ristretto le scadenze citate di seguito e spiegate
 \end{itemize}
 \end{itemize}
 \subsection{Descrizione della procedura di pianificazione adottata}
-Per gestire al meglio la pianificazione, \gruppo ~prevede l'attivit\'a di verifica in tutti e quattro i periodi di avanzamento del prodotto, che sono paralleli alle scadenze definite in \infoPDP.
+Per gestire al meglio la pianificazione, \gruppo ~prevede l'attività di verifica in tutti e quattro i periodi di avanzamento del prodotto, che sono paralleli alle scadenze definite in \infoPDP.
 \begin{itemize}
-\item \textbf{Analisi}: in questa prima fase il compito del \textit{Verificatore} \'e innanzitutto relativo alla documentazione e alla correttezza del tracciamento dei requisiti. Ogni documento che servir\'a per la consegna della RR, una volta ultimata la fase di redazione, verr\'a verificato in modo definitivo seguendo la procedura cos\'i definita:
+\item \textbf{Analisi}: in questa prima fase il compito del \textit{Verificatore} è innanzitutto relativo alla documentazione e alla correttezza del tracciamento dei requisiti. Ogni documento che servirà per la consegna della RR, una volta ultimata la fase di redazione, verrà verificato in modo definitivo seguendo la procedura cos\'i definita:
 \begin{enumerate}
-\item Verr\'a controllata la correttezza dei contenuti rispetto alle aspettative del documento tramite una rilettura accurata;
-\item Verr\'a controllata la correttezza grammaticale;
-\item Verr\'a controllato che il documento rispetti le norme definite in \infoNDP ~tramite la lista di controllo presente in tale documento.
-\item Verr\'a verificato che ogni requisito funzionale rilevato abbia una corrispondenza in almeno un caso d'uso e che questo sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare;
-\item Verr\'a verificato che ogni requisito di vincolo e di qualit\'a sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare.
+\item Verrà controllata la correttezza dei contenuti rispetto alle aspettative del documento tramite una rilettura accurata;
+\item Verrà controllata la correttezza grammaticale;
+\item Verrà controllato che il documento rispetti le norme definite in \infoNDP ~tramite la lista di controllo presente in tale documento.
+\item Verrà verificato che ogni requisito funzionale rilevato abbia una corrispondenza in almeno un caso d'uso e che questo sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare;
+\item Verrà verificato che ogni requisito di vincolo e di qualità sia tracciato tramite il software di tracciamento che \gruppo ~ha deciso di utilizzare.
 \end{enumerate}
 \item \textbf{Progettazione}: il \textit{Verificatore} ha l'importante compito di controllare il soddisfacimento dei requisiti indicati in fase di analisi. Inoltre, si devono verificare che i processi che portano all'incremento dei documenti redatti nel precedente periodo siano conformi alle procedure e regole descritte in \infoNDP;
-\item \textbf{Programmazione}: il \textit{Verificatore} provveder\'a a controlli periodici e pianificati di porzioni di codice, inizialmente di tipo statico per poi passare a dei controlli di tipo dinamico per valutare la correttezza del software;
+\item \textbf{Programmazione}: il \textit{Verificatore} provvederà a controlli periodici e pianificati di porzioni di codice, inizialmente di tipo statico per poi passare a dei controlli di tipo dinamico per valutare la correttezza del software;
 \item \textbf{Collaudo}: in questa fase le verifiche saranno esclusivamente di tipo dinamico per garantire che il prodotto risponda a tutti i requisiti indicati e a tutte le richieste del committente: sia implicite che esplicite.
 \end{itemize}
-Per i diversi periodi l'attivit\'a di verifica sar\'a diversa in base alla tipologia di lavoro svolta. Essa verter\'a sulla verifica della documentazione all'analisi del prodotto software garantendo che il risultato sia efficace\ped{G} rispetto alla procedura analizzata, non perdendo di efficienza\ped{G} contrattuale. 
+Per i diversi periodi l'attività di verifica sarà diversa in base alla tipologia di lavoro svolta. Essa verterà sulla verifica della documentazione all'analisi del prodotto software garantendo che il risultato sia efficace\ped{G} rispetto alla procedura analizzata, non perdendo di efficienza\ped{G} contrattuale. 
 \subsection{Slack}
-\gruppo, conscio della poca esperienza nella pianificazione e gestione di progetti di questo tipo, ha deciso di inserire degli \textit{slack}\ped{G} temporale durante la pianificazione delle attivit\'a. Tale scelta \'e approfondita in \infoNDP ~che ne definisce la quanti\'a e in \infoPDP ~che ne analizza le motivazioni.
-L'aggiunta di slack temporali, oltre a portare al progetto una pianificazione pi\'u precisa, comporta un aumento dei costi che \'e per\'o commisurato all'aumento della qualit\'a finale.
+\gruppo, conscio della poca esperienza nella pianificazione e gestione di progetti di questo tipo, ha deciso di inserire degli \textit{slack}\ped{G} temporale durante la pianificazione delle attività. Tale scelta è approfondita in \infoNDP ~che ne definisce la quantità e in \infoPDP ~che ne analizza le motivazioni.
+L'aggiunta di slack temporali, oltre a portare al progetto una pianificazione più precisa, comporta un aumento dei costi che è però commisurato all'aumento della qualità finale.
 \subsection{Obiettivi}
-\subsubsection{Qualit\'a di processo}
-Al fine di garantire la qualit\'a di prodotto \'e necessario ricercare la qualit\'a dei processi che lo definiscono. Per questo \gruppo ~ha deciso di adottare lo standard ISO/IEC 15504 denominato SPICE il quale fornisce le indicazioni necessarie a valutare l'idoneit\'a dei processi attualmente in uso.
-Per applicare correttamente questo modello, ed adattarlo alla gestione attuata dal gruppo di lavoro, si \'e deciso di utilizzare il ciclo di Deming o PDCA: il quale definisce una metodologia di controllo dei processi durante il loro ciclo di vita permettendo, inoltre, di migliorare in modo continuo la qualit\'a.
-Tramite al principio PDCA, descritto nella sezione A.1, \'e garantito un miglioramento continuo dei processi e quindi della qualit\'a degli stessi: come diretta conseguenza si otterr\'a il miglioramento qualitativo del prodotto risultante.
-Per attenere questo \'e necessario che il processo sia in controllo e quindi:
+\subsubsection{Qualità di processo}
+Al fine di garantire la qualità di prodotto è necessario ricercare la qualità dei processi che lo definiscono. Per questo \gruppo ~ha deciso di adottare lo standard ISO/IEC 15504 denominato SPICE il quale fornisce le indicazioni necessarie a valutare l'idoneità dei processi attualmente in uso.
+Per applicare correttamente questo modello, ed adattarlo alla gestione attuata dal gruppo di lavoro, si è deciso di utilizzare il ciclo di Deming o PDCA: il quale definisce una metodologia di controllo dei processi durante il loro ciclo di vita permettendo, inoltre, di migliorare in modo continuo la qualità.
+Tramite al principio PDCA, descritto nella sezione A.1, è garantito un miglioramento continuo dei processi e quindi della qualità degli stessi: come diretta conseguenza si otterrà il miglioramento qualitativo del prodotto risultante.
+Per attenere questo è necessario che il processo sia in controllo e quindi:
 \begin{itemize}
 \item Effettuare una dettagliata pianificazione dei processi;
 \item Pianificare anche il numero di risorse da utilizzare;
 \end{itemize}
-La qualit\'a dei processi viene monitorata anche tramite la qualit\'a del prodotto: infatti un pprodotto di bassa qualit\'a indica un processo da migliorare.
-\subsubsection{Qualit\'a di prodotto}
-Al fine di aumentare il valore del prodotto e di garantire il corretto funzionamento dello stesso \'e necessario fissare degli obiettivi e garantire che questi vengano effettivamente rispettati.
-Lo standard ISO/IEC 9126 \'e stato redatto con lo scopo di descrivere questi obiettivi e di delineare delle metriche capaci di misurare il raggiungimento degli stesso.
-Ognuno di questi obiettivi verr\'a valutato al termine del processo di verifica per avere dei risultati da analizzare. La valutazione dei risultati ottenuti \'e molto importante, soprattutto nei primi momenti di creazione del gruppo, in quanto questo deve essere un punto di partenza per modificare, creare o ridefinire le procedure in modo da evitare il ripercuotersi sistematico degli errori.
-In particolare \gruppo ~si impegna a garantire la qualit\'a di prodotto perseguendo le seguenti caratteristiche:
+La qualità dei processi viene monitorata anche tramite la qualità del prodotto: infatti un prodotto di bassa qualità indica un processo da migliorare. Se ad un processo non vengono rilevati problemi, è possibile apportare dei miglioramenti: riducendo il numero di cicli iterattivi, il tempo o le risorse ma garantendo che l'esecuzione del processo sia fedele al piano e soddisfi i requisiti. In questo modo si aumenta l'efficenza del processo e se ne determina un'adattamento positivo alla realtà del team di lavoro valutabile in efficacia.
+\subsubsection{Qualità di prodotto}
+Al fine di aumentare il valore del prodotto e di garantire il corretto funzionamento dello stesso è necessario fissare degli obiettivi e garantire che questi vengano effettivamente rispettati.
+Lo standard ISO/IEC 9126 è stato redatto con lo scopo di descrivere questi obiettivi e di delineare delle metriche capaci di misurare il raggiungimento degli stesso.
+Ognuno di questi obiettivi verrà valutato al termine del processo di verifica per avere dei risultati da analizzare. La valutazione dei risultati ottenuti è molto importante, soprattutto nei primi momenti di creazione del gruppo, in quanto questo deve essere un punto di partenza per modificare, creare o ridefinire le procedure in modo da evitare il ripercuotersi sistematico degli errori.
+Di seguito elenchiamo le caratteristiche che \gruppo ~si impegna a garantire per il prodotto che andrà a realizzare: Oltre alla descrizione della caratteristica qui vengono definite le metriche, i parametri di accettazione che sono trattati in modo approfondito in \infoNDP assieme ad una descrizione più dettagliata degli strumenti da utilizzare. 
 \begin{itemize}
-\item \textbf{Funzionalit\'a}
-L’applicazione prodotta deve soddisfare tutti i requisiti individuati nell’Analisi dei Requisiti nel modo pi\'u completo ed economico possibile, garantendo la sicurezza del prodotto e dei suoi componenti, e adeguandosi alle norme e alle prescrizioni imposte.
-\gruppo ha stabilito che la soglia di sufficienza sia il soddisfacimento di tutti i requisiti obbligatori.
-\item \textbf{Affidabilit\'a}
+\item \textbf{Funzionalità}
+L’applicazione prodotta deve soddisfare tutti i requisiti individuati in \infoAR ~nel modo più completo ed economico possibile, garantendo la sicurezza del prodotto e dei suoi componenti, e adeguandosi alle norme e alle prescrizioni imposte. Inoltre, data la natura del prodotto \progetto, \gruppo ~ha deciso di prestare particolare attenzione al'interoperabilità del codice: intesa come la capacità di agire con altri sistemi.
+\begin{itemize}
+\item \textbf{misura:} percentuale di requisiti soddisfatti;
+\item \textbf{metrica:} la soglia di sufficienza sia il soddisfacimento di tutti i requisiti obbligatori;
+\item \textbf{strumenti:} sarà necessario il superamento di tutti i test che garantiscano che il prodotto possieda tutte le funzionalità richieste.
+\end{itemize}
+\item \textbf{Affidabilità}
 L’applicazione deve dimostrarsi robusta, di facile ripristino e recupero in caso di errori, e aderire alle norme e alle prescrizioni stabilite.
-Per questo \gruppo effettuer\'a i test di sistema in modo approfondito al fine di testare il maggior numero di casistiche di esecuzione.
-\item \textbf{Usabilit\'a}
-L’applicazione deve risultare comprensibile, facilmente apprendibile e soprattutto aderire a norme e prescrizioni per garantire facilit\'a d’uso e soddisfacimento delle necessit\'a dell’utente.
-\item \textbf{Efficienza}
-L’applicazione deve fornire tutte le funzionalit\'a nel minor tempo possibile e con il minimo utilizzo di risorse.
-Per questo si faranno dei test di sistema nei primi periodi di sviluppo software al fine di ricercare la soluzione che permetta di ottenere risultati dalla richiesta di funzionalit\'a nel minor tempo possibile.
-\item \textbf{Manutenibilit\'a}
-L’applicazione deve essere analizzabile, facilmente modificabile e verificabile. Per questo \'e stata definita una metrica indicata di seguito.
-\item \textbf{Portabilit\'a}
-L’applicazione deve essere adattabile e compatibile con ambienti d’uso diversi quindi validata da strumenti forniti dal W3C.
-\item \textbf{Semplicit\'a}: realizzazione del prodotto nella maniera pi` semplice possibile, ma non semplicistica;
-\item \textbf{Incapsulamento}: il codice deve avere visibilit\'a minima e permettere un utilizzo dall’esterno solamente mediante interfacce; ci\'o aumenta la manutenibilit\'a e la possibilit\'a di riuso del codice;
-\item \textbf{Coesione}: le funzionalit\'a che concorrono allo stesso fine devono risiedere nello stesso componente; favorisce semplicit\'a, manutenibilit\'a, riusabilit\'a e riduce l’indice di dipendenza.
-\end{itemize}
-Al fine di controllare la qualit\'a di prodotto raggiunta \gruppo ha adottato le seguenti procedure:
 \begin{itemize}
-\item \textbf{\textit{Quality assurance}}: insieme di attivit\'a atte a garantire il raggiungimento degli obiettivi di qualit\'a;
-\item \textbf{Verifica}: determina se l'output di una fase \'e \textbf{consistente}, \textbf{completo} e \textbf{corretto}. Il processo di verifica \'e eseguito in modo uniforme e durante tutto il periodo di realizzazione del prodotto. I risultati della verifica sono analizzati di volta in volta e riportati in seguito al documento;
-\item \textbf{Validazione}: \'e si intende la conferma in modo oggettivo che il sistema risponde ai requisiti.
+\item \textbf{misura:} numero di esecuzioni dell'applicazione andate a buon fine;
+\item \textbf{metrica:} le esecuzioni dovranno spaziare su tutta la gamma delle possibili casistiche. Il numero di esecuzioni andate a buon fine dovrà essere rapportato al numero totale delle casistiche considerate;
+\item \textbf{strumenti:} da definire.
 \end{itemize}
-\subsection{Risurse umane e responsabilit\'a}
-Il responsabile delle relazioni con il committente \'e il \textit{Responsabile di Progetto} il quale \'e responsabile anche dell'operato dei \textit{Verificatori}. Mentre i \textit{Verificatori} sono a loro volta responsabili delle attivit\'a di verifica e delle procedure di controllo qualit\'a . Il \textit{Verificatore}, inoltre, avr\'a un ruolo attivo in tutto il ciclo di vita del prodotto software, ma esso dovr\'a evitare di influire in modo troppo pesante sui processi software per evitare un rapporto costi/benefici troppo elevato. Compito dell' \textit{Amministratore} \'a quello di supporto a tutte le attivit\'a fornendo una solida infrastruttura software anche per il processo di verifica in ogni fase lavorativa.
-Per una descrizione pi\'u approfondita di ruoli e responsabilit\'a si rimanda a \infoNDP.\\
+\item \textbf{Usabilità}
+L’applicazione deve risultare comprensibile, facilmente apprendibile e soprattutto aderire a norme e prescrizioni per garantire facilità d’uso e soddisfacimento delle necessità dell’utente.
+\begin{itemize}
+\item \textbf{misura:} data l'aleatorietà della qualità richiesta, non si riesce a definire un'unità di misura obiettiva;
+\item \textbf{metrica:} non è stata definita una metrica di usabilità; ma \gruppo ~cercherà di offrire la miglior esperienza di utilizzo per tutti coloro che usano il prodotto;
+\item \textbf{strumenti:} non avendo definito una metrica, il team ha deciso di utilizzare i pareri degli utilizzatori dell'applicazione per valutarne l'usabilità.
+\end{itemize}
+
+\item \textbf{Efficienza}
+L’applicazione deve fornire tutte le funzionalità nel minor tempo possibile e con il minimo utilizzo di risorse.
+\begin{itemize}
+\item \textbf{misura:} il tempo di latenza per ottenere una risposta dal programma;
+il tempo di latenza per ottenere una risposta simulando un sovraccarico della rete;
+\item \textbf{metrica:} i tempi di latenza dovranno essere in linea con le tempistiche rilevate con l'utilizzo di architetture dello stesso tipo di quelle definite nel prodotto;
+\item \textbf{strumenti:} non è ancora stato definito uno strumento.
+\end{itemize}
+
+\item \textbf{Manutenibilità}
+L’applicazione deve essere analizzabile, facilmente modificabile e verificabile; inoltre dovrà ridurre il rischio di comportamenti inaspettati al seguito dell'effettuazione di modifiche.
+\begin{itemize}
+\item \textbf{misura:} le misurazioni per garantire questa caratteristica sono diverse e non esclusive e sono descritte nella sezione Metriche;
+\item \textbf{metrica:} le metriche da utilizzare sono descritte nella sezione Metriche;
+\item \textbf{strumenti:} lo strumento non è ancora stato definito in quanto dovrà essere ricercato in seguito alla scelta dell'ambiente di sviluppo.
+\end{itemize}
+
+\item \textbf{Portabilità}
+L’applicazione deve essere adattabile e compatibile con ambienti d’uso diversi, e con i quali dovrà coesistere condividendo risorse e anche per questo sarà validata da strumenti forniti dal W3C.
+\begin{itemize}
+\item \textbf{misura:} L'applicazione dovrà essere eseguibile con i browser indicati in \infoAR;
+\item \textbf{metrica:} soddisfacimento dei requisiti di compatibilità e validazione tramite strumenti W3C;
+\item \textbf{strumenti:} esecuzione dell'applicazione, validatori W3C.
+\end{itemize}
+\end{itemize}
+Inoltre, \gruppo ~ ha definito delle altre caratteristi che andranno ricercate per il prodotto:
+\begin{itemize}
+\item \textbf{Semplicità}: realizzazione del prodotto nella maniera più semplice possibile, ma non semplicistica;
+\item \textbf{Incapsulamento}: il codice deve avere visibilità minima e permettere un utilizzo dall’esterno solamente mediante interfacce; ciò aumenta la manutenibilità e la possibilità di riuso del codice;
+\item \textbf{Coesione}: le funzionalità che concorrono allo stesso fine devono risiedere nello stesso componente; favorisce semplicità, manutenibilità, riusabilità e riduce l’indice di dipendenza.
+\end{itemize}
+Al fine di controllare la qualità di prodotto raggiunta \gruppo ha adottato le seguenti procedure:
+\begin{itemize}
+\item \textbf{\textit{Quality assurance}}: insieme di attività atte a garantire il raggiungimento degli obiettivi di qualità;
+\item \textbf{Verifica}: determina se l'output di una fase è \textbf{consistente}, \textbf{completo} e \textbf{corretto}. Il processo di verifica è eseguito in modo uniforme e durante tutto il periodo di realizzazione del prodotto. I risultati della verifica sono analizzati di volta in volta e riportati in seguito al documento;
+\item \textbf{Validazione}: e si intende la conferma in modo oggettivo che il sistema risponde ai requisiti.
+\end{itemize}
+\subsection{Risurse umane e responsabilità}
+Il responsabile delle relazioni con il committente è il \textit{Responsabile di Progetto} il quale è responsabile anche dell'operato dei \textit{Verificatori}. Mentre i \textit{Verificatori} sono a loro volta responsabili delle attività di verifica e delle procedure di controllo qualità . Il \textit{Verificatore}, inoltre, avrà un ruolo attivo in tutto il ciclo di vita del prodotto software, ma esso dovrà evitare di influire in modo troppo pesante sui processi software per evitare un rapporto costi/benefici troppo elevato. Compito dell' \textit{Amministratore} è quello di supporto a tutte le attività fornendo una solida infrastruttura software anche per il processo di verifica in ogni fase lavorativa.
+Per una descrizione più approfondita di ruoli e responsabilità si rimanda a \infoNDP.\\
 \subsection{Risorse software}
-Al fine di effettuare la fase di verifica e validazione nel podo più sistematico possibile sono stati messi a disposizione di tutti i \textit{Verificatori} dall' \textit{Amministratore} un pacchetto di prodotti software il pi\'u specifico possibile rispetto alle esigenze del team. Inoltre, \'e sempre compito dell' \textit{Amministratore} formare ogni verificatore all'utilizzo dei prodotti che permettano la verifica, evidenziando, se richiesto le funzionalit\'a non utilizzate per ogni prodotto. \gruppo{} ha deciso di adottare questo tipo di formazione per valorizzare il lavoro di chi effettivamente utilizza i prodotti di verifica, dando la possibilit\'a che proprio da queste figure nascano idee e proposte di miglioramento che saranno poi valutate dal \textit{Responsabile di progetto} congiuntamente all'\textit{Amministratore}.
-Gli strumenti necessari al raggiungimento degli obiettivi definiti \'e indicato in \infoNDP, che ne definiscono anche le specifiche tecniche e l'utilizzo.
+Al fine di effettuare la fase di verifica e validazione nel modo più sistematico possibile sono stati messi a disposizione di tutti i \textit{Verificatori} dall' \textit{Amministratore} un pacchetto di prodotti software il più specifico possibile rispetto alle esigenze del team. Inoltre, è sempre compito dell' \textit{Amministratore} formare ogni verificatore all'utilizzo dei prodotti che permettano la verifica, evidenziando, se richiesto le funzionalità non utilizzate per ogni prodotto. \gruppo{} ha deciso di adottare questo tipo di formazione per valorizzare il lavoro di chi effettivamente utilizza i prodotti di verifica, dando la possibilità che proprio da queste figure nascano idee e proposte di miglioramento che saranno poi valutate dal \textit{Responsabile di progetto} congiuntamente all'\textit{Amministratore}.
+Gli strumenti necessari al raggiungimento degli obiettivi definiti è indicato in \infoNDP, che ne definiscono anche le specifiche tecniche e l'utilizzo.
 \subsection{Tecniche di analisi statica}
-L'analisi statica \'e una tecnica di analisi applicabile sia alla documentazione che al codice e permette di effettuare la verifica di quanto prodotto individuando errori ed anomalie. Essa può essere svolta in due modi diversi ma complementari tra di loro in quanto per utilizzare \textit{inspection} bisogna prima aver effettuato \textit{walkthrough}
+L'analisi statica è una tecnica di analisi applicabile sia alla documentazione che al codice e permette di effettuare la verifica di quanto prodotto individuando errori ed anomalie. Essa può essere svolta in due modi diversi ma complementari tra di loro in quanto per utilizzare \textit{inspection} bisogna prima aver effettuato \textit{walkthrough}
 \subsubsection{Inspection}
-Questa tecnica, di analisi statica, consiste nella verifica di sezioni ben definite di un documento o del codice. Questo tipo di controlli per i documenti sono usualmente definiti tramite una lista di controllo (checklist) redatta anticipatamente rispetto all'attivit\'a di verifica da intraprendere. Per la verifica dei documenti, la lista di controllo \'e stata elaborata a seguito di analisi eseguite tramite \textit{walkthrough}, ed evidenziando gli errori più ricorrenti riscontrati. \textit{Inspection} \'e una strategia rapida in quanto permette l'analisi di alcuni parti ritenute critiche nella checklist senza bisogno di una lettura integrale di documento o di tutto il codice in oggetto.
+Questa tecnica, di analisi statica, consiste nella verifica di sezioni ben definite di un documento o del codice. Questo tipo di controlli per i documenti sono usualmente definiti tramite una lista di controllo (checklist) redatta anticipatamente rispetto all'attività di verifica da intraprendere. Per la verifica dei documenti, la lista di controllo è stata elaborata a seguito di analisi eseguite tramite \textit{walkthrough}, ed evidenziando gli errori più ricorrenti riscontrati. \textit{Inspection} è una strategia rapida in quanto permette l'analisi di alcuni parti ritenute critiche nella checklist senza bisogno di una lettura integrale di documento o di tutto il codice in oggetto.
 \subsubsection{Walkthrough}
-Walkthrough \'e una tecnica di analisi statica che consiste nella lettura critica a largo raggio di tutto il documento. In questa tipologia di analisi il \textit{Verificatore} utilizza molto tempo per la lettura e correzione del documento o codice. Questa tecnica viene di solito utilizzata nella prima parte dello sviluppo di progetti in quanto, la poca esperienza del \textit{Verificatore} non permette un'altro tipo di verifica. Al termine di questo primo set di analisi \textit{walkthrough} viene usualmente definita una lista di controllo che permetta di ricercare in primo luogo gli errori pi\'u ricorrenti, e maggiormente riscontrati. \textit{Walkthrough} \'e un'attivit\'a onerosa e collaborativa che richiede l'intervento di pi\'u persone per essere efficente ed efficace
+\textit{Walkthrough} è una tecnica di analisi statica che consiste nella lettura critica a largo raggio di tutto il documento. In questa tipologia di analisi il \textit{Verificatore} utilizza molto tempo per la lettura e correzione del documento o codice. Questa tecnica viene di solito utilizzata nella prima parte dello sviluppo di progetti in quanto, la poca esperienza del \textit{Verificatore} non permette un'altro tipo di verifica. Al termine di questo primo set di analisi \textit{walkthrough} viene usualmente definita una lista di controllo che permetta di ricercare in primo luogo gli errori più ricorrenti, e maggiormente riscontrati. \textit{Walkthrough} è un'attività onerosa e collaborativa che richiede l'intervento di più persone per essere efficiente ed efficace
 \subsection{Tecniche di analisi dinamica}
 L'analisi dinamica si applica solamente al prodotto software e consiste nell'esecuzione del codice mediante l'uso di test predisposti per verificarne il funzionamento o rilevare possibili difetti di implementazione eseguendo tutto o solo una parte del codice.
-La \textbf{ripetibilit\'a} del test \'e una caratteristica fondamentale per questo tipo di test, in quanto dichiara che il codice con un certo \textit{input} produce sempre lo stesso \textit{output} su uno specifico ambiente. In questo modo si \'e in grado di riscontrare problemi e verificare la correttezza del prodotto.
+La \textbf{ripetibilità} del test è una caratteristica fondamentale per questo tipo di test, in quanto dichiara che il codice con un certo \textit{input} produce sempre lo stesso \textit{output} su uno specifico ambiente. In questo modo si è in grado di riscontrare problemi e verificare la correttezza del prodotto.
 Per questo \gruppo ~ha deciso di definire a priori le seguenti caratteristiche:
 \begin{itemize}
-\item \textbf{Ambiente}: sistema \textit{hardware} e quello \textit{software} sui quali \'e stato pianificato l'utilizzo del prodotto, di essi si deve definire uno stato iniziale dal quale poter iniziare ad eseguire i test;
+\item \textbf{Ambiente}: sistema \textit{hardware} e quello \textit{software} sui quali è stato pianificato l'utilizzo del prodotto, di essi si deve definire uno stato iniziale dal quale poter iniziare ad eseguire i test;
 \item \textbf{Specifica di \textit{input}}: definire quali sono gli \textit{input} e quali devono essere gli \textit{output} attesi;
 \item \textbf{Procedure}: definire quali devono essere i test ed in che ordine devono essere analizzati i risultati ottenuti.
 \end{itemize}
 Di seguito sono definiti cinque diversi tipi di test.
-\subsubsection{Test di unit\'a} 
-Per test di unit\'a si intende la verifica di ogni singola unit\'a di prodotto software tramite l'utilizzo di stub\ped{G}, driver\ped{G} e logger\ped{G}. Per unit\'a si intende la pi\'u piccola porzione di codice che \'e utile verificare singolarmente e che viene prodotta da un unico programmatore. Tramite questo tipo di test si vogliono testare i vari le unit\'a per rilevare errori di implementazione da parte dei programmatori.
+\subsubsection{Test di unità} 
+Per test di unità si intende la verifica di ogni singola unità di prodotto software tramite l'utilizzo di stub\ped{G}, driver\ped{G} e logger\ped{G}. Per unità si intende la più piccola porzione di codice che è utile verificare singolarmente e che viene prodotta da un unico programmatore. Tramite questo tipo di test si vogliono testare i vari le unità per rilevare errori di implementazione da parte dei programmatori.
 \subsubsection{Test di integrazione}
-I test di integrazione prevedono la verifica dei componenti del sistema che vengono aggiunti incrementando il prodotto di origine e si prefigge quindi di analizzare la combinazione di due o più unit\'a software che hanno quindi superato i test di unit\'a. Questa tecnica di verifica serve ad individuare errori residui nella programmazione dei singoli moduli: come modifiche delle interfacce e comportamenti inaspettati di componenti software di parti terze e che pregiudicherebbero la validit\'a del prodotto. Per effettuare tali test pu\'o essere necessario l'aggiunta di componenti software fittizzie e non ancora implementate al fine di non pregiudicare negativamente l'esito dell'analisi.
+I test di integrazione prevedono la verifica dei componenti del sistema che vengono aggiunti incrementando il prodotto di origine e si prefigge quindi di analizzare la combinazione di due o più unità software che hanno quindi superato i test di unità. Questa tecnica di verifica serve ad individuare errori residui nella programmazione dei singoli moduli: come modifiche delle interfacce e comportamenti inaspettati di componenti software di parti terze e che pregiudicherebbero la validità del prodotto. Per effettuare tali test può essere necessario l'aggiunta di componenti software fittizie e non ancora implementate al fine di non pregiudicare negativamente l'esito dell'analisi.
 \subsubsection{Test di sistema}
 Consiste nella validazione del sistema attraverso la verifica della copertura di tutti i requisiti obbligatori individuati in \infoAR, e tracciati  grazie allo strumento messo a punto da \gruppo;
 \subsubsection{Test di regressione}
 I test di regressione vengono eseguiti quando si apportano delle modifiche a parte del software e questi consistono nella riesecuzione dei test riguardanti le i componenti che hanno subito modifiche e che precedentemente non erano soggetti ad errori.
-Tale operazione viene aiutata dal tracciamento, che permette di individuare e ripetere facilmente i test di unit\'a, integrazione ed eventualmente di sistema che sono stati potenzialmente influenzati dalle modifiche.
+Tale operazione viene aiutata dal tracciamento, che permette di individuare e ripetere facilmente i test di unità, integrazione ed eventualmente di sistema che sono stati potenzialmente influenzati dalle modifiche.
 \subsubsection{Test di accettazione}
 Si tratta del collaudo del prodotto software sotto il controllo del proponente. Se il collaudo viene superato in modo positivo, il sistema viene rilasciato e la commessa si conclude.
-\subsection{Misure e metriche per l'accettazione}
-I dati rilevati dal processo di verifica devono essere analizzati tramite precise metriche.
-Con questo termine si intende l'insieme di parametri misurabili su un processo. Qualora le metriche definite in questo documento siano approssimative e/o ambigue, queste dovranno essere ridefinite in modo specifico e seguiranno in modo incrementale il ciclo di vita del prodotto.
-Per ogni metrica sono definiti due diverse tipologie di intervalli:
-\begin{itemize}
-\item Accettazione: intervallo di valori affinché il prodotto sia accettato;
-\item Ottimale: all'interno dell'intervallo di accettazione viene definito l'intervallo ottimale all'interno del quale si dovrebbe posizionare la misurazione effettuata. Tale intervallo non \'e vincolante ma fortemente consigliato.
-\end{itemize}
-\subsection{Metriche per i processi}
-Le metriche dei processi ne stabiliscono la qualit\'a che \'e definita come connubio di \textit{capability}\ped{G}, \textit{maturity}\ped{G} e i miglioramenti. Queste caratteristiche di qualit\'a si possono individuare in tre classi di misure di processo:
-\begin{itemize}
-\item \textbf{Tempo}: il tempo richiesto per il completamento di un particolare processo;
-\item \textbf{Risorse}: le risorse richieste per un particolare processo, in genere vengono definite risorse-uomo, per le risorse software si fa riferimento a \infoNDP;
-\item \textbf{Occorrenze}: il numero di volte che capita un particolare evento, che pu\'o essere il numero di difetti scoperti durante l'attivit\'a di verifica.
-\end{itemize}
-Per rilevare questi dati \gruppo{} ha deciso di utilizzare, per il controllo dei processi, indici che valutano i tempi e i costi del processo. La scelta di queste metriche \'e dettata anche dal loro possibile utilizzo anche durante lo svolgimento del processo, per capire in modo semplice se lo stato del processo \'e conforme a quanto pianificato, mantenendo quindi il processo in controllo. In \infoPDP ~viene specificato come sono stati pianificati questi indici nello stato di avanzamento.
-\subsubsection{(SV) Schedule Variance}
-Indica se si \'e in linea, in anticipo o in ritardo rispetto alla pianificazione temporale delle attività citata in \infoPDP.
-È un indicatore di efficacia temporale e per questo \gruppo ha deciso di esprimerlo in ore.
-Se SV $>$ 0 significa che il gruppo di lavoro sta producendo con maggior velocit\'a rispetto a quanto pianificato, viceversa se negativo.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [$>$-(ore preventivo fase x5\%)];
-\item Ottimale: [$>$0].
-\end{itemize}
-
-\subsubsection{(BV) Budget Variance}
-Indica se allo stato attuale si \'e speso pi\'u o meno rispetto a quanto pianificato.
-È un indicatore che ha valore contabile e finanziario per questo \'e espresso in euro.
-Se BV $>$ 0 significa che l’attuazione del progetto sta consumando il proprio budget con minor velocit\'a rispetto a quanto pianificato, viceversa se negativo.
-\textbf{Parametri utilizzati:}\\
-\begin{itemize}
-\item Accettazione: [$>$-(costo preventivo fase x10\%)];
-\item Ottimale: [$>$0].
-\end{itemize}
-
-\subsection{Metriche per i documenti}
-Come metrica per la verifica dei documenti \gruppo ha deciso di utilizzare l’indice di leggibilit\'a.
-Vi sono a disposizione molti indici di leggibilit\'a, ma i più importanti sono per la lingua inglese. Si \'e deciso quindi di adottare un indice di leggibilit\'a per la lingua italiana.
-L’indice \textit{Gulpease} \'e un indice di leggibilit\'a di un testo tarato sulla lingua italiana. Rispetto ad altri indici, esso ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzich\'e in sillabe, semplificandone il calcolo automatico. Permette di misurare la complessit\'a dello stile di scrittura di un documento.
-L’indice viene calcolato utilizzando la formula citata nelle \infoNDP~.
-I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilit\'a più alta e 0 la leggibilit\'a pi\'u bassa. In generale risulta che testi con un indice:
-\begin{itemize}
-\item Inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
-\item Inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-\item Inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-\end{itemize}
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [40-100];
-\item Ottimale: [50-100].
-\end{itemize}
-\subsection{Metriche per il software}
-Al fine di perseguire gli obiettivi qualitativi dichiarati sopra \'e necessario definire delle metriche per fare in modo che questi obiettivi siano misurabili. Questa sezione, però, \'e da intendersi come modificabile nell'arco dello svolgimento del progetto in quanto sar\'a a discrezione del tema utilizzare le metriche che sono pi\'u rappresentative.
-\subsubsection{Complessit\'a ciclomatica}
-Pensata da T.J. McCabe \'e utilizzata per misurare la complessit\'a per funzioni, moduli, metodi o classi di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
-Alti valori di complessit\'a ciclomatica indicano una ridotta manutenibilit\'a del codice. Al contrario, valori bassi potrebbero determinare una scarsa efficienza dei metodi. Questo parametro \'e inoltre un indice del carico di lavoro richiesto dal \textit{testing}. Indicativamente un modulo con complessit\'a ciclomatica pi\'u bassa richiede meno test di uno con complessit\'a pi\'u elevata.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [1-15];
-\item Ottimale: [1-10].
-\end{itemize}
-\subsubsection{Numero livelli di annidamento}
-Rappresenta il numero di livelli di annidamento quindi l'inserimento di una struttura di controllo all'interno di un'altra. Un elevato valore comporta un'alta complessit\'a e un basso livello di astrazione del codice.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [1-6];
-\item Ottimale: [1-3].
-\end{itemize}
-\subsubsection{Attributi per classe}
-Un elevato numero di attributi per classe pu\'o rappresentare la necessit\'a di suddividere la classe in pi\'u classi, possibilmente utilizzando la tecnica dell'incapsulamento, e può inoltre rappresentare un possibile errore di progettazione.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [0-16];
-\item Ottimale: [3-8].
-\end{itemize}
-\subsubsection{Numero di parametri per metodo}
-Un elevato numero di parametri potrebbe richiedere di ridurre le funzionalit\'a del metodo o provvedere ad una nuova progettazione dello stesso.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [0-8];
-\item Ottimale: [0-4].
-\end{itemize}
-\subsubsection{Linee di codice per linee di commento}
-Indica il rapporto tra linee di codice e linee di commento: questo parametro \'e fondamentale per valutare la manutenibilit\'a del codice prodotto, nonch\'e del possibile riuso.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [>0,25];
-\item Ottimale: [>0.30].
-\end{itemize}
-\subsubsection{Flusso di informazioni}
-fan in e fan out \underline{DA TOGLIERE}\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [40-100];
-\item Ottimale: [50-100].
-\end{itemize}
-\subsubsection{Accoppiamento}
-accoppiamento afferente e accoppiamento efferente \underline{DA TOGLIERE}\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [40-100];
-\item Ottimale: [50-100].
-\end{itemize}
-\subsubsection{Copertura del codice}
-Indica la percentuale di istruzione che vengono eseguite durante i test. Maggiore \'e la percentuale e pi\'u probabilit\'a si hanno di rilevare minori errori nei prodotto. Tale valore pu\'o essere abbassato tramite l'utilizzo di metodi molto semplici che non richiedono test.\\
-\textbf{Parametri utilizzati:}
-\begin{itemize}
-\item Accettazione: [42\%-100\%];
-\item Ottimale: [65\%-100\%].
-\end{itemize}
+\input{Metriche.tex}
