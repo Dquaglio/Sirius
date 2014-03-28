@@ -1,66 +1,66 @@
-\begin{longtable}{lXXr}%p{0.1\textwidth}}
+\begin{longtable}{llXr}%p{0.1\textwidth}}
 \toprule
 \textbf{Test} & \textbf{Requisito} & \textbf{Descrizione} & \textbf{Stato}\\
 \toprule
-test&FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&Capitolato\\
+TU1&FOBU 1&Verificare che il sistema permetta all'utente di registrarsi&N.A.\\
 \midrule
-test&FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema &Capitolato\\
+TU1.1&FOBU 1.1&Verificare che lo \textit{username} utente lo identifichi univocamente all'interno del sistema &N.A.\\
 \midrule
-test&FOBU 1.1.1&L'utente dovrà inserire un \textit{username} composto da almeno 6 caratteri &Interna\\
+TU1.1.1&FOBU 1.1.1&Verificare che lo \textit{username} inserito dall'utente sia composto da almeno 6 caratteri &N.A.\\
 \midrule
-test&FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&Capitolato\\
-test&FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&Interna\\
+TU1.2&FOBU 1.2&Verificare che l'utente debba inserire una \textit{password} d'accesso&N.A.\\
+TU1.2.1&FOBU 1.2.1&Verificare che la \textit{password} sia composta almeno da 8 caratteri alfanumerici&N.A.\\
 \midrule
-test&FOBU 1.5&L'utente dovrà inserire la propria data di nascita&Interna\\
-test&FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&Interna\\
+TU1.5&FOBU 1.5&Verificare che il campo data di nascita sia un campo obbligatorio&N.A.\\
+TU1.5&FOBU 1.5.1&Verificare che la data di nascita inserita dall'utente sia antecedente alla data di iscrizione&N.A.\\
 \midrule
-test&FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&Interna\\
-test&FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&Interna\\
+TU1.6&FOBU 1.6&Verificare che la \textit{email} utente sia un campo obbligatorio&N.A.\\
+TU1.6.1&FDEU 1.6.1&Verificare che la \textit{email} inserita corrisponda ad un indirizzo di posta elettronica esistente&N.A.\\
 \midrule
-test&FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&Capitolato\\
-test&FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&Interna\\
+TU2&FOBU 2&Verificare che  il sistema permetta all'utente di autenticarsi&N.A.\\
+TU2.1&FOBU 2.1&Verificare che il sistema non permetta il login con dati non presenti sul \textit{server\ped{G}}&N.A.\\
 \midrule
-test&FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&Interna\\
+TU3.1&FOPL 3.1&Verificare che l'utente autenticato possa visualizzare le proprie credenziali&N.A.\\
 \midrule
-test&FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&Interna\\
+TU3.2&FOPL 3.2&Verificare che l'utente autenticato possa modificare i propri dati&N.A.\\
 \midrule
-test&FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&Capitolato\\
+TU4.1&FOBL 4.1&Verificare che l'utente autenticato possa scegliere un processo da una lista selezionata o da risultati di una ricerca&N.A.\\
 \midrule
-test&FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&Interna\\
+TU4.2&FOBL 4.2&Verificare che l'utente autenticato possa visualizzare la descrizione di un processo selezionato&N.A.\\
 \midrule
-test&FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&Capitolato\\
+TU4.3&FOBL 4.3&Verificare che un utente autenticato possa iscriversi a un processo precedentemente selezionato&N.A.\\
 \midrule
-test&FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&Capitolato\\
+TU4.4&FOBL 4.4&Verificare che un utente autenticato possa eseguire il processo scelto a cui è iscritto&N.A.\\
 \midrule
-test&FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&Capitolato\\
+TU4.4.1&FOBL 4.4.1&Verificare che all'utente autenticato sia concesso di visualizzare i criteri di terminazione di un processo&N.A.\\
 \midrule
-test&FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&Interna\\
+TU4.4.2&FOBL 4.4.2&Verificare che l'utente autenticato possa visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&N.A.\\
 \midrule
-test&FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&Capitolato\\
+TU4.4.4&FOBL 4.4.4&Verificare che il sistema permetta all'utente autenticato di eseguire un passo del processo scelto&N.A.\\
 \midrule
-test&FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&Capitolato\\
+TU4.4.4.1&FOBL 4.4.4.1&Verificare che l'utente autenticato possa visualizzare le informazioni del passo in esecuzione&N.A.\\
 \midrule
-test&FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&Capitolato\\
+TU4.4.4.2&FOBL 4.4.4.2&Verificare che all'utente autenticato sia concesso visualizzare i vincoli da rispettare per superare il passo in esecuzione&N.A.\\
 \midrule
-test&FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+TU4.4.4.3&FOBL 4.4.4.3&Verificare che il sistema permetta all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&N.A.\\
 \midrule
-test&FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&Capitolato\\
+TU4.4.4.4&FOBL 4.4.4.4&Verificare che l'utente autenticato possa inviare al sistema i dati richiesti per l'esecuzione del passo in corso&N.A.\\
 \midrule
-test&FOPL 4.4.4.4.6&Il sistema dovrà permettere all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&Capitolato\\
+TU4.4.4.4.6&FOPL 4.4.4.4.6&Verificare che il sistema permetta all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&N.A.\\
 \midrule
-test&FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&Verbale 2014-02-03\\
+TU4.4.4.5&FOBL 4.4.4.5&Verificare che il sistema notifichi all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&N.A.\\
 \midrule
-test&FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dall'amministratore&Capitolato\\
+TU4.4.4.6&FOBL 4.4.4.6&Verifica se il sistema permetta all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dall'process owner&N.A.\\
 \midrule
-test&FOPL 4.4.4.7&Il sistema dovrà permettere all'utente autenticato di saltare il passo in esecuzione se facoltativo&Capitolato\\
+TU4.4.4.7&FOPL 4.4.4.7&Verifica che il sistema permetta all'utente autenticato di saltare il passo in esecuzione se facoltativo&N.A.\\
 \midrule
-test&FOPL 4.4.5.1&Il sistema dovrà permettere all'utente autenticato la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi&Capitolato\\
+TU4.4.5.1&FOPL 4.4.5.1&Verifica che all'utente autenticato sia concessa la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi&N.A.\\
 \midrule
-test&FOBL 4.4.5.2&Il sistema dovrà permettere all'utente autenticato di eliminare un processo un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&Capitolato\\
+TU4.4.5.2&FOBL 4.4.5.2&Verifica che all'utente autenticato sia permesso di eliminare un processo, un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&N.A.\\
 \midrule
-test&FOBL 4.5&Il sistema dovrà permettere all'utente autenticato di disiscriversi da un processo a cui è iscritto&Capitolato\\
+TU4.5&FOBL 4.5&Verificare che il sistema permetta all'utente autenticato di disiscriversi da un processo a cui è iscritto&N.A.\\
 \midrule
-test&FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&Capitolato\\
+TU5&FOBL 5&Verifica che l'utente possa terminare la propria sessione, diventando utente generico&N.A.\\
 \bottomrule
 \caption{Tabella dei requisiti utente}
 \end{longtable}
