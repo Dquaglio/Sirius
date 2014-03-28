@@ -1,164 +1,254 @@
-\subsubsection{Package sequenziatore.client.view}
-\paragraph{Package sequenziatore.client.view.admin}
-Interfacce \\
-\begin{description}
-	\item[imainUser] 
-  	\hfill \\
-  	Nome: imainUser\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.admin\\
-	Descrizione: interfaccia che permette la gestione delle varie componenti 	dell'interfaccia grafica dell'utente
-\end{description}
+\subsubsection{Package sequenziatore::client::view::user}
 
-\begin{description}
-	\item[ilogin] 
-  	\hfill \\
-  	Nome: ilogin\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette di richiedere l'accesso oppure terminazione al sistema Sequenziatore da parte dell’utente generico
-\end{description}
+\paragraph{MainUser}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{MainUser};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Main\fshyp{}U\fshyp{}ser} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[iregister] 
-  	\hfill \\
-  	Nome: iregister\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette la visualizzazione su richiesta del presenter del widget\ped{G} per la registrazione di un nuovo utente al sistema Sequenziatore
-\end{description}
+\paragraph{UpdateView}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{UpdateView};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire l’aggiornameno dei \textit{widget\ped{G}} della componente \textit{view};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Up\fshyp{}da\fshyp{}te\fshyp{}View} e aggiorna le componenti della \textit{view} comunicando con le seguenti classi:
+\begin{itemize}
+\item \texttt{\viewAdmin{}::MainUser};
+\item \texttt{\viewAdmin{}::Login};
+\item \texttt{\viewAdmin{}::Register};
+\item \texttt{\viewAdmin{}::ViewData};
+\item \texttt{\viewAdmin{}::EditData};
+\item \texttt{\viewAdmin{}::ChangePassword};
+\item \texttt{\viewAdmin{}::OpenProcess};
+\item \texttt{\viewAdmin{}::ManagementSelectedProcess};
+\item \texttt{\viewAdmin{}::SendData};
+\item \texttt{\viewAdmin{}::SendText};
+\item \texttt{\viewAdmin{}::SendNumb};
+\item \texttt{\viewAdmin{}::SendPosition};
+\item \texttt{\viewAdmin{}::SendImage};
+\item \texttt{\viewAdmin{}::SendPhoto};
+\item \texttt{\viewAdmin{}::EndSelectedProcess};
+\item \texttt{\viewAdmin{}::PrintProcess};
+\item \texttt{\viewAdmin{}::PreviewProcess}.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[iviewData] 
-  	\hfill \\
-  	Nome: iviewData\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette la realizzazione su richiesta del presenter del widget per la visualizzazione dei dati dell'utente
-\end{description}
+\paragraph{Login}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{Login};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di autenticazione e chiusura della sessione da parte dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Lo\fshyp{}gin} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isetData] 
-  	\hfill \\
-  	Nome: isetData\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette alle classi che la implementano di creare, su richiesta del presenter,il widget per la modifica dei dati personali dell'utente loggato
-\end{description}
+\paragraph{Register}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{Register};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Re\fshyp{}gis\fshyp{}ter} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[imanagmentProcess] 
-  	\hfill \\
-  	Nome: imanagmentProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia realizzare il widget per la gestione dei Processcessi, la visualizzazione dei Processpri dati e per disautenticarsi dal sistema Sequenziatore
-\end{description}
+\paragraph{ViewData}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ViewData};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono visualizzazione dei dati dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}View\fshyp{}Da\fshyp{}ta} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[iopenProcess] 
-  	\hfill \\
-  	Nome: iopenProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per la visualizzazione dei Processcessi iscrivibili e iscritti dell'utente loggato, oltre a fornire la funzionalità di ricerca per nome
-\end{description}
+\paragraph{EditData}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{EditData};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono la modifica dei dati personali dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Edit\fshyp{}Da\fshyp{}ta} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[imanaselectedProcess] 
-  	\hfill \\
-  	Nome: imanaselectedProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia realizzare il widget per visualizzare il stato corrente del processo selezionato nel widget che implementa iopenProcess, i vincoli per concludere il passo e la Positionsibilità di saltare il passo se opzionale
-\end{description}
+\paragraph{ChangePassword}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ChangePassword};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono la modifica della \textit{password} dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Change\fshyp{}Pass\fshyp{}word} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendData] 
-  	\hfill \\
-  	Nome: isendData\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare i dati richiesti per la conclusione del passo
-\end{description}
+\paragraph{OpenProcess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{OpenProcess};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'apertura di un processo tramite ricerca o selezionandolo da una lista;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendData] 
-  	\hfill \\
-  	Nome: isendData\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare i dati richiesti per la conclusione del passo
-\end{description}
+\paragraph{ManagementSelectedProcess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ManagementSelectedProcess};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire la visualizzazione dello stato del processo selezionato e i vincoli per concludere il passo in corso;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Se\fshyp{}lec\fshyp{}ted\fshyp{}Pro\fshyp{}cess} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendText] 
-  	\hfill \\
-  	Nome: isendText\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inserire il testo da inviare per concludere il passo
-\end{description}
+\paragraph{SendData}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendData};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'invio dei dati richiesti per la conclusione del passo in esecuzione;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Da\fshyp{}ta} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendNumb] 
-  	\hfill \\
-  	Nome: isendNumb\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette di realizzare il widget per inviare i dati numerici richiesti per la conclusione del passo
-\end{description}
+\paragraph{SendText}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendData};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire il testo da inviare per concludere il passo in esecuzione;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Text} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendPosition] 
-  	\hfill \\
-  	Nome: isendPosition\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per invio della Positionizione geografica per la conclusione del passo. Il widget oltre a permettere l'invio, visualizza il messaggio di avvenuto invio in caso di Positionizione corretta altrimenti visualizza un messaggio di errore
-\end{description}
+\paragraph{SendNumb}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendNumb};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette agli oggetti che la implementano di realizzare i \textit{widget} che consentono di inserire i dati numerici da inviare per concludere il passo in esecuzione;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Numb} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendImage] 
-  	\hfill \\
-  	Nome: isendImage\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per inviare l'immagine richiesta dal passo per la sua conclusione
-\end{description}
+\paragraph{SendPosition}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendPosition};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette  di realizzare i \textit{widget} che consentono di inviare la posizione geografica richiesta per la conclusione del passo in esecuzione;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Po\fshyp{}si\fshyp{}tion} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[isendPhoto] 
-  	\hfill \\
-  	Nome: isendPhoto\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che realizza il widget, dove Positionsibile di fotografare la foto da inviare per la conclusione del passo
-\end{description}
+\paragraph{SendImage}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendImage};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire le immagini richieste per concludere i passo in esecuzione;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Image} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[iendselectedProcess] 
-  	\hfill \\
-  	Nome: iendselectedProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che permette agli oggetti che la implementano di realizzare il widget per visualizzare l'esito di fine processo, oltre a garantire la Positionsibilità di visualizzare e salvare il Reportrt da parte dell'utente loggato
-\end{description}
+\paragraph{SendPhoto}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendPhoto};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di scattare le fotografie richieste dal passo in esecuzione e di inviarle;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Photo} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[iprintProcess] 
-  	\hfill \\
-  	Nome: iprintProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che realizza, agli oggetti che la implementano,  il widget per il salvataggio del Reportrt di fine processo
-\end{description}
+\paragraph{EndSelectedProcess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{EndSelectedProcess};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di visualizzare l'esito del processo e di effettuare le operazioni di conclusione del processo;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}End\fshyp{}Se\fshyp{}lec\fshyp{}ted\fshyp{}Pro\fshyp{}cess} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
-\begin{description}
-	\item[ipreviewProcess] 
-  	\hfill \\
-  	Nome: ipreviewProcess\\
-  	Tipo: interface\\
-	Package: sequenziatore.client.view.user\\
-	Descrizione: interfaccia che realizza, agli oggetti che la implementano,  il widget per visualizzare l'anteprima del Reportrt salvato di fine percorso
-\end{description}
+\paragraph{PrintProcess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{PrintProcess};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono il salvataggio dei \textit{report} sull'esecuzione del processo;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Print\fshyp{}Pro\fshyp{}cess} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{PreviewProcess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{PreviewProcess};
+\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Descrizione:} Classe che permette agli oggetti che la implementano di realizzare i \textit{widget} per consentire la visualizzazione dei \textit{report} sull'esecuzione del processo;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Pre\fshyp{}view\fshyp{}Pro\fshyp{}cess} e comunica con il \textit{presenter} utilizzando metodi della classe \texttt{\logicUser{}::Main\fshyp{}Lo\fshyp{}gic}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}

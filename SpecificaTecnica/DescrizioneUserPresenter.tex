@@ -1,7 +1,3 @@
-\iffalse
-model::localdataprocessowner::ProcessOwnerData
-\fi
-
 \subsubsection{Package sequenziatore::client::presenter::user::logic}
 
 \paragraph{MainLogic}
@@ -85,7 +81,10 @@ La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\
 \item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato dei processi. Le operazioni di gestione dello stato comprendono l'eliminazione dei processi terminati;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::Pro\fshyp{}cess} e \texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi 
+\texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, 
+\texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} e 
+\texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -98,7 +97,7 @@ La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\
 \item \textbf{Descrizione:} Classe che ha il compito di gestire l'inserimento e l'invio di dati da parte degli utenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Send\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\model{}::Step} e \texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Send\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\model{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} e \texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -111,7 +110,7 @@ La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Send\fshyp{}D
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la creazione di report sull'andamento dei processi in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::HttpCommunication}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::Pro\fshyp{}cess}, \texttt{\model{}::Step} \texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::HttpCommunication}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} \texttt{\logicUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
