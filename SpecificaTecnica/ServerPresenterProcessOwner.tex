@@ -7,7 +7,14 @@
 	\end{itemize}
 
 %----------------------------------------------------------------------------------------------%
+\paragraph{ILogin}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{ILogin};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione della login del \textit{process owner};
+	\end{itemize}
 
+%----------------------------------------------------------------------------------------------%
 \paragraph{IStepManager}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IStepManager};
@@ -33,6 +40,17 @@
 
 %0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
 \subsubsection{Package sequenziatore::server::presenter::processowner}
+\paragraph{Login}
+	\begin{itemize}
+		\item \textbf{Nome:} \texttt{Login};
+		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Descrizione:} Classe che permette la gestione della login del \textit{process owner};
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::ILogin ed invoca i metodi delle classi:
+		\begin{itemize}
+			\item sequenziatore::server::model::dao::daoprocessowner::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daoprocessowner::IObjectTransfer;
+			\item sequenziatore::server::model::dao::daoprocessowner::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daoprocessowner::IDataAccessObject;
+		\end{itemize}
+	\end{itemize}
 
 \paragraph{ProcessManager}
 	\begin{itemize}
@@ -41,7 +59,8 @@
 		\item \textbf{Descrizione:} Classe che riceve le richieste del \textit{process owner} per la gestione dei processi come creazione,modifica e eliminazione degli stessi;
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IProcessManager ed invoca i metodi delle classi:
 		\begin{itemize}
-			\item \textcolor{red}{manca}
+			\item sequenziatore::server::model::dao::daoprocessowner::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::dao::daoprocessowner::IObjectTransfer;
+			\item sequenziatore::server::model::dao::daoprocessowner::DataAccessObject tramite l' interfaccia sequenziatore::server::model::dao::daoprocessowner::IDataAccessObject;
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
