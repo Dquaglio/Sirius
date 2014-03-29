@@ -4,7 +4,7 @@
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{MainUser};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -17,29 +17,29 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Main\fshyp{}U\
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{UpdateView};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di gestire l’aggiornameno dei \textit{widget\ped{G}} della componente \textit{view};
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
 La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Up\fshyp{}da\fshyp{}te\fshyp{}View} e aggiorna le componenti della \textit{view} comunicando con le seguenti classi:
 \begin{itemize}
-\item \texttt{\viewAdmin{}::MainUser};
-\item \texttt{\viewAdmin{}::Login};
-\item \texttt{\viewAdmin{}::Register};
-\item \texttt{\viewAdmin{}::ViewData};
-\item \texttt{\viewAdmin{}::EditData};
-\item \texttt{\viewAdmin{}::ChangePassword};
-\item \texttt{\viewAdmin{}::OpenProcess};
-\item \texttt{\viewAdmin{}::ManagementSelectedProcess};
-\item \texttt{\viewAdmin{}::SendData};
-\item \texttt{\viewAdmin{}::SendText};
-\item \texttt{\viewAdmin{}::SendNumb};
-\item \texttt{\viewAdmin{}::SendPosition};
-\item \texttt{\viewAdmin{}::SendImage};
-\item \texttt{\viewAdmin{}::SendPhoto};
-\item \texttt{\viewAdmin{}::EndSelectedProcess};
-\item \texttt{\viewAdmin{}::PrintProcess};
-\item \texttt{\viewAdmin{}::PreviewProcess}.
+\item \texttt{\viewUser{}::MainUser};
+\item \texttt{\viewUser{}::Login};
+\item \texttt{\viewUser{}::Register};
+\item \texttt{\viewUser{}::ViewData};
+\item \texttt{\viewUser{}::EditData};
+\item \texttt{\viewUser{}::ChangePassword};
+\item \texttt{\viewUser{}::OpenProcess};
+\item \texttt{\viewUser{}::ManagementSelectedProcess};
+\item \texttt{\viewUser{}::SendData};
+\item \texttt{\viewUser{}::SendText};
+\item \texttt{\viewUser{}::SendNumb};
+\item \texttt{\viewUser{}::SendPosition};
+\item \texttt{\viewUser{}::SendImage};
+\item \texttt{\viewUser{}::SendPhoto};
+\item \texttt{\viewUser{}::EndSelectedProcess};
+\item \texttt{\viewUser{}::PrintProcess};
+\item \texttt{\viewUser{}::PreviewProcess}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -49,7 +49,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Up\fshyp{}da\f
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{Login};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di autenticazione e chiusura della sessione da parte dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -62,7 +62,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Lo\fshyp{}gin}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{Register};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -75,7 +75,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Re\fshyp{}gis\
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ViewData};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono visualizzazione dei dati dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -88,7 +88,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}View\fshyp{}Da
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{EditData};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono la modifica dei dati personali dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -101,7 +101,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Edit\fshyp{}Da
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ChangePassword};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono la modifica della \textit{password} dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -114,7 +114,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Change\fshyp{}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{OpenProcess};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'apertura di un processo tramite ricerca o selezionandolo da una lista;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -127,7 +127,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}O\fshyp{}pen\f
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ManagementSelectedProcess};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire la visualizzazione dello stato del processo selezionato e i vincoli per concludere il passo in corso;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -140,7 +140,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Ma\fshyp{}na\f
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendData};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'invio dei dati richiesti per la conclusione del passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -153,7 +153,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Da
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendData};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire il testo da inviare per concludere il passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -166,7 +166,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Te
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendNumb};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette agli oggetti che la implementano di realizzare i \textit{widget} che consentono di inserire i dati numerici da inviare per concludere il passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -179,7 +179,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Nu
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendPosition};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette  di realizzare i \textit{widget} che consentono di inviare la posizione geografica richiesta per la conclusione del passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -192,7 +192,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Po
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendImage};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire le immagini richieste per concludere i passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -205,7 +205,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Im
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendPhoto};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di scattare le fotografie richieste dal passo in esecuzione e di inviarle;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -218,7 +218,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Ph
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{EndSelectedProcess};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di visualizzare l'esito del processo e di effettuare le operazioni di conclusione del processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -231,7 +231,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}End\fshyp{}Se\
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{PrintProcess};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono il salvataggio dei \textit{report} sull'esecuzione del processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
@@ -244,7 +244,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Print\fshyp{}P
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{PreviewProcess};
-\item \textbf{Package:} \texttt{\viewAdmin{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette agli oggetti che la implementano di realizzare i \textit{widget} per consentire la visualizzazione dei \textit{report} sull'esecuzione del processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}

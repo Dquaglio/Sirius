@@ -23,19 +23,6 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}.I\fshyp{}Main\fshyp{}L
 \end{itemize}
 \end{flushleft}
 
-\paragraph{UpdateView}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{LoginLogic};
-\item \textbf{Package:} \texttt{\logicAdmin{}};
-\item \textbf{Descrizione:} Classe che ha il compito di gestire l'aggiornameno dei \textit{widget\ped{G}} della componente \textit{View};
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Up\fshyp{}date\fshyp{}View} e comunica con la \textit{View} utilizzando metodi della classe \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
 \paragraph{LoginLogic}
 \begin{flushleft}
 \begin{itemize}
@@ -44,7 +31,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Up\fshyp{}da
 \item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di autenticazione e chiusura della sessione da parte dell'utente \textit{process owner};
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Log\fshyp{}in\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Log\fshyp{}in\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -57,7 +44,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Log\fshyp{}i
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la logica della definizione di un nuovo processo, comunicando con il \textit{server\ped{G}} quando richiesto;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}New\fshyp{}Pro\fshyp{}cess\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}New\fshyp{}Pro\fshyp{}cess\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -70,7 +57,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}New\fshyp{}P
 \item \textbf{Descrizione:} Classe che ha il compito di definire la logica di gestione dei passi di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Add\fshyp{}Step\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\model{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Add\fshyp{}Step\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\model{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -83,7 +70,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Add\fshyp{}S
 \item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato dei processi. Le operazioni di gestione dello stato comprendono la terminazione e l'eliminazione di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -96,7 +83,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Ma\fshyp{}na
 \item \textbf{Descrizione:} Classe che ha il compito di definire la logica del controllo di un passo che richiede intervento umano per essere approvato;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Check\fshyp{}Step\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Check\fshyp{}Step\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -109,7 +96,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Check\fshyp{
 \item \textbf{Descrizione:} Classe che ha il compito di gestire l'accesso alle informazioni statistiche sui processi, come il numero di utenti partecipanti e il numero di completamenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Sta\fshyp{}tis\fshyp{}tic\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Sta\fshyp{}tis\fshyp{}tic\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -122,7 +109,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}Sta\fshyp{}t
 \item \textbf{Descrizione:} Classe che ha il compito gestire l'accesso alle informazioni sui passi superati dagli utenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}U\fshyp{}ser\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}U\fshyp{}ser\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelAdmin{}::Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner\fshyp{}Da\fshyp{}ta} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -135,7 +122,7 @@ La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}U\fshyp{}ser
 \item \textbf{Descrizione:} Classe che ha il compito di gestire i permessi di iscrizione ad un processo degli utenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}In\fshyp{}vi\fshyp{}te\fshyp{}U\fshyp{}ser\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\logicAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe implementa l'interfaccia \texttt{\iLogicAdmin{}::I\fshyp{}In\fshyp{}vi\fshyp{}te\fshyp{}U\fshyp{}ser\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\viewAdmin{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
