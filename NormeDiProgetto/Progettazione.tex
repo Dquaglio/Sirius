@@ -40,6 +40,27 @@ ove con:
 \end{itemize}
 
 \subsubsection{Tracciamento}
+Ogni componente sarà tracciato seguendo tali regole:\\
+\begin{center}
+{\textbf{Ambito}}{\textbf{Utente}}{\textbf{Codice}}
+\end{center}
+
+ove \textbf{Ambito} rappresenta con:
+\begin{itemize}
+\item \textbf{V}: view;
+\item \textbf{CP}: client presenter;
+\item \textbf{SP}: server presenter;
+\item \textbf{CM}: client model;
+\item \textbf{SM}: server model.
+\end{itemize}
+
+ove \textbf{Ambito} rappresenta:
+\begin{itemize}
+\item \textbf{A}: process owner;
+\item \textbf{U}: utente;
+\end{itemize}
+
+Per quanto concerne il codice, si adotteranno i codici del tracciamento degli UC.
 
 \subsection{Test} I progettisti avranno il compito di definire delle classi e dei test fittizi con lo scopo di valutare il lavoro svolto.
 I test saranno suddivisi in:
@@ -48,13 +69,12 @@ I test saranno suddivisi in:
 \item Test di unità;
 \end{itemize}
 
-\subsubsection{Tracciamento dei test}
-
 \paragraph{Tracciamento requisiti-componenti}
+
 \begin{itemize}
-\item \textbf{Requisito}:
-\item \textbf{Descrizione req.}:
-\item \textbf{Nome componente}:
+\item \textit{Requisito}: contiene il codice univoco e classificante del requisito;
+\item \textit{Descrizione requisito}: contiene la descrizione del requisito;
+\item \textit{Nome componente}: contiene il codice identificativo del componente.
 \end{itemize}
 
 \paragraph{Tracciamento componenti-requisiti}

@@ -1,5 +1,5 @@
 \section{Strumenti di lavoro}
-\subsection{Strum. documentazione}
+\subsection{Strumenti per la documentazione}
 \subsubsection{LaTeX}
 Per la stesura dei documenti il team \gruppo{} ha deciso di adottare il linguaggio di markup\ped{G} \LaTeX la scelta è stata effettuata prevalentemente per le seguenti ragioni:
 \begin{itemize}
@@ -11,7 +11,7 @@ e formattazione;
 \end{itemize}
 Gli altri software valutati (Open office, Microsoft Office, Google Docs) non erano in grado di fornire il più delle sopracitate funzionalità, di conseguenza sono stati scartati. Inoltre come editor è consigliato ma non obbligato l'uso di TeXstudio.
 
-\subsubsection{Macros}
+\subsubsection{Macro}
 Al fine di velocizzare il lavoro di stesura documenti, il team \gruppo{} ha deciso di creare delle apposite macro, qui vengono riportate le principali assieme ad una breve spiegazione delle loro funzionalità:
 \begin{itemize}
 \item \verb+\+gruppo riporta il nome del team \gruppo;
@@ -53,7 +53,7 @@ I principali errori rilevati sono i seguenti:
 \end{itemize}
 \subsubsection{UML}
 Per la modellazione dei diagrammi User Case (UC\ped{G}) sono stati presi in considerazione tre editor: Dia, Microsoft Visio, Astah. Infine il team ha optato per adottare Astah come strumento definitivo in quanto si tratta di un software open source, con supporto di Unified Modeling Language (UML\ped{G}) 2.x  e secondo l'analisi del team dotato di un interfaccia più responsiva ed intuitiva degli altri software.
-\subsection{Strum. gestione del progetto}
+\subsection{Strumento per la gestione del progetto}
 Al fine di gestire rigorosamente lo sviluppo del progetto il team \gruppo{} ha adottato l'utilizzo del software \textit{TeamWorkPM} (\href{http://www.teamwork.com}{www.teamwork.com}), tale strumento fornisce le seguenti funzionalità:
 
 \begin{itemize}
@@ -71,7 +71,7 @@ Sono stati valutati altri software come ad esempio \textit{Redmine}, il quale fu
 Il \textit{Responsabile di Progetto} per garantire il regolare svolgimento delle attività dovrà necessariamente verificare con cadenza giornaliera se sono presenti \textit{ticket} scaduti e non ancora completati, nel caso citato infatti sarà obbligato a richiedere informazioni (o in caso di ritardi gravi convocare l'interessato) circa la causa del ritardo.\\
 Infine, il \textit{Responsabile di Progetto} dovrà tenere nota che l'assegnazione di \textit{ticket} la cui scadenza è prevista per il giorno successivo può avvenire solo se il lavoro da svolgere non supera le 2 ore lavorative.
 
-\subsection{Strum. pianificazione}
+\subsection{Strumento di pianificazione}
 Per l'attività di pianificazione del progetto nonché gestione delle risorse è stato adottato il software GanttProject, software open source basato su piattaforma Java. Qui di seguito vengono elencate le principali caratteristiche che hanno portato alla scelta di questo strumento:
 \begin{itemize}
 \item Portabilità, essendo un software basato su Java;
@@ -82,7 +82,7 @@ Per l'attività di pianificazione del progetto nonché gestione delle risorse è
 \item Può generare grafici Program Evalutation and Review Tecnique (PERT\ped{G});
 \item In grado di gestire e generare grafici delle risorse assegnate.
 \end{itemize}
-\subsection{Strum. di versionamento}
+\subsection{Strumento di versionamento}
 Di pressoché fondamentale importanza è stata la definizione di un ambiente ordinato in cui organizzare e mantenere tutti i \textit{file} che attraversano il ciclo di vita, per questa ragione è stato scelto di avvalersi di un \textit{repository}. 
 
 \subsubsection{GitHub}
@@ -119,14 +119,14 @@ Il \textit{master branch} è stato quindi suddiviso seguendo questa struttura:
 A scopo puramente dimostrativo è stato creato l'esempio di un documento formale del gruppo \gruppo, contenuto nella cartella: "EsempioDocumento", questa scelta è stata fatta per illustrare la struttura generale che deve preservare qualsiasi documento (sezione 5.4, Struttura documentazione).
 Per sfruttare il parallelismo nello sviluppo di uno stesso documento sono stati creati appositamente dei  \textit{branch} denominati con il nome dei membri del gruppo, i documenti  \textit{baseline\ped{G}} invece saranno contenuti solamente nel \textit{master branch}. Il \textit{merge\ped{G}} con il ramo \textit{master} avviene quindi solamente dopo la terminazione dell'attività di verifica di un documento.
 
-\subsection{Strum. condivisione file}
+\subsection{Strumenti per la condivisione file}
 Per gestire efficientemente la condivisione dei file intra-gruppo a supporto dello strumento di \textbf{Git} è stato scelto l'utilizzo di: Google Drive, un servizio \textit{web} di \textit{storage} e sincronizzazione \textit{online} che dovrebbe facilitare la condivisione e fornire una base d'appoggio secondaria ed informale per alcuni file che non necessitano versionamento.
 L'utilizzo di \textit{Google Drive} e' limitato ai documenti che:
 \begin{itemize}
 \item Non necessitano di versionamento;
 \item Necessitano di essere acceduti velocemente tramite \textit{web};
 \end{itemize}
-\subsection{Strum. tracciamento}
+\subsection{Piattaforma per il tracciamento}
 Per il tracciamento è stato sviluppato un semplice programma denominato \textit{Sirius RTg}. Questo programma è stato sviluppato utilizzando PHP\ped{G}, CSS\ped{G} ed HTML\ped{G}. Sirius RTg è attualmente un programma il cui sviluppo non è terminato, principalmente per permettere una aggiunta di funzionalità in caso di necessità. Sirius RTg, alla versione 2.0.0, fornisce le seguenti funzionalità:
 \begin{itemize}
 \item Inserimento requisito e relativo tracciamento;
@@ -165,5 +165,5 @@ Questa funzionalità è stata inserita al fine di poter tracciare le componenti 
 \item Requisiti associati al componente
 \end{itemize}
 Sono state inoltre implementati due script che stampano a video il codice \LaTeX{} del tracciamento componente-requisito e requisito-componente, il codice \LaTeX{} generato è conforme alle \NormeDiProgetto{}.
-\subsubsection{Scritp glossario}
+\subsubsection{Script glossario}
 Anche se non inerente al tracciamento dei requisiti, lo strumento \textit{Sirius RTg} alla versione 2.0 prevede la funzionalità aggiuntiva di poter inserire automaticamente i pedici \ped{G} (per le parole contenute nel \Glossario{}) ai documenti del team.

@@ -1,0 +1,61 @@
+\section{Verifica}
+\subsubsection{Metriche}
+I dati rilevati durante l'attività di verifica devono essere analizzati tramite precise metriche.
+Con questo termine si intende l'insieme di parametri misurabili su un processo. Qualora le metriche definite in questo documento siano approssimative e/o ambigue, queste dovranno essere ridefinite in modo specifico e seguiranno in modo incrementale il ciclo di vita del prodotto. Di seguito sono riportate le metriche adottate dal team \textit{Sirius}; gli obbiettivi qualitativi che invece definiscono il grado di accettazione/ottimalità verranno riportati nel \PianoDiQualifica.
+\subsubsection{Metriche per i processi}
+Le metriche dei processi ne stabiliscono la qualità, definita come connubio tra \textit{capability}\ped{G}, \textit{maturity}\ped{G} e i miglioramenti. Queste caratteristiche di qualità si possono individuare in tre classi di misure di processo:
+\begin{itemize}
+\item \textbf{Tempo}: il tempo richiesto per il completamento di un particolare processo;
+\item \textbf{Risorse}: le risorse richieste per un particolare processo, in genere vengono definite risorse-uomo, per le risorse software si fa riferimento a \infoNDP;
+\item \textbf{Occorrenze}: il numero di volte che capita un particolare evento, che può essere il numero di difetti scoperti durante l'attività di verifica.
+\end{itemize}
+Per rilevare questi dati \gruppo ~ha deciso di utilizzare, indici che valutano i tempi e i costi del processo. La scelta di queste metriche è dettata anche dal loro possibile utilizzo durante lo svolgimento del processo, per capire in modo semplice se lo stato del processo è conforme a quanto pianificato, mantenendo quindi il processo in controllo. In \infoPDP ~viene specificato come sono stati pianificati questi indici nello stato di avanzamento.
+\paragraph{(SV) Schedule Variance}
+Indica se si è in linea, in anticipo o in ritardo rispetto alla pianificazione temporale delle attività citata in \infoPDP.
+È un indicatore di efficacia temporale e per questo \gruppo ha deciso di esprimerlo in ore.
+Se SV $>$ 0 significa che il gruppo di lavoro sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo.\\
+
+\paragraph{(BV) Budget Variance}
+Indica se allo stato attuale si è speso più o meno rispetto a quanto pianificato.
+È un indicatore che ha valore contabile e finanziario per questo è espresso in euro.
+Se BV $>$ 0 significa che l’attuazione del progetto sta consumando il proprio budget con minor velocità rispetto a quanto pianificato, viceversa se negativo.
+
+\subsubsection{Metriche per i documenti}
+Come metrica per la verifica dei documenti \gruppo ha deciso di utilizzare l’indice di leggibilità.
+Vi sono a disposizione molti indici di leggibilità, ma i più importanti sono per la lingua inglese. Si è deciso quindi di adottare un indice di leggibilità per la lingua italiana.
+L’indice \textit{Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri indici, esso ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Permette di misurare la complessità dello stile di scrittura di un documento.
+L’indice viene calcolato utilizzando la formula citata nelle \infoNDP~.
+I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta e 0 la leggibilità più bassa. In generale risulta che testi con un indice:
+\begin{itemize}
+\item Inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+\item Inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+\item Inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+\end{itemize}
+
+\subsubsection{Metriche per il software}
+Al fine di perseguire gli obiettivi qualitativi dichiarati nel \PianoDiQualifica{} è necessario definire delle metriche, queste metriche hanno quindi l'obbiettivo di rendere quantificabile il lavoro svolto. Questa sezione, però, è da intendersi come modificabile nell'arco dello svolgimento del progetto.
+\paragraph{Complessità ciclomatica}
+Pensata da T.J. McCabe è utilizzata per misurare la complessità per funzioni, moduli, metodi o classi di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
+Alti valori di complessità ciclomatica indicano una ridotta manutenibilità del codice. Al contrario, valori bassi potrebbero determinare una scarsa efficienza dei metodi. Questo parametro è inoltre un indice del carico di lavoro richiesto dal \textit{testing}. Indicativamente un modulo con complessità ciclomatica più bassa richiede meno test di uno con complessità più elevata.\\
+Il valore 10 come massimo di complessità ciclomatica fu raccomandato da T.J.McCabe, l'inventore di tale metrica.
+\paragraph{Numero livelli di annidamento}
+Rappresenta il numero di livelli di annidamento, quindi l'inserimento di una struttura di controllo all'interno di un'altra. Un elevato valore comporta un'alta complessità e un basso livello di astrazione del codice.\\
+
+\paragraph{Attributi per classe}
+Un elevato numero di attributi per classe può rappresentare la necessità di suddividere la classe in più classi, possibilmente utilizzando la tecnica dell'incapsulamento, e può inoltre rappresentare un possibile errore di progettazione.\\
+
+\paragraph{Numero di parametri per metodo}
+Un elevato numero di parametri potrebbe richiedere di ridurre le funzionalità del metodo o provvedere ad una nuova progettazione dello stesso.\\
+
+\paragraph{Linee di codice per linee di commento}
+Indica il rapporto tra linee di codice e linee di commento: questo parametro è fondamentale per valutare la manutenibilità del codice prodotto, nonché del possibile riuso.\\
+
+\paragraph{Accoppiamento}
+\begin{itemize}
+\item \textbf{Accoppiamento afferente:} indica il numero di classi esterne al package\ped{G} che dipendono da classi interne ad esso. Un alto valore indica che è presente un alto grado di dipendenza del resto del software dal package. Questo non indica necessariamente una progettazione errata o di bassa qualità, ma possono rappresentare una criticità del package, che quindi perderebbe di robustezza. Al contrario un valore troppo basso potrebbe segnalare che il package analizzato fornisce poche funzionalità e quindi potrebbe risultare scarsamente utile.
+\textbf{Parametri utilizzati:}
+I valori di range di tale indice verranno definiti durante la progettazione di dettaglio.
+\item \textbf{Accoppiamento efferente:} indica il numero di classi interne al package che dipendono da classi esterne ad esso. Mantenendo un basso valore di questo indice, è possibile mantenere il package in grado di garantire funzionalità di base indipendentemente dal resto del sistema.
+\end{itemize}
+\paragraph{Copertura del codice}
+Indica la percentuale di istruzione che vengono eseguite durante i test. Maggiore è la percentuale e più probabilità si hanno di rilevare minori errori nei prodotto. Tale valore può essere abbassato tramite l'utilizzo di metodi molto semplici che non richiedono test.\\
