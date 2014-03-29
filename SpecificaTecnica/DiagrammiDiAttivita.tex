@@ -1,0 +1,133 @@
+\section{Diagrammi di attività}
+Di seguito vengono illustrati i diagrammi di attività che illustrano l'interazione degli utenti con il l'applicativo \progetto{}.
+Si è cercato di creare diagrammi ad alto livello che descrivessero il principale flusso di azioni. Tali diagrammi sono in seguito stati suddivisi secondo sotto-diagrammi specifici, al fine di illustrare con maggior dettaglio il flusso di certe attività.
+
+\subsection{Diagrammi di attività: process owner}
+
+\subsubsection{Creazione processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/admin/creazioneprocesso}
+\caption{Attività process owner: creazione processo.}
+\end{figure}
+
+\textbf{Descrizione}: Il process owner\ped{G} al fine di creare un nuovo processo dovrà dapprima inserire il nome e la descrizione del suddetto. Inseriti i primi campi potrà inserire
+o una data di scadenza o un numero massimo di completamenti del processo, alchè sarà tenuto a definire i passi del suddetto (per maggiori dettagli vedere: Figura 3, Attività process owner: creazione passo). Eseguiti i passi sopracitati potrà decidere se annullare il processo o darne la conferma
+\subsubsection{Gestione processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.40]%
+{./attivita/admin/gestioneprocesso}
+\caption{Attività process owner: gestione di un processo.}
+\end{figure}
+
+\textbf{Descrizione}: Brevemente il process owner dopo aver visualizzato la lista processi, può selezionare il processo di interesse per accedere alla sua gestione, ossia: visualizzare utenti (al fine di aggiungerli al processo), eliminare il processo, terminarlo oppure recuperare le informazioni relative al suddetto.
+Il recupero delle informazioni è necessario per controllare i dati che richiedono la verifica umana. Nel momento in cui il process owner ha finito di gestire i processi, potrà chiudere l'applicazione.
+
+\subsubsection{Creazione passo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/admin/creazionepasso}
+\caption{Attività process owner: creazione passo.}
+\end{figure}
+
+\textbf{Descrizione}: durante la creazione /modifica di un processo l'utente process owner potrà decidere di aggiungere dei passi, l'aggiunta di un passo comporta l'aggiunta dei dati che gli competono, che possono essere di tre tipologie. Compiuta l'aggiunta dei dati, sarà possibile imporre dei vincoli su questi dati, al fine di determinare se l'utente gli ha inseriti rispettandoli. In questa fase è inoltre possibile inserire un vincolo geografico (coordinate GPS). Attuato questo flusso di comandi il passo potrà essere avviato oppure annullato a discrezione del process owner.
+
+\subsubsection{Gestione passi}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.40]%
+{./attivita/admin/definizionepasso}
+\caption{Attività process owner: gestione passi.}
+\end{figure}
+
+\textbf{Descrizione}: La gestione dei passi di un processo si dirama in 4 possibili scelte: la creazione di un nuovo passo, la modifica di un passo esistente, l'eliminazione di un passo e la visualizzazione dei passi creati. Per quanto concerne la modifica e l'eliminazione di un passo l'utente potrà scegliere se annullare o apportare effettivamente le modifiche/eliminazione.
+
+\subsection{Diagrammi di attività: standard user}
+
+\subsubsection{Registrazione}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Registrazione}
+\caption{Attività user: Registrazione}
+\end{figure}
+
+\textbf{Descrizione}: L'utente inserisce i dati richiesti per la registrazione, se  l'username scelto è unico, allora i dati vengono salvati, l'utente è registrato e può autenticarsi, in caso contrario viene richiesto di inserire un nuovo username.
+
+
+\subsubsection{Login}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Login}
+\caption{Attività user: Login}
+\end{figure}
+
+\textbf{Descrizione}: L'utente non autenticato inserisce i suoi dati d'accesso, se sono corretti, l'utente viene autenticato, altrimenti gli viene notificato l'errore.
+
+\subsubsection{Modifica dati utente}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Modificautente}
+\caption{Attività user: Modifica dati utente}
+\end{figure}
+
+\textbf{Descrizione}: I dati che l'utente può modificare una volta reistrato sono la sua password e la sua email.
+Se l'utente vuole modificare la password gli viene priam richiesta la password corrente, se non è corretta gli viene notificato un errore e la richiesta viene ripetuta, in caso contrario l'utente inserisce una nuova password.
+Se invece l'utente vuole modificare la sua email, gli viene semplicemnte richiesta una nuova mail.
+In caso di modifica di password o email i dai vengono risalvati sul server.
+
+\subsubsection{Gestione dei processi}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Gestioneprocessi}
+\caption{Attività user: Gestione dei processi}
+\end{figure}
+
+\textbf{Descrizione}: Il sistema dopo aver ricevuto dal server i dati sui processi che l'utente può gestire, ne visualizza una lista, l'utente seleziona un processo dalla lista di cui riceve successivamente la descrizione.
+Se l'utente è iscritto al processo selezionato può eseguire il processo e/o pùò disiscriversi da questo processo.
+Se non è iscritto invece può decidere di iscriversi, e una volta iscritto gli vengono offerte le stesse attività descritte nel caso precedente.
+
+\subsubsection{Esecuzione di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Esecuzioneprocesso}
+\caption{Attività user: Esecuzione di un processo}
+\end{figure}
+
+\textbf{Descrizione}: All'utente vengono visualizzate le informazioni sul processo in esecuzione, dopodichè, per ogni passo del processo, l'utente segue il passo (si veda il diagramma delle attività "Esecuzione di un passo" per i dettagli), e il sistema determina il passo succesivo.
+Infine, al terminie dei passi che il sistema ha determinato da eseguire, il processo viene concluso (si veda il digramma delle attività "Conclusione di un processo" per i dettagli).
+
+
+\subsubsection{Conclusione di un processo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Conclusioneprocesso}
+\caption{Attività user: conclusione di un processo}
+\end{figure}
+
+\textbf{Descrizione}: Il sistema genera un report sui passi eseguiti e sui dati raccolti, questo report viene inviato al server.
+Successivamente l'utente può scegliere se visualizzare il report e se salvarne una copia sul proprio dispositivo.
+Infine il processo viene chiuso.
+
+\subsubsection{Esecuzione di un passo}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.50]%
+{./attivita/user/Esecuzionepasso}
+\caption{Attività user: Esecuzione di un passo}
+\end{figure}
+
+\textbf{Descrizione}: All'utente vengono visualizzate le informazioni sul passo, poi se il passo è opzionale l'utente può decidere di saltarlo.
+Nel caso il passo non sia opzionale o che l'utente non voglia saltarlo, l'utente inserisce i dati richisti per il completamento del passo, i quali vengono successivamente inviati al server.
+Se i dati inviati richiedono il controllo dell'amministratore, il passo non può essere completato fino alla ricezione del suo giudizio che può richiedere di ripetere l'esecuzione del passo.
+Nel caso che i dati soddisfino il l'amministratore o non fosse richiesto il controllo, il passo viene concluso.
+
+
