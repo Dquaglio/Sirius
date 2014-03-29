@@ -11,15 +11,15 @@ In questa sezione vengono descritti i test di sistema che consentiranno a \grupp
 \subsection{Requisiti di vincolo}
 \LTXtable{\textwidth}{RequisitiVincolo.tex}
 \subsection{Test di integrazione}
-In questa sezione vengono descritti i test di integrazione, da utilizzare per i vari componenti descritti nella progettazione ad alto livello, che permettono di verificare la corretta integrazione ed il corretto flusso dei dati all’interno del sistema.
-Si è deciso di utilizzare una strategia di integrazione incrementale che permette di
-sviluppare e verificare le componenti in parallelo.\\
+In questa sezione verranno descritti i test di integrazione, da utilizzare per i vari componenti descritti nella progettazione ad alto livello, che permettono di verificare la corretta integrazione ed il corretto flusso dei dati all’interno del sistema.
+Si è deciso di utilizzare una strategia di integrazione incrementale bottom-up che permette di sviluppare e verificare le componenti in parallelo.\\
 Assemblando le componenti in modo incrementale i difetti rilevati da un test sono da
 attribuirsi, con maggior probabilità, all’ultima parte aggiunta e si rende ogni passo di
 integrazione reversibile consentendo di retrocedere verso uno stato noto e sicuro.
 In questo modo i componenti base vengono testati più volte riducendo la possibile presenza di errori.
-\subsubsection{Descrizione dei test di integrazione}
-\LTXtable{\textwidth}{Componenti.tex}
+I test di integrazione saranno definiti durante la progettazione di dettaglio in modo che possano essere il più completi possibile, e che siano nella sequenza corretta rispetto allo sviluppo temporale dei componenti.
+%\subsubsection{Descrizione dei test di integrazione}
+%\LTXtable{\textwidth}{Componenti.tex}
 \subsection{Test di validazione}
 I test di validazione saranno definiti durante la progettazione di dettaglio in modo che possano essere il più completi possibile.
 
