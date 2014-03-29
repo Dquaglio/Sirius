@@ -12,12 +12,12 @@
 		\end{itemize}
 	\end{itemize}
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
-\subsubsection{Package sequenziatore::server::presenter::icommunication}
+\subsubsection{Package sequenziatore::server::presenter::iclientcommunication}
 \paragraph{ICommunication}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ICommunication};
 		\item \textbf{Tipo:} Interface;
-		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Package:} sequenziatore::server::presenter::iclientcommunication
 		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il \textit{presenter} lato \textit{client};
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
@@ -25,18 +25,18 @@
 	\begin{itemize}
 		\item \textbf{Nome:} IDataFormatter;
 		\item \textbf{Tipo:} Interface;
-		\item \textbf{Package:} sequenziatore::server::presenter::icommunication
+		\item \textbf{Package:} sequenziatore::server::presenter::iclientcommunication
 		\item \textbf{Descrizione:} interfaccia che gestisce le comunicazioni con il presenter lato \textit{client} tramite richieste http;
 	\end{itemize}
 %0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
-\subsubsection{Package sequenziatore::server::presenter::communication}
+\subsubsection{Package sequenziatore::server::presenter::clientcommunication}
 \paragraph{HttpCommunication}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{HttpCommunication};
 		\item \textbf{Tipo:} Class;
-		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Package:} sequenziatore::server::presenter::clientcommunication
 		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite richieste http;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::communication::ICommunication} e richiama metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::iclientcommunication::ICommunication} e richiama metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::presenter::PresenterFacade.
 		\end{itemize}
@@ -46,9 +46,9 @@
 	\begin{itemize}
 		\item \textbf{Nome:} WebsocketCommunication;
 		\item \textbf{Tipo:} Class;
-		\item \textbf{Package:} sequenziatore::server::presenter::communication
+		\item \textbf{Package:} sequenziatore::server::presenter::clientcommunication
 		\item \textbf{Descrizione:} classe responsabile della gestione delle comunicazioni con il presenter lato \textit{client} tramite WebSocket;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::communication::ICommunication} e richiama metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia :\texttt{sequenziatore::server::presenter::iclientcommunication::ICommunication} e richiama metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::presenter::PresenterFacade.
 		\end{itemize}

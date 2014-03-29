@@ -1,10 +1,9 @@
 \subsubsection{Package sequenziatore::server::presenter::iuser}
-\paragraph{ProcessOwnerFacade}
+\paragraph{UserFacade}
 	\begin{itemize}
-		\item \textbf{Nome:} ProcessOwnerFacade;
-		\item \textbf{Tipo:} abstract;
+		\item \textbf{Nome:} UserFacade;
 		\item \textbf{Package:} sequenziatore::server::presenter::iuser
-		\item \textbf{Descrizione:} classe che decide in base alla richiesta ricevuta a che classe assegnarne l' elaborazione di tale richiesta all' interno del package processowner
+		\item \textbf{Descrizione:} classe astratta che decide in base alla richiesta ricevuta a che classe assegnarne l' elaborazione di tale richiesta all' interno del package processowner
 		\item \textbf{Relazione con altre componenti:} la classe richiama metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::presenter::user::AccountManager tramite l' interfaccia			sequenziatore::server::presenter::user::IAccountManager;
@@ -18,7 +17,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IAccountManager};
 		\item \textbf{Package:} sequenziatore::server::presenter::iuser
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente e ne gestisce la login.
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
 \paragraph{IUserProcessManager}
