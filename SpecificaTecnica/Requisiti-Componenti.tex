@@ -1,354 +1,313 @@
-\begin{longtable}{lXl}
+\begin{longtable}{lXp{0.23\textwidth}}
 \toprule
 \textbf{Requisito} & \textbf{Descrizione} & \textbf{Componente}\\
 \toprule
-FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&VU4\\
-&&CPU3\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
+FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&VU4, CPU3, CP1, CP3, SP1, SP3, SPU1, SMU1, SMU2\\
 \midrule
-FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema&VU4\\
-&&CPU3\\
+FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema&VU4, CPU3\\
 \midrule
-FOBU 1.1.1&L'utente dovrà inserire un \textit{username} composto da almeno 6 caratteri &VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.3&L'utente dovrà inserire il proprio nome&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.4&L'utente dovrà inserire il proprio cognome&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.5&L'utente dovrà inserire la propria data di nascita&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&VU4\\
-&&CPU3\\
-\midrule
-FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&VU4\\
-&&CPU3\\
-\midrule
-FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&VU4\\
-&&CPU3\\
-\midrule
-FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&VU3\\
-&&CPU2\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
-\midrule
-FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&VU3\\
-&&CPU2\\
-\midrule
-FOBU 2.2&L'utente dovrà inserire il proprio \textit{username} per autenticarsi&VU3\\
-&&CPU2\\
-\midrule
-FOBU 2.3&L'utente dovrà inserire la propria \textit{password} per autenticarsi&VU3\\
-&&CPU2\\
-\midrule
-FOPL 3&Il sistema dovrà permettere all'utente autenticato di gestire le proprie credenziali&VU5\\
-&&VU6\\
-&&CPU4\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
-\midrule
-FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&VU5\\
-&&CPU4\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
-\midrule
-FOPL 3.1.1&L'utente autenticato visualizzerà il proprio \textit{username}&VU5\\
-&&CPU4\\
-\midrule
-FOPL 3.1.2&L'utente autenticato visualizzerà il proprio nome&VU5\\
-&&CPU4\\
-\midrule
-FOPL 3.1.3&L'utente autenticato visualizzerà il proprio cognome&VU5\\\\
-&&CPU4\\
-\midrule
-FOPL 3.1.4&L'utente autenticato visualizzerà la propria data di nascita&VU5\\
-&&CPU4\\
-\midrule
-FOPL 3.1.5&L'utente autenticato visualizzerà la propria \textit{email}&VU5\\
-&&CPU4\\
-\midrule
-FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&VU6\\
-&&CPU4\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
-\midrule
-FOPL 3.2.1&Il sistema dovrà permettere all'utente autenticato di modificare la propria \textit{password}&VU6\\
-&&VU7\\
-&&CPU4\\
-&&SPU1\\
-&&SMU1\\
-&&SMU2\\
-\midrule
-FOPL 3.2.1.1&L'utente autenticato potrà inserire la nuova \textit{password}&VU6\\
-&&VU7\\
-&&CPU4\\
-\midrule
-FOPL 3.2.1.2&L'utente autenticato potrà inserire la \textit{password} corrente&VU6\\
-&&VU7\\
-&&CPU4\\
-\midrule
-FOPL 3.2.1.3&Il sistema dovrà comunicare all'utente autenticato se la \textit{password} inserita non è corretta&VU6\\
-&&VU7\\
-&&CPU4\\
-\midrule
-FOBL 4&Il sistema dovrà permettere all'utente autenticato di gestire i processi disponibili&VU8\\
-&&VU9\\
-&&VU10\\
-&&VU11\\
-&&VU12\\
-&&VU13\\
-&&VU14\\
-&&VU15\\
-&&VU16\\
-&&VU17\\
-&&VU18\\
-&&CPU5\\
-&&CPU6\\
-&&CPU7\\
-&&SPU2\\
-&&SPU3\\
-&&SPU4\\
-&&SM1\\
-&&SM2\\
-&&SM3\\
-&&SM4\\
-\midrule
-FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire una lista di processi&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.1.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi in esecuzione&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.1.1.2&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi disponibili&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FDEL 4.1.1.3&L'utente autenticato riceverà da parte del sistema la segnalazione di processi terminabili&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FDEL 4.1.1.4&L'utente autenticato riceverà da parte del sistema la segnalazione dei nuovi processi disponibili&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.1.2&L'utente autenticato potrà selezionare un processo dalla lista di processi aperta&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FDEL 4.1.3&Il sistema dovrà permettere all'utente autenticato di ricercare dei processi fra tutti quelli a cui può partecipare&VU8\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4.1.1&L'utente autenticato potrà visualizzare il numero di completamenti del processo necessari e sufficienti a causarne la terminazione&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale data di scadenza del processo selezionato&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-\midrule
-FOBL 4.4.2.1&L'utente autenticato potrà visualizzare il numero di passi già completati del processo selezionato&VU9\\
-&&CPU5\\
-\midrule
-FOBL 4.4.2.2&L'utente autenticato potrà visualizzare il numero di totale dei passi del processo selezionato&VU9\\
-&&CPU5\\
-\midrule
-FOBL 4.4.2.3&L'utente autenticato potrà visualizzare il numero di utenti che hanno già terminato il processo selezionato&VU9\\
-&&CPU5\\
-\midrule
-FOBL 4.4.2.4&L'utente autenticato potrà visualizzare il numero di utenti iscritti al processo selezionato&VU9\\
-&&CPU5\\
-\midrule
-FOBL 4.4.3&L'utente autenticato potrà visualizzare la lista dei passi in corso, cioè quelli iniziali o quelli immediatamente successivi agli ultimi passi superati&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-&&SM3\\
-&&SM4\\
-\midrule
-FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&VU9\\
-&&CPU5\\
-&&SPU2\\
-&&CMU3\\
-&&SM1\\
-&&SM2\\
-&&SM3\\
-&&SM4\\
-\midrule
-FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&VU9\\
-&&CPU5\\
-&&CMU3\\
-&&SPU2\\
-&&SM1\\
-&&SM2\\
-&&SM3\\
-&&SM4\\
-\midrule
-FOBL 4.4.4.1.1&L'utente autenticato potrà visualizzare la descrizione del passo in esecuzione&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale nome dei dati del passo esecuzione&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.2.1&L'utente autenticato potrà visualizzare se il passo in esecuzione richiede l'approvazione del \textit{process owner\ped{G}} per essere concluso&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.2.2&L'utente autenticato potrà visualizzare i vincoli sui dati geografici richiesti&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.2.2.1&L'utente autenticato potrà visualizzare la posizione in cui dovrà trovarsi durante l'invio dei dati del passo in esecuzione&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOPL 4.4.4.2.2.2&L'utente autenticato potrà visualizzare l'eventuale raggio di tolleranza rispetto alla posizione geografica richiesta per l'esecuzione del passo&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.2.3&L'utente autenticato potrà visualizzare l'eventuale intervallo temporale in cui può inviare i dati&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FDEL 4.4.4.2.4&L'utente autenticato potrà visualizzare i vincoli sui dati numerici&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOPL 4.4.4.2.4.1&L'utente autenticato potrà visualizzare il numero minimo e massimo di cifre dei valori numerici richiesti&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FDEL 4.4.4.2.4.2&L'utente autenticato potrà visualizzare se i valori numerici richiesti possono contenere cifre decimali&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOPL 4.4.4.2.4.3&L'utente autenticato potrà visualizzare l'eventuale limite superiore e inferiore dei valori numerici richiesti&VU9\\
-&&CPU5\\
-&&CMU3\\
-\midrule
-FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&\\
-\midrule
-FOBL 4.4.4.3.1&Il sistema dovrà permettere all'utente autenticato l'inserimento di una immagine richiesta&\\
-\midrule
-FDEL 4.4.4.3.1.1&Il sistema dovrà permettere all'utente autenticato di scattare una foto per inserire l'immagine richiesta&\\
-\midrule
-FOBL 4.4.4.3.1.2&Il sistema dovrà permettere all'utente autenticato di inserire una immagine caricandola dai suoi file&\\
-\midrule
-FOBL 4.4.4.3.2&L'utente può inserire dati testuali richiesti dal passo in esecuzione&\\
-\midrule
-FOBL 4.4.4.3.3&Il sistema dovrà permettere all'utente autenticato di inserire dati numerici richiesti dal passo in esecuzione&\\
-\midrule
-FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&\\
-\midrule
-FOBL 4.4.4.4.1&L'utente autenticato potrà inviare al sistema i dati dati testuali inseriti&\\
-\midrule
-FOBL 4.4.4.4.2&L'utente autenticato potrà inviare al sistema le immagini inserite&\\
-\midrule
-FOBL 4.4.4.4.3&L'utente autenticato potrà inviare al sistema i dati numerici inseriti&\\
-\midrule
-FOBL 4.4.4.4.4&L'utente autenticato potrà inviare al sistema le coordinate della sua posizione&\\
-\midrule
-FOBL 4.4.4.4.5&L'utente autenticato potrà inviare al sistema la data e ora al momento della richiesta di invio dati&\\
-\midrule
-FOPL 4.4.4.4.6&Il sitema dovrà permettere all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&\\
-\midrule
-FOPL 4.4.4.4.6.1&Il sitema, in assenza di connessione, dovrà permettere all'utente autenticato di salvare i dati richiesti dal passo esecuzione&\\
-\midrule
-FOPL 4.4.4.4.6.2&Il sistema, in presenza di connessione, dovrà permettere all'utente autenticato di inviare i dati precedentemente salvati&\\
-\midrule
-FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&\\
-\midrule
-FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dal \textit{process owner\ped{G}}&\\
-\midrule
-FOBL 4.4.5&Il sistema dovrà permettere all'utente autenticato di concludere un processo terminato o del quale ha eseguito tutti i passi&\\
-\midrule
-FOPL 4.4.5.1&Il sistema dovrà permettere all'utente autenticato la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi in formato PDF\ped{G}&\\
-\midrule
-FOBL 4.4.5.2&Il sistema dovrà permettere all'utente autenticato di eliminare un processo un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&\\
-\midrule
-FOPL 4.4.6&Il sistema dovrà permettere all'utente autenticato di saltare il passo in esecuzione se facoltativo&\\
-\midrule
-FOBL 4.5&Il sistema dovrà permettere all'utente autenticato di disiscriversi da un processo a cui è iscritto&\\
-\midrule
-FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&\\
+FOBU 1.1.1&L'utente dovrà inserire un \textit{username} composto da almeno 6 caratteri &VU4, CPU3\\
+\midrule
+FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&VU4, CPU3\\
+\midrule
+FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&VU4, CPU3\\
+\midrule
+FOBU 1.3&L'utente dovrà inserire il proprio nome&VU4, CPU3\\
+\midrule
+FOBU 1.4&L'utente dovrà inserire il proprio cognome&VU4, CPU3\\
+\midrule
+FOBU 1.5&L'utente dovrà inserire la propria data di nascita&VU4, CPU3\\
+\midrule
+FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&VU4, CPU3\\
+\midrule
+FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&VU4, CPU3\\
+\midrule
+FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&VU4, CPU3\\
+\midrule
+FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&VU3, CPU2, CP1, CP3, SP1, SP3, SPU1, SMU1, SMU2\\
+\midrule
+FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&VU3, CPU2\\
+\midrule
+FOBU 2.2&L'utente dovrà inserire il proprio \textit{username} per autenticarsi&VU3, CPU2\\
+\midrule
+FOBU 2.3&L'utente dovrà inserire la propria \textit{password} per autenticarsi&VU3, CPU2\\
+\midrule
+FOPL 3&Il sistema dovrà permettere all'utente autenticato di gestire le proprie credenziali&VU5, VU6, CPU4, CP1, CP3, SP1, SP3, SPU1, SMU1, SMU2\\
+\midrule
+FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&VU5, CPU4, SPU1, CP1, CP3, SP1, SP3, SMU1, SMU2\\
+\midrule
+FOPL 3.1.1&L'utente autenticato visualizzerà il proprio \textit{username}&VU5, CPU4\\
+\midrule
+FOPL 3.1.2&L'utente autenticato visualizzerà il proprio nome&VU5, CPU4\\
+\midrule
+FOPL 3.1.3&L'utente autenticato visualizzerà il proprio cognome&VU5,  CPU4\\
+\midrule
+FOPL 3.1.4&L'utente autenticato visualizzerà la propria data di nascita&VU5, CPU4\\
+\midrule
+FOPL 3.1.5&L'utente autenticato visualizzerà la propria \textit{email}&VU5, CPU4\\
+\midrule
+FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&VU6, CPU4, SPU1, CP1, CP3, SP1, SP3, SMU1, SMU2\\
+\midrule
+FOPL 3.2.1&Il sistema dovrà permettere all'utente autenticato di modificare la propria \textit{password}&VU6, VU7, CPU4, SPU1, SMU1, SMU2\\
+\midrule
+FOPL 3.2.1.1&L'utente autenticato potrà inserire la nuova \textit{password}&VU6, VU7, CPU4\\
+\midrule
+FOPL 3.2.1.2&L'utente autenticato potrà inserire la \textit{password} corrente&VU6, VU7, CPU4\\
+\midrule
+FOPL 3.2.1.3&Il sistema dovrà comunicare all'utente autenticato se la \textit{password} inserita non è corretta&VU6, VU7, CPU4\\
+\midrule
+FOBL 4&Il sistema dovrà permettere all'utente autenticato di gestire i processi disponibili&VU8, VU9, VU10, VU11, VU12, VU13, VU14, VU15, VU16, VU17, VU18, CPU5, CPU6, CPU7, CP1, CP2, CP3, SP1, SP2, SP3, SPU2, SPU3, SPU4, SM1, SM2, SM3, SM4\\
+\midrule
+FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&VU8, CPU5, SPU2, CP1, CP2, CP3, SP1, SP2, SP3, SM1, SM2\\
+\midrule
+FOBL 4.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire una lista di processi&VU8, CPU5, SPU2, CP1, CP2, CP3, SP1, SP2, SP3, SM1, SM2\\
+\midrule
+FOBL 4.1.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi in esecuzione&VU8, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.1.1.2&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi disponibili&VU8, CPU5, SPU2, SM1, SM2\\
+\midrule
+FDEL 4.1.1.3&L'utente autenticato riceverà da parte del sistema la segnalazione di processi terminabili&VU8, CPU5, SPU2, SM1, SM2\\
+\midrule
+FDEL 4.1.1.4&L'utente autenticato riceverà da parte del sistema la segnalazione dei nuovi processi disponibili&VU8, CPU5, CP1, CP2, CP3, SP1, SP2, SP3, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.1.2&L'utente autenticato potrà selezionare un processo dalla lista di processi aperta&VU8, CPU5, SPU2, SM1, SM2\\
+\midrule
+FDEL 4.1.3&Il sistema dovrà permettere all'utente autenticato di ricercare dei processi fra tutti quelli a cui può partecipare&VU8, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&VU9, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&VU9, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&VU9, CPU5, CP1, CP2, CP3, SP1, SP2, SP3, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&VU9, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4.1.1&L'utente autenticato potrà visualizzare il numero di completamenti del processo necessari e sufficienti a causarne la terminazione&VU9, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale data di scadenza del processo selezionato&VU9, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&VU9, CPU5, CP1, CP2, CP3, SP1, SP2, SP3, SPU2, SM1, SM2\\
+\midrule
+FOBL 4.4.2.1&L'utente autenticato potrà visualizzare il numero di passi già completati del processo selezionato&VU9, CPU5\\
+\midrule
+FOBL 4.4.2.2&L'utente autenticato potrà visualizzare il numero di totale dei passi del processo selezionato&VU9, CPU5\\
+\midrule
+FOBL 4.4.2.3&L'utente autenticato potrà visualizzare il numero di utenti che hanno già terminato il processo selezionato&VU9, CPU5\\
+\midrule
+FOBL 4.4.2.4&L'utente autenticato potrà visualizzare il numero di utenti iscritti al processo selezionato&VU9, CPU5\\
+\midrule
+FOBL 4.4.3&L'utente autenticato potrà visualizzare la lista dei passi in corso, cioè quelli iniziali o quelli immediatamente successivi agli ultimi passi superati&VU9, CPU5, SPU2, SM1, SM2, SM3, SM4\\
+\midrule
+FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&VU9, CPU5, SPU2, CMU3, CP1, CP2, CP3, SP1, SP2, SP3, SM1, SM2, SM3, SM4\\
+\midrule
+FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&VU9, CPU5, CMU3, SPU2, SM1, SM2, SM3, SM4\\
+\midrule
+FOBL 4.4.4.1.1&L'utente autenticato potrà visualizzare la descrizione del passo in esecuzione&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale nome dei dati del passo esecuzione&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&VU9, CPU5, SPU3, CMU3\\
+\midrule
+FOBL 4.4.4.2.1&L'utente autenticato potrà visualizzare se il passo in esecuzione richiede l'approvazione del \textit{process owner\ped{G}} per essere concluso&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.2.2&L'utente autenticato potrà visualizzare i vincoli sui dati geografici richiesti&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.2.2.1&L'utente autenticato potrà visualizzare la posizione in cui dovrà trovarsi durante l'invio dei dati del passo in esecuzione&VU9, CPU5, CMU3\\
+\midrule
+FOPL 4.4.4.2.2.2&L'utente autenticato potrà visualizzare l'eventuale raggio di tolleranza rispetto alla posizione geografica richiesta per l'esecuzione del passo&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.2.3&L'utente autenticato potrà visualizzare l'eventuale intervallo temporale in cui può inviare i dati&VU9, CPU5, CMU3\\
+\midrule
+FDEL 4.4.4.2.4&L'utente autenticato potrà visualizzare i vincoli sui dati numerici&VU9, CPU5, CMU3\\
+\midrule
+FOPL 4.4.4.2.4.1&L'utente autenticato potrà visualizzare il numero minimo e massimo di cifre dei valori numerici richiesti&VU9, CPU5, CMU3\\
+\midrule
+FDEL 4.4.4.2.4.2&L'utente autenticato potrà visualizzare se i valori numerici richiesti possono contenere cifre decimali&VU9, CPU5, CMU3\\
+\midrule
+FOPL 4.4.4.2.4.3&L'utente autenticato potrà visualizzare l'eventuale limite superiore e inferiore dei valori numerici richiesti&VU9, CPU5, CMU3\\
+\midrule
+FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&VU10, CPU6, SPU2, SM3, SM4\\
+\midrule
+FOBL 4.4.4.3.1&Il sistema dovrà permettere all'utente autenticato l'inserimento di una immagine richiesta&VU14\\
+VU15, CPU6\\
+\midrule
+FDEL 4.4.4.3.1.1&Il sistema dovrà permettere all'utente autenticato di scattare una foto per inserire l'immagine richiesta&VU15, CPU6\\
+\midrule
+FOBL 4.4.4.3.1.2&Il sistema dovrà permettere all'utente autenticato di inserire una immagine caricandola dai suoi file&VU14, CPU6\\
+\midrule
+FOBL 4.4.4.3.2&L'utente può inserire dati testuali richiesti dal passo in esecuzione&VU11, CPU6\\
+\midrule
+FOBL 4.4.4.3.3&Il sistema dovrà permettere all'utente autenticato di inserire dati numerici richiesti dal passo in esecuzione&VU12, CPU6\\
+\midrule
+FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&VU10, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SPU2, SM3, SM4\\
+\midrule
+FOBL 4.4.4.4.1&L'utente autenticato potrà inviare al sistema i dati dati testuali inseriti&VU11, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SM3, SM4\\
+\midrule
+FOBL 4.4.4.4.2&L'utente autenticato potrà inviare al sistema le immagini inserite&VU15, VU14, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SM3, SM4\\
+\midrule
+FOBL 4.4.4.4.3&L'utente autenticato potrà inviare al sistema i dati numerici inseriti&VU12, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SM3, SM4\\
+\midrule
+FOBL 4.4.4.4.4&L'utente autenticato potrà inviare al sistema le coordinate della sua posizione&VU13, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SM3, SM4\\
+\midrule
+FOBL 4.4.4.4.5&L'utente autenticato potrà inviare al sistema la data e ora al momento della richiesta di invio dati&VU10, CPU6, CP1, CP2, CP3, SP1, SP2, SP3, SM3, SM4\\
+\midrule
+FOPL 4.4.4.4.6&Il sistema dovrà permettere all'utente autenticato di raccogliere i dati in assenza di connessione e di inviarli a collegamento ripristinato&VU10, CPU6\\
+&SPU3, CMU3\\
+\midrule
+FOPL 4.4.4.4.6.1&Il sistema, in assenza di connessione, dovrà permettere all'utente autenticato di salvare i dati richiesti dal passo esecuzione&VU10, CPU6, CMU3\\
+\midrule
+FOPL 4.4.4.4.6.2&Il sistema, in presenza di connessione, dovrà permettere all'utente autenticato di inviare i dati precedentemente salvati&VU10, CPU6, CMU3\\
+\midrule
+FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&VU9, CPU5, CP2, CP1, CP2, CP3, SP1, SP2, SP3, SPU3, SP3\\
+\midrule
+FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dal \textit{process owner\ped{G}}&VU9, CPU5\\
+\midrule
+FOBL 4.4.5&Il sistema dovrà permettere all'utente autenticato di concludere un processo terminato o del quale ha eseguito tutti i passi&VU16, CPU5, SPU2, SM1, SM2\\
+\midrule
+FOPL 4.4.5.1&Il sistema dovrà permettere all'utente autenticato la creazione di un report finale su un processo terminato o del quale ha eseguito tutti i passi in formato PDF\ped{G}&VU16, VU17, VU18, CPU5, SPU4, CP1, CP3, SP1, SP3, SM1, SM2\\
+\midrule
+FOBL 4.4.5.2&Il sistema dovrà permettere all'utente autenticato di eliminare un processo un processo terminato o del quale ha eseguito tutti i passi, dalla lista dei processi gestiti&VU16, CPU5, SM1, SM2\\
+\midrule
+FOPL 4.4.6&Il sistema dovrà permettere all'utente autenticato di saltare il passo in esecuzione se facoltativo&VU9, CPU6, SPU3, SM1, SM2, SM3, SM4\\
+\midrule
+FOBL 4.5&Il sistema dovrà permettere all'utente autenticato di disiscriversi da un processo a cui è iscritto&VU9, CPU6, CP1, CP3, SP1, SP3, SPU1, SM1, SM2\\
+\midrule
+FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&VU9, CPU6, SM1, SM2\\
+% AMMINISTRATORE
+\midrule
+FOBA 1&Il sistema dovrà permettere al \textit{process owner\ped{G}} la creazione di processi&VA4, CPA4, CM1, CM2, SPA2, SM1\\
+\midrule
+FOBA 1.1&Il \textit{process owner\ped{G}} dovrà inserire un nome che identifichi univocamente il processo che vuole creare&VA4, CPA4, CM1, SM1, SM2\\
+\midrule
+FOBA 1.2&Il \textit{process owner\ped{G}} dovrà inserire la descrizione del processo che vuole creare &VA4, CPA4, CM1, SM1, SM2\\
+\midrule
+FOBA 1.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di definire i criteri di terminazione di un processo durante la sua creazione&VA4, CPA4, CM1\\
+\midrule
+FOBA 1.3.1&Il \textit{process owner\ped{G}} dovrà inserire il numero massimo di completamenti del processo in creazione &VA4, CPA4, CM1, SM1, SM2\\
+\midrule
+FOBA 1.3.2&Il \textit{process owner\ped{G}} potrà inserire la data di terminazione del processo in creazione&VA4, CPA4, CM1, SM1, SM2\\
+\midrule
+FOBA 1.4&Il sistema dovrà permettere al \textit{process owner\ped{G}} di gestire i passi del processo in creazione&VA4, VA6, CPA4, CM1, SM1, SM2, CM2, SM3, SM4\\
+\midrule
+FOBA 1.4.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di creare un passo del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.1&Il \textit{process owner\ped{G}} dovrà inserire la descrizione del passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di inserire uno o più dati al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2.1&Il \textit{process owner\ped{G}} potrà inserire un nome al dato che vuole aggiungere al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2.2&Il \textit{process owner\ped{G}} dovrà scegliere il tipo del dato che vuole aggiungere al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2.2.1&Il \textit{process owner\ped{G}} potrà scegliere un dato testuale come tipo del dato aggiunto al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2.2.2&Il \textit{process owner\ped{G}} potrà scegliere un dato numerico come tipo del dato aggiunto al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.2.2.3&Il \textit{process owner\ped{G}} potrà scegliere un'immagine come tipo del dato aggiunto al passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di definire uno o più criteri di superamento del passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3.1&Per ogni criterio di superamento, il \textit{process owner\ped{G}} dovrà definire una o più condizioni di avanzamento&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.1.3.1.1&Per ogni criterio di superamento, il \textit{process owner\ped{G}} potrà scegliere se i dati ricevuti dall'utente richiederanno il suo controllo per concludere il passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3.1.2&Per ogni criterio di superamento, il \textit{process owner\ped{G}} potrà inserire un vincolo sulla posizione geografica dell'utente al momento dell'invio dei dati&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3.1.2.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di stabilire una precisa posizione geografica&VA5, CPA4, CM2\\
+\midrule
+FOPA 1.4.1.3.1.2.2&Il \textit{process owner\ped{G}} potrà inserire un raggio di tolleranza rispetto alla posizione geografica inserita durante la definizione delle condizioni di avanzamento di un passo&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3.1.3&Per ogni criterio di superamento, il \textit{process owner\ped{G}} potrà stabilire uno o più intervalli temporali in cui l'utente può inviare i dati richiesti&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.1.3.1.4&Per ogni criterio di superamento, il \textit{process owner\ped{G}} potrà inserire dei vincoli sui dati numerici presenti nel passo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOPA 1.4.1.3.1.4.1&Il \textit{process owner\ped{G}} potrà stabilire un numero minimo e massimo di cifre durante la definizione dei vincoli su un dato numerico&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.1.3.1.4.2&Il \textit{process owner\ped{G}}, durante la definizione dei vincoli su un dato numerico, potrà stabilire se tale numero potrà contenere cifre decimali&VA5, CPA4, CM2\\
+\midrule
+FOPA 1.4.1.3.1.4.3&Il \textit{process owner\ped{G}}, durante la definizione dei vincoli su un dato numerico, potrà stabilire un limite superiore e inferiore per tale numero&VA5, CPA4, CM2\\
+\midrule
+FOPA 1.4.1.3.1.5&Il \textit{process owner\ped{G}} potrà stabilire la facoltatività dell'esecuzione di un passo&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.1.3.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di scegliere il passo eseguibile dall'utente una volta soddisfatto il criterio di superamento in definizione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.4.2&Il \textit{process owner\ped{G}} potrà visualizzare la lista dei passi creati durante la creazione di un nuovo processo&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3&Il \textit{process owner\ped{G}}, durante la creazione di un nuovo processo, potrà modificare un passo esistente&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare la descrizione di un passo di un processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare la descrizione dei dati di un passo di un processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare i criteri di superamento dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare le condizioni di avanzamento dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.1.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare i vincoli sull'approvazione dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.1.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare i vincoli dei passi del processo in creazione, relativi alla posizione dell'utente al momento dell'invio dei dati&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.1.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare gli intervalli temporali in cui l'utente potrà inviare i dati, stabiliti nei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.1.4&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare i vincoli sui dati numerici dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOPA 1.4.3.3.1.5&Il sistema dovrà permettere al \textit{process owner\ped{G}} di modificare le impostazioni sulla facoltatività dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.3.3.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di sostituire il passo eseguibile al soddisfacimento dei criteri di superamento dei passi del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FDEA 1.4.4&Il sistema dovrà permettere al \textit{process owner\ped{G}} di eliminare un passo del processo in creazione&VA5, CPA4, CM2\\
+\midrule
+FOBA 1.5&Il sistema dovrà permettere al \textit{process owner\ped{G}} di avviare un processo in creazione che contiene almeno un passo&VA4, SPA2, SM1, SM2, CP1, CP2, CP3, SP1, SP2, SP3\\
+\midrule
+FDEA 2&Il sistema dovrà permettere al \textit{process owner\ped{G}} la gestione dei processi creati&VA8, VA11, CPA5, CPA7, SM1, SM2\\
+\midrule
+FDEA 2.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di scegliere un processo avviato&VA7, VA8, VA11, CPA5, CPA7, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FOPA 2.1.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di ricercare un processo inserendone il nome&VA7, VA8, VA11, CPA5, CPA7, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FDEA 2.1.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di selezionare un processo da gestire&VA7, VA8, VA11, CPA5, CPA7, SM1, SM2\\
+\midrule
+FOPA 2.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di selezionare gli utenti a cui permettere l'iscrizione al processo gestito&VA12, CPA9, SM1, SMU1, SMU2\\
+\midrule
+FOPA 2.2.1&Il \textit{process owner\ped{G}} potrà visualizzare la lista degli utenti registrati al sistema&VA12, CPA9, SM1, SMU1, SMU2, CP1, CP2, SP1, SP3\\
+\midrule
+FOPA 2.2.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di selezionare dalla lista gli utenti a cui consentire l'iscrizione al processo gestito&VA12, CPA9, SM1, SMU1, SMU2\\
+\midrule
+FDEA 2.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di consultare informazioni sul processo gestito&VA8, VA11, CPA5, CPA7, SM1, SM2\\
+\midrule
+FOPA 2.3.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di recuperare informazioni sul processo gestito&VA8, VA11, CPA5, CPA7, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FOPA 2.3.1.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare la descrizione del processo gestito&VA11, CPA7, SM1, SM2\\
+\midrule
+FOPA 2.3.1.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare i criteri di terminazione del processo gestito&VA11, CPA7, SM1, SM2\\
+\midrule
+FOPA 2.3.1.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare i dati dei passi del processo gestito&VA11, CPA7, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FOPA 2.3.1.4&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare le condizioni di superamento dei passi del processo gestito&VA11, CPA7, SM1, SM2\\
+\midrule
+FDEA 2.3.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare lo stato dell'esecuzione del processo&VA11, CPA7, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FDEA 2.3.2.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare il numero di utenti iscritti al processo gestito&VA11, CPA7, SM1, SM2\\
+\midrule
+FDEA 2.3.2.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare il numero di completamenti del processo gestito&VA11, CPA7, SM1, SM2\\
+\midrule
+FDEA 2.3.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare i dati inviati dagli utenti che hanno comportato il superamento di un passo del processo gestito&VA11, CPA7, CM1, CM2, SM1, SM2, SM3, SM4, CP1, CP3, SP1, SP3\\
+\midrule
+FDEA 2.4&Il sistema dovrà permettere al \textit{process owner\ped{G}} di controllare i dati inviati dagli utenti che richiedono la sua approvazione&VA9, CPA5, SM1, SM2\\
+\midrule
+FOBA 2.4.1&Il sistema dovrà permettere al \textit{process owner\ped{G}} di visualizzare i dati inviati dagli utenti che richiedono la sua approvazione&VA9, CPA5, SM1, SM2, CP1, CP3, SP1, SP3\\
+\midrule
+FDEA 2.4.2&Il sistema dovrà permettere al \textit{process owner\ped{G}} di approvare i dati controllati&VA9, CPA5, SM1, SM2\\
+\midrule
+FDEA 2.4.3&Il sistema dovrà permettere al \textit{process owner\ped{G}} di respingere i dati controllati&VA9, CPA5, SM1, SM2\\
+\midrule
+FDEA 2.4.4&Il sistema dovrà inviare l'esito del controllo agli utenti che hanno inviato dei dati che richiedono approvazione&VA9, CPA5, SM1, SM2, CP1, CP2, CP3, SP1, SP2, SP3\\
+\midrule
+FDEA 2.5&Il sistema dovrà permettere al \textit{process owner\ped{G}} di terminare un processo avviato&VA8, CPA5, SM1, SM2, CP1, CP2, CP3, SP1, SP2, SP3\\
+\midrule
+FDEA 2.6&Il sistema dovrà permettere al \textit{process owner\ped{G}} di eliminare un processo terminato dall'insieme dei processi creati&VA8, CPA5, SM1, SM2\\ 
+\midrule
+FOBL 3&Il \textit{process owner\ped{G}} potrà terminare la propria sessione, diventando utente generico&VA3, CPA2, SMA1, SMA2\\
 \bottomrule
 \caption{Tabella requisiti-Componenti}
 \end{longtable}
