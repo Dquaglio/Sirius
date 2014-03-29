@@ -22,14 +22,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IDataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daouser
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia con il compito di interagire con il database.
 	\end{itemize}
 %------------------------------------------------------------------------------%
 \paragraph{DataAccessObject}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{DataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daouser
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} classe che si occupa di effettuare le richieste al database, acquisendo i dati richiesti o inserendone di nuovi.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::model::daouser::IDataAccessObject ed invoca metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::daouser::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::daouser::IObjectTransfer
@@ -40,14 +40,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daouser
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia che permette lo scambio di dati tra model e presenter.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{ObjectTransfer}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daouser
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Classe che permette lo scambio di dati tra la classe DataAccessObject e il presenter.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l'interfaccia sequenziatore::server::model::daouser::IObjectTransfer.
 	\end{itemize}
 %000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
@@ -56,14 +56,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IDataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia con il compito di interagire con il database.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{DataAccessObject}
 \begin{itemize}
 		\item \textbf{Nome:} \texttt{DataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} classe che si occupa di effettuare le richieste al database, acquisendo i dati richiesti o inserendone di nuovi.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::model::daoprocessowner::IDataAccessObject ed invoca metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::daoprocessowner::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::daoprocessowner::IObjectTransfer
@@ -74,14 +74,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia che permette lo scambio di dati tra model e presenter.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{ObjectTransfer}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Classe che permette lo scambio di dati tra la classe DataAccessObject e il presenter.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l'interfaccia sequenziatore::server::model::daoprocessowner::IObjectTransfer.
 	\end{itemize}
 %000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
@@ -90,14 +90,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IDataAccessObject};
 		\item \textbf{Package:}sequenziatore::server::model::daoprocess
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia con il compito di interagire con il database.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{DataAccessObject}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{DataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocess
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} classe che si occupa di effettuare le richieste al database, acquisendo i dati richiesti o inserendone di nuovi.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::model::daoprocess::IDataAccessObject ed invoca metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::daoprocess::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::daoprocess::IObjectTransfer
@@ -108,14 +108,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocess
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia che permette lo scambio di dati tra model e presenter.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{ObjectTransfer}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daoprocess
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Classe che permette lo scambio di dati tra la classe DataAccessObject e il presenter.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l'interfaccia sequenziatore::server::model::daoprocess::IObjectTransfer.
 	\end{itemize}
 %000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
@@ -124,14 +124,14 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IDataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daostep
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia con il compito di interagire con il database.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{DataAccessObject}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{DataAccessObject};
 		\item \textbf{Package:} sequenziatore::server::model::daostep
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} classe che si occupa di effettuare le richieste al database, acquisendo i dati richiesti o inserendone di nuovi.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l' interfaccia sequenziatore::server::model::daostep::IDataAccessObject ed invoca metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::daostep::ObjectTransfer tramite l' interfaccia sequenziatore::server::model::daostep::IObjectTransfer
@@ -142,13 +142,13 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{IObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daostep
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Interfaccia che permette lo scambio di dati tra model e presenter.
 	\end{itemize}
 	%------------------------------------------------------------------------------%
 \paragraph{ObjectTransfer}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ObjectTransfer};
 		\item \textbf{Package:} sequenziatore::server::model::daostep
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione del proprio account all' utente.
+		\item \textbf{Descrizione:} Classe che permette lo scambio di dati tra la classe DataAccessObject e il presenter.
 		\item \textbf{Relazione con altre componenti:} la classe implementa l'interfaccia sequenziatore::server::model::daostep::IObjectTransfer.
 	\end{itemize}
