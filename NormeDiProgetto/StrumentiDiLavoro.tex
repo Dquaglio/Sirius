@@ -127,7 +127,7 @@ L'utilizzo di \textit{Google Drive} e' limitato ai documenti che:
 \item Necessitano di essere acceduti velocemente tramite \textit{web};
 \end{itemize}
 \subsection{Strum. tracciamento}
-Per il tracciamento è stato sviluppato un semplice programma denominato Sirius RTg. Questo programma è stato sviluppato utilizzando PHP\ped{G}, CSS\ped{G} ed HTML\ped{G}. Sirius RTg è attualmente un programma il cui sviluppo non è terminato, principalmente per permettere una aggiunta di funzionalità in caso di necessità. Sirius RTg, alla versione 1.4.0, fornisce le seguenti funzionalità:
+Per il tracciamento è stato sviluppato un semplice programma denominato \textit{Sirius RTg}. Questo programma è stato sviluppato utilizzando PHP\ped{G}, CSS\ped{G} ed HTML\ped{G}. Sirius RTg è attualmente un programma il cui sviluppo non è terminato, principalmente per permettere una aggiunta di funzionalità in caso di necessità. Sirius RTg, alla versione 2.0.0, fornisce le seguenti funzionalità:
 \begin{itemize}
 \item Inserimento requisito e relativo tracciamento;
 \item Visualizzazione dello script per la tabella dei requisiti e relativo tracciamento.
@@ -146,7 +146,7 @@ L'interfaccia è costituita da uno semplice \textit{form}, in cui è possibile i
 \end{itemize}
 Ogni requisito deve avere obbligatoriamente definito il Tipo, l'Importanza, ed il Codice requisito. Il codice deve necessariamente identificare univocamente il requisito, altrimenti un uso ridondante di codici verrà notificato all'utente. Obbligatoria la categoria, in caso il requisiti sia della parte utente.
 \subsubsection{Visualizza script}
-Questa funzionalità serve per la stampa a video dei vari script in latex\ped{G} per i vari requisiti e il relativo tracciamento.\\ Visualizza script è composto dalle seguenti funzionalità:
+Questa funzionalità serve per la stampa a video dei vari script in \LaTeX{} per i vari requisiti e il relativo tracciamento.\\ Visualizza script è composto dalle seguenti funzionalità:
 	\begin{itemize}
 		\item Visualizzazione script per Requisiti di tipo utente amministratore;
 		\item Visualizzazione script per Requisiti di tipo utente-utente autenticato;
@@ -158,3 +158,12 @@ Questa funzionalità serve per la stampa a video dei vari script in latex\ped{G}
 Ogni script stampato su video, segue le regole definite nelle \textit{Norme di Progetto}.\\
 Anche se Visualizzazione script utente e Visualizzazione script utente autenticato sono due sotto-funzionalità distinte di Visualizza script, devono essere utilizzate assieme per produrre la tabella dei requisiti di tipo utente; infatti Visualizzazione script utente stampa l'intestazione della tabella e la parte dei requisiti utente, mentre Visualizzazione script utente autenticato stampa la parte dei requisiti utente autenticato e i comandi necessari per chiudere la tabella.\\
 Tutti gli altri Script, invece possono essere usati singolarmente e a video, oltre al contenuto comparirà la relativa intestazione e chiusura della tabella.
+\subsubsection{Inserimento componente e relativo tracciamento}
+Questa funzionalità è stata inserita al fine di poter tracciare le componenti del sistema, permette di inserire tramite un form:
+\begin{itemize}
+\item Nome del componente
+\item Requisiti associati al componente
+\end{itemize}
+Sono state inoltre implementati due script che stampano a video il codice \LaTeX{} del tracciamento componente-requisito e requisito-componente, il codice \LaTeX{} generato è conforme alle \NormeDiProgetto{}.
+\subsubsection{Scritp glossario}
+Anche se non inerente al tracciamento dei requisiti, lo strumento \textit{Sirius RTg} alla versione 2.0 prevede la funzionalità aggiuntiva di poter inserire automaticamente i pedici \ped{G} (per le parole contenute nel \Glossario{}) ai documenti del team.
