@@ -1,112 +1,55 @@
-\subsubsection{Package sequenziatore::server::presenter::iprocessowner}
-\paragraph{ProcessOwnerFacade}
-	\begin{itemize}
-		\item \textbf{Nome:} ProcessOwnerFacade;
-		\item \textbf{Tipo:} abstract;
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} classe che decide in base alla richiesta ricevuta a che classe assegnarne l' elaborazione di tale richiesta all' interno del package processowner
-		\item \textbf{Relazione con altre componenti:} la classe richiama metodi delle classi:
-		\begin{itemize}
-			\item sequenziatore::server::presenter::processowner::Login tramite l' interfaccia sequenziatore::server::presenter::processowner::ILogin;
-			\item sequenziatore::server::presenter::processowner::ProcessManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IProcessManager;
-			\item sequenziatore::server::presenter::processowner::StepManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IStepManager;
-			\item sequenziatore::server::presenter::processowner::UserManager tramite l' interfaccia sequenziatore::server::presenter::processowner::IUserManager;
-			\item sequenziatore::server::presenter::processowner::Report tramite l' interfaccia
-sequenziatore::server::presenter::processowner::IReport;
-		\end{itemize}
-	\end{itemize}
-%-----------------------------------------------------------------------------------------------%
-\paragraph{IProcessManager}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{IProcessManager};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei processi al \textit{process owner};
-	\end{itemize}
-
-%----------------------------------------------------------------------------------------------%
-\paragraph{ILogin}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{ILogin};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione della login del \textit{process owner};
-	\end{itemize}
-
-%----------------------------------------------------------------------------------------------%
-\paragraph{IStepManager}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{IStepManager};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei passi al \textit{process owner};
-	\end{itemize}
-
-%----------------------------------------------------------------------------------------------%
-\paragraph{IUserManager}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{IUserManager};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Interfaccia per la gestione degli utenti iscritti ai processi;
-	\end{itemize}
-%----------------------------------------------------------------------------------------------%
-
-\paragraph{IReport}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{IReport};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Interfaccia che permette la gestione dei report al \textit{process owner};
-	\end{itemize}
-%0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000%
 \subsubsection{Package sequenziatore::server::presenter::processowner}
-\paragraph{Login}
+\paragraph{LoginController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{Login};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Nome:} \texttt{LoginController};
+		\item \textbf{Package:} sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che permette la gestione della login del \textit{process owner};
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::ILogin ed invoca i metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::DaoFacade;
+			\item BOTTER;
 		\end{itemize}
 	\end{itemize}
 
-\paragraph{ProcessManager}
+\paragraph{ProcessController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{ProcessManager};
+		\item \textbf{Nome:} \texttt{ProcessController};
 		\item \textbf{Package:} sequenziatore::server::presenter::processowner
-		\item \textbf{Descrizione:} Classe che riceve le richieste del \textit{process owner} per la gestione dei processi come creazione,modifica e eliminazione degli stessi;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IProcessManager ed invoca i metodi delle classi:
+		\item \textbf{Descrizione:} Classe che riceve le richieste da parte del \textit{process owner} per la gestione dei processi come ad esempio la creazione, la modifica e la eliminazione degli stessi;
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::DaoFacade;
+			\item BOTTER;
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
-\paragraph{StepManager}
+\paragraph{StepController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{StepManager};
+		\item \textbf{Nome:} \texttt{StepController};
 		\item \textbf{Package:} sequenziatore::server::presenter::processowner
-		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di passi;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IStepManager ed invoca i metodi delle classi:
+		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di singoli passi, per esempio permetterà di aggiungere o rimuovere dei campi richiesti;
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
 		\begin{itemize}
-			\item sequenziatore::server::model::DaoFacade;
+			\item BOTTER;
 		\end{itemize}
 	\end{itemize}
 	%----------------------------------------------------------------------------------------------%
-\paragraph{UserManager}
+\paragraph{UserController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{UserManager};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
-		\item \textbf{Descrizione:} Classe che permette la gestione degli utenti iscritti alla piattaforma, permettendogli di rimuovere utenti da processi,;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IUserManager ed invoca i metodi delle classi:
+		\item \textbf{Nome:} \texttt{UserController};
+		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Descrizione:} Classe che permette la gestione degli utenti iscritti alla piattaforma, permettendogli di rimuovere utenti da processi o fornire le informazioni di un singolo utente quando richiesto;
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
 	\end{itemize}
 
 %----------------------------------------------------------------------------------------------%
-\paragraph{Report}
+\paragraph{ReportController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{Report};
-		\item \textbf{Package:} sequenziatore::server::presenter::iprocessowner
+		\item \textbf{Nome:} \texttt{ReportController};
+		\item \textbf{Package:} sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che permette la gestione delle richieste dei report al \textit{process owner}, permettendogli di visualizzare i risultati raggiunti in un processo;
-		\item \textbf{Relazione con altre componenti:} la classe implementa l' intefaccia sequenziatore::server::presenter::iprocessowner::IReport ed invoca i metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
 		\begin{itemize}
 			\item sequenziatore::server::model::DaoFacade;
 		\end{itemize}
