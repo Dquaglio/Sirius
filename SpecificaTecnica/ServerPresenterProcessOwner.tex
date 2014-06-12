@@ -1,56 +1,45 @@
-\subsubsection{Package sequenziatore::server::presenter::processowner}
-\paragraph{LoginController}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{LoginController};
-		\item \textbf{Package:} sequenziatore::server::presenter::processowner
-		\item \textbf{Descrizione:} Classe che permette la gestione della login del \textit{process owner};
-		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
-		\begin{itemize}
-			\item BOTTER;
-		\end{itemize}
-	\end{itemize}
-
+\subsubsection{Package com::sirius::sequenziatore::server::presenter::processowner}
 \paragraph{ProcessController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ProcessController};
-		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Package:} com::sirius::sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che riceve le richieste da parte del \textit{process owner} per la gestione dei processi come ad esempio la creazione, la modifica e la eliminazione degli stessi;
-		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item BOTTER;
+			\item com::sirius::sequenziatore::server::dao::IDataAccessObject;
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
 \paragraph{StepController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{StepController};
-		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Package:} com::sirius::sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di singoli passi, per esempio permetterà di aggiungere o rimuovere dei campi richiesti;
-		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item BOTTER;
+			\item com::sirius::sequenziatore::server::dao::IDataAccessObject;
 		\end{itemize}
 	\end{itemize}
 	%----------------------------------------------------------------------------------------------%
 \paragraph{UserController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{UserController};
-		\item \textbf{Package:} sequenziatore::server::presenter::processowner
+		\item \textbf{Nome:} \texttt{UsersController};
+		\item \textbf{Package:} com::sirius::sequenziatore::server::presenter::processowner
 		\item \textbf{Descrizione:} Classe che permette la gestione degli utenti iscritti alla piattaforma, permettendogli di rimuovere utenti da processi o fornire le informazioni di un singolo utente quando richiesto;
-		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item sequenziatore::server::model::DaoFacade;
+			\item com::sirius::sequenziatore::server::dao::IDataAccessObject;
 		\end{itemize}
 	\end{itemize}
 
 %----------------------------------------------------------------------------------------------%
-\paragraph{ReportController}
+\paragraph{ManageUserStepController}
 	\begin{itemize}
-		\item \textbf{Nome:} \texttt{ReportController};
-		\item \textbf{Package:} sequenziatore::server::presenter::processowner
-		\item \textbf{Descrizione:} Classe che permette la gestione delle richieste dei report al \textit{process owner}, permettendogli di visualizzare i risultati raggiunti in un processo;
-		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi delle classi:
+		\item \textbf{Nome:} \texttt{ManageUserStepController};
+		\item \textbf{Package:} com::sirius::sequenziatore::server::presenter::processowner
+		\item \textbf{Descrizione:} Classe che permette al process owner la gestione dei passi da approvare, quindi con questa classe si forniranno la lista di passi da approvare e si gestirà la approvazione o il rifiuto dei suddetti in base all' esito del process owner;
+		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item sequenziatore::server::model::DaoFacade;
+			\item com::sirius::sequenziatore::server::dao::IDataAccessObject;
 		\end{itemize}
 	\end{itemize}
