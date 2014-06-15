@@ -5,44 +5,44 @@ package\ped{G} che compongono il sistema.
 Figura 3: Diagramma dei package del prodotto MyTalk.
 Il sistema Sequenziatore è composto da due macro package\ped{G}:
 \begin{enumerate}
-	\item sequenziatore::client: le componenti di questo package\ped{G} realizzano la parte front-end\ped{G} del sistema Sequenziatore 
-	\item sequenziatore::server: le componenti di questo package\ped{G} realizzano la parte back-end\ped{G} del sistema Sequenziatore 
+	\item sequenziatore.client: le componenti di questo package\ped{G} realizzano la parte front-end\ped{G} del sistema Sequenziatore 
+	\item sequenziatore.server: le componenti di questo package\ped{G} realizzano la parte back-end\ped{G} del sistema Sequenziatore 
 \end{enumerate}
 Il package\ped{G} sequenziatore.client è composto dai seguenti package\ped{G}:
 \begin{itemize}
-	\item sequenziatore::client::view;
-	\item sequenziatore::client::presenter;
-	\item sequenziatore::client::model.
+	\item sequenziatore.client.view;
+	\item sequenziatore.client.presenter;
+	\item sequenziatore.client.model.
 \end{itemize}
 Come è facilmente intuibile, la struttura del package\ped{G} sequenziatore.client si basa sulla struttura del design patter
 architetturale Model View Presenter, scelto dal team Sirius per poter separare la logica di presentazione dei dati dalla logica di business.\\
 I package\ped{G} che compongono il package\ped{G} sequenziatore::server sono:
 \begin{itemize}
-	\item sequenziatore::server::presenter;
-	\item sequenziatore::server::model.
+	\item sequenziatore.server.presenter;
+	\item sequenziatore.server.model.
 \end{itemize}
-\subsubsection{Package sequenziatore::client::view}
-Il package\ped{G} sequenziatore::client::view è composto da i seguenti package\ped{G}:
+\subsubsection{Package sequenziatore.client.view}
+Il package\ped{G} sequenziatore.client.view è composto da i seguenti package\ped{G}:
 \begin{itemize}
-	\item sequenziatore::client::view::process_owner: contiene le componenti template necessarie per la realizzazione dell’interfaccia grafica del process owner.
-	\item sequenziatore::client::view::user: contiene le componenti template necessarie per la realizzazione dell’interfaccia grafica dell'user.
+	\item sequenziatore.client.view.process_owner: contiene le componenti template necessarie per la realizzazione dell’interfaccia grafica del process owner.
+	\item sequenziatore.client.view.user: contiene le componenti template necessarie per la realizzazione dell’interfaccia grafica dell'user.
 \end{itemize}
-\subsubsection{Package sequenziatore::client::presenter}
-Il package\ped{G} sequenziatore::client::presenter contiene tutte le componenti del Presenter della parte client\ped{G} del sistema Sequenziatore; ed è composto da i seguenti package\ped{G}:
+\subsubsection{Package sequenziatore.client.presenter}
+Il package\ped{G} sequenziatore.client.presenter contiene tutte le componenti del Presenter della parte client\ped{G} del sistema Sequenziatore; ed è composto da i seguenti package\ped{G}:
 \begin{itemize}
-	\item sequenziatore::client::presenter::process_owner: contiene le componenti che costituiscono la componente Presenter
-per il process owner, il package\ped{G} sequenziatore::client::presenter::process_owner è diviso ulteriormente nei sotto-package\ped{G}:
+	\item sequenziatore.client.presenter.process_owner: contiene le componenti che costituiscono la componente Presenter
+per il process owner, il package\ped{G} sequenziatore.client.presenter.process_owner è diviso ulteriormente nei sotto-package\ped{G}:
 	\begin{itemize}
-		\item sequenziatore::client::presenter::process_owner::views: contiene le classi necessarie per realizzare e gestire l'aggiornamento della parte grafica, usando i template presenti nel package\ped{g} sequenziatore::client::view::process_owner, e alla gestione degli eventi generati dall'interazione da parte del process owner con l'interfaccia grafica, gestendo inoltre la logica di business dell'applicazione;
+		\item sequenziatore.client.presenter.process_owner.views: contiene le classi necessarie per realizzare e gestire l'aggiornamento della parte grafica, usando i template presenti nel package\ped{g} sequenziatore.client.view.process_owner, e alla gestione degli eventi generati dall'interazione da parte del process owner con l'interfaccia grafica, gestendo inoltre la logica di business dell'applicazione;
 	\end{itemize}
-	\item sequenziatore::client::presenter::user: contiene le componenti che realizzano la componente Presenter per l'utente autenticato; i sotto-package\ped{G} di sequenziatore::client::presenter::user sono i seguenti:
+	\item sequenziatore.client.presenter.user: contiene le componenti che realizzano la componente Presenter per l'utente autenticato; i sotto-package\ped{G} di sequenziatore.client.presenter.user sono i seguenti:
 	\begin{itemize}
-		\item sequenziatore::client::presenter::user::views: contiene le classi necessarie per realizzare, mediante i template presenti nel package\ped{g} sequenziatore::client::view::user, l'interfaccia utente e gestirne l'interazione con l'utente autenticato, gestendo inoltre la logica di business dell'applicazione;
+		\item sequenziatore.client.presenter.user.views: contiene le classi necessarie per realizzare, mediante i template presenti nel package\ped{g} sequenziatore.client.view.user, l'interfaccia utente e gestirne l'interazione con l'utente autenticato, gestendo inoltre la logica di business dell'applicazione;
 	\end{itemize}
 \end{itemize}
-\subsubsection{Package sequenziatore::client::model}
-Il package\ped{G} sequenziatore::client::model contiene tutte le classi della componente Model. 
-Il package\ped{G} sequenziatore::client::model contiene inoltre:
+\subsubsection{Package sequenziatore.client.model}
+Il package\ped{G} sequenziatore.client.model contiene tutte le classi della componente Model. 
+Il package\ped{G} sequenziatore.client.model contiene inoltre:
 \begin{itemize}
-	\item sequenziatore::client::model::collections contiene le varie collezioni di dati contenuti nel package model; il nome del package ricalca inoltre il nome del supertipo di tutte le collezioni di strutture date usate in un sistema sviluppato usando il framework\ped{G} Backbone.js\ped{G}
+	\item sequenziatore.client.model.collections contiene le varie collezioni di dati contenuti nel package model; il nome del package ricalca inoltre il nome del supertipo di tutte le collezioni di strutture date usate in un sistema sviluppato usando il framework\ped{G} Backbone.js\ped{G}
 \end{itemize}
