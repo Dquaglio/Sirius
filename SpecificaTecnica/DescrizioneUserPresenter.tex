@@ -1,4 +1,23 @@
-\subsubsection{Package sequenziatore::client::presenter::user::logic}
+\subsubsection{Package sequenziatore.client.presenter.user.views}
+
+\paragraph{UserRouter}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{UserRouter};
+\item \textbf{Descrizione:} Classe che permette la modifica dello stato dell'interfaccia grafica in base all'evolversi dell'interazione fra utente e applicazione}
+\begin{sloppypar}
+La classe cambia lo stato dell'interfaccia richiamando le seguente classi, le quali permetteranno la realizzazione del widget desiderato implementa l'interfaccia:
+\end{sloppypar}
+\begin{itemize}
+\item \texttt{Lo\fshyp{}gin};
+\item \texttt{Re\fshyp{}gis\fshyp{}ter};
+\item \texttt{Ma\fshyp{}in\fshyp{}Us\fshyp{}er};
+\item \texttt{Us\fshyp{}er\fshyp{}Da\fshyp{}ta};
+\item \texttt{Op\fshyp{}en\fshyp{}Pro\fshyp{}cess\fshyp{}gic};
+\item \texttt{Ma\fshyp{}nag\fshyp{}ment\fshyp{}Pro\fshyp{}cess};
+\end{itemize}
+\end{itemize}
+\end{flushleft}
 
 \paragraph{MainLogic}
 \begin{flushleft}
@@ -21,83 +40,145 @@ La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Main\fshyp{}L
 \end{itemize}
 \end{flushleft}
 
-\paragraph{LoginLogic}
+\paragraph{Login}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{LoginLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
-\item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di autenticazione e chiusura della sessione da parte dell'utente;
+\item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di autenticazione e chiusura della sessione da parte dell'utente e realizzare l'opportuna interfaccia grafica;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Log\fshyp{}in\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe, comunicando con l'interfaccia \texttt{I\fshyp{}Lo\fshyp{}gin}, realizza il widget per la l'autenticazione.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{RegisterLogic}
+\paragraph{Register}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{RegisterLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
+\item \textbf{Nome:} \texttt{Register};
 \item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di registrazione da parte dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Re\fshyp{}gis\fshyp{}ter\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe, comunicando attraverso l'interfaccia \texttt{I\fshyp{}Re\fshyp{}gi\fshyp{}ster} realizza il widget per la registrazione.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{ManagmentDataLogic}
+\paragraph{UserData}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{ManagmentDataLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
+\item \textbf{Nome:} \texttt{UserData};
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la visualizzazione e la modifica dei dati dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion} e \texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe, per mezzo dell'interfaccia\texttt{I\fshyp{}Us\fshyp{}er\fshyp{}Da\fshyp{}ta}, realizza il widget preposto alla visualizzazione e modifica dei dati dell'utente.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{ManagmentProcessLogic}
+\paragraph{OpenProcess}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{ManagmentProcessLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
-\item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato dei processi. Le operazioni di gestione dello stato comprendono l'eliminazione dei processi terminati;
+\item \textbf{Nome:} \texttt{OpenProcess};
+\item \textbf{Descrizione:} Classe che ha il compito di selezionare, ricercare e aprire un processo fra quelli eseguibili;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi 
-\texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, 
-\texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} e 
-\texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe realizza e modifica l'opportuno widget mediante l'interfaccia \texttt{I\fshyp{}Op\fshyp{}en\fshyp{}Pro\fshyp{}cess}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{SendDataLogic}
+\paragraph{ManagmentProcess}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{SendDataLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
-\item \textbf{Descrizione:} Classe che ha il compito di gestire l'inserimento e l'invio di dati da parte degli utenti;
+\item \textbf{Nome:} \texttt{ManagmentProcess};
+\item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato del processo selezionato.;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Send\fshyp{}Da\fshyp{}ta\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::Http\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\model{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} e \texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe, mediante l'interfaccia \texttt{I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess}, realizza e aggiorna il widget che permette la gestione del processo selezionato. Inoltre provvede a creare e chiamare le seguenti classi in base alle decisioni dell'utente:
+\begin{itemize}
+\item \texttt{PrintReport}
+\item \texttt{SendData}
+\end{itemize}
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{ReportLogic}
+\paragraph{PrintReport}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{ReportLogic};
-\item \textbf{Package:} \texttt{\logicUser{}};
+\item \textbf{Nome:} \texttt{PrintReport};
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la creazione di report sull'andamento dei processi in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iLogicUser{}::I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Lo\fshyp{}gic}, e utilizza metodi delle classi \texttt{\serverCommunication{}::HttpCommunication}, \texttt{\serverCommunication{}::Web\fshyp{}so\fshyp{}cket\fshyp{}Com\fshyp{}mu\fshyp{}ni\fshyp{}ca\fshyp{}tion}, \texttt{\modelUser{}::U\fshyp{}ser\fshyp{}Da\fshyp{}ta} \texttt{\viewUser{}::Up\fshyp{}da\fshyp{}te\fshyp{}View}.
+La classe chiama l'interfaccia \texttt{I\fshyp{}Print\fshyp{}Re\fshyp{}port} per poter realizzare il widget per poter creare il report.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
+
+\paragraph{SendData}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendData};
+\item \textbf{Descrizione:} Classe che ha il compito di gestire l'inserimento e l'invio di dati da parte degli utenti, per completare il passo corrente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe,mediante l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Da\fshyp{}ta}, crea ed aggiorna il widget preposto per la selezione del vario tipo di dato da inviare. Crea ed invoca le seguenti classi preposte alla realizzazione e gestione dei widget per inviare i vari tipo di dati:
+\begin{itemize}
+	\item \texttt{SendText}
+	\item \texttt{SendNumb}
+	\item \texttt{SendImage}
+	\item \texttt{SendPosition}
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{SendText}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendText};
+\item \textbf{Descrizione:} Classe che permette l'inserimento e l'invio di dati testuali da parte degli utenti;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe,mediante l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Text}, realizza e aggiorna l'opportuno widget.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{SendNumb}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendNumb};
+\item \textbf{Descrizione:} Classe che ha il compito di permettere l'inserimento e l'invio di dati numerici da parte degli utenti, per completare il passo corrente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe,mediante l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Numb}, realizza e aggiorna l'opportuno widget.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{SendImage}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendImage};
+\item \textbf{Descrizione:} Classe che gestisce l'inserimento e l'invio di immagini da parte degli utenti, richieste per completare il passo corrente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe,mediante l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Ima\fshyp{}ge}, realizza e aggiorna l'opportuno widget.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{SendPosition}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{SendPosition};
+\item \textbf{Descrizione:} Classe che ha il compito di gestire il calcolo e l'invio della posizione geografica dell'utente;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe,mediante l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Po\fshyp{}si\fshyp{}tion}, realizza e aggiorna l'opportuno widget.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
