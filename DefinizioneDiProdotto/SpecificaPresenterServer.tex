@@ -8,24 +8,50 @@ Tale componente è composta dalle classi:
 	\item com.sirius.sequenziatore.server.presenter.common.ProcessInfoController
 	\item com.sirius.sequenziatore.server.presenter.processowner.StepController
 	\item com.sirius.sequenziatore.server.presenter.processowner.ProcessController
-	\item com.sirius.sequenziatore.server.presenter.processowner.ManageUserStepController
+	\item com.sirius.sequenziatore.server.presenter.processowner.ApproveStepController
 	\item com.sirius.sequenziatore.server.presenter.user.AccountController
 	\item com.sirius.sequenziatore.server.presenter.user.UserStepController
 	\item com.sirius.sequenziatore.server.presenter.user.UserProcessController
 	\item com.sirius.sequenziatore.server.presenter.user.ReportController
 \end{itemize}
-Nella prossime sessioni verranno trattate in dettaglio le seguenti classi dividendo l' esposizione per \textit{package}.
+Nella prossime sessioni verranno trattate in dettaglio le seguenti classi dividendo l' esposizione per \textit{package}, si evidenzia come la voce mappatura base sia l' estensione della mappatura su cui si programma il sistema che sarà \textit{localhost:8080/sequenziatore/} , quindi tutte le mappature base saranno da considerarsi come aggiunte a seguito di /sequenziatore/ e successivamente le varie varianti dei metodi.
+Tutte le classi \textit{controller} del \textit{presenter} dovranno essere marcate come \textit{@Controller} per essere riconosciute in modo corretto da Spring.
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.common}
 IMMAGINE DEL PACKAGE
 All' interno di questa sezione verranno trattate tutte le classi contenute nel package \textit{common}.
-\paragraph{Classe SignUpController}
+\paragraph{Classe SignUpController}%--------------------------------------------------------%
 \begin{description}
-	\item[Descrizione]
-	\item[Attributi]
-	\item[Metodi]
+	\item[Descrizione] Questa classe dovrà gestire tutte le richieste di registrazione al sistema, sarà incaricata di inserire i dati nel database e di avvertire il client della riuscita della registrazione.
+	\item[Mappatura base:] \textit{\textbackslash signup}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item +RegisterUser(Utente toBeRegistered) , questo metodo gestirà un metodo \textbf{POST} e restituirà un errore qual' ora ci siano stati problemi nella registrazione;
+				\end{itemize}
 \end{description}
-\paragraph{LoginController}
-
-\paragraph{StepInfoController}
-
-\paragraph{ProcessInfoController}
+\paragraph{LoginController}%--------------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] Questa classe gestirà le richieste di \textit{log in}, dovrà controllare se l' utente esiste nel sistema e se le credenziali d' accesso siano corrette;
+	\item[Mappatura base:] \textit{\textbackslash login}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item +CheckLogin(Utente toBeLogged) , questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà restituire un errore qual' ora ci siano stati problemi nella login;
+				\end{itemize}
+\end{description}
+\paragraph{StepInfoController}%--------------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] Questa classe restituirà lo scheletro, quindi la composizione del passo richiesto;
+	\item[Mappatura base:] \textit{\textbackslash step\textbackslash \{id\}}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item +Step GetStepInformation() il metodo gestisce una richiesta \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito;
+				\end{itemize}
+\end{description}
+\paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] 
+	\item[Mappatura base:] \textit{\textbackslash process\textbackslash \{id\}}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item 
+				\end{itemize}
+\end{description}
