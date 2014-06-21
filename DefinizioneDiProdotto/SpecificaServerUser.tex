@@ -1,0 +1,40 @@
+\subsubsection{Package com.sirius.sequenziatore.server.presenter.user}
+\textbf{IMMAGINE PACKAGE}
+\paragraph{UserStepController}%----------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] Questa classe gestisce la ricezione di un passo da parte di un utente tramite una richiesta di tipo \textit{POST}, tale passo dovrà essere inserito nel database, ponendo attenzione se è un passo che richiede approvazione o meno;
+	\item[Mappatura base:] \textit{\textbackslash stepdata\textbackslash user}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item 
+				\end{itemize}
+\end{description}
+\paragraph{UserProcessController}%----------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] Questa classe permette all' utente varie operazioni, innanzitutto l' iscrizione ad un processo, poi restituisce il passo a cui è arrivato e il suo stato per tale processo e infine fornisce una lista di processi con tutti i processi a cui si può iscrivere e i processi per i quali può chiedere di fare il \textit{report};
+	\item[Mappatura base:] \textit{\textbackslash user\textbackslash \{username\}}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item +void ProcessSubscribe() questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta di tipo \textit{POST} che permette ad un utente di iscriversi al processo voluto;
+					\item +Status GetProcessStatus() questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta \textit{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
+					\item +ProcessList GetListProcess() questo processo mappa su \textbackslash processlist e gestisce una richiesta di tipo \textit{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
+				\end{itemize}
+\end{description}
+\paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] 
+	\item[Mappatura base:] \textit{\textbackslash process\textbackslash \{id\}}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item 
+				\end{itemize}
+\end{description}
+\paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\begin{description}
+	\item[Descrizione] 
+	\item[Mappatura base:] \textit{\textbackslash process\textbackslash \{id\}}
+	\item[Attributi:]
+	\item[Metodi:]\begin{itemize}
+					\item 
+				\end{itemize}
+\end{description}
