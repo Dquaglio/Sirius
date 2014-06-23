@@ -1,8 +1,15 @@
-\subsubsection{Package sequenziatore.client.view.user}
+\subsubsection{Package \viewUser{}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./pack/UserViewB.png} \caption{Diagramma \textit{view} utente - gestione processi}
+\end{figure}
 
 \paragraph{IMainUser}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IMainUser};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette la gestione delle principali componenti dell'Interfaccia grafica dell'utente.
 \end{itemize}
 
@@ -10,28 +17,11 @@
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{MainUser};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Main\fshyp{}U\fshyp{}ser}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{ILogin}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{ILogin};
-\item \textbf{Descrizione:} Interfaccia che permette di gestire l'interfaccia grafica relativa alle richieste di autenticazione e chiusura della sessione da parte dell'utente.
-\end{itemize}
-
-\paragraph{Login}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{Login};
-\item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di autenticazione e chiusura della sessione da parte dell'utente;
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Lo\fshyp{}gin}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Main\fshyp{}U\fshyp{}ser}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -39,7 +29,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Lo\fshyp{}gin}.
 \paragraph{IRegister}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IRegister};
-\item \textbf{Package:} \texttt{\iViewUser{}};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di gestire l'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente.
 \end{itemize}
 
@@ -47,10 +37,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Lo\fshyp{}gin}.
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{Register};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di gestire dell'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Re\fshyp{}gis\fshyp{}ter}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Re\fshyp{}gis\fshyp{}ter}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -58,6 +49,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Re\fshyp{}gis\fshyp{}ter}.
 \paragraph{IUserData}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IUserData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette la realizzazione dei \textit{widget} per la visualizzazione dei dati dell'utente e la relativa modifica dei dati, dove possibile.
 \end{itemize}
 
@@ -65,10 +57,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Re\fshyp{}gis\fshyp{}ter}.
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{UserData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette la realizzazione dei \textit{widget} che consentono visualizzazione e modifica dei dati dell'utente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}User\fshyp{}Da\fshyp{}ta}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}User\fshyp{}Da\fshyp{}ta}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -76,6 +69,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}User\fshyp{}Da\fshyp{}ta}.
 \paragraph{IOpenProcess}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IOpenProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per consentire la ricerca e la selezione di processi.
 \end{itemize}
 
@@ -83,10 +77,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}User\fshyp{}Da\fshyp{}ta}.
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{OpenProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'apertura di un processo tramite ricerca o selezionandolo da una lista;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -94,6 +89,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshy
 \paragraph{IManagementProcess}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IManagementSelectedProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per visualizzare lo stato corrente del processo selezionato e i vincoli per concludere il passo.
 \end{itemize}
 
@@ -101,10 +97,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshy
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ManagementProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire la visualizzazione dello stato del processo selezionato e i vincoli per concludere il passo in corso;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -112,6 +109,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp
 \paragraph{ISendData}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ISendData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per inviare i dati richiesti per la conclusione del passo.
 \end{itemize}
 
@@ -119,10 +117,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} per consentire l'invio dei dati richiesti per la conclusione del passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Da\fshyp{}ta}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da\fshyp{}ta}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -130,6 +129,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Da
 \paragraph{ISendText}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ISendData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per inserire il testo da inviare per concludere il passo.
 \end{itemize}
 
@@ -137,10 +137,11 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Da
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendData};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire il testo da inviare per concludere il passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Text}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Text}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -148,6 +149,7 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Te
 \paragraph{ISendNumb}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ISendNumb};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per inserire i dati numerici da inviare per concludere il passo.
 \end{itemize}
 
@@ -155,10 +157,11 @@ La classe implementa l'interfaccia \texttt{\iViewUser{}::I\fshyp{}Send\fshyp{}Te
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendNumb};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette agli oggetti che la implementano di realizzare i \textit{widget} che consentono di inserire i dati numerici da inviare per concludere il passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Numb}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Numb}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -166,6 +169,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Numb}.
 \paragraph{ISendPosition}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ISendPosition};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette  di realizzare i \textit{widget} per inviare la posizione geografica per la conclusione di un passo. Inoltre consente di visualizzare eventuali messaggi d'errore nella rilevazione delle coordinate.
 \end{itemize}
 
@@ -173,10 +177,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Numb}.
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{SendPosition};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette  di realizzare i \textit{widget} che consentono di inviare la posizione geografica richiesta per la conclusione del passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Po\fshyp{}si\fshyp{}tion}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Po\fshyp{}si\fshyp{}tion}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -184,6 +189,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Po\fshyp{}si\fsh
 \paragraph{ISendImage}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ISendImage};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per inserire le immagini richieste per la conclusione del passo.
 \end{itemize}
 
@@ -195,7 +201,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Po\fshyp{}si\fsh
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono di inserire le immagini richieste per concludere i passo in esecuzione;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Image}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Image}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -203,6 +209,7 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Image}.
 \paragraph{IPrintProcess}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{IPrintProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Interfaccia che permette di realizzare i \textit{widget} per consentire il salvataggio dei \textit{report} di fine processo.
 \end{itemize}
 
@@ -210,10 +217,11 @@ La classe implementa l'interfaccia \texttt{I\fshyp{}Send\fshyp{}Image}.
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{PrintProcess};
+\item \textbf{Package:} \texttt{\viewUser{}};
 \item \textbf{Descrizione:} Classe che permette di realizzare i \textit{widget} che consentono il salvataggio dei \textit{report} sull'esecuzione del processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe implementa l'interfaccia \texttt{I\fshyp{}Print\fshyp{}Pro\fshyp{}cess}.
+La classe implementa l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}Pro\fshyp{}cess}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}

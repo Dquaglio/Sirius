@@ -1,4 +1,43 @@
 \section{Descrizione singoli componenti}
-\subsection{Package sequenziatore.client.view}
+
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./pack/POPackage.png} \caption{Diagramma componenti - \textit{process owner}}
+\end{figure}
+
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./pack/UserMainPackage.png} \caption{Diagramma componenti - \textit{utente}}
+\end{figure}
+
+
+\subsection{Package \view{}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./pack/UserViewA.png} \caption{Diagramma principale \textit{view} utente}
+\end{figure}
+
+\paragraph{ILogin}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ILogin};
+\item \textbf{Package:} \texttt{\view{}};
+\item \textbf{Descrizione:} Interfaccia che permette di gestire l'interfaccia grafica relativa alle richieste di autenticazione al sistema.
+\end{itemize}
+
+\paragraph{Login}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{Login};
+\item \textbf{Package:} \texttt{\view{}};
+\item \textbf{Descrizione:} Componente che permette di gestire l'interfaccia grafica relativa alle richieste di autenticazione al sistema;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+Il componente implementa l'interfaccia \texttt{\view{}::I\fshyp{}Lo\fshyp{}gin}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
 \input{DescrizioneUserView.tex}
-%\input{DescrizioneAdminView.tex}
+\input{DescrizioneAdminView.tex}
