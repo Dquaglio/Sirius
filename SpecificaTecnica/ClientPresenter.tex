@@ -1,3 +1,43 @@
-\subsection{Package sequenziatore.client.presenter}
+\subsection{Package \logic{}}
+
+\paragraph{Router}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{Router};
+\item \textbf{Package:} \texttt{\logic{}};
+\item \textbf{Descrizione:} Classe che permette di coordinare l'inizializzazione e la renderizzazione delle pagine, gestendo gli eventi e le azioni di cambio pagina;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe reperisce le informazioni di sessione dalla classe \texttt{\model{}::U\fshyp{}ser\fshyp{}Mo\fshyp{}del} e comunica con le seguenti classi se l'utente dispone dei diritti d'accesso necessari:
+\begin{itemize}
+\item \texttt{\logic{}Lo\fshyp{}gin};
+\item \texttt{\logicUser{}Re\fshyp{}gis\fshyp{}ter};
+\item \texttt{\logicUser{}Ma\fshyp{}in\fshyp{}Us\fshyp{}er};
+\item \texttt{\logicUser{}Us\fshyp{}er\fshyp{}Da\fshyp{}ta};
+\item \texttt{\logicUser{}Op\fshyp{}en\fshyp{}Pro\fshyp{}cess\fshyp{}gic};
+\item \texttt{\logicUser{}Ma\fshyp{}nag\fshyp{}ment\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}Ma\fshyp{}in\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner};
+\item \texttt{\logicAdmin{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}New\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}Add\fshyp{}Step};
+\item \texttt{\logicAdmin{}Check\fshyp{}Step};
+\item \texttt{\logicAdmin{}Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess};
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Login}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{LoginLogic};
+\item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di autenticazione al sistema;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe gestisce i dati di sessione comunicando con la classe \texttt{\model{}U\fshyp{}ser\fshyp{}Mo\fshyp{}del} e realizza l'interfaccia grafica tramite metodi della classe \texttt{\view{}Lo\fshyp{}gin}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
 \input{DescrizioneUserPresenter}
 \input{DescrizioneAdminPresenter}
