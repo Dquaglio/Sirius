@@ -1,3 +1,121 @@
 \section{Specifica della componente presenter}
-Questa componente racchiude tutti i metodi che gestiscono le varie operazioni offerte dall' applicazione il \progetto e viene suddivisa in due parti: Client e Server
+Questa componente consente la gestione della logica principale dell'applicazione \progetto{} e viene suddivisa in due parti: \textit{client} e \textit{server}.
+
 \subsection{Client}
+
+Il \textit{presenter} lato \textit{client} consente di gestire la logica delle pagine dell'applicazione.
+La inizializzazione delle classi e la gestione degli eventi di cambio pagina, avviene tramite alla classe principale \texttt{Router}, che estende la classe \texttt{Backbone.Router} fornita dal \textit{framework\ped{G} Backbone}.
+Le altre classi della componente, consentono di renderizzare le viste utilizzando i \textit{template} della componente \textit{view}, di gestire gli eventi generati dagli utenti, e di gestire la comunicazione con il server tramite le classi della componente \textit{model}.
+
+La componente è composta dalle seguenti \textit{classi}:
+\begin{itemize}
+	\item \hyperref[router]{\logic{}.Rou\fshyp{}ter};
+	\item \hyperref[login]{\logic{}.Lo\fshyp{}gin};
+	
+	\iffalse
+	
+	\item \hyperref[mainUser]{\logicUser{}.Ma\fshyp{}in\fshyp{}U\fshyp{}ser};
+	\item \hyperref[register]{\logicUser{}.Re\fshyp{}gis\fshyp{}ter};
+	\item \hyperref[userData]{\logicUser{}.U\fshyp{}ser\fshyp{}Da\fshyp{}ta};
+	\item \hyperref[openProcess]{\logicUser{}.O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[management]{\logicUser{}.Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[sendData{\logicUser{}.Send\fshyp{}Da\fshyp{}ta};
+	\item \hyperref[sendText]{\logicUser{}.Send\fshyp{}Text};
+	\item \hyperref[sendNumb]{\logicUser{}.Send\fshyp{}Numb};
+	\item \hyperref[sendPosition]{\logicUser{}.Send\fshyp{}Po\fshyp{}si\fshyp{}tion};
+	\item \hyperref[sendImage]{\logicUser{}.Send\fshyp{}I\fshyp{}ma\fshyp{}ge};
+	\item \hyperref[printProcess]{\logicUser{}.Print\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[mainProcessOwner]{\logicAdmin{}.Main\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner};
+	\item \hyperref[newProcess]{\logicAdmin{}.New\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[addStep]{\logicAdmin{}.Add\fshyp{}Step};
+	\item \hyperref[openProcess]{\logicAdmin{}.O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[manageProcess]{\logicAdmin{}.Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[checkStep]{\logicAdmin{}.Check\fshyp{}Step};
+	
+	\fi
+	
+\end{itemize}
+
+
+\subsubsection{Package \logic{}}
+
+\paragraph{Router}
+\label{router}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che permette di coordinare l'inizializzazione e la renderizzazione delle pagine, gestendo gli eventi e le azioni di cambio pagina;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe reperisce le informazioni di sessione dalla classe \texttt{\model{}::U\fshyp{}ser\fshyp{}Mo\fshyp{}del} e comunica con le seguenti classi se l'utente dispone dei diritti d'accesso necessari:
+\begin{itemize}
+\item \texttt{\logic{}.Lo\fshyp{}gin};
+\item \texttt{\logicUser{}.Re\fshyp{}gis\fshyp{}ter};
+\item \texttt{\logicUser{}.Ma\fshyp{}in\fshyp{}Us\fshyp{}er};
+\item \texttt{\logicUser{}.Us\fshyp{}er\fshyp{}Da\fshyp{}ta};
+\item \texttt{\logicUser{}.Op\fshyp{}en\fshyp{}Pro\fshyp{}cess\fshyp{}gic};
+\item \texttt{\logicUser{}.Ma\fshyp{}nag\fshyp{}ment\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}.Ma\fshyp{}in\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner};
+\item \texttt{\logicAdmin{}.O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}.New\fshyp{}Pro\fshyp{}cess};
+\item \texttt{\logicAdmin{}.Add\fshyp{}Step};
+\item \texttt{\logicAdmin{}.Check\fshyp{}Step};
+\item \texttt{\logicAdmin{}.Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess};
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{Session session:}\\ oggetto di tipo \texttt{\model{}U\fshyp{}ser\fshyp{}Da\fshyp{}ta}, che consente di gestire la sessione dell'utente;
+\item \texttt{Backbone.View[] views:}\\ array che contiene le classi del presenter in esecuzione;
+\item \texttt{Object routes:}\\ oggetto ridefinito da \texttt{Backbone.Router} che associa ad ogni evento di \textit{routing\ped{G}}, un metodo della classe;
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ null home():}\\ gestisce l'evento di \textit{routing\ped{G} home};
+\item \texttt{+ null processes():}\\ gestisce l'evento di \textit{routing\ped{G} processes};
+\item \texttt{+ null newProcess():}\\ gestisce l'evento di \textit{routing\ped{G} newProcess};
+\item \texttt{+ null checkStep():}\\ gestisce l'evento di \textit{routing\ped{G} checkStep};
+\item \texttt{+ null process():}\\ gestisce l'evento di \textit{routing\ped{G} process};
+\item \texttt{+ null register():}\\ gestisce l'evento di \textit{routing\ped{G} register};
+\item \texttt{+ null user():}\\ gestisce l'evento di \textit{routing\ped{G} user};
+\item \texttt{+ bool checkSession(String pageId):}\\ ritorna \texttt{true} solo se l'utente è autenticato; in caso contrario crea e renderizza la pagina di \textit{login};
+\item \texttt{+ null load(String resource, String pageId):}\\ crea e aggiunge una vista di tipo \textit{resource} al campo dati \texttt{this.views}, all'indice \textit{pageId};
+\item \texttt{+ null changePage(String pageId):}\\ imposta la pagina con id \textit{pageId} come attiva, ed esegue la transizione di cambio pagina.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Login}
+\label{login}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che ha il compito di gestire le richieste di autenticazione al sistema;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe gestisce i dati di sessione comunicando con la classe \texttt{\model{}U\fshyp{}ser\fshyp{}Mo\fshyp{}del} e realizza l'interfaccia grafica tramite metodi della classe \texttt{\view{}Lo\fshyp{}gin}.
+\end{sloppypar}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{UserDataModel model:}\\ campo dati che contiene i dati di sessione dell'utente;
+\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere la pagina \textit{login} alla pagina \textit{HTML\ped{G}}, se non è ancora presente;
+\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ null login(Event event):}\\ effettua una richiesta di \textit{login}, utilizzando il campo dati \model{} per comunicare con il \textit{server\ped{G}}.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\subsubsection{Package \logicAdmin{}}
+
