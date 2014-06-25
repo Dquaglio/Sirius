@@ -15,7 +15,7 @@ Tale componente è composta dalle classi:
 	\item \texttt{com.sirius.sequenziatore.server.presenter.user.ReportController}
 \end{itemize}
 Nella prossime sessioni verranno trattate in dettaglio le seguenti classi dividendo l' esposizione per \textit{package}, si evidenzia come la voce mappatura base sia l' estensione della mappatura su cui si programma il sistema che sarà \textit{localhost:8080/sequenziatore/} , quindi tutte le mappature base saranno da considerarsi come aggiunte a seguito di /sequenziatore/ e successivamente le varie varianti dei metodi.
-Tutte le classi \textit{controller} del \textit{presenter} dovranno essere marcate come \textit{@Controller} per essere riconosciute in modo corretto da Spring.
+Tutte le classi \textit{controller} del \textit{presenter} dovranno essere marcate come \textit{@Controller} per essere riconosciute in modo corretto da \textit{Spring}.
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.common}
 \textbf{IMMAGINE DEL PACKAGE}
 All' interno di questa sezione verranno trattate tutte le classi contenute nel package \textit{common}.
@@ -24,31 +24,56 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 	\item \textbf{Descrizione: } Questa classe dovrà gestire tutte le richieste di registrazione al sistema, sarà incaricata di inserire i dati nel database e di avvertire il client della riuscita della registrazione.
 	\item \textbf{Mappatura base: }\textit{\textbackslash signup}
 	\item \textbf{Relazioni con altri componenti: }
-	La classe utilizzera' le seguenti classi:
+	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
 		\item \texttt{com.sirius.sequenziatore.server.model.User;}
 		\item \texttt{com.sirius.sequenziatore.server.model.UserDao;}
 	\end{itemize}
+	tramite le interfacce:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
+		\item \texttt{\sModel .IDataAccessObject;}
+	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+RegisterUser(Utente toBeRegistered)}:\\
-					 questo metodo gestirà un metodo \textbf{POST} e restituirà un errore qual' ora ci siano stati problemi nella registrazione;
+					\item \texttt{+RegisterUser(User toBeRegistered)}:\\
+					 questo metodo gestirà un metodo \textbf{POST} e restituirà dovrà lanciare un' eccezione di tipo \texttt{HttpError} qual' ora ci siano stati problemi nella registrazione;
 				\end{itemize}
 \end{itemize}
 \paragraph{LoginController}%--------------------------------------------------------------------%
 \begin{itemize}
-	\item \textbf{Descrizione: }Questa classe gestirà le richieste di \textit{log in}, dovrà controllare se l' utente esiste nel sistema e se le credenziali d' accesso siano corrette;
+	\item \textbf{Descrizione: }Questa classe gestirà le richieste di \textit{log in}, dovrà controllare se l' utente esiste nel sistema e se le credenziali d' accesso sono corrette restituendo il tipo di utente altrimenti un errore se l' utente non esiste nel sistema;
 	\item \textbf{Mappatura base: }\textit{\textbackslash login}
-	\item \textbf{Attributi: }
+	\item \textbf{Relazioni con altri componenti: }
+	La classe utilizzerà le seguenti classi:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.User;}
+		\item \texttt{com.sirius.sequenziatore.server.model.UserDao;}
+	\end{itemize}
+	tramite le interfacce:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
+		\item \texttt{\sModel .IDataAccessObject;}
+	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
 					\item \texttt{+CheckLogin(User toBeLogged)}:\\
-					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà restituire un errore qual' ora ci siano stati problemi nella login;
+					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà lanciare un' eccezione di tipo \texttt{HttpError} qualora ci siano stati problemi nella login;
 				\end{itemize}
 \end{itemize}
 \paragraph{StepInfoController}%--------------------------------------------------------------------%
 \begin{itemize}
 	\item \textbf{Descrizione: }Questa classe restituirà lo scheletro, quindi la composizione del passo richiesto;
 	\item \textbf{Mappatura base: }\textit{\textbackslash step\textbackslash \{id\}}
-	\item \textbf{Attributi: }
+	\item \textbf{Relazioni con altri componenti: }
+	La classe utilizzerà le seguenti classi:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.Step;}
+		\item \texttt{com.sirius.sequenziatore.server.model.StepDao;}
+	\end{itemize}
+	tramite le interfacce:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
+		\item \texttt{\sModel .IDataAccessObject;}
+	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
 					\item \texttt{+Step GetStepInformation()}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla recuperata dal \textit{database};
@@ -58,10 +83,19 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe dovrà restituire a chi lo richiede un processo dato l' \textit{id} con i suoi dati;
 	\item \textbf{Mappatura base: }\textit{\textbackslash process\textbackslash \{id\}}
-	\item \textbf{Attributi: }
+	\item \textbf{Relazioni con altri componenti: }
+	La classe utilizzerà le seguenti classi:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.Process;}
+		\item \texttt{com.sirius.sequenziatore.server.model.ProcessDao;}
+	\end{itemize}
+	tramite le interfacce:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
+		\item \texttt{\sModel .IDataAccessObject;}
+	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+Process GetProcessInformation()
-					}:\\
-					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con idprocesso richiesto;
+					\item \texttt{+Process GetProcessInformation()}:\\
+					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con id processo richiesto;
 				\end{itemize}
 \end{itemize}

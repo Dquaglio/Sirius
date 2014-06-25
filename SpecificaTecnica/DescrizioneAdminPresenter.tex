@@ -14,7 +14,7 @@
 \item \textbf{Descrizione:} Classe che ha il compito della gestione generale della logica delle funzionalità \textit{Process Owner\ped{G}};
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Main\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner} per la realizzazione dell'interfaccia grafica.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}Main\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner} per la realizzazione dell'interfaccia grafica.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -27,7 +27,7 @@ La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Main\fshyp{}Pr
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la ricerca e la selezione di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, e con la classe \texttt{\collection{}Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}O\fshyp{}pen\fshyp{}Pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, e con la classe \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -40,7 +40,7 @@ La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}O\fshyp{}pen\f
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la logica della definizione di un nuovo processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}New\fshyp{}pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, e con la classe \texttt{\collection{}Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} comunicare con il \textit{server\ped{G}}.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}New\fshyp{}pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, con la classe \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} comunicare con il \textit{server\ped{G}}, e con la classe \texttt{\logicAdmin{}Add\fshyp{}Step};.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -53,7 +53,7 @@ La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}New\fshyp{}pro
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la logica di definizione dei passi di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Add\fshyp{}Step} per la realizzazione dell'interfaccia grafica.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}Add\fshyp{}Step} per la realizzazione dell'interfaccia grafica e utilizza la classe \texttt{\model{}Step} per salvare i dati del passo in creazione.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -66,20 +66,20 @@ La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Add\fshyp{}Ste
 \item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato dei processi e ai dati inviati dagli utenti. Le operazioni di gestione dello stato comprendono la terminazione e l'eliminazione di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, e con le classi \texttt{\collection{}Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} e \texttt{\model{}Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess} per la realizzazione dell'interfaccia grafica, e con le classi \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} e \texttt{\model{}Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
-\paragraph{CheckStepLogic}
+\paragraph{CheckStep}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Nome:} \texttt{CheckStepLogic};
+\item \textbf{Nome:} \texttt{CheckStep};
 \item \textbf{Package:} \texttt{\logicAdmin{}};
 \item \textbf{Descrizione:} Classe che ha il compito di definire la logica del controllo di un passo che richiede intervento umano per essere approvato;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewAdmin{}I\fshyp{}Check\fshyp{}Step} per la realizzazione dell'interfaccia grafica, e con le classi \texttt{\collection{}Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} e \texttt{\model{}Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe comunica con l'interfaccia \texttt{\viewAdmin{}.I\fshyp{}Check\fshyp{}Step} per la realizzazione dell'interfaccia grafica, e con le classi \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} e \texttt{\model{}Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
