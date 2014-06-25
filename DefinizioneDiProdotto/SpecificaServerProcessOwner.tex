@@ -16,8 +16,10 @@
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }
 				\begin{itemize}
-					\item +void CreateProcess(Process) questo metodo gestisce una richiesta di tipo \textbf{POST} e permette l' inserimento del processo fornito nel \textit{database};
-					\item +ProcessList GetProcessList() questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce al \textit{process owner} una lista di processi che può visualizzare;
+					\item +void CreateProcess(Process):\\
+					questo metodo gestisce una richiesta di tipo \textbf{POST} e permette l' inserimento del processo fornito nel \textit{database};
+					\item +ProcessList GetProcessList():\\
+					 questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce al \textit{process owner} una lista di processi che può visualizzare;
 				\end{itemize}
 \end{itemize}
 \paragraph{ApproveStepController}%----------------------------------------------------------------%
@@ -26,7 +28,9 @@
 	\item \textbf{Mappatura base: } \textit{\textbackslash approvedata}
 	\item \textbf{Attributi: } 
 	\item \textbf{Metodi: }\begin{itemize}
-					\item +StepList GetStepToApprove(), il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo StepList contenente tutti i dati che richiedono approvazione;
-					\item +void ApproveResponse(Step), il metodo gestisce una richiesta di tipo \textit{POST}, riceve un passo che ha subito la moderazione del \textit{process owner}, tale passo verrà eliminato dal database se il processowner lo ha rifiutato altrimenti verrà approvato definitivamente;  
+					\item +StepList GetStepToApprove():\\
+					 il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo StepList contenente tutti i dati che richiedono approvazione;
+					\item +void ApproveResponse(Step):\\
+					il metodo gestisce una richiesta di tipo \textit{POST}, riceve un passo che ha subito la moderazione del \textit{process owner}, tale passo verrà eliminato dal database se il processowner lo ha rifiutato altrimenti verrà approvato definitivamente;  
 				\end{itemize}
 \end{itemize}

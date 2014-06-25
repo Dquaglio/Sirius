@@ -16,9 +16,12 @@
 	\item \textbf{Mappatura base: } \textit{\textbackslash user\textbackslash \{username\}}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+void ProcessSubscribe()} questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta di tipo \textit{POST} che permette ad un utente di iscriversi al processo voluto;
-					\item \texttt{+Status GetProcessStatus()} questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta \textit{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
-					\item \texttt{+ProcessList GetListProcess()} questo processo mappa su \textbackslash processlist e gestisce una richiesta di tipo \textit{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
+					\item \texttt{+void ProcessSubscribe()}:\\
+					questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta di tipo \textit{POST} che permette ad un utente di iscriversi al processo voluto;
+					\item \texttt{+Status GetProcessStatus()}:\\
+					questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta \textit{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
+					\item \texttt{+ProcessList GetListProcess()}:\\
+					questo processo mappa su \textbackslash processlist e gestisce una richiesta di tipo \textit{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
 				\end{itemize}
 \end{itemize}
 \paragraph{AccountController}%----------------------------------------------------------------%

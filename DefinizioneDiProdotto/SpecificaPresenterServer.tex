@@ -25,7 +25,8 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 	\item \textbf{Mappatura base: }\textit{\textbackslash signup}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item +RegisterUser(Utente toBeRegistered) , questo metodo gestirà un metodo \textbf{POST} e restituirà un errore qual' ora ci siano stati problemi nella registrazione;
+					\item +RegisterUser(Utente toBeRegistered):\\
+					 questo metodo gestirà un metodo \textbf{POST} e restituirà un errore qual' ora ci siano stati problemi nella registrazione;
 				\end{itemize}
 \end{itemize}
 \paragraph{LoginController}%--------------------------------------------------------------------%
@@ -34,7 +35,8 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 	\item \textbf{Mappatura base: }\textit{\textbackslash login}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item +CheckLogin(User toBeLogged) , questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà restituire un errore qual' ora ci siano stati problemi nella login;
+					\item +CheckLogin(User toBeLogged):\\
+					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà restituire un errore qual' ora ci siano stati problemi nella login;
 				\end{itemize}
 \end{itemize}
 \paragraph{StepInfoController}%--------------------------------------------------------------------%
@@ -43,7 +45,8 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 	\item \textbf{Mappatura base: }\textit{\textbackslash step\textbackslash \{id\}}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item +Step GetStepInformation() il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla recuperata dal \textit{database};
+					\item +Step GetStepInformation():\\
+					 il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla recuperata dal \textit{database};
 				\end{itemize}
 \end{itemize}
 \paragraph{ProcessInfoController}%----------------------------------------------------------------%
@@ -52,6 +55,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 	\item \textbf{Mappatura base: }\textit{\textbackslash process\textbackslash \{id\}}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item 
+					\item +Process GetProcessInformation():\\
+					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con idprocesso richiesto;
 				\end{itemize}
 \end{itemize}

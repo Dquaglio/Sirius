@@ -1,1 +1,142 @@
 \section{Specifica della componente view}
+
+La componente \textit{view} è formata da \textit{template HTML\ped{G}} che possono contentere codice \textit{javascript\ped{G}} che, utilizzati dalle componenti del \textit{presenter}, consentono di renderizzare l'interfaccia grafica dell'applicazione.
+
+Le componenti del \textit{presenter}, si interfacciano con la \textit{view} utilizzando il metodo \texttt{template} della libreria \textit{underscoreJS}, che consente di generare codice \textit{HTML\ped{G}} a seconda dei parametri del metodo.
+Per questo motivo, le interfacce presenti nel \textit{package} \view{} definite nel documento \SpecificaTecnica{}, non verrano né implementate né descritte nel presente documento.
+
+La componente \textit{view} è composta dai seguenti \textit{template}:
+\begin{itemize}
+	\item \hyperref[loginTemplate]{\view{}.Lo\fshyp{}gin};
+	\item \hyperref[mainUserTemplate]{\viewUser{}.Ma\fshyp{}in\fshyp{}U\fshyp{}ser};
+	\item \hyperref[registerTemplate]{\viewUser{}.Re\fshyp{}gis\fshyp{}ter};
+	\item \hyperref[userDataTemplate]{\viewUser{}.U\fshyp{}ser\fshyp{}Da\fshyp{}ta};
+	\item \hyperref[openProcessTemplate]{\viewUser{}.O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[managementProcessTemplate]{\viewUser{}.Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[sendDataTemplate]{\viewUser{}.Send\fshyp{}Da\fshyp{}ta};
+	\item \hyperref[sendTextTemplate]{\viewUser{}.Send\fshyp{}Text};
+	\item \hyperref[sendNumbTemplate]{\viewUser{}.Send\fshyp{}Numb};
+	\item \hyperref[sendPositionTemplate]{\viewUser{}.Send\fshyp{}Po\fshyp{}si\fshyp{}tion};
+	\item \hyperref[sendImageTemplate]{\viewUser{}.Send\fshyp{}I\fshyp{}ma\fshyp{}ge};
+	\item \hyperref[printProcessTemplate]{\viewUser{}.Print\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[mainProcessOwnerTemplate]{\viewAdmin{}.Main\fshyp{}Pro\fshyp{}cess\fshyp{}Ow\fshyp{}ner};
+	\item \hyperref[newProcessTemplate]{\viewAdmin{}.New\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[addStepTemplate]{\viewAdmin{}.Add\fshyp{}Step};
+	\item \hyperref[openProcessTemplate]{\viewAdmin{}.O\fshyp{}pen\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[manageProcessTemplate]{\viewAdmin{}.Ma\fshyp{}na\fshyp{}ge\fshyp{}Pro\fshyp{}cess};
+	\item \hyperref[checkStepTemplate]{\viewAdmin{}.Check\fshyp{}Step};
+\end{itemize}
+
+\subsection{Package \view{}}
+
+\paragraph{Login}
+\label{loginTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica relativa alle richieste di autenticazione al sistema.
+\end{itemize}
+
+\subsection{Package \viewUser{}}
+
+\paragraph{MainUser}
+\label{mainUserTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente.
+\end{itemize}
+
+\paragraph{Register}
+\label{registerTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire dell'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente.
+\end{itemize}
+
+\paragraph{UserData}
+\label{userDataTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette la realizzazione dei \textit{widget} che consentono visualizzazione e modifica dei dati dell'utente.
+\end{itemize}
+
+\paragraph{OpenProcess}
+\label{openProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire l'apertura di un processo tramite ricerca o selezionandolo da una lista.
+\end{itemize}
+
+\paragraph{ManagementProcess}
+\label{managementProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire la visualizzazione dello stato del processo selezionato e i vincoli per concludere il passo in corso.
+\end{itemize}
+
+\paragraph{SendData}
+\label{sendDataTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire l'invio dei dati richiesti per la conclusione del passo in esecuzione.
+\end{itemize}
+
+\paragraph{SendText}
+\label{sendTextTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono di inserire il testo da inviare per concludere il passo in esecuzione.
+\end{itemize}
+
+\paragraph{SendNumb}
+\label{sendNumbTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette agli oggetti che la implementano di realizzare i \textit{widget} che consentono di inserire i dati numerici da inviare per concludere il passo in esecuzione.
+\end{itemize}
+
+\paragraph{SendPosition}
+\label{sendPositionTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette  di realizzare i \textit{widget} che consentono di inviare la posizione geografica richiesta per la conclusione del passo in esecuzione.
+\end{itemize}
+
+\paragraph{SendImage}
+\label{sendImageTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono di inserire le immagini richieste per concludere i passo in esecuzione.
+\end{itemize}
+
+\paragraph{PrintProcess}
+\label{printProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono il salvataggio dei \textit{report} sull'esecuzione del processo.
+\end{itemize}
+
+\subsection{Package \viewAdmin{}}
+
+\paragraph{MainProcessOwner}
+\label{mainProcessOwnerTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} Componente che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente \textit{process owner\ped{G}}.
+\end{itemize}
+
+\paragraph{NewProcess}
+\label{newProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica che consente di creare nuovi processi.
+\end{itemize}
+
+\paragraph{AddStep}
+\label{AddStepTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica che consente di definire un nuovo passo del processo in creazione.
+\end{itemize}
+
+\paragraph{OpenProcess}
+\label{openProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di aprire un processo tramite ricerca o selezionandolo da una lista.
+\end{itemize}
+
+\paragraph{ManageProcess}
+\label{manageProcessTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di gestire l'accesso ai dati inviati al\textit{server\ped{G}} dagli utenti.
+\end{itemize}
+
+\paragraph{CheckStep}
+\label{checkStepTemplate}
+\begin{itemize}
+\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di gestire l'approvazione dei passi che richiedono intervento umano.
+\end{itemize}
