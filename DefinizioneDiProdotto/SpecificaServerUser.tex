@@ -16,21 +16,22 @@
 	\item \textbf{Mappatura base: } \textit{\textbackslash user\textbackslash \{username\}}
 	\item \textbf{Attributi: }
 	\item \textbf{Metodi: }\begin{itemize}
-					\item +void ProcessSubscribe() questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta di tipo \textit{POST} che permette ad un utente di iscriversi al processo voluto;
-					\item +Status GetProcessStatus() questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta \textit{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
-					\item +ProcessList GetListProcess() questo processo mappa su \textbackslash processlist e gestisce una richiesta di tipo \textit{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
+					\item \texttt{+void ProcessSubscribe()} questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta di tipo \textit{POST} che permette ad un utente di iscriversi al processo voluto;
+					\item \texttt{+Status GetProcessStatus()} questo metodo mappa su \textbackslash subscribe\textbackslash \{processid\} e gestisce una richiesta \textit{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
+					\item \texttt{+ProcessList GetListProcess()} questo processo mappa su \textbackslash processlist e gestisce una richiesta di tipo \textit{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
 				\end{itemize}
 \end{itemize}
-\paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\paragraph{AccountController}%----------------------------------------------------------------%
 \begin{itemize}
-	\item \textbf{Descrizione: } 
-	\item \textbf{Mappatura base: } \textit{\textbackslash process\textbackslash \{id\}}
-	\item \textbf{Attributi: }
+	\item \textbf{Descrizione: } Classe che fornisce i dati di un utente e ne permette la modifica dei suddetti;
+	\item \textbf{Mappatura base: } \textit{\textbackslash account\textbackslash \{username\}}
+	\item \textbf{Attributi: } 
 	\item \textbf{Metodi: }\begin{itemize}
-					\item 
+					\item \texttt{+User GetUserData():}\\
+					questo metodo gestisce una richiesta di tipo \textit{GET} e restituisce un oggetto di tipo User contenente tutti i dati di un utente;
 				\end{itemize}
 \end{itemize}
-\paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\paragraph{ReportController}%----------------------------------------------------------------%
 \begin{itemize}
 	\item \textbf{Descrizione: } 
 	\item \textbf{Mappatura base: } \textit{\textbackslash process\textbackslash \{id\}}
