@@ -1,5 +1,5 @@
 \section{Pianificazione dei test}
-Di seguito elenchiamo tutti i test di validazione, sistema ed integrazione previsti, prevedendo però ad un successivo aggiornamento ed integrazione degli stessi e dei test di unità nella prossima revisione. Per quanto riguarda le tempistiche di esecuzione dei test si faccia riferimento a \infoPDP.
+Di seguito elenchiamo tutti i test di validazione, sistema ed integrazione previsti, prevedendo però ad un successivo aggiornamento per i test di unità. Per quanto riguarda le tempistiche di esecuzione dei test si faccia riferimento a \infoPDP.
 Il valore \textbf{N.A} è da intendersi come non applicato, in quanto tali test saranno eseguiti successivamente nello svolgimento del progetto.
 \subsection{Test di sistema}
 In questa sezione vengono descritti i test di sistema che consentiranno a \gruppo ~di verificare il comportamento dinamico del sistema rispetto ai requisiti descritti in \infoAR. I test sotto riportati sono relativi ai requisiti software individuati e meritevoli di test.
@@ -16,10 +16,20 @@ Si è deciso di utilizzare una strategia di integrazione incrementale bottom-up 
 Assemblando le componenti in modo incrementale i difetti rilevati da un test sono da
 attribuirsi, con maggior probabilità, all’ultima parte aggiunta e si rende ogni passo di
 integrazione reversibile consentendo di retrocedere verso uno stato noto e sicuro.
-In questo modo i componenti base vengono testati più volte riducendo la possibile presenza di errori.
-I test di integrazione saranno definiti durante la progettazione di dettaglio in modo che possano essere il più completi possibile, e che siano nella sequenza corretta rispetto allo sviluppo temporale dei componenti.
-%\subsubsection{Descrizione dei test di integrazione}
-%\LTXtable{\textwidth}{Componenti.tex}
-\subsection{Test di validazione}
-I test di validazione saranno definiti durante la progettazione di dettaglio in modo che possano essere il più completi possibile.
+In questo modo i componenti base vengono testati più volte riducendo la possibile presenza di errori.\\
+Nel diagramma 
+\subsubsection{Descrizione dei test di integrazione}
+\LTXtable{\textwidth}{Dettagliotestintegrazione.tex}
+%da fare
+\subsection{Test di unità}
+I test di unità saranno definiti in seguito nello sviluppo del prodotto software.
+\subsubsection{Descrizione test di unità}%da fare
+\LTXtable{\textwidth}{Dettagliotestunita.tex}
+\subsection{Test di validazione}%da fare
+Di seguito vengono descritti i test di validazione per certificare che il prodotto realizzato sia conforme alle attese. Per ogni test vengono descritti i vari passi da eseguire per testare i requisiti ad esso associati.
+\subsubsection{Descrizione dei test di validazione}
+\paragraph{Test TV1}
+\begin{itemize}
+\item loggare utente;
+\end{itemize}
 
