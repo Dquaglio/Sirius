@@ -2,66 +2,74 @@
 \toprule
 \textbf{Package} & \textbf{Componente}\\
 \midrule
-\viewUser{}&VU1 - \texttt{MainUser}\\
-&VU2 - \texttt{UpdateView}\\
-&VU3 - \texttt{Login}\\
+\view{}&V1 - \texttt{ILogin}\\
+&V2 - \texttt{Login}\\
+\midrule
+\viewUser{}&VU1 - \texttt{IMainUser}\\
+&VU2 - \texttt{MainUser}\\
+&VU3 - \texttt{IRegister}\\
 &VU4 - \texttt{Register}\\
-&VU5 - \texttt{ViewData}\\
-&VU6 - \texttt{EditData}\\
-&VU7 - \texttt{ChangePassword}\\
+&VU5 - \texttt{IUserData}\\
+&VU6 - \texttt{UserData}\\
+&VU7 - \texttt{IOpenProcess}
 &VU8 - \texttt{OpenProcess}\\
-&VU9 - \texttt{Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Se\fshyp{}lec\fshyp{}ted\fshyp{}Pro\fshyp{}cess}\\
-&VU10 - \texttt{SendData}\\
-&VU11 - \texttt{SendText}\\
-&VU12 - \texttt{SendNumb}\\
-&VU13 - \texttt{SendPosition}\\
-&VU14 - \texttt{SendImage}\\
-&VU15 - \texttt{SendPhoto}\\
-&VU16 - \texttt{EndSelectedProcess}\\
-&VU17 - \texttt{PrintProcess}\\
-&VU18 - \texttt{PreviewProcess}\\
+&VU9 - \texttt{IMa\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess}\\
+&VU9 - \texttt{Ma\fshyp{}na\fshyp{}ge\fshyp{}ment\fshyp{}Pro\fshyp{}cess}\\
+&VU10 - \texttt{ISendData}\\
+&VU11 - \texttt{SendData}\\
+&VU12 - \texttt{ISendText}\\
+&VU13 - \texttt{SendText}\\
+&VU14 - \texttt{ISendNumb}\\
+&VU15 - \texttt{SendNumb}\\
+&VU16 - \texttt{ISendPosition}\\
+&VU17 - \texttt{SendPosition}\\
+&VU18 - \texttt{ISendImage}\\
+&VU19 - \texttt{SendImage}\\
+&VU20 - \texttt{IPrintProcess}\\
+&VU21 - \texttt{PrintProcess}\\
 \midrule
-\viewAdmin{}&VA1 - \texttt{MainProcessOwner}\\
-&VA2 - \texttt{UpdateView}\\
-&VA3 - \texttt{Login}\\
-&VA4 - \texttt{SetProcess}\\
-&VA5 - \texttt{AddStep}\\
-&VA6 - \texttt{PreviewProcess}\\
-&VA7 - \texttt{OpenProcess}\\
-&VA8 - \texttt{ManagementSelectedProcess}\\
-&VA9 - \texttt{CheckStep}\\
-&VA10 - \texttt{UserReceivedData}\\
-&VA11 - \texttt{Statistics}\\
-&VA12 - \texttt{InviteUser}\\
+\viewAdmin{}&VA1 - \texttt{IMainProcessOwner}\\
+&VA2 - \texttt{MainProcessOwner}\\
+&VA3 - \texttt{INewProcess}\\
+&VA4 - \texttt{NewProcess}\\
+&VA5 - \texttt{IAddStep}\\
+&VA6 - \texttt{AddStep}\\
+&VA7 - \texttt{IOpenProcess}\\
+&VA8 - \texttt{OpenProcess}\\
+&VA9 - \texttt{IManageProcess}\\
+&VA10 - \texttt{ManageProcess}\\
+&VA11 - \texttt{ICheckStep}\\
+&VA12 - \texttt{CheckStep}\\
 \midrule
-\logicUser{}&CPU1 - \texttt{MainLogic}\\
-&CPU2 - \texttt{LoginLogic}\\
-&CPU3 - \texttt{RegisterLogic}\\
-&CPU4 - \texttt{ManagementDataLogic}\\
-&CPU5 - \texttt{ManagementProcessLogic}\\
-&CPU6 - \texttt{SendDataLogic}\\
-&CPU7 - \texttt{ReportLogic}\\
+\logic()&P1 - \texttt{Router}\\
+&P2 - \texttt{Login}\\
+\logicUser{}&PU1 - \texttt{MainUser}\\
+&PU2 - \texttt{Register}\\
+&PU3 - \texttt{UserData}\\
+&PU4 - \texttt{OpenProcess}\\
+&PU5 - \texttt{ManagementProcess}\\
+&PU6 - \texttt{PrintReport}\\
+&PU7 - \texttt{SendData}\\
+&PU8 - \texttt{SendText}\\
+&PU9 - \texttt{SendImage}\\
+&PU10 - \texttt{SendPosition}\\
+&PU11 - \texttt{SendNumber}\\
 \midrule
-\logicAdmin{}&CPA1 - \texttt{MainLogic}\\
-&CPA2 - \texttt{LoginLogic}\\
-&CPA3 - \texttt{NewProcessLogic}\\
-&CPA4 - \texttt{AddStepLogic}\\
-&CPA5 - \texttt{ManagementProcessLogic}\\
-&CPA6 - \texttt{CheckStepLogic}\\
-&CPA7 - \texttt{StatisticLogic}\\
-&CPA8 - \texttt{UserDataLogic}\\
-&CPA9 - \texttt{InviteUserLogic}\\
+\logicAdmin{}&PA1 - \texttt{MainProcessOwner}\\
+&PA2 - \texttt{NewProcess}\\
+&PA3 - \texttt{AddStep}\\
+&PA4 - \texttt{OpenProcess}\\
+&PA5 - \texttt{ManageProcess}\\
+&PA6 - \texttt{CheckStep}\\
 \midrule
-eliminato&CP1 - \texttt{HttpCommunication}\\
-&CP2 - \texttt{WebsocketCommunication}\\
-&CP3 - \texttt{JSONFormatter}\\
+\model{}&M1 - \texttt{ProcessModel}\\
+&M2 - \texttt{ProcessDataModel}\\
+&M3 - \texttt{StepModel}\\
+&M4 - \texttt{UserModel}\\
 \midrule
-\model{}&CM1 - \texttt{Process}\\
-&CM2 - \texttt{Step}\\
-\midrule
-\modelUser{}&CMU3 - \texttt{UserData}\\
-\midrule
-\modelAdmin{}&CMA4 - \texttt{ProcessOwnerData}\\
+\collection{}&MC1 - \texttt{{ProcessCollection}}\\
+&MC2 - \texttt{{ProcessDataCollection}}\\
+&MC3 - \texttt{{StepCollection}}\\
 \midrule
 \sCommunication{}&SP2 - \texttt{HttpCommunication}\\
 &SP3 - \texttt{WebsocketCommunication}\\
