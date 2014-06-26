@@ -27,15 +27,15 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null login(String username, String password):}\\ delega al server il controllo delle credenzili e, al completamento della richiesta, salva i dati di sessione in caso di successo;
-\item \texttt{+ null logout():}\\ cancella di dati di sessione dell'utente;
-\item \texttt{+ null signup():}\\ effettua una richiesta di registrazione al \textit{server\ped{G}} inviando i dati della classe.
+\item \texttt{+ void login(String username, String password):}\\ delega al server il controllo delle credenzili e, al completamento della richiesta, salva i dati di sessione in caso di successo;
+\item \texttt{+ void logout():}\\ cancella di dati di sessione dell'utente;
+\item \texttt{+ void signup():}\\ effettua una richiesta di registrazione al \textit{server\ped{G}} inviando i dati della classe.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -53,15 +53,15 @@ La classe contiene un oggetto di tipo \texttt{\collection{}.Step\fshyp{}Col\fshy
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{int id:}\\ campo dati ridefinito da \texttt{Backbone.model} che rappresenta l'identificatore del processo;
-\item \texttt{StepCollection steps:}\\ campo dati di tipo \texttt{\collection{}.Step\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la collezione dei passi del processo;
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ int id:}\\ campo dati ridefinito da \texttt{Backbone.model} che rappresenta l'identificatore del processo;
+\item \texttt{+ StepCollection steps:}\\ campo dati di tipo \texttt{\collection{}.Step\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la collezione dei passi del processo;
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null fetchProcess():}\\ recupera dal \textit{server\ped{G}} i dati del processo, e i dati dei passi che assegna alla collezione \texttt{steps}, sincronizzando le operazioni.
+\item \texttt{+ void fetchProcess():}\\ recupera dal \textit{server\ped{G}} i dati del processo, e i dati dei passi che assegna alla collezione \texttt{steps}, sincronizzando le operazioni.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -75,15 +75,15 @@ La classe contiene un oggetto di tipo \texttt{\collection{}.Step\fshyp{}Col\fshy
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{int idProcesso:}\\ rappresenta l'identificatore del processo a cui i dati si riferiscono;
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ int idProcesso:}\\ rappresenta l'identificatore del processo a cui i dati si riferiscono;
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null subscribe(Bool subscription):}\\ effettua una richiesta di iscrizione o disiscrizione al \textit{server\ped{G}} a seconda del valore del parametro \textit{subscription}, riguardante il processo con "id" \texttt{idProcesso};
-\item \texttt{+ null sendData(int nextStep):}\\ invia al \textit{server\ped{G}} i dati della classe e l'id del prossimo passo da eseguire, che identifica una condizione del processo con "id" \texttt{idProcesso}.
+\item \texttt{+ void subscribe(Bool subscription):}\\ effettua una richiesta di iscrizione o disiscrizione al \textit{server\ped{G}} a seconda del valore del parametro \textit{subscription}, riguardante il processo con "id" \texttt{idProcesso};
+\item \texttt{+ void sendData(int nextStep):}\\ invia al \textit{server\ped{G}} i dati della classe e l'id del prossimo passo da eseguire, che identifica una condizione del processo con "id" \texttt{idProcesso}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -97,8 +97,8 @@ La classe contiene un oggetto di tipo \texttt{\collection{}.Step\fshyp{}Col\fshy
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{int id:}\\ campo dati ridefinito da \texttt{Backbone.model} che rappresenta l'identificatore del passo;
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ int id:}\\ campo dati ridefinito da \texttt{Backbone.model} che rappresenta l'identificatore del passo;
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Model} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -118,15 +118,15 @@ La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
-\item \texttt{function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del};
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del};
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null fetchProcesses():}\\ richiede al server la lista dei processi a cui l'utente identificato dai dati di sessione può accedere;
-\item \texttt{+ null saveProcess(ProcessModel process):}\\ aggiunge il processo \texttt{process} alla collezione dei processi nel \textit{serve\ped{G}}.
+\item \texttt{+ void fetchProcesses():}\\ richiede al server la lista dei processi a cui l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void saveProcess(ProcessModel process):}\\ aggiunge il processo \texttt{process} alla collezione dei processi nel \textit{serve\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -136,7 +136,7 @@ La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}
 \label{processDataCollection}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Descrizione:} Classe che permette di gestire un insieme di processi;
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati dagli utenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
 La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del}.
@@ -144,18 +144,18 @@ La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
-\item \texttt{function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del};
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del};
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null fetchProcessData(int stepId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il passo con "id" \texttt{stepId}, ai quali l'utente identificato dai dati di sessione può accedere;
-\item \texttt{+ null fetchStepData(int processId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il processo con "id" \texttt{processId}, ai quali l'utente identificato dai dati di sessione può accedere;
-\item \texttt{+ null fetchWaitingData():}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati che richiedono controllo umano;
-\item \texttt{+ null approveData(int stepId, String username):}\\ invia al \textit{server\ped{G}} la richiesta di approvazione dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
-\item \texttt{+ null rejectData(int stepId, String username):}\\ invia al \textit{server\ped{G}} l'esito negativo del controllo dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
+\item \texttt{+ void fetchProcessData(int stepId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il passo con "id" \texttt{stepId}, ai quali l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void fetchStepData(int processId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il processo con "id" \texttt{processId}, ai quali l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void fetchWaitingData():}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati che richiedono controllo umano;
+\item \texttt{+ void approveData(int stepId, String username):}\\ invia al \textit{server\ped{G}} la richiesta di approvazione dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
+\item \texttt{+ void rejectData(int stepId, String username):}\\ invia al \textit{server\ped{G}} l'esito negativo del controllo dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -173,8 +173,8 @@ La classe definisce una collezione di \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
-\item \texttt{function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del};
+\item \texttt{+ String url:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene l'indirizzo \textit{url\ped{G}} per comunicare con il \textit{server\ped{G}};
+\item \texttt{+ function model:}\\ campo dati di ridefinito da \texttt{Backbone.Collection} che contiene la definizione della classe \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del};
 \end{itemize}
 \end{sloppypar}
 \end{itemize}

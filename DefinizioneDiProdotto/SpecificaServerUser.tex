@@ -17,7 +17,7 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+void SaveStepData(DataSent,int):}\\
+					\item \texttt{+void saveStepData(DataSent step,int nextStep):}\\
 					questo metodo gestisce una richiesta \textbf{POST} da un utente, riceve i dati inerenti a un passo e li inserisce nel database e se non necessita di approvazione lo segna come completato e modifica quale sarà il passo o i passi che si potranno eseguire; 
 				\end{itemize}
 \end{itemize}
@@ -39,11 +39,11 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+void ProcessSubscribe()}:\\
+					\item \texttt{+void processSubscribe()}:\\
 					questo metodo mappa su \textit{\textbackslash subscribe\textbackslash \{processid\}} e gestisce una richiesta di tipo \textbf{POST} che permette ad un utente di iscriversi al processo voluto;
-					\item \texttt{+List<UserStep> GetProcessStatus()}:\\
+					\item \texttt{+List<UserStep> getProcessStatus()}:\\
 					questo metodo mappa su \textit{\textbackslash subscribe\textbackslash \{processid\}} e gestisce una richiesta \textbf{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
-					\item \texttt{+ProcessList GetListProcess()}:\\
+					\item \texttt{+List<Process> getListProcess()}:\\
 					questo processo mappa su \textit{\textbackslash processlist} e gestisce una richiesta di tipo \textbf{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
 				\end{itemize}
 \end{itemize}
@@ -63,9 +63,9 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+User GetUserData():}\\
+					\item \texttt{+User getUserData():}\\
 					questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce un oggetto di tipo User contenente tutti i dati di un utente;
-					\item \texttt{+void ChangeUserData(User newData):}\\
+					\item \texttt{+void changeUserData(User newData):}\\
 					questo metodo gestisce una chiamata di tipo \textbf{POST} e permette la modifica dei dati di un account di un utente;
 				\end{itemize}
 \end{itemize}
@@ -90,7 +90,7 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+List<DataSent> GetReportData():}\\
+					\item \texttt{+List<DataSent> getReportData():}\\
 					questo metodo gestisce una richiesta di tipo \textbf{GET} e fornirà tutti i dati inseriti da un utente per un certo processo;
 				\end{itemize}
 \end{itemize}

@@ -35,7 +35,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+RegisterUser(User toBeRegistered)}:\\
+					\item \texttt{+registerUser(User toBeRegistered)}:\\
 					 questo metodo gestirà un metodo \textbf{POST} e restituirà dovrà lanciare un' eccezione di tipo \texttt{HttpError} qual' ora ci siano stati problemi nella registrazione;
 				\end{itemize}
 \end{itemize}
@@ -55,7 +55,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+CheckLogin(User toBeLogged)}:\\
+					\item \texttt{+checkLogin(User toBeLogged)}:\\
 					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà lanciare un' eccezione di tipo \texttt{HttpError} qualora ci siano stati problemi nella login;
 				\end{itemize}
 \end{itemize}
@@ -75,7 +75,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+Step GetStepInformation()}:\\
+					\item \texttt{+Step getStepInformation()}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla recuperata dal \textit{database};
 				\end{itemize}
 \end{itemize}
@@ -95,7 +95,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+Process GetProcessInformation()}:\\
+					\item \texttt{+Process getProcessInformation()}:\\
 					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con id processo richiesto;
 				\end{itemize}
 \end{itemize}

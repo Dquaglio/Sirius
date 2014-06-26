@@ -1,6 +1,6 @@
 \input{../modello/macro.tex}% macro
-\newcommand{\lastversion}{1.0.0}%versione del documento
-\newcommand{\doctitle}{Definizione di prodotto}%nome documento
+\newcommand{\lastversion}{\lastversionMU}%versione del documento
+\newcommand{\doctitle}{\doctitleMU}%nome documento
 \newcommand{\info}{\doctitle\ v\lastversion}
 \input{../modello/layout.tex}% layout
 
@@ -30,16 +30,6 @@
 \listoffigures
 \pagenumbering{arabic}%numeri di pagina  arabi
 
-\input{PackageCommands.tex}
-
 \include{Introduzione}
-\include{StandardDiProgetto}
-\include{SpecificaView}
-\include{SpecificaPresenter}
-\input{SpecificaPresenterServer.tex}
-\input{SpecificaServerProcessOwner.tex}
-\input{SpecificaServerUser.tex}
-\include{SpecificaModel}
-\input{SpecificaModelServer.tex}
 
 \end{document}

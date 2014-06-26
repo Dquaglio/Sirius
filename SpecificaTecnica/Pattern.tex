@@ -16,6 +16,7 @@ Il \textit{pattern\ped{G}} MVP prevede la suddivisione dell'applicazione in tre 
 Il \textit{pattern\ped{G}} \textit{Model View Presenter} (MVP) è la architettura di base del progetto.
 \end{itemize}
 
+\iffalse
 \subsection{Facade}
 \begin{itemize}
 \item \textbf{Scopo e descrizione:}
@@ -25,6 +26,7 @@ Il \textit{pattern\ped{G}} strutturale \textit{Facade} prevede l'utilizzo di un'
 \item \textbf{Contesto d'uso:}
 Il \textit{pattern\ped{G}} \textit{Facade} è stato utilizzato nei \textit{package\ped{G} sequenziatore::server::presenter}, \textit{sequenziatore::server::model}, \textit{sequenziatore::client::presenter::user::logic} e \textit{sequenziatore::client::view::user}.
 \end{itemize}
+\fi
 
 \subsection{Data Access Object}
 \begin{itemize}
@@ -41,4 +43,32 @@ Rappresenta l'oggeto utilizzato per il trasferimento dei dati, sia in lettura, s
 \end{figure}
 \item \textbf{Contesto d'uso:}
 Il \textit{pattern\ped{G}} DAO è stato utilizzato nei \textit{package\ped{G} sequenziatore::server::model::daouser}, \textit{sequenziatore::server::model::daoprocessowner}, \textit{sequenziatore::server::model::daoprocess} e \textit{sequenziatore::server::model::daostep}. 
+\end{itemize}
+
+\subsection{Asynchronous Module Definition}
+\begin{itemize}
+\item \textbf{Scopo e descrizione:}
+Il \textit{pattern\ped{G}} \textit{Asynchronous Module Definition} (AMD), fornisce delle soluzioni per suddividere il codice \textit{Javascript \ped{G}} in moduli e di caricarli in modo asincrono, dove con modulo si intende un'unità che consente di incapsulare una porzione di codice.
+Di seguito viene riportato l'esempio di caricamento di due moduli \texttt{ModuloA} e \texttt{ModuloB} da una classe \texttt{MainClass}:
+
+\lstset{
+	language=PHP,
+	escapeinside={//*}{*)}
+}
+\begin{lstlisting}
+/* classe MainClass */
+require(['ModuleA', 'ModuleB'], function(A, B) {
+	var a = new A();
+    var b = new B();
+    a.print(); b.print();
+});
+\end{lstlisting}
+
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./pattern/amd.png} \caption{Diagramma pattern AMD}
+\end{figure}
+
+\item \textbf{Contesto d'uso:}
+Il \textit{pattern\ped{G}} AMD è utilizzato dalla classe \texttt{\logic{}.Router}, e consente di caricare le classi dei \textit{package} \texttt{\logicAdmin{}} e \texttt{\logicAdmin{}} a seconda dei dai di sessione salvati dalla classe \texttt{\model{}.UserDataModel}. 
 \end{itemize}
