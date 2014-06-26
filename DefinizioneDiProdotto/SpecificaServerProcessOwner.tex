@@ -16,7 +16,7 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+List<StepData> GetStepData():}\\
+					\item \texttt{+List<StepData> getStepData():}\\
 					questo metodo gestisce una richiesta di tipo \textbf{GET} che fornisce al \textit{process owner} tutti i dati inviati dagli utenti per un certo passo;
 				\end{itemize}
 \end{itemize}
@@ -37,9 +37,9 @@
 	\end{itemize}
 	\item \textbf{Metodi: }
 				\begin{itemize}
-					\item \texttt{+void CreateProcess(Process):}\\
+					\item \texttt{+void createProcess(Process toBeCreated):}\\
 					questo metodo gestisce una richiesta di tipo \textbf{POST} e permette l' inserimento del processo fornito nel \textit{database};
-					\item \texttt{+List<Process> GetProcessList():}\\
+					\item \texttt{+List<Process> getProcessList():}\\
 					 questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce al \textit{process owner} una lista di processi che può visualizzare;
 				\end{itemize}
 \end{itemize}
@@ -59,9 +59,9 @@
 		\item \texttt{\sModel .IDataAccessObject;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+List<DataSent> GetStepToApprove():}\\
+					\item \texttt{+List<DataSent> getStepToApprove():}\\
 					 il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo List<DataSent> contenente tutti i dati che richiedono approvazione;
-					\item \texttt{+void ApproveResponse(DataSent):}\\
+					\item \texttt{+void approveResponse(DataSent moderatedStep):}\\
 					il metodo gestisce una richiesta di tipo \textit{POST}, riceve i dati di un passo che ha subito la moderazione del \textit{process owner}, tale passo verrà eliminato dal database se il processowner lo ha rifiutato altrimenti verrà approvato definitivamente;  
 				\end{itemize}
 \end{itemize}
