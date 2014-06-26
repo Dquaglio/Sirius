@@ -59,24 +59,24 @@ La classe reperisce le informazioni di sessione dalla classe \texttt{\model{}::U
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Session session:}\\ oggetto di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Da\fshyp{}ta}, che consente di gestire la sessione dell'utente;
-\item \texttt{Backbone.View[] views:}\\ array che contiene le classi del presenter in esecuzione;
-\item \texttt{Object routes:}\\ oggetto ridefinito da \texttt{Backbone.Router} che associa ad ogni evento di \textit{routing\ped{G}}, un metodo della classe;
+\item \texttt{+ UserData session:}\\ oggetto di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Da\fshyp{}ta}, che consente di gestire la sessione dell'utente;
+\item \texttt{+ Backbone.View[] views:}\\ array che contiene le classi del presenter in esecuzione;
+\item \texttt{+ Object routes:}\\ oggetto ridefinito da \texttt{Backbone.Router} che associa ad ogni evento di \textit{routing\ped{G}}, un metodo della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null home():}\\ gestisce l'evento di \textit{routing\ped{G} home};
-\item \texttt{+ null processes():}\\ gestisce l'evento di \textit{routing\ped{G} processes};
-\item \texttt{+ null newProcess():}\\ gestisce l'evento di \textit{routing\ped{G} newProcess};
-\item \texttt{+ null checkStep():}\\ gestisce l'evento di \textit{routing\ped{G} checkStep};
-\item \texttt{+ null process():}\\ gestisce l'evento di \textit{routing\ped{G} process};
-\item \texttt{+ null register():}\\ gestisce l'evento di \textit{routing\ped{G} register};
-\item \texttt{+ null user():}\\ gestisce l'evento di \textit{routing\ped{G} user};
+\item \texttt{+ void home():}\\ gestisce l'evento di \textit{routing\ped{G} home};
+\item \texttt{+ void processes():}\\ gestisce l'evento di \textit{routing\ped{G} processes};
+\item \texttt{+ void newProcess():}\\ gestisce l'evento di \textit{routing\ped{G} newProcess};
+\item \texttt{+ void checkStep():}\\ gestisce l'evento di \textit{routing\ped{G} checkStep};
+\item \texttt{+ void process():}\\ gestisce l'evento di \textit{routing\ped{G} process};
+\item \texttt{+ void register():}\\ gestisce l'evento di \textit{routing\ped{G} register};
+\item \texttt{+ void user():}\\ gestisce l'evento di \textit{routing\ped{G} user};
 \item \texttt{+ bool checkSession(String pageId):}\\ ritorna \texttt{true} solo se l'utente è autenticato; in caso contrario crea e renderizza la pagina di \textit{login};
-\item \texttt{+ null load(String resource, String pageId):}\\ crea e aggiunge una vista di tipo \textit{resource} al campo dati \texttt{this.views}, all'indice \textit{pageId};
-\item \texttt{+ null changePage(String pageId):}\\ imposta la pagina con id \textit{pageId} come attiva, ed esegue la transizione di cambio pagina.
+\item \texttt{+ void load(String resource, String pageId):}\\ crea e aggiunge una vista di tipo \textit{resource} al campo dati \texttt{this.views}, all'indice \textit{pageId};
+\item \texttt{+ void changePage(String pageId):}\\ imposta la pagina con id \textit{pageId} come attiva, ed esegue la transizione di cambio pagina.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -94,18 +94,18 @@ La classe gestisce i dati di sessione comunicando con la classe \texttt{\model{}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati di sessione dell'utente;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
+\item \texttt{+ UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati di sessione dell'utente;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null login(Event event):}\\ effettua una richiesta di \textit{login}, utilizzando il campo dati \model{} per comunicare con il \textit{server\ped{G}}.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void login(Event event):}\\ effettua una richiesta di \textit{login}, utilizzando il campo dati \model{} per comunicare con il \textit{server\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -125,17 +125,17 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Main\fshyp{}U\
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati di sessione dell'utente;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
+\item \texttt{+ UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati di sessione dell'utente;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -153,18 +153,18 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Re\fshyp{}gi\f
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati utente e di sessione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
+\item \texttt{+ UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati utente e di sessione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null register(Event event):}\\ effettua una richiesta di registrazione, utilizzando il campo dati \model{} per comunicare con il \textit{server\ped{G}}.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void register(Event event):}\\ effettua una richiesta di registrazione, utilizzando il campo dati \model{} per comunicare con il \textit{server\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -182,18 +182,18 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Us\fshyp{}er\f
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati utente e di sessione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
+\item \texttt{+ UserDataModel model:}\\ campo dati di tipo \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} che contiene i dati utente e di sessione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ Object events:}\\ oggetto ridefinito da \texttt{Backbone.View} che associa ad ogni evento generato dagli utenti nella pagina \textit{HTML\ped{G}}, un metodo della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null editData():}\\ utilizza il campo dati \texttt{model} per salvare i dati modificati dall'utente nel \textit{server\ped{G}}.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void editData():}\\ utilizza il campo dati \texttt{model} per salvare i dati modificati dall'utente nel \textit{server\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -211,18 +211,18 @@ La classe realizza e modifica l'opportuno \textit{widget} mediante l'interfaccia
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la lista dei processi non terminati o non ancora eliminati dall'utente;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la lista dei processi non terminati o non ancora eliminati dall'utente;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null update():}\\ aggiorna il campo dati \texttt{collection} comunicando con il \textit{server\ped{G}}.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void update():}\\ aggiorna il campo dati \texttt{collection} comunicando con il \textit{server\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -244,18 +244,18 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Ma\fshyp{}na\f
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessModel process:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in gestione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessModel process:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in gestione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null update():}\\ aggiorna i campi dati \texttt{process} e \texttt{processData} comunicando con il \textit{server\ped{G}};
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void update():}\\ aggiorna i campi dati \texttt{process} e \texttt{processData} comunicando con il \textit{server\ped{G}};
 \item \texttt{+ String getParam(String param):}\\ ritorna il valore del parametro \textit{param} se presente nella \textit{URL\ped{G}}.
 \end{itemize}
 \end{sloppypar}
@@ -274,17 +274,17 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}R
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dall'utente relativi al processo in gestione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dall'utente relativi al processo in gestione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -308,17 +308,17 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che consente di interagire con la lista dei dati inviati dall'utente relativa al processo in gestione presente nel \textit{server\ped{G}};
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che consente di interagire con la lista dei dati inviati dall'utente relativa al processo in gestione presente nel \textit{server\ped{G}};
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe. Utilizza le classi \item \texttt{\logicUser{}.SendText}, \item \texttt{\logicUser{}.SendNumb}, \item \texttt{\logicUser{}.SendImage} e \item \texttt{\logicUser{}.SendPosition} per renderizzare l'interfaccia relativa all'inserimento dei diversi tipi di dato;
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe. Utilizza le classi \texttt{\logicUser{}.SendText} \texttt{\logicUser{}.SendNumb}, \texttt{\logicUser{}.SendImage} e \texttt{\logicUser{}.SendPosition} per renderizzare l'interfaccia relativa all'inserimento dei diversi tipi di dato;
 \item \texttt{+ bool getData():}\\ controlla se i dati inseriti dall'utente sono corretti: se lo sono ritorna \texttt{true} e li aggiunge alla collezione \texttt{processData}, altrimenti ritorna \texttt{false};
 \item \texttt{+ bool saveData():}\\ utilizza metodi del campo dati \texttt{processData}, per inviare i dati raccolti al \textit{server\ped{G}}.
 \end{itemize}
@@ -338,16 +338,16 @@ La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Text}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
 \item \texttt{+ bool getData(ProcessDataModel data):}\\ controlla se i dati inseriti dall'utente sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al riferimento \texttt{data}, altrimenti ritorna \texttt{false}.
 \end{itemize}
 \end{sloppypar}
@@ -366,16 +366,16 @@ La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Numb}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
 \item \texttt{+ bool getData(ProcessDataModel data):}\\ controlla se i dati inseriti dall'utente sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al riferimento \texttt{data}, altrimenti ritorna \texttt{false}.
 \end{itemize}
 \end{sloppypar}
@@ -394,16 +394,16 @@ La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Ima\f
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
 \item \texttt{+ bool getData(ProcessDataModel data):}\\ controlla se i dati inseriti dall'utente sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al riferimento \texttt{data}, altrimenti ritorna \texttt{false}.
 \end{itemize}
 \end{sloppypar}
@@ -422,16 +422,16 @@ La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Po\fs
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
 \item \texttt{+ bool getData(ProcessDataModel data):}\\ controlla se i dati inseriti dall'utente sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al riferimento \texttt{data}, altrimenti ritorna \texttt{false}.
 \end{itemize}
 \end{sloppypar}
@@ -452,16 +452,16 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}Main\f
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -479,18 +479,18 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}O\fshy
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la lista dei processi non eliminati dal \textit{process owner\ped{G}};
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene la lista dei processi non eliminati dal \textit{process owner\ped{G}};
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null update():}\\ aggiorna il campo dati \texttt{collection} comunicando con il \textit{server\ped{G}}.
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void update():}\\ aggiorna il campo dati \texttt{collection} comunicando con il \textit{server\ped{G}}.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -508,19 +508,19 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}New\fs
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che consente di interagire con la lista dei processi non eliminati dal \textit{process owner\ped{G}}, presente nel \textit{server\ped{G}};
-\item \texttt{ProcessModel model:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in definizione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessCollection collection:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} che consente di interagire con la lista dei processi non eliminati dal \textit{process owner\ped{G}}, presente nel \textit{server\ped{G}};
+\item \texttt{+ ProcessModel model:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in definizione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render(String[] errors):}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe, compilato con gli eventuali errori \texttt{errors};
-\item \texttt{+ null newStep():}\\ utilizza la classe \texttt{\logicAdmin{}.Add\fshyp{}Step} per definire e aggiungere un nuovo passo al processo \texttt{model};
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render(String[] errors):}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe, compilato con gli eventuali errori \texttt{errors};
+\item \texttt{+ void newStep():}\\ utilizza la classe \texttt{\logicAdmin{}.Add\fshyp{}Step} per definire e aggiungere un nuovo passo al processo \texttt{model};
 \item \texttt{+ bool getData():}\\ controlla se i dati inseriti dal \textit{process owner\ped{G}} sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al processo \texttt{model}, altrimenti ritorna \texttt{false};
 \item \texttt{+ bool saveProcess():}\\ utilizza metodi del campo dati \texttt{collection}, per inviare il processo \texttt{model} al \textit{server\ped{G}}.
 \end{itemize}
@@ -540,17 +540,17 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}Add\fs
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{StepModel model:}\\ campo dati di tipo \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del} che contiene i dati del passo in definizione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ StepModel model:}\\ campo dati di tipo \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del} che contiene i dati del passo in definizione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render(String[] errors):}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe, compilato con gli eventuali errori \texttt{errors};
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render(String[] errors):}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe, compilato con gli eventuali errori \texttt{errors};
 \item \texttt{+ bool getData():}\\ controlla se i dati inseriti dal \textit{process owner\ped{G}} sono corretti: se lo sono ritorna \texttt{true} e li aggiunge al passo \texttt{model}, altrimenti ritorna \texttt{false}.
 \end{itemize}
 \end{sloppypar}
@@ -569,19 +569,19 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}Ma\fsh
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessModel process:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in gestione;
-\item \texttt{ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dagli utenti relativi al processo in gestione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessModel process:}\\ campo dati di tipo \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} che contiene i dati del processo in gestione;
+\item \texttt{+ ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dagli utenti relativi al processo in gestione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null update():}\\ aggiorna i campi dati \texttt{process} e \texttt{processData} comunicando con il \textit{server\ped{G}};
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void update():}\\ aggiorna i campi dati \texttt{process} e \texttt{processData} comunicando con il \textit{server\ped{G}};
 \item \texttt{+ String getParam(String param):}\\ ritorna il valore del parametro \textit{param} se presente nella \textit{URL\ped{G}};
 \end{itemize}
 \end{sloppypar}
@@ -600,21 +600,21 @@ La classe comunica con il \textit{template} \texttt{\viewAdmin{}.I\fshyp{}Check\
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dagli utenti in attesa di approvazione;
-\item \texttt{Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
-\item \texttt{Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
-\item \texttt{String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
+\item \texttt{+ ProcessDataCollection processdata:}\\ campo dati di tipo \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Da\fshyp{}ta\fshyp{}Col\fshyp{}lec\fshyp{}tion} che contiene i dati inviati dagli utenti in attesa di approvazione;
+\item \texttt{+ Object template:}\\ oggetto ridefinito da \texttt{Backbone.View}, che contiene il \textit{template HTML\ped{G}} associato alla classe;
+\item \texttt{+ Object el:}\\ oggetto ridefinito da \texttt{Backbone.View} che rappresenta l'elemento \textit{HTML\ped{G}} entro cui la classe ascolta eventi generati dagli utenti;
+\item \texttt{+ String id:}\\ campo dati ridefinito da \texttt{Backbone.View} contente l'id della classe;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ null initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
-\item \texttt{+ null render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
-\item \texttt{+ null update():}\\ aggiorna il campo dati \texttt{processData} comunicando con il \textit{server\ped{G}};
+\item \texttt{+ void initialize():}\\ metodo ridefinito da \texttt{Backbone.View}, invocato alla costruzione di ciascun oggetto della classe, che consente di aggiungere una pagina \textit{HTML\ped{G}} associata al componente;
+\item \texttt{+ void render():}\\ metodo ridefinito da \texttt{Backbone.View}, che consente di aggiungere alla pagina \textit{HTML\ped{G}} il \textit{template} campo dati della classe;
+\item \texttt{+ void update():}\\ aggiorna il campo dati \texttt{processData} comunicando con il \textit{server\ped{G}};
 \item \texttt{+ String getParam(String param):}\\ ritorna il valore del parametro \textit{param} se presente nella \textit{URL\ped{G}};
-\item \texttt{+ null approveData():}\\ salva nel \textit{server} lo stato "approvato" ai dati della collezione \textit{processData} dei quali il \textit{process owner\ped{G}} ha richiesto l'approvazione;
-\item \texttt{+ null rejectData():}\\ salva nel \textit{server} lo stato "approvato" ai dati della collezione \textit{processData} che il \textit{process owner\ped{G}} ha respinto;
+\item \texttt{+ void approveData():}\\ salva nel \textit{server} lo stato "approvato" ai dati della collezione \textit{processData} dei quali il \textit{process owner\ped{G}} ha richiesto l'approvazione;
+\item \texttt{+ void rejectData():}\\ salva nel \textit{server} lo stato "approvato" ai dati della collezione \textit{processData} che il \textit{process owner\ped{G}} ha respinto;
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
