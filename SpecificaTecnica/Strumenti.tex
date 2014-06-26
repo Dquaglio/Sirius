@@ -1,20 +1,33 @@
 \appendix
 \section{Tecnologie utilizzate}
 \subsection{HTML5}
-HTML5\ped{G}, richiesto espressamente dal proponente all' interno del capitolato d'appalto, verrà utilizzato per la struttura base della pagine, inoltre ci permetterà di utilizzare il controllo della geo localizzazione, fondamentale nello sviluppo del nostro sistema, oltre alle altre novità che introduce.
+\textit{HTML5\ped{G}}, richiesto espressamente dal proponente all'interno del capitolato d'appalto, verrà utilizzato per la struttura base della pagine, inoltre ci permetterà di utilizzare il controllo della geolocalizzazione, fondamentale nello sviluppo del nostro sistema, oltre alle altre novità che introduce.
 \subsection{CSS3}
-CSS3 è un linguaggio \textit{style sheet} verrà utilizzato per rappresentare la struttura della presentazione in modo da mantenerla separata dai contenuti delle varie pagine, in questo modo verranno migliorate comprensione, manutenibilità e portabilità.
+\textit{CSS3} è un linguaggio \textit{style sheet} verrà utilizzato per la rappresentazione grafica delle pagine, in modo da separarla dai contenuti. In questo modo verranno migliorate comprensione, manutenibilità e portabilità.
 \subsection{Javascript}
-L' utilizzo di Javascript è stato richiesto espressamente dal proponente, è un linguaggio di \textit{scripting} lato client non compilato ma interpretato direttamente dal browser. Nello sviluppo del nostro progetto ci permetterà di non ricaricare la pagina ad ogni modifica degli utenti, e gestirà anche la comunicazione, quando richiesto, con il lato server per ricevere dati di cui può necessitare.
-\subsection{JAVA 7}
-Java è un linguaggio orientato agli oggetti che permette di essere quanto più indipendenti possibili dalla piattaforma di esecuzione. Nello sviluppo del nostro sistema verrà utilizzato nella la creazione del \textit{back end}, in particolare per la creazione delle \textit{Servlet}.
-\subsection{JSON}
-\textit{JavaScript Object Notation} è il formato scelto pe lo scambio dati tra client e server, è molto facile da utilizzare e si integra bene con la programmazione in AJAX e il suo uso con Javascript è semplice infatti il \textit{parsing} di tale tipo di dato viene effettuato con la semplice chiamata ad un metodo.
-\subsection{JDBC}
-\textit{Java DataBase Connectivity} è un connettore per database in grado di consentire l'accesso alle basi di dati da un programma scritto in Java. Fornisce i metodi per interrogare e modificare i dati nella base di dati.
+L' utilizzo di \textit{Javascript\ped{G}} è stato richiesto espressamente dal proponente, è un linguaggio di \textit{scripting} non compilato ma interpretato direttamente dal \textit{browser\ped{G}}. Nello sviluppo del nostro progetto ci permetterà di sviluppare l'applicazione lato lato \textit{client\ped{G}} e di comunicare con il \textit{server\ped{G}}.
+\subsection{Backbone.js}
+\textit{Backbone.js} è un \textit{framework} basato sul paradigma \textit{model-view-presenter}, utilizzata per lo sviluppo dell'applicazione \progetto{}.
+Il \textit{framework} è particolarmente leggero e necessita come unica dipendenza della libreria \textit{Underscore.js}.
+\textit{Backbone.js} è creato per sviluppare applicazioni \textit{web} di tipo \textit{single page}, e consente di strutturare il codice, grazie alle classi \textit{Model, View} e \textit{Router} estendibili dal programmatore.
+Il gruppo \gruppo{} ha scelto questo \textit{framework}, in quanto si presta alle esigenze architetturali del progetto, e inoltre è molto ben documentato.
+\subsection{Underscore.js}
+\textit{Underscore.js} è una libreria necessaria al \textit{framework Backbone.js}. Viene utilizzata in particolare per gestire la comunicazione tra \textit{Backbone} e i \textit{template} utilizzati nel \textit{package view}.
+\subsection{Require.js}
+\textit{Require.js} è una libreria utilizzata per gestire le dipendenze tra le componenti e le librerie, e per implementare il \textit{pattern Asynchronous Module Definition
+}. La libreria è stata scelta per l'ottima compatibilità con il \textit{framework Backbone.js}.
+\subsection{JQuery}
+\textit{Jquery} è una libreria \textit{Javascript} per applicazioni web.
+La libreria consente di interagire con gli elementi \textit{DOM}, di gestire eventi e implementare funzionalità \textit{AJAX}.
 \subsection{JQueryMobile}
-Questo \textit{framework} verrà usato per lo sviluppo di un front end per dispositivi di tipo \textit{responsive} accessibili da \textit{smartphne}, \textit{tablet} e computer. La scelta del team di questo \textit{framework} è data dal fatto che sembra una tecnologia affermata nel mondo del \textit{web development} e dal semplice utilizzo, inoltre permette la scrittura di meno righe di codice rispetto a Javascript puro.
+Questa libreria verrà usata per lo sviluppo di un \textit{front-end} per dispositivi di tipo \textit{responsive}, accessibili da \textit{smartphne}, \textit{tablet} e computer. La scelta del team di questa libreria è data dal fatto che è affermata nel mondo del \textit{web development}.
+\subsection{JAVA 7}
+\textit{Java\ped{G}} è un linguaggio orientato agli oggetti che permette di essere quanto più indipendenti possibili dalla piattaforma di esecuzione. Nello sviluppo del nostro sistema verrà utilizzato nella la creazione del \textit{back-end}, in particolare per la creazione delle \textit{Servlet}.
+\subsection{JSON}
+\textit{JavaScript Object Notation} è il formato scelto pe lo scambio dati tra \textit{client\ped{G}} e \textit{server\ped{G}}, è molto facile da utilizzare e si integra bene con la programmazione in AJAX e il suo uso con \textit{Javascript}. Il \textit{parsing} di tale tipo di dato viene effettuato con la semplice chiamata ad un metodo.
+\subsection{JDBC}
+\textit{Java DataBase Connectivity} è un connettore per \textit{database} in grado di consentire l'accesso alle basi di dati da un programma scritto in \textit{Java}. Fornisce i metodi per interrogare e modificare i dati nella base di dati.
 \subsection{MySQL}
-MySQL è un Relational database management system(RDBMS), il team ha scelto questo tipo di base di dati in quanto di semplice utilizzo e già utilizzata da tutti i membri del gruppo.
+\textit{MySQL\ped{G}} è un Relational database management system(RDBMS). Il team ha scelto questo tipo di base di dati in quanto di semplice utilizzo e già utilizzata da tutti i membri del gruppo.
 \subsection{Apache Tomcat}
-Apache Tomcat è un contenitore servlet \textit{open source} che offre una piattaforma per l'esecuzione di applicazioni web sviluppate in java. La versione 4.x comprende Catalina e Coyote, ripsettivamente il contenitore servlet e il connettore HTTP.
+\textit{Apache Tomcat} è un contenitore \textit{servlet} \textit{open source} che offre una piattaforma per l'esecuzione di applicazioni web sviluppate in \textit{Java}. La versione 4.x comprende \textit{Catalina} e \textit{Coyote}, rispettivamente il contenitore \textit{servlet} e il connettore \textit{HTTP}.
