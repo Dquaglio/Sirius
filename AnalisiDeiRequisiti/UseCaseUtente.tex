@@ -411,8 +411,7 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \subsubsection{UCL 2.1: Scelta di un processo}
 \begin{figure}[H]
 \centering
-\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
-\textwidth]
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
 {./grafici/L21}
 \caption{UCL 2.1: Scelta di un processo}
 \end{figure}
@@ -423,8 +422,8 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \item \textbf{Flusso principale degli eventi:}
 \begin{enumerate}
 \item L'utente può aprire una lista di processi (UCL 2.1.2);
-\item L'utente può ricercare un processo (UCL 2.1.3)
-\item L'utente può selezionare un processo (UCL 2.1.2).
+\item L'utente può filtrare la lista tramite una ricerca (UCL 2.1.2)
+\item L'utente può selezionare un processo (UCL 2.1.3).
 \end{enumerate}
 \item \textbf{Postcondizione:} Il sistema è pronto per la gestione del processo scelto.
 \end{itemize}
@@ -514,8 +513,21 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 \end{itemize}
 
 \hypertarget{L2.1.2}{}
-\bookmark[dest=L2.1.2,level=5]{UCL 2.1.2: Selezione di un processo}
-\subsubsection{UCL 2.1.2: Selezione di un processo}
+\bookmark[dest=L2.1.2,level=5]{UCL 2.1.2: Filtro dei processi tramite ricerca}
+\subsubsection{UCL 2.1.2: Filtro dei processi tramite ricerca}
+\begin{itemize}
+\item \textbf{Attori:} Utente autenticato;
+\item \textbf{Descrizione:} L'utente può filtrare la lista dei processi aperta, effettuano una ricerca testuale;
+\item \textbf{Precondizione:} Il sistema ha visualizzato la lista dei processi scelta dall'utente;
+\item \textbf{Scenario principale:} L'utente può effettuare una ricerca testuale per ricercare un processo;
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} Il sistema ha filtrato la lista dei processi che ora è composta dai soli processi che contengono il testo ricercato.
+\end{itemize}
+
+\hypertarget{L2.1.3}{}
+\bookmark[dest=L2.1.3,level=5]{UCL 2.1.3: Selezione di un processo}
+\subsubsection{UCL 2.1.3: Selezione di un processo}
 \begin{itemize}
 \item \textbf{Attori:} Utente autenticato;
 \item \textbf{Descrizione:} L'utente può selezionare un processo dalla lista dei processi precedentemente aperta;
@@ -525,19 +537,6 @@ Scegliendo un processo l'utente può inoltre visualizzarne le informazioni;
 %\item \textbf{Inclusioni:}
 %\item \textbf{Estensioni:}
 \item \textbf{Postcondizione:} Il sistema è pronto per la gestione del processo scelto.
-\end{itemize}
-
-\hypertarget{L2.1.3}{}
-\bookmark[dest=L2.1.3,level=5]{UCL 2.1.3: Ricerca di un processo}
-\subsubsection{UCL 2.1.3: Ricerca di un processo}
-\begin{itemize}
-\item \textbf{Attori:} Utente autenticato;
-\item \textbf{Descrizione:} L'utente può ricercare per nome un processo tra tutti quelli a cui può partecipare;
-\item \textbf{Precondizione:} L'utente vuole cercare un processo tra quelli a cui può partecipare;
-\item \textbf{Scenario principale:} L'utente può ricercare un processo inserendone il nome;
-%\item \textbf{Inclusioni:}
-%\item \textbf{Estensioni:}
-\item \textbf{Postcondizione:} Il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
 \end{itemize}
 
 \hypertarget{L2.2}{}

@@ -717,20 +717,19 @@ Il \textit{process owner\ped{G}} ha concluso le operazioni che desiderava fare s
 \subsubsection{UCA 2.1: Scelta di un processo}
 \begin{figure}[H]
 \centering
-\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,width=%
-\textwidth]
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
 {./grafici/A21}
 \caption{UCA 2.1: Scelta di un processo}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attori:} Process owner;
-\item \textbf{Descrizione:} Il \textit{process owner\ped{G}} può selezionare un processo da una lista o da i risultati di una ricerca;
+\item \textbf{Descrizione:} Il \textit{process owner\ped{G}} può selezionare un processo da una lista;
 \item \textbf{Precondizione:} Il \textit{process owner\ped{G}} vuole gestire un processo creato;
 \item \textbf{Flusso principale degli eventi:}
 \begin{enumerate}
-\item Il \textit{process owner\ped{G}} può aprire la lista di processi;
-\item Il \textit{process owner\ped{G}} può selezionare un processo.
-\item Il \textit{process owner\ped{G}} può ricercare un processo.
+\item Il \textit{process owner\ped{G}} può aprire la lista di processi (UCA 2.1.1);
+\item Il \textit{process owner\ped{G}} può filtrare la lista dei processi tramite una ricerca testuale (UCA 2.1.2);
+\item Il \textit{process owner\ped{G}} può selezionare un processo (UCA 2.1.3).
 \end{enumerate}
 \item \textbf{Postcondizione:} Il sistema è pronto per la gestione del processo scelto.
 %\item \textbf{Scenario alternativo:}
@@ -750,8 +749,21 @@ Il \textit{process owner\ped{G}} ha concluso le operazioni che desiderava fare s
 \end{itemize}
 
 \hypertarget{A2.1.2}{}
-\bookmark[dest=A2.1.2,level=4]{UCA 2.1.2: Selezione di un processo}
-\subsubsection{UCA 2.1.2: Selezione di un processo}
+\bookmark[dest=A2.1.2,level=4]{UCA 2.1.2: Filtro dei processi tramite ricerca}
+\subsubsection{UCA 2.1.2: Filtro dei processi tramite ricerca}
+\begin{itemize}
+\item \textbf{Attori:} Process owner;
+\item \textbf{Descrizione:} Il \textit{process owner\ped{G}} può filtrare la lista dei processi, effettuano una ricerca testuale;
+\item \textbf{Precondizione:} Il sistema ha visualizzato la lista dei processi;
+\item \textbf{Scenario principale:} Il \textit{process owner\ped{G}} può effettuare una ricerca testuale per ricercare un processo;
+%\item \textbf{Inclusioni:}
+%\item \textbf{Estensioni:}
+\item \textbf{Postcondizione:} Il sistema ha filtrato la lista dei processi che ora è composta dai soli processi che contengono il testo ricercato.
+\end{itemize}
+
+\hypertarget{A2.1.3}{}
+\bookmark[dest=A2.1.3,level=4]{UCA 2.1.3: Selezione di un processo}
+\subsubsection{UCA 2.1.3: Selezione di un processo}
 \begin{itemize}
 \item \textbf{Attori:} Process owner;
 \item \textbf{Descrizione:} Il \textit{process owner\ped{G}} può selezionare un processo dalla lista dei processi visualizzata;
@@ -761,19 +773,6 @@ Il \textit{process owner\ped{G}} ha concluso le operazioni che desiderava fare s
 %\item \textbf{Inclusioni:}
 %\item \textbf{Estensioni:}
 \item \textbf{Postcondizione:} Il sistema è pronto per la gestione del processo scelto.
-\end{itemize}
-
-\hypertarget{A2.1.3}{}
-\bookmark[dest=A2.1.3,level=4]{UCA 2.1.3: Ricerca di un processo}
-\subsubsection{UCA 2.1.3: Ricerca di un processo}
-\begin{itemize}
-\item \textbf{Attori:} Process owner;
-\item \textbf{Descrizione:} Il \textit{process owner\ped{G}} può ricercare per nome ed eventualmente aprire un insieme di processi tra quelli creati;
-\item \textbf{Precondizione:} Il \textit{process owner\ped{G}} vuole cercare un processo tra quelli creati;
-\item \textbf{Scenario principale:} Il \textit{process owner\ped{G}} può ricercare un processo;
-%\item \textbf{Inclusioni:}
-%\item \textbf{Estensioni:}
-\item \textbf{Postcondizione:} Il sistema ha visualizzato la lista dei processi che soddisfano i criteri di ricerca.
 \end{itemize}
 
 \hypertarget{A2.2}{}
