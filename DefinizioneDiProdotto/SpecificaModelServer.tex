@@ -10,6 +10,24 @@ La componente è formata dalle seguenti \textit{classi}:
 	\item \hyperref[processdao]{\smodel{}.ProcessDao};
 	\item \hyperref[processownerdao]{\smodel{}.ProcessOwnerDao};
 	\item \hyperref[stepdao]{\smodel{}.StepDao};
+	\item \hyperref[botuser]{\smodel{}.User};
+	\item \hyperref[botprocess]{\smodel{}.Process};
+	\item \hyperref[botstep]{\smodel{}.Step};
+	\item \hyperref[botdata]{\smodel{}.Data};
+	\item \hyperref[botdatatype]{\smodel{}.DataType};
+	\item \hyperref[botcondition]{\smodel{}.Condition};
+	\item \hyperref[botconstraint]{\smodel{}.Constraint};
+	\item \hyperref[botnumericconstraint]{\smodel{}.NumericConstraint};
+	\item \hyperref[bottemporalconstraint]{\smodel{}.TemporalConstraint};
+	\item \hyperref[botgeographicconstraint]{\smodel{}.GeographicConstraint};
+	\item \hyperref[botdatasent]{\smodel{}.DataSent};
+	\item \hyperref[botidatavalue]{\smodel{}.IDataValue};
+	\item \hyperref[bottextualvalue]{\smodel{}.TextualValue};
+	\item \hyperref[botnumericvalue]{\smodel{}.NumericValue};
+	\item \hyperref[botimagevalue]{\smodel{}.ImageValue};
+	\item \hyperref[botgeographicvalue]{\smodel{}.GeographicValue};
+	\item \hyperref[botuserstep]{\smodel{}.UserStep};
+	\item \hyperref[botpowner]{\smodel{}.ProcessOwner};
 \end{itemize}
 
 \subsubsection{Package \model{}}
@@ -84,7 +102,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
+\item \texttt{- JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
@@ -115,7 +133,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
+\item \texttt{- JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
@@ -145,7 +163,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
+\item \texttt{- JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
@@ -161,6 +179,570 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ List<DataSent> getData(Step step)}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato;
 \item \texttt{+ List<DataSent> getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
 \item \texttt{+ boolean completeStep(String userName, Step step, List<DataSent> data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{User}
+\label{botuser}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella gli utenti del sistema e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- String userName:}\\ Nome utente;
+\item \texttt{- String password:}\\ Password dell'utente;
+\item \texttt{- String name:}\\Nome anagrafico dell'utente;
+\item \texttt{- String surName:}\\Cognome dell'utente;
+\item \texttt{- Date dateOfBirth:}\\Data di nascita dell'utente;
+\item \texttt{- String email:}\\Indirizzo di posta elettronica dell'utente;
+\item \texttt{- int id:}\\Codice identificativo \texttt{id} associato all'utente.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUserName():}\\ Ritorna il nome utente;
+\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente;
+\item \texttt{+ String getPassword():}\\ Ritorna la password dell'utente;
+\item \texttt{+ void setPassword(String password):}\\ Imposta la password dell'utente;
+\item \texttt{+ String getName():}\\ Ritorna il nome anagrafico dell'utente;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome anagrafico dell'utente;
+\item \texttt{+ String getSurName():}\\ Ritorna il cognome dell'utente;
+\item \texttt{+ void setSurName(String surName):}\\ Imposta il cognome dell'utente;
+\item \texttt{+ Date getDateOfBirth():}\\ Ritorna la data di nascita dell'utente;
+\item \texttt{+ void setDateOfBirth(Date dateOfBirth):}\\ Imposta la data di nascita dell'utente;
+\item \texttt{+ String getEmail():}\\ Ritorna l'indirizzo di posta elettronica dell'utente;
+\item \texttt{+ void setEmail(String email):}\\ Imposta l'indirizzo di posta elettronica dell'utente;
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato all'utente;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato all'utente.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Process}
+\label{botprocess}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i processi del sistema e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- String name:}\\ Nome del processo;
+\item \texttt{- String description:}\\ Descrizione del processo;
+\item \texttt{- int completionsMax:}\\ Numero massimo di completamenti del processo;
+\item \texttt{- Date dateOfTermination:}\\ Data di terminazione del processo;
+\item \texttt{- boolean terminated:}\\ Boolano vero quando il processo è terminato;
+\item \texttt{- int maxTree:}\\ Massimo alberi del processo;
+\item \texttt{- List<Integer> stepsId:}\\ Lista di codici \texttt{id} relativi ai passi del processo;
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al processo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getName():}\\ Ritorna il nome del processo;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome del processo;
+\item \texttt{+ String getDescription():}\\ Ritorna la descrizione del processo;
+\item \texttt{+ void setDescription(String description):}\\ Imposta la descrizione del processo;
+\item \texttt{+ int getCompletionsMax():}\\ Restituisce il numero massimo di completamenti del processo;
+\item \texttt{+ void setCompletionsMax(int completionsMax):}\\ Imposta il numero massimo di completamenti del processo;
+\item \texttt{+ Date getDateOfTermination():}\\ Ritorna data di terminazione del processo;
+\item \texttt{+ void setDateOfTermination(Date dateOfTermination):}\\ Imposta la data di terminazione del processo;
+\item \texttt{+ boolean isTerminated():}\\ Ritorna vero se il processo è terminato;
+\item \texttt{+ void setTerminated(boolean terminated):}\\ Imposta vero se il processo è terminato;
+\item \texttt{+ int getMaxTree():}\\ Ritorna il massimo alberi del processo;
+\item \texttt{+ void setMaxtree(int maxTree):}\\ Imposta il massimo alberi del processo;
+\item \texttt{+ List<Integer> getStepsId():}\\ Ritorna lista di codici \texttt{id} relativi ai passi del processo;
+\item \texttt{+ void setStepsId(List<Integer> stepsId):}\\ Imposta lista di codi \texttt{id} relativi ai passi del processo;
+\item \texttt{+int getId():}\\ Ritorna codice identificativo \texttt{id} associato al processo;
+\item \texttt{+void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al processo.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Step}
+\label{botstep}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i passi del sistema e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+		La classe contiene istanze di:
+		\begin{itemize}
+			\item \smodel{}.Condition;
+			\item \smodel{}.Data.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al passo;
+\item \texttt{- String description:}\\ Descrizione del passo;
+\item \texttt{- List<Data> data:}\\ Lista con i campi dato del passo;
+\item \texttt{- List<Condition> conditions:}\\ Lista delle condizioni di avanzamento del passo;
+\item \texttt{- int processId:}\\ Codice identificativo \texttt{id} associato al processo padre;
+\item \texttt{- boolean first:}\\ Booleano vero se il passo è primo per il processo padre.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice identificativo \texttt{id} associato al passo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al passo;
+\item \texttt{+ String getDescription():}\\ Ritorna descrizione del passo;
+\item \texttt{+ void setDescription(String description):}\\ Imposta descrizione del passo;
+\item \texttt{+ List<Data> getData():}\\ Ritorna lista con i campi dato del passo;
+\item \texttt{+ void setData(List<Data> data):}\\ Imposta lista con i campi dato del passo;
+\item \texttt{+ List<Condition> getConditions():}\\ Ritorna lista delle condizioni di avanzamento del passo;
+\item \texttt{+ void setConditions(List<Condition conditions):}\\ Imposta lista delle condizioni di avanzamento del passo;
+\item \texttt{+ int getProcessId():}\\ Ritorna codice \texttt{id} associato al processo padre;
+\item \texttt{+ void setProcessId(int processId):}\\ Imposta codice \texttt{id} associato al processo padre;
+\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il passo è primo per il processo padre;
+\item \texttt{+ void setFirst():}\\ Imposta vero se il passo è primo per il processo padre. 
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Data}
+\label{botdata}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i campi dato richiesti.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- String name:}\\ Nome del campo dati;
+\item \texttt{- DataType type:}\\ Tipo di dato richiesto dal campo;
+\item \texttt{- int id;}\\Codice identificativo \texttt{id} associato al campo dati.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getName():}\\ Ritorna il nome del campo dati;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome del campo dati;
+\item \texttt{+ DataType getType():}\\ Ritorna il tipo di dato richiesto dal campo;
+\item \texttt{+ void setType(DataType type):}\\ Imposta il tipo di dato richiesto dal campo;
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato al campo dati;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato al campo dati.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{DataType}
+\label{botdatatype}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Enumerazione tipo di dato.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ enum DataType\{TEXTUAL, NUMERIC, IMAGE, GEOGRAPHIC}:\}\\ Enumerazione tipo di dato.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Condition}
+\label{botcondition}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella le condizioni di avanzamento di un passo.
+\item \textbf{Relazione con altre componenti:}La classe contiene istanze di:
+		\begin{itemize}
+			\item \smodel{}.Constraint;
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato alla condizione di avanzamento;
+\item \texttt{- boolean requiresApproval:}\\ Booleano vero se è richiesta l'approvazione del \textit{Process Owner};
+\item \texttt{- List<Constraint> constraints:}\\ Lista di vincoli che soddisfano la condizione di avanzamento;
+\item \texttt{- boolean optional:}\\ Booleano vero se la condizione è opzionale per l'avanzamento;
+\item \texttt{- int nextStepId:}\\ Codice identificativo \texttt{id} associato al passo succesivo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato alla condizione di avanzamento;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato alla condizione di avanzamento;
+\item \texttt{+ boolean isRequiresApproval():}\\ Ritorna vero se è richiesta l'approvazione del \textit{Process Owner};
+\item \texttt{+ void setRequiresApproval(boolean requiresApproval):}\\ Imposta vero se è richiesta l'approvazione del \textit{Process Owner};
+\item \texttt{+ List<Constraint> getConstraints():}\\ Ritorna lista di vincoli che soddisfano la condizione di avanzamento;
+\item \texttt{+ void setConstraints(List<Constraint> constraints):}\\ Imposta lista di vincoli che soddisfano la condizione di avanzamento;
+\item \texttt{+ boolean isOptional():}\\ Ritorna vero se la condizione è opzionale per l'avanzamento;
+\item \texttt{+ void setOptional(boolean optional):}\\ Imposta vero se la condizione è opzionale per l'avanzamento;
+\item \texttt{+ int getNextStepId():}\\ Ritorna codice \texttt{id} del passo successivo;
+\item \texttt{+ void setNextStepId(int nextStepId):}\\ Imposta codice \texttt{id} del passo succesivo.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Constraint}
+\label{botconstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe astratta che modella i vincoli.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- Data associatedData:}\\ Campo dati su cui è posto il vincolo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ Data getAssociatedData():}\\ Ritorna il campo dati su cui è posto il vincolo;
+\item \texttt{+ void setAssociatedData(Data associatedData):}\\ Imposta il campo dati sui cui è posto il vincolo.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{NumericConstraint}
+\label{botnumericconstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i vincoli numerici.
+\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
+		\begin{itemize}
+			\item \smodel{}.Constraint.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al vincolo;
+\item \texttt{- int minDigits:}\\ Minimo numero di cifre;
+\item \texttt{- int maxDigits:}\\ Massimo numero di cifre;
+\item \texttt{- boolean decimal:}\\ Booleano vero se atteso un decimale;
+\item \texttt{- double minValue:}\\ Valore minimo;
+\item \texttt{- double maxValue:}\\ Valore massimo;
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ int getMinDigits():}\\ Ritorna minimo numero di cifre;
+\item \texttt{+ void setMinDigits(int minDigits):}\\ Imposta minimo numero di cifre;
+\item \texttt{+ int getMaxDigits():}\\ Ritorna massimo numero di cifre;
+\item \texttt{+ void setMaxDigits(int maxDigits):}\\ Imposta massimo numero di cifre;
+\item \texttt{+ boolean isDecimal():}\\ Ritorna vero se atteso un decimale;
+\item \texttt{+ void setDecimal(boolean decimal):}\\ Imposta vero se atteso un decimale;
+\item \texttt{+ double getMinValue():}\\ Ritorna valore minimo;
+\item \texttt{+ void setMinValue(double minValue):}\\ Imposta valore minimo;
+\item \texttt{+ double getMaxValue():}\\ Ritorna valore massimo;
+\item \texttt{+ void setMaxValue(double maxValue):}\\ Imposta valore massimo;
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{TemporalConstraint}
+\label{bottemporalconstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i vincoli temporali.
+\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
+		\begin{itemize}
+			\item \smodel{}.Constraint.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al vincolo;
+\item \texttt{- Date begin:}\\ Inizio arco temporale valido;
+\item \texttt{- Date end:}\\ Fine arco temporale valido.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ Date getBegin():}\\ Ritorna inizio arco temporale valido;
+\item \texttt{+ void setBegin(Date begin):}\\ Imposta inizio arco temporale valido;
+\item \texttt{+ Date getEnd():}\\ Ritorna fine arco temporale valido;
+\item \texttt{+ void setEnd(Date end):}\ Imposta fine arco temporale valido.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{GeographicConstraint}
+\label{botgeographicconstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i vincoli geografici.
+\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
+		\begin{itemize}
+			\item \smodel{}.Constraint.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al vincolo;
+\item \texttt{- double latitude:}\\ Latitudine richiesta;
+\item \texttt{- double longitude:}\\ Longitudine richiesta;
+\item \texttt{- double altitude:}\\ Altitudine richiesta;
+\item \texttt{- double radius:}\\ Raggio di tolleranza.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ double getLatitude():}\\ Ritorna latitudine richiesta;
+\item \texttt{+ void setLatitude(double latitude):}\\ Imposta latitudine richiesta;
+\item \texttt{+ double getLongitude():}\\ Ritorna longitudine richiesta;
+\item \texttt{+ void setLongitude(double longitude):}\\ Imposta longitudine richiesta;
+\item \texttt{+ double getAltitude():}\\ Ritorna altitudine richiesta;
+\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine richiesta;
+\item \texttt{+ double getRadius():}\\ Ritorna raggio di tolleranza;
+\item \texttt{+ void setRadius(double radius):}\\ Imposta raggio di tolleranza.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{DataSent}
+\label{botdatasent}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i dati ricevuti dagli utenti che funge da interscambio  con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+				La classe invoca i metodi della classe:
+		\begin{itemize}
+			\item \smodel{}.IDataValue.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- String user:}\\ Nome utente dell'utente che ha inviato il dato;
+\item \texttt{- DataType type:}\\ Tipo del dato inviato;
+\item \texttt{- IDataValue value:}\\ Oggetto con il valore del dato;
+\item \texttt{- int stepId:}\\Codice \texttt{id} del passo richiedente il dato.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUser():}\\ Ritorna nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ DataType getType():}\\ Ritorna il tipo del dato inviato;
+\item \texttt{+ void setType(DataType type):}\\ Imposta il tipo del dato inviato;
+\item \texttt{+ IDataValue getValue():}\\ Ritorna oggetto con il valore del dato;
+\item \texttt{+ void setValue(IDataValue value):}\\ Imposta oggetto con il valore del dato;
+\item \texttt{+ int getStepId():}\\ Ritorna codice \texttt{id} del passo richiedente il dato;
+\item \texttt{+ void setStepId(int stepId):}\\ Imposta codice \texttt{id} del passo richiedente il dato.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{IDataValue}
+\label{botidatavalue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Interfaccia che modella i valori dei dati ricevuti.
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{TextualValue}
+\label{bottextualvalue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati testuali.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.IDataValue.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- String value:}\\ Valore testuale.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getValue():}\\ Ritorna valore testuale;
+\item \texttt{+ void setValue(String value):}\\ Imposta valore testuale.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{NumericValue}
+\label{botnumericvalue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati numerici.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.IDataValue.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- double value:}\\ Valore numerico.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ double getValue():}\\ Ritorna valore numerico;
+\item \texttt{+ void setValue(double value):}\\ Imposta valore numerico.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ImageValue}
+\label{botimagevalue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati immagine.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.IDataValue.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- String imageUrl:}\\ Percorso \textit{URL} dell'immagine.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getImageUrl():}\\ Ritorna percorso \textit{URL} dell'immagine;
+\item \texttt{+ void setImageUrl(String imageUrl):}\\ Imposta percorso \textit{URL} dell'immagine.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{GeographicValue}
+\label{botgeographicvalue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati geografici.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.IDataValue.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- double latitude:}\\ Latitudine;
+\item \texttt{- double longitude:}\\ Longitudine;
+\item \texttt{- double altitude:}\\ Altitudine.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ double getLatitude():}\\ Ritorna latitudine;
+\item \texttt{+ void setLatitude(double latitude):}\\ Imposta latitudine;
+\item \texttt{+ double getLongitude():}\\ Ritorna longitudine;
+\item \texttt{+ void setLongitude(double longitude):}\\ Imposta longitudine;
+\item \texttt{+ double getAltitude():}\\ Ritorna altitudine;
+\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{UserStep}
+\label{botuserstep}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i passi in corso e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ enum stepStates\{ONGOING, EXPECTANT, REJECTED, APPROVED\}:}\\ Enumerazione stato avanzamento;
+\item \texttt{- int currentStepId:}\\ Codice \texttt{id} del passo attuale;
+\item \texttt{- stepStates state:}\\ Stato avanzamento;
+\item \texttt{- String user:}\\ Nome utente dell'utente del caso.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getCurrentStepId():}\\ Ritorna il codice \texttt{id} del passo attuale;
+\item \texttt{+ void setCurrentStepId(int currentStepId):}\\ Imposta il codice \texttt{id} del passo attuale;
+\item \texttt{+ stepStates getState():}\\ Ritorna stato avanzamento;
+\item \texttt{+ void setStates(stepStates state):}\\ Imposta stato avanzamento;
+\item \texttt{+ String getUser():}\\ Restituisce nome utente dell'utente in caso;
+\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente in caso.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessOwner}
+\label{botpowner}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella il ProcessOwner e che funge da interscambio dei dati di quest'ultimo con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- String userName:}\\ Nome utente \textit{Process Owner};
+\item \texttt{- String password:}\\ Password \textit{Process Owner}.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUserName():}\\ Ritorna il nome utente del \textit{Process Owner};
+\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente del \textit{Process Owner};
+\item \texttt{+ String getPassword():}\\ Ritorna la password del \textit{Process Owner};
+\item \texttt{+ void setPassword(String password):}\\ Imposta la password del \textit{Process Owner}. 
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
