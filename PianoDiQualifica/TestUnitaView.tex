@@ -1,107 +1,125 @@
 \paragraph{TestLogin}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica relativa alle richieste di autenticazione al sistema;
+\item \textbf{Descrizione:} verifica che sia in grado di gestire le richieste di login;
 \item \textbf{Metodo:} TestView();
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestMainUser}
 \begin{itemize}
-\item \textbf{Descrizione:} Classe che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica del corretto passaggio di dati per l'utente \textit{user};
+\item \textbf{Metodo:} TestView(object userData);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestRegister}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire dell'interfaccia grafica relativa alle richieste di registrazione da parte dell'utente;
+\item \textbf{Descrizione:} verifica del passaggio dati per la registrazione utente;
 \item \textbf{Metodo:} TestView();
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestUserData}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette la realizzazione dei \textit{widget} che consentono visualizzazione e modifica dei dati dell'utente;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica correttezza dati e dell'eventuale aggiornamento in modo corretto;
+\item \textbf{Metodo:} TestView(object userdata);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestOpenProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire l'apertura di un processo tramite ricerca o selezionandolo da una lista;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della corretta visualizzazione della ricerca e che da tale pagina sia permesso l'apertura di un processo tramite selezione o ricerca;
+\item \textbf{Metodo:} TestView(object processes);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestManagementProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire la visualizzazione dello stato del processo selezionato e i vincoli per concludere il passo in corso;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} visualizzazione corretta dello stato del processo e visualizzazione dei vincoli per la conclusione del passo;
+\item \textbf{Metodo:} TestView(object Process);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestSendData}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} per consentire l'invio dei dati richiesti per la conclusione del passo in esecuzione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di caricare informazioni per dichiarare l'esecuzione del passo;
+\item \textbf{Metodo:} TestView(object ProcessDataCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestSendText}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono di inserire il testo da inviare per concludere il passo in esecuzione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di caricare informazioni testuali per dichiarare l'esecuzione del passo;
+\item \textbf{Metodo:} TestView(object ProcessDataModel);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestSendNumb}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette agli oggetti che la implementano di realizzare i \textit{widget} che consentono di inserire i dati numerici da inviare per concludere il passo in esecuzione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di caricare informazioni numeriche per dichiarare l'esecuzione del passo;
+\item \textbf{Metodo:} TestView(object ProcessDataModel);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestSendPosition}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette  di realizzare i \textit{widget} che consentono di inviare la posizione geografica richiesta per la conclusione del passo in esecuzione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di caricare informazioni di posizione per dichiarare l'esecuzione del passo;
+\item \textbf{Metodo:} TestView(object ProcessDataModel);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestSendImage}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono di inserire le immagini richieste per concludere i passo in esecuzione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di caricare immagini per dichiarare l'esecuzione del passo;
+\item \textbf{Metodo:} TestView(object ProcessDataModel);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestPrintProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i \textit{widget} che consentono il salvataggio dei \textit{report} sull'esecuzione del processo;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} controllo della corretta esecuzione del report di terminazione passo;
+\item \textbf{Metodo:} TestView(object ProcessDataCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestMainProcessOwner}
 \begin{itemize}
-\item \textbf{Descrizione:} Componente che permette la gestione delle principali componenti dell'interfaccia grafica dell'utente \textit{process owner\ped{G}};
+\item \textbf{Descrizione:} verifica del corretto passaggio di dati per l'utente \textit{user};
 \item \textbf{Metodo:} TestView();
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestNewProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica che consente di creare nuovi processi;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della corretta possibilità di inserimento dati per la creazione di un nuovo processo;
+\item \textbf{Metodo:} TestView(object ProcessCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestAddStep}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di gestire l'interfaccia grafica che consente di definire un nuovo passo del processo in creazione;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della corretta possibilità di inserimento dati per la creazione di un nuovo passo del processo in creazione;
+\item \textbf{Metodo:} TestView(object StepModel);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestOpenProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di aprire un processo tramite ricerca o selezionandolo da una lista;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della possibilità di ricerca e apertura processo tramite ricerca o selezionandolo da una lista;
+\item \textbf{Metodo:} TestView(object ProcessCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestManageProcess}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di gestire l'accesso ai dati inviati al\textit{server\ped{G}} dagli utenti;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della corretta visualizzazione di \textit{widget} per l'accesso ai dati inviati al\textit{server\ped{G}} dagli utenti;
+\item \textbf{Metodo:} TestView(object ProcessModel, object ProcessDataCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
 
 \paragraph{TestCheckStep}
 \begin{itemize}
-\item \textbf{Descrizione:} \textit{Template HTML} che permette di realizzare i\textit{widget} che consentono di gestire l'approvazione dei passi che richiedono intervento umano;
-\item \textbf{Metodo:} TestView();
+\item \textbf{Descrizione:} verifica della corretta realizzare i\textit{widget} che consentono di gestire l'approvazione dei passi che richiedono intervento umano;
+\item \textbf{Metodo:} TestView(object ProcessModel, object ProcessDataCollection);
+\item \textbf{Esito:} Superato;
 \end{itemize}
