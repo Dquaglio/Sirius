@@ -1,0 +1,41 @@
+\input{../modello/macro.tex}% macro
+\newcommand{\lastversion}{\lastversionMPO}%versione del documento
+\newcommand{\doctitle}{\doctitleMPO}%nome documento
+\newcommand{\info}{\doctitle\ v\lastversion}
+\input{../modello/layout.tex}% layout
+
+\makeatletter
+\renewcommand*{\BreakableSlash}{%
+  \leavevmode
+  \prw@zbreak
+  %
+  \discretionary{-}{}{}%
+  \prw@zbreak
+}
+
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+
+\begin{document}
+
+\input{../modello/firstpage.tex}%pagina del titolo
+\input{../modello/info.tex}
+\listoftables
+\listoffigures
+\pagenumbering{arabic}%numeri di pagina  arabi
+
+\include{Introduzione}
+%\include{DescrizioneGenerale}
+
+\include{Istruzioni}
+
+\appendix
+\include{Errori}
+\include{Glossario}
+
+\end{document}
