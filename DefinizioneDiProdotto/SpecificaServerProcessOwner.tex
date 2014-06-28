@@ -4,6 +4,7 @@
 {./classi/server/presenterprocessowner.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.processowner}}
 \end{figure}
 \paragraph{StepController}%----------------------------------------------------------------%
+\
 \begin{figure}[H] \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
 {./classi/server/stepcontroller.png} \caption{Diagramma classe - \texttt{StepController}}
@@ -28,6 +29,7 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{ProcessController}%----------------------------------------------------------------%
+\
 \begin{figure}[H] \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
 {./classi/server/processcontroller.png} \caption{Diagramma classe - \texttt{ProcessController}}
@@ -55,6 +57,7 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{ApproveStepController}%----------------------------------------------------------------%
+\
 \begin{figure}[H] \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
 {./classi/server/approvestepcontroller.png} \caption{Diagramma classe - \texttt{ApproveStepController}}
@@ -76,7 +79,7 @@
 	\item \textbf{Metodi: }\begin{itemize}
 					\item \texttt{+List<DataSent> getStepToApprove():}\\
 					 il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo List<DataSent> contenente tutti i dati che richiedono approvazione;
-					\item \texttt{+void approveResponse(DataSent moderatedStep):}\\
+					\item \texttt{+void approveResponse(int idStep,String usernameww):}\\
 					il metodo gestisce una richiesta di tipo \textit{POST}, riceve i dati di un passo che ha subito la moderazione del \textit{process owner}, tale passo verrà eliminato dal database se il processowner lo ha rifiutato altrimenti verrà approvato definitivamente;  
 				\end{itemize}
 \end{itemize}
