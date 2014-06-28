@@ -1,4 +1,80 @@
 \section{Strumenti di lavoro}
+\subsection{Coordinamento}
+\subsubsection{Strumento per la gestione del progetto}
+Al fine di gestire rigorosamente lo sviluppo del progetto il team \gruppo{} ha adottato l'utilizzo del software \textit{TeamWorkPM} (\href{http://www.teamwork.com}{www.teamwork.com}), tale strumento fornisce le seguenti funzionalità:
+
+\begin{itemize}
+\item Creazione di \textit{ticket\ped{G}}, \textit{milestone\ped{G}} e liste di attività;
+\item Creazione ed assegnazione di attività;
+\item Calendario di progetto;
+\item \textit{Report} automatico giornaliero delle attività svolte ed in ritardo inviato tramite \textit{e-mail};
+\item Gestione dei ruoli;
+\item Generazione di grafici \textit{Gantt\ped{G}} a partire dalle \textit{task-list};
+\item Monitoraggio dei tempi;
+\item Registro dei rischi.
+\end{itemize}
+
+Sono stati valutati altri software come ad esempio \textit{Redmine}, il quale fu ritenuto quasi altrettanto completo ed intuitivo. Tuttavia si è optato per \textit{TeamWorkPM} data la sua estrema semplicità di utilizzo.\\
+Il \textit{Responsabile di Progetto} per garantire il regolare svolgimento delle attività dovrà necessariamente verificare con cadenza giornaliera se sono presenti \textit{ticket} scaduti e non ancora completati, nel caso citato infatti sarà obbligato a richiedere informazioni (o in caso di ritardi gravi convocare l'interessato) circa la causa del ritardo.\\
+Infine, il \textit{Responsabile di Progetto} dovrà tenere nota che l'assegnazione di \textit{ticket} la cui scadenza è prevista per il giorno successivo può avvenire solo se il lavoro da svolgere non supera le 2 ore lavorative.
+
+\subsubsection{Strumento di versionamento}
+Di pressoché fondamentale importanza è stata la definizione di un ambiente ordinato in cui organizzare e mantenere tutti i \textit{file} che attraversano il ciclo di vita, per questa ragione è stato scelto di avvalersi di un \textit{repository}. 
+
+\paragraph{GitHub}
+Come sistema di controllo di versione è stato adottato il software \textit{GitHub\ped{G}}, i pregi di questo strumento vengono qui di seguito riportati:
+\begin{itemize}
+\item Molto reattivo;
+\item Design semplice; 
+\item \textit{Software} gratuito.
+\end{itemize}
+
+\paragraph{Struttura repository}
+L'indirizzo di \textbf{root\ped{G}} del \textit{repository} contenente tutta la documentazione è:
+\begin{center}
+\href{https://github.com/Dquaglio/Sirius}{https://github.com/Dquaglio/Sirius}
+\end{center}
+
+Ogni documento presente sarà contenuto in una sotto cartella del \textit{master branch\ped{G}} nominata come il nome del documento stesso.
+All'interno della cartella potranno essere contenuti solamente \textit{file.tex}, per la visualizzazione del relativo \textit{pdf\ped{G}} sarà necessario scaricarli e compilarli, assicurandosi di avere l'ultima versione del modello disponibile.
+\begin{center}
+\textbf{modello.git}: \href{https://github.com/Dquaglio/Sirius/tree/master/modello.git}{https://github.com/Dquaglio/Sirius/tree/master/modello.git}
+\end{center}
+
+conterrà il \textit{template} \LaTeX, le \textit{macro} e gli script aggiornati all'ultima versione disponibile.
+\\
+\\
+Il \textit{master branch} è stato quindi suddiviso seguendo questa struttura:
+\begin{figure}
+\centering
+\includegraphics[width= %
+\linewidth]{immaginiNDP/repository}
+\caption[]{Struttura master branch.}
+\label{fig:repository}
+\end{figure}
+A scopo puramente dimostrativo è stato creato l'esempio di un documento formale del gruppo \gruppo, contenuto nella cartella: "EsempioDocumento", questa scelta è stata fatta per illustrare la struttura generale che deve preservare qualsiasi documento (sezione 5.4, Struttura documentazione).
+Per sfruttare il parallelismo nello sviluppo di uno stesso documento sono stati creati appositamente dei  \textit{branch} denominati con il nome dei membri del gruppo, i documenti  \textit{baseline\ped{G}} invece saranno contenuti solamente nel \textit{master branch}. Il \textit{merge\ped{G}} con il ramo \textit{master} avviene quindi solamente dopo la terminazione dell'attività di verifica di un documento.
+
+\subsubsection{Strumenti per la condivisione file}
+Per gestire efficientemente la condivisione dei file intra-gruppo a supporto dello strumento di \textbf{Git} è stato scelto l'utilizzo di: Google Drive, un servizio \textit{web} di \textit{storage} e sincronizzazione \textit{online} che dovrebbe facilitare la condivisione e fornire una base d'appoggio secondaria ed informale per alcuni file che non necessitano versionamento.
+L'utilizzo di \textit{Google Drive} e' limitato ai documenti che:
+\begin{itemize}
+\item Non necessitano di versionamento;
+\item Necessitano di essere acceduti velocemente tramite \textit{web};
+\end{itemize}
+
+\subsection{Pianificazione}
+
+Per l'attività di pianificazione del progetto nonché gestione delle risorse è stato adottato il software GanttProject, software open source basato su piattaforma Java. Qui di seguito vengono elencate le principali caratteristiche che hanno portato alla scelta di questo strumento:
+\begin{itemize}
+\item Portabilità, essendo un software basato su Java;
+\item Open-source\ped{G};
+\item Compatibile con MicrosoftProject;
+\item Può generare grafici Work Breakdown Structure (WBS\ped{G});
+\item Fornisce la possibilità di creare grafici di Gantt\ped{G};
+\item Può generare grafici Program Evalutation and Review Tecnique (PERT\ped{G});
+\item In grado di gestire e generare grafici delle risorse assegnate.
+\end{itemize}
 \subsection{Strumenti per la documentazione}
 \subsubsection{LaTeX}
 Per la stesura dei documenti il team \gruppo{} ha deciso di adottare il linguaggio di markup\ped{G} \LaTeX la scelta è stata effettuata prevalentemente per le seguenti ragioni:
@@ -53,79 +129,9 @@ I principali errori rilevati sono i seguenti:
 \end{itemize}
 \subsubsection{UML}
 Per la modellazione dei diagrammi User Case (UC\ped{G}) sono stati presi in considerazione tre editor: Dia, Microsoft Visio, Astah. Infine il team ha optato per adottare Astah come strumento definitivo in quanto si tratta di un software open source, con supporto di Unified Modeling Language (UML\ped{G}) 2.x  e secondo l'analisi del team dotato di un interfaccia più responsiva ed intuitiva degli altri software.
-\subsection{Strumento per la gestione del progetto}
-Al fine di gestire rigorosamente lo sviluppo del progetto il team \gruppo{} ha adottato l'utilizzo del software \textit{TeamWorkPM} (\href{http://www.teamwork.com}{www.teamwork.com}), tale strumento fornisce le seguenti funzionalità:
 
-\begin{itemize}
-\item Creazione di \textit{ticket\ped{G}}, \textit{milestone\ped{G}} e liste di attività;
-\item Creazione ed assegnazione di attività;
-\item Calendario di progetto;
-\item \textit{Report} automatico giornaliero delle attività svolte ed in ritardo inviato tramite \textit{e-mail};
-\item Gestione dei ruoli;
-\item Generazione di grafici \textit{Gantt\ped{G}} a partire dalle \textit{task-list};
-\item Monitoraggio dei tempi;
-\item Registro dei rischi.
-\end{itemize}
+Per lo sviluppo dei diagrammi di sequenza, dopo aver effettuato i test necessari, è stato permesso l'utilizzo del software \textit{VisualParadigm}, questa modifica è stata attuata dopo aver verificato che il software \textit{Astah} forniva un iterfaccia di creazione per diagrammi di sequenza poco intuitiva e difficoltosa da utilizzare. \textit{VisualParadigm} è adeguato per lo sviluppo di diagrammi UML 2.x.
 
-Sono stati valutati altri software come ad esempio \textit{Redmine}, il quale fu ritenuto quasi altrettanto completo ed intuitivo. Tuttavia si è optato per \textit{TeamWorkPM} data la sua estrema semplicità di utilizzo.\\
-Il \textit{Responsabile di Progetto} per garantire il regolare svolgimento delle attività dovrà necessariamente verificare con cadenza giornaliera se sono presenti \textit{ticket} scaduti e non ancora completati, nel caso citato infatti sarà obbligato a richiedere informazioni (o in caso di ritardi gravi convocare l'interessato) circa la causa del ritardo.\\
-Infine, il \textit{Responsabile di Progetto} dovrà tenere nota che l'assegnazione di \textit{ticket} la cui scadenza è prevista per il giorno successivo può avvenire solo se il lavoro da svolgere non supera le 2 ore lavorative.
-
-\subsection{Strumento di pianificazione}
-Per l'attività di pianificazione del progetto nonché gestione delle risorse è stato adottato il software GanttProject, software open source basato su piattaforma Java. Qui di seguito vengono elencate le principali caratteristiche che hanno portato alla scelta di questo strumento:
-\begin{itemize}
-\item Portabilità, essendo un software basato su Java;
-\item Open-source\ped{G};
-\item Compatibile con MicrosoftProject;
-\item Può generare grafici Work Breakdown Structure (WBS\ped{G});
-\item Fornisce la possibilità di creare grafici di Gantt\ped{G};
-\item Può generare grafici Program Evalutation and Review Tecnique (PERT\ped{G});
-\item In grado di gestire e generare grafici delle risorse assegnate.
-\end{itemize}
-\subsection{Strumento di versionamento}
-Di pressoché fondamentale importanza è stata la definizione di un ambiente ordinato in cui organizzare e mantenere tutti i \textit{file} che attraversano il ciclo di vita, per questa ragione è stato scelto di avvalersi di un \textit{repository}. 
-
-\subsubsection{GitHub}
-Come sistema di controllo di versione è stato adottato il software \textit{GitHub\ped{G}}, i pregi di questo strumento vengono qui di seguito riportati:
-\begin{itemize}
-\item Molto reattivo;
-\item Design semplice; 
-\item \textit{Software} gratuito.
-\end{itemize}
-
-\subsubsection{Struttura repository}
-L'indirizzo di \textbf{root\ped{G}} del \textit{repository} contenente tutta la documentazione è:
-\begin{center}
-\href{https://github.com/Dquaglio/Sirius}{https://github.com/Dquaglio/Sirius}
-\end{center}
-
-Ogni documento presente sarà contenuto in una sotto cartella del \textit{master branch\ped{G}} nominata come il nome del documento stesso.
-All'interno della cartella potranno essere contenuti solamente \textit{file.tex}, per la visualizzazione del relativo \textit{pdf\ped{G}} sarà necessario scaricarli e compilarli, assicurandosi di avere l'ultima versione del modello disponibile.
-\begin{center}
-\textbf{modello.git}: \href{https://github.com/Dquaglio/Sirius/tree/master/modello.git}{https://github.com/Dquaglio/Sirius/tree/master/modello.git}
-\end{center}
-
-conterrà il \textit{template} \LaTeX, le \textit{macro} e gli script aggiornati all'ultima versione disponibile.
-\\
-\\
-Il \textit{master branch} è stato quindi suddiviso seguendo questa struttura:
-\begin{figure}
-\centering
-\includegraphics[width= %
-\linewidth]{immaginiNDP/repository}
-\caption[]{Struttura master branch.}
-\label{fig:repository}
-\end{figure}
-A scopo puramente dimostrativo è stato creato l'esempio di un documento formale del gruppo \gruppo, contenuto nella cartella: "EsempioDocumento", questa scelta è stata fatta per illustrare la struttura generale che deve preservare qualsiasi documento (sezione 5.4, Struttura documentazione).
-Per sfruttare il parallelismo nello sviluppo di uno stesso documento sono stati creati appositamente dei  \textit{branch} denominati con il nome dei membri del gruppo, i documenti  \textit{baseline\ped{G}} invece saranno contenuti solamente nel \textit{master branch}. Il \textit{merge\ped{G}} con il ramo \textit{master} avviene quindi solamente dopo la terminazione dell'attività di verifica di un documento.
-
-\subsection{Strumenti per la condivisione file}
-Per gestire efficientemente la condivisione dei file intra-gruppo a supporto dello strumento di \textbf{Git} è stato scelto l'utilizzo di: Google Drive, un servizio \textit{web} di \textit{storage} e sincronizzazione \textit{online} che dovrebbe facilitare la condivisione e fornire una base d'appoggio secondaria ed informale per alcuni file che non necessitano versionamento.
-L'utilizzo di \textit{Google Drive} e' limitato ai documenti che:
-\begin{itemize}
-\item Non necessitano di versionamento;
-\item Necessitano di essere acceduti velocemente tramite \textit{web};
-\end{itemize}
 \subsection{Piattaforma per il tracciamento}
 Per il tracciamento è stato sviluppato un semplice programma denominato \textit{Sirius RTg}. Questo programma è stato sviluppato utilizzando PHP\ped{G}, CSS\ped{G} ed HTML\ped{G}. Sirius RTg è attualmente un programma il cui sviluppo non è terminato, principalmente per permettere una aggiunta di funzionalità in caso di necessità. Sirius RTg, alla versione 2.0.0, fornisce le seguenti funzionalità:
 \begin{itemize}
@@ -167,3 +173,41 @@ Questa funzionalità è stata inserita al fine di poter tracciare le componenti 
 Sono state inoltre implementati due script che stampano a video il codice \LaTeX{} del tracciamento componente-requisito e requisito-componente, il codice \LaTeX{} generato è conforme alle \NormeDiProgetto{}.
 \subsubsection{Script glossario}
 Anche se non inerente al tracciamento dei requisiti, lo strumento \textit{Sirius RTg} alla versione 2.0 prevede la funzionalità aggiuntiva di poter inserire automaticamente i pedici \ped{G} (per le parole contenute nel \Glossario{}) ai documenti del team.
+\subsection{Sviluppo dell'applicazione}
+Il team \gruppo{} durante lo sviluppo dell'applicazione utilizzerà diversi framework e librerie quali:
+
+\begin{itemize}
+\item Spring;
+\item Backbone.js;
+\item RequireJS.
+\end{itemize}
+
+Per non incorrere in problemi di incompatibilità del codice sviluppato, si è deciso di uniformare le versioni di tali \textit{framework} e librerie.
+I programmatori sono quindi \textbf{tenuti} a sviluppare tramite software aggiornato alla seguente \textit{release}:
+\begin{itemize}
+\item \textbf{\textit{Spring:}} 4.0.3;
+\item \textbf{\textit{Backbone.js:}} 1.1.2;
+\item \textbf{\textit{RequireJS:}} 1.1.
+\end{itemize}
+
+
+\paragraph{IDE}
+Per la stesura del codice dell'applicazione \progetto{} il team \gruppo{} sara tenuto ad utlizzare gli ide\ped{G} ammessi nella lista di seguito riportata. Nel caso il team di sviluppo lo ritenesse necessario, sarà possibile richiedere all'\textit{amministratore} di modificare tale lista aggiungendo nuovi ambienti di sviluppo che vengono ritenuti più adatti per la stesura del codice.
+\\
+\\
+\textbf{Spring tool suite (versione 3.5.1)}.
+\\
+\\
+\textit{Spring tool suite} è un ide basato su Eclipse che integra tutto il necessario per lavorare ad un progetto che necessita l'utilizzo del \textit{framework} \textit{Spring}.
+\\
+\\
+Infine è possibile utilizzare l'ide \textit{Eclipse} in quanto si tratta di un ambiente di sviluppo \textit{open source} multipiattaforma e multilinguaggio piuttosto completo, con possibilità di installare plug-in per espanderne le sue funzionalità.
+La versione da adottare di questo software è la 4.3.2 (Kepler SR2).
+
+
+\subsubsection{Stesura dei test}
+
+Per effettuare i test dovrà essere installato un plug-in per \textit{Eclipse} \textit{Eclipse metrics} che fornisce un tool di testing per codice \textit{Java}. Per quanto concerne invece i test per il codice \textit{JavaScript} sarà necessario utilizzare il \textit{framework} \textit{Jasmine}.
+
+
+
