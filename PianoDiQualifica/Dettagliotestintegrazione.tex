@@ -1,31 +1,41 @@
-\begin{longtable}{lllllXr}
+\begin{longtable}{lllll}
 \toprule
 \textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Test} & \textbf{Stato}\\
 &&&\textbf{di integrazione}&\\
 \toprule
-TU1&login utente e login process owner &Login & & Pianificato\\
+TU1& Login process owner &Login & verifica con dati corretti&ok\\
+&&&verifica con dati errati&\\
 \midrule
-TU2&creazione processo&NuovoProcesso&&N.A.\\
+TU2& Creazione processo&NuovoProcesso&creazione processo&ok\\
+&&&creazione passi&\\
 \midrule
-TU3&visualizzazione dati processo&VisualizzaProcesso&&N.A.\\
+TU3& Visualizzazione&VisualizzaProcesso&visualizzazione nome processo&ok\\
+&dati processo&&visualizzazione passi&\\
 \midrule
-TU4&Approvazione passo&ApprovazionePasso&&N.A.\\
+TU4& Approvazione passo&ApprovazionePasso&verifica approvazione&ok\\
+&&&verifica di non approvazione&\\
 \bottomrule
 \caption{Tabella dei test di integrazione process owner}
 \end{longtable}
 
-\begin{longtable}{lllllXr}
+\begin{longtable}{lllll}
 \toprule
 \textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Test} & \textbf{Stato}\\
 &&&\textbf{di integrazione}&\\
 \toprule
-TU5&gestione dati&GestioneUser&&N.A.\\
+TU5& Iscrizione/disiscrizione&Registrazione&registrazione e login&ok\\
+&&&login e cancellazione&\\
 \midrule
-TU6&iscrizione/disiscrizione&Registrazione&&N.A.\\
+TU6& Gestione dati&GestioneUser&controllo dati inseriti&ok\\
+&&&modifica dati utente&\\
 \midrule
-TU7&esecuzione passo&EsecuzionePasso&&N.A.\\
+TU7& Esecuzione passo&EsecuzionePasso&dati di tipo testuale&ok\\
+&&&dati di tipo numerico&\\
+&&&dati di tipo immagine&\\
+&&&dati di tipo geografici&\\
 \midrule
-TU8&Visualizzazione report finale&Stampa&&N.A.\\
+TU8& Visualizzazione &Stampa&esecuzione stampa a video&ok\\
+&report finale&&&\\
 \bottomrule
 \caption{Tabella dei test di integrazione user}
 \end{longtable}
