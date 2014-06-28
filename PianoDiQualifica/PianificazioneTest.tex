@@ -19,10 +19,10 @@ integrazione reversibile consentendo di retrocedere verso uno stato noto e sicur
 In questo modo i componenti base vengono testati più volte riducendo la possibile presenza di errori.\\
 Nel diagramma 
 \subsubsection{Descrizione dei test di integrazione}
-Di seguito sono elencati i test di integrazione relativo ai componenti indicati in \infoST.
+Di seguito sono elencati i test di integrazione relativo ai componenti indicati in \infoST. I test di integrazione valutano l'integrazione dei vari componenti mano a mano che vengono aggregati al progetto, facendo in modo di non perdere le funzionalità acquisite fino a quel momento.
 \input{Dettagliotestintegrazione.tex}
 \subsection{Test di unità}
-I test di unità sulle view sono effettuati creando una nuova classe basata sulla precedente denominata \textit{"testnomeclasse"} ed invocando i metodi di test con i rispettivi parametri.
+I test di unità sono effettuati creando una nuova classe basata sulla precedente denominata \textit{"testnomeclasse"} ed invocando i metodi di test con i rispettivi parametri. Per la definizione delle classi si faccia riferimento a \infoDP.
 \subsubsection{Test di unità per view}
 \input{../DefinizioneDiProdotto/PackageCommands.tex}
 Per la \textit{View}, essendo le classi prive di metodi, viene creato un metodo TestView() che riceve come parametro il tipo di dato richiesto e se ne verifica il risultato ottenuto confrontandolo con quello atteso.

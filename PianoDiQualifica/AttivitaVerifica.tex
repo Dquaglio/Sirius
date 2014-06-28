@@ -247,22 +247,22 @@ Complessivamente \gruppo ~ha ottenuto:
 \item BV-totale = -197.00 €.
 \end{itemize}
 \subsubsection{Risultati delle misurazioni sul codice}
-Di seguito i risultati dei test di analisi statica e dinamica effettuati sul codice fin'ora prodotto. Per ogni metrica viene indicata la media e il valore massimo, giustificando gli eventuali valori fuori range.\\
+Di seguito i risultati dei test di analisi statica effettuati sul codice fin'ora prodotto. Si è deciso di non effettuare i test sulla parte HTML in quanto statica e priva di metodi da analizzare. Per ogni metrica viene indicata la media e il valore massimo, rilevati dall'analisi sul codice prodotto, sia parte server che parte client.
+Il livello di accettabilità è valutato sul valore medio della metrica.\\
+I valori fuori range saranno commentati di seguito.\\
 \begin{longtable}{llllXr}
 \toprule
 \textbf{Metrica} & \textbf{Media} & \textbf{Massimo} & \textbf{Accettazione}\\
 \toprule
-Complessità ciclomatica & 1 & 10 & Acc.\\%1-15
+Complessità ciclomatica & 4 & 13 & Acc.\\%1-15
 \midrule
-Livelli di annidamento & 1 & 10 & Acc.\\%1-6
+Livelli di annidamento & 1,46 & 3 & Acc.\\%1-6
 \midrule
-Attributi per classe & 1 & 10 & Acc.\\%0-16
+Attributi per classe & 2,3 & 8 & Acc.\\%0-16
 \midrule
-Parametri per metodo & 1 & 10 & Acc.\\%0-8
+Parametri per metodo & 3 & 7 & Acc.\\%0-8
 \midrule
-Linee di codice per linee commento & 1 & 10 & Acc.\\%>0,25
-\midrule
-Accoppiamento & 1 & 10 & Acc.\\%Da definire
+Linee di codice per linee commento & 32\% & 44\% & Acc.\\%>0,25
 \midrule
 Copertura & 53\% &  & \textbf{N. Acc.}\\%80 percento
 \bottomrule
