@@ -178,6 +178,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ List<UserStep> userProcessStep(String userName, processId)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso appartenenti al processo di cui si è passato l'\texttt{id} da parte dell'utente di cui si è passato il nome utente;
 \item \texttt{+ List<DataSent> getData(Step step)}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato;
 \item \texttt{+ List<DataSent> getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
+\item \texttt{+ List<DataSent> getWaitingData()}\\ Ritorna tutti i dati di tutti i passi in attesa di approvazione;
 \item \texttt{+ boolean completeStep(String userName, Step step, List<DataSent> data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
 \end{itemize}
 \end{sloppypar}
