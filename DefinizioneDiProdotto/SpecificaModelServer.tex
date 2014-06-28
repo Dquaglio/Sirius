@@ -176,10 +176,11 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ public boolean updateStep(Step step) :}\\ Aggiorna i dati del passo con l'\texttt{id} corrispondente a quello del passo passato, con i dati del passo passato;
 \item \texttt{+ List<UserStep> userStep(String userName)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso da parte dell'utente di cui si è passato il nome utente;
 \item \texttt{+ List<UserStep> userProcessStep(String userName, processId)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso appartenenti al processo di cui si è passato l'\texttt{id} da parte dell'utente di cui si è passato il nome utente;
+\item \texttt{+ boolean updateUserStep(UserStep userStep):}\\ Aggiornato lo stato del passo per l'utente in questione.
 \item \texttt{+ List<DataSent> getData(Step step)}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato;
-\item \texttt{+ List<DataSent> getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
+\item \texttt{+ DataSent getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
 \item \texttt{+ List<DataSent> getWaitingData()}\\ Ritorna tutti i dati di tutti i passi in attesa di approvazione;
-\item \texttt{+ boolean completeStep(String userName, Step step, List<DataSent> data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
+\item \texttt{+ boolean completeStep(String userName, Step step, DataSent data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -535,7 +536,7 @@ La componente è formata dalle seguenti \textit{classi}:
 		\begin{itemize}
 			\item \smodel{}.ITransferObject.
 		\end{itemize}
-				La classe invoca i metodi della classe:
+				La classe contiene instanze della classe:
 		\begin{itemize}
 			\item \smodel{}.IDataValue.
 		\end{itemize}
@@ -543,8 +544,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{- String user:}\\ Nome utente dell'utente che ha inviato il dato;
-\item \texttt{- DataType type:}\\ Tipo del dato inviato;
-\item \texttt{- IDataValue value:}\\ Oggetto con il valore del dato;
+\item \texttt{- List<IDataValue> values:}\\ Oggetti con il valori dei dati;
 \item \texttt{- int stepId:}\\Codice \texttt{id} del passo richiedente il dato.
 \end{itemize}
 \end{sloppypar}
@@ -553,10 +553,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{itemize}
 \item \texttt{+ String getUser():}\\ Ritorna nome utente dell'utente che ha inviato il dato;
 \item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente che ha inviato il dato;
-\item \texttt{+ DataType getType():}\\ Ritorna il tipo del dato inviato;
-\item \texttt{+ void setType(DataType type):}\\ Imposta il tipo del dato inviato;
-\item \texttt{+ IDataValue getValue():}\\ Ritorna oggetto con il valore del dato;
-\item \texttt{+ void setValue(IDataValue value):}\\ Imposta oggetto con il valore del dato;
+\item \texttt{+ List<IDataValue> getValues():}\\ Ritorna lista di oggetti con il valori dei dati;
+\item \texttt{+ void setValues(List<IDataValue> values):}\\ Imposta lista di oggetti con il valori dei dati;
 \item \texttt{+ int getStepId():}\\ Ritorna codice \texttt{id} del passo richiedente il dato;
 \item \texttt{+ void setStepId(int stepId):}\\ Imposta codice \texttt{id} del passo richiedente il dato.
 \end{itemize}
@@ -574,6 +572,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{itemize}
 \item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} associato al valore;
 \item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataType getType():}\\ Ritorna il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
