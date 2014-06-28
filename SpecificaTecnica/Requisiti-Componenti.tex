@@ -1,267 +1,267 @@
 \begin{longtable}{lXp{0.23\textwidth}}
 \toprule 
-\textbf{Requisiti} & \textbf{Descrizione} & \textbf{Componenti} 
-\midrule
+\textbf{Requisiti} & \textbf{Descrizione} & \textbf{Componenti} \\
+\toprule
 FOBU 1&Il sistema dovrà permettere all'utente di registrarsi&PU2\\
-&VU3\\ 
-&VU4\\ 
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FOBU 1.1&L'utente dovrà inserire un \textit{username} che lo identifichi univocamente all'interno del sistema&PU2\\
 \midrule 
 FOBU 1.2&L'utente dovrà inserire una \textit{password} d'accesso&PA2\\ 
-&PU2\\
-&VU3\\ 
-&VU4\\ 
+&&PU2\\
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FOBU 1.2.1&L'utente dovrà inserire una \textit{password} composta almeno da 8 caratteri alfanumerici&PU2\\ 
 \midrule 
 FOBU 1.3&L'utente dovrà inserire il proprio nome&PA2\\ 
-&PU2\\
-&VU3\\ 
-&VU4\\ 
+&&PU2\\
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FOBU 1.4&L'utente dovrà inserire il proprio cognome&PA3\\ 
-&PU2\\
-&VU3\\ 
-&VU4\\ 
+&&PU2\\
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FOBU 1.5&L'utente dovrà inserire la propria data di nascita&PA3\\ 
-&PU2\\  
-&VU3\\ 
-&VU4\\ 
+&&PU2\\  
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FOBU 1.5.1&La data di nascita inserita dall'utente dovrà essere antecedente alla data di iscrizione&PU2\\ 
 \midrule 
 FOBU 1.6&L'utente dovrà inserire una sua \textit{email}&PU2\\ 
-&VU3\\ 
-&VU4\\ 
+&&VU3\\ 
+&&VU4\\ 
 \midrule 
 FDEU 1.6.1&La \textit{email} inserita dovrà corrispondere ad un indirizzo di posta elettronica esistente&PU2\\ 
 \midrule
 FOBU 2&Il sistema dovrà permettere all'utente di autenticarsi&P2\\ 
-&V1\\ 
-&V2\\
+&&V1\\ 
+&&V2\\
 \midrule 
 FOBU 2.1&Il sistema dovrà negare l'autenticazione se i dati inseriti dall'utente sono errati o non esistenti all'interno del \textit{server\ped{G}}&P2\\ 
 \midrule 
 FOBU 2.2&L'utente dovrà inserire il proprio \textit{username} per autenticarsi&P2\\ 
-&V1\\ 
-&V2\\
+&&V1\\ 
+&&V2\\
 \midrule 
 FOBU 2.3&L'utente dovrà inserire la propria \textit{password} per autenticarsi&P2\\
-&V1\\ 
-&V2\\ 
+&&V1\\ 
+&&V2\\ 
 \midrule 
 FOPL 3&Il sistema dovrà permettere all'utente autenticato di gestire le proprie credenziali&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule
 FOPL 3.1&L'utente autenticato potrà visualizzare le proprie credenziali&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.1.1&L'utente autenticato visualizzerà il proprio \textit{username}&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.1.2&L'utente autenticato visualizzerà il proprio nome&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.1.3&L'utente autenticato visualizzerà il proprio cognome&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.1.4&L'utente autenticato visualizzerà la propria data di nascita&PU3\\ 
-&VU5\\ 
-&VU6\\
+&&VU5\\ 
+&&VU6\\
 \midrule
 FOPL 3.1.5&L'utente autenticato visualizzerà la propria \textit{email}&VU5\\ 
-&VU6\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.2&Il sistema dovrà permettere all'utente autenticato di modificare i propri dati&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.2.1&Il sistema dovrà permettere all'utente autenticato di modificare la propria \textit{password}&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.2.1.1&L'utente autenticato potrà inserire la nuova \textit{password}&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.2.1.2&L'utente autenticato potrà inserire la \textit{password} corrente&PU3\\ 
-&VU5\\ 
-&VU6\\ 
+&&VU5\\ 
+&&VU6\\ 
 \midrule 
 FOPL 3.2.1.3&Il sistema dovrà comunicare all'utente autenticato se la \textit{password} inserita non è corretta&PU3\\ 
 \midrule 
 FOBL 4&Il sistema dovrà permettere all'utente autenticato di gestire i processi disponibili&PU4\\ 
-&VU7\\ 
-&VU8\\
+&&VU7\\ 
+&&VU8\\
 \midrule
 FOBL 4.1&Il sistema dovrà permettere all'utente autenticato di scegliere un processo da una lista selezionata o da i risultati di una ricerca&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire una lista di processi&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.1.1&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi in esecuzione&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.1.2&Il sistema dovrà permettere all'utente autenticato di selezionare ed aprire la lista dei processi disponibili&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.1.3&L'utente autenticato riceverà da parte del sistema la segnalazione di processi terminabili&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.1.4&L'utente autenticato riceverà da parte del sistema la segnalazione dei nuovi processi disponibili&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.2&L'utente autenticato potrà selezionare un processo dalla lista di processi aperta&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.1.3&Il sistema dovrà permettere all'utente autenticato di ricercare dei processi fra tutti quelli a cui può partecipare&PU4\\ 
-&VU7\\ 
-&VU8\\ 
+&&VU7\\ 
+&&VU8\\ 
 \midrule 
 FOBL 4.2&L'utente autenticato potrà visualizzare la descrizione di un processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.3&Il sistema dovrà permettere all'utente autenticato di iscriversi a un processo precedentemente selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4&Il sistema dovrà permettere all'utente autenticato di eseguire il processo scelto a cui è iscritto&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.1&Il sistema dovrà permettere all'utente autenticato di visualizzare i criteri di terminazione di un processo&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.1.1&L'utente autenticato potrà visualizzare il numero di completamenti del processo necessari e sufficienti a causarne la terminazione&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale data di scadenza del processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.2&L'utente autenticato potrà visualizzare le informazioni sullo stato corrente di avanzamento del processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.2.1&L'utente autenticato potrà visualizzare il numero di passi già completati del processo selezionato&PU5\\
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.2.2&L'utente autenticato potrà visualizzare il numero di totale dei passi del processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.2.3&L'utente autenticato potrà visualizzare il numero di utenti autenticati che hanno già terminato il processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.2.4&L'utente autenticato potrà visualizzare il numero di utenti iscritti al processo selezionato&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.3&L'utente autenticato potrà visualizzare la lista dei passi in corso, cioè quelli iniziali o quelli immediatamente successivi agli ultimi passi superati&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4&Il sistema dovrà permettere all'utente autenticato di eseguire un passo del processo scelto&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.1&L'utente autenticato potrà visualizzare le informazioni del passo in esecuzione&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.1.1&L'utente autenticato potrà visualizzare la descrizione del passo in esecuzione	&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.1.2&L'utente autenticato potrà visualizzare l'eventuale nome dei dati del passo esecuzione	 &PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2&L'utente autenticato potrà visualizzare i vincoli da rispettare per superare il passo in esecuzione&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2.1&L'utente autenticato potrà visualizzare se il passo in esecuzione richiede l'approvazione del \textit{process owner\ped{G}} per essere concluso&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2.2&L'utente autenticato potrà visualizzare i vincoli sui dati geografici richiesti&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2.2.1&L'utente autenticato potrà visualizzare la posizione in cui dovrà trovarsi durante l'invio dei dati del passo in esecuzione&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOPL 4.4.4.2.2.2&L'utente autenticato potrà visualizzare l'eventuale raggio di tolleranza rispetto alla posizione geografica richiesta per l'esecuzione del passo	 &PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2.3&L'utente autenticato potrà visualizzare l'eventuale intervallo temporale in cui può inviare i dati&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.2.4&L'utente autenticato potrà visualizzare i vincoli sui dati numerici&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOPL 4.4.4.2.4.1&L'utente autenticato potrà visualizzare il numero minimo e massimo di cifre dei valori numerici richiesti&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FDEL 4.4.4.2.4.2&L'utente autenticato potrà visualizzare se i valori numerici richiesti possono contenere cifre decimali&PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOPL 4.4.4.2.4.3&L'utente autenticato potrà visualizzare l'eventuale limite superiore e inferiore dei valori numerici richiesti &PU5\\ 
-&VU10\\ 
-&VU9\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.4.3&L'utente autenticato potrà inviare al sistema i dati numerici inseriti&PU11\\ 
-&PU7\\ 
+&&PU7\\ 
 \midrule 
 FOBL 4.4.4.3&Il sistema dovrà permettere all'utente autenticato di inserire i dati richiesti per l'esecuzione del passo in corso&PU7\\ 
-&VU11\\ 
-&VU12\\ 
+&&VU11\\ 
+&&VU12\\ 
 \midrule 
 FOBL 4.4.4.3.1&Il sistema dovrà permettere all'utente autenticato l'inserimento di una immagine richiesta&PU9\\ 
-&VU19\\ 
-&VU20\\ 
+&&VU19\\ 
+&&VU20\\ 
 \midrule 
 FDEL 4.4.4.3.1.1&Il sistema dovrà permettere all'utente autenticato di scattare una foto per inserire l'immagine richiesta&PU9\\ 
-&VU19\\ 
-&VU20\\ 
+&&VU19\\ 
+&&VU20\\ 
 \midrule 
-FOBL 4.4.4.3.1.2&Il sistema deve permettere all&aposutente l&aposinserimento di una immagine carica da file salvato in memoria&PU9\\ 
-&VU19\\ 
-&VU20\\ 
+FOBL 4.4.4.3.1.2&Il sistema deve permettere all' utente l' inserimento di una immagine carica da file salvato in memoria&PU9\\ 
+&&VU19\\ 
+&&VU20\\ 
 \midrule
 FOBL 4.4.4.3.2&L'utente può inserire dati testuali richiesti dal passo in esecuzione&PU8\\ 
-&VU13\\ 
-&VU14\\ 
+&&VU13\\ 
+&&VU14\\ 
 \midrule 
 FOBL 4.4.4.3.3&Il sistema dovrà permettere all'utente autenticato di inserire dati numerici richiesti dal passo in esecuzione&VU15\\ 
-&VU16\\ 
+&&VU16\\ 
 \midrule 
 FOBL 4.4.4.4&L'utente autenticato potrà inviare al sistema i dati richiesti per l'esecuzione del passo in corso&PU7\\ 
 \midrule 
@@ -269,12 +269,12 @@ FOBL 4.4.4.4.1&L'utente autenticato potrà inviare al sistema i dati dati testua
 &PU8\\ 
 \midrule 
 FOBL 4.4.4.4.2&L'utente autenticato potrà inviare al sistema le immagini inserite&PU7\\ 
-&PU9\\ 
+&&PU9\\ 
 \midrule
 FOBL 4.4.4.4.4&L'utente autenticato potrà inviare al sistema le coordinate della sua posizione&PU10\\ 
-&PU7\\ 
-&VU17\\ 
-&VU18\\ 
+&&PU7\\ 
+&&VU17\\ 
+&&VU18\\ 
 \midrule 
 FOBL 4.4.4.4.5&L'utente autenticato potrà inviare al sistema la data e ora al momento della richiesta di invio dati&PU7\\ 
 \midrule
@@ -285,9 +285,9 @@ FOPL 4.4.4.4.6.1&Il sistema, in assenza di connessione, dovrà permettere all'ut
 FOPL 4.4.4.4.6.2& Il sistema, in presenza di connessione, dovrà permettere all'utente autenticato di inviare i dati precedentemente salvati&PU7\\ 
 \midrule 
 FOBL 4.4.4.5&Il sistema dovrà notificare all'utente autenticato se i dati che ha inviato sono corretti, se non soddisfano i vincoli di superamento del passo o se sono in attesa di approvazione&PU5\\ 
-&PU7\\ 
-&VU10\\ 
-&VU9\\ 
+&&PU7\\ 
+&&VU10\\ 
+&&VU9\\ 
 \midrule 
 FOBL 4.4.4.6&Il sistema dovrà permettere all'utente autenticato di concludere un passo del quale ha ricevuto l'approvazione sui dati da parte del sistema o dal \textit{process owner\ped{G}}&PU5\\ 
 &VU10\\ 
@@ -319,7 +319,7 @@ FOBA 1&Il sistema dovrà permettere al \textit{process owner\ped{G}} la creazion
 \midrule
 FOBL 5&L'utente potrà terminare la propria sessione, diventando utente generico&VU1\\ &VU2\\ &PU1\\
 \midrule
-FOBA 1.1&Il \\textit{process owner\\ped{G}} dovrà inserire un nome che identifichi univocamente il processo che vuole creare&PA2\\ 
+FOBA 1.1&Il \textit{process owner\ped{G}} dovrà inserire un nome che identifichi univocamente il processo che vuole creare&PA2\\ 
 &VA3\\ 
 &VA4\\ 
 \midrule 

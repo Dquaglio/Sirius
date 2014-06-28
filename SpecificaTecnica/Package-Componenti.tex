@@ -41,7 +41,7 @@
 &VA11 - \texttt{ICheckStep}\\ 
 &VA12 - \texttt{CheckStep}\\ 
 \midrule
-\logic()&P1 - \texttt{Router}\\ 
+\logic{} &P1 - \texttt{Router}\\ 
 &P2 - \texttt{Login}\\ 
 \logicUser{}&PU1 - \texttt{MainUser}\\ 
 &PU2 - \texttt{Register}\\ 
@@ -71,31 +71,22 @@
 &MC2 - \texttt{{ProcessDataCollection}}\\
 &MC3 - \texttt{{StepCollection}}\\
 \midrule
-\sCommunication{}&SP2 - \texttt{HttpCommunication}\\
-&SP3 - \texttt{WebsocketCommunication}\\
+\sCommon{}&SPC1 - \texttt{StepInfoController}\\
+		&SPC2 - \texttt{ProcessInfoController}\\
+		&SPC3 - \texttt{LoginController}\\
+		&SPC4 - \texttt{SignUpController}\\
 \midrule
-\sLogicUser{}&SPU1 - \texttt{AccountManager}\\
-&SPU2 - \texttt{UserProcessManager}\\
-&SPU3 - \texttt{UserStepManager}\\
-&SPU4 - \texttt{Report}\\
+
+\sProcessOwner{}&SPPO1 - \texttt{StepController}\\
+&SPPO2 - \texttt{ProcessController}\\
+&SPPO3 - \texttt{ApproveStepController}\\
 \midrule
-\sLogicAdmin{}&SPA1 - \texttt{Login}\\
-&SPA2 - \texttt{ProcessManager}\\
-&SPA3 - \texttt{StepManager}\\
-&SPA4 - \texttt{UserManager}\\
-&SPA5 - \texttt{report}\\
-\midrule
-\daoUser{}&SMU1 - \texttt{DataAccessObject}\\
-&SMU2 - \texttt{ObjectTransfer}\\
-\midrule
-\daoAdmin{}&SMA1 - \texttt{DataAccessObject}\\
-&SMA2 - \texttt{ObjectTransfer}\\
-\midrule
-\daoProcess{}&SM1 - \texttt{DataAccessObject}\\
-&SM2 - \texttt{ObjectTransfer}\\
-\midrule
-\daoStep{}&SM3 - \texttt{DataAccessObject}\\
-&SM4 - \texttt{ObjectTransfer}\\
+\sUser{}&SPU1 - \texttt{AccountController}\\
+&SPU1 - \texttt{UserStepController}\\
+&SPU1 - \texttt{UserProcessController}\\
+&SPU1 - \texttt{ReportController}\\
+
+
 \bottomrule
 \caption{Tabella package/componenti}
 \end{longtable}

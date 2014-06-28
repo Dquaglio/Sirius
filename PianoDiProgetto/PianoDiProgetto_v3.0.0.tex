@@ -1,0 +1,22 @@
+\input{../modello/macro.tex}
+\newcommand{\lastversion}{\lastversionPDP}%versione del documento
+\newcommand{\doctitle}{\doctitlePDP}%nome documento
+\newcommand{\info}{\infoPDP}
+\input{../modello/layout.tex}% layout
+\begin{document}
+\input{../modello/firstpage.tex}%pagina del titolo
+\input{../modello/info.tex}
+\pagenumbering{arabic}%numeri di pagina arabi
+\input{Introduzione.tex}
+\newpage
+\input{AnalisiDeiRischi.tex}
+\newpage
+\input{SuddivisioneDelLavoro.tex}
+\newpage
+%\input{ControlloRendicontazione.tex}
+%\newpage
+\input{Consuntivo.tex}
+\newpage
+\appendix
+\input{Appendice.tex}
+\end{document}
