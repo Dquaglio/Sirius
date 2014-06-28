@@ -1,0 +1,533 @@
+\paragraph{UserModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testUserModel;
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di una sessione di un utente autenticato o di un \textit{Process Owner\ped{G}};
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void login(String username, String password):}\\ delega al server il controllo delle credenzili e, al completamento della richiesta, salva i dati di sessione in caso di successo;
+\item \texttt{+ void logout():}\\ cancella di dati di sessione dell'utente;
+\item \texttt{+ void signup():}\\ effettua una richiesta di registrazione al \textit{server\ped{G}} inviando i dati della classe.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessModel;
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}};
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void fetchProcess():}\\ recupera dal \textit{server\ped{G}} i dati del processo, e i dati dei passi che assegna alla collezione \texttt{steps}, sincronizzando le operazioni.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDataModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessDataModel;
+\item \textbf{Descrizione:} verifica del corretto invio di dati da un utente relativi ad un processo, e e il relativo salvataggio e recupero dal \textit{server\ped{G}};
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void subscribe(bool subscription):}\\ effettua una richiesta di iscrizione o disiscrizione al \textit{server\ped{G}} a seconda del valore del parametro \textit{subscription}, riguardante il processo con "id" \texttt{idProcesso};
+\item \texttt{+ void sendData(int nextStep):}\\ invia al \textit{server\ped{G}} i dati della classe e l'id del prossimo passo da eseguire, che identifica una condizione del processo con "id" \texttt{idProcesso}.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+
+\paragraph{ProcessCollection}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessCollection;
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati da un utente relativi ad un processo;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void fetchProcesses():}\\ verifica del corretto ritorno dal server della lista dei processi a cui l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void saveProcess(ProcessModel process):}\\ aggiunge il processo \texttt{process} alla collezione dei processi nel \textit{serve\ped{G}}.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDataCollection}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessDataCollection;
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati dagli utenti;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void fetchProcessData(int stepId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il passo con "id" \texttt{stepId}, ai quali l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void fetchStepData(int processId):}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati riguardanti il processo con "id" \texttt{processId}, ai quali l'utente identificato dai dati di sessione può accedere;
+\item \texttt{+ void fetchWaitingData():}\\ richiede al \textit{server\ped{G}} la lista dei dati inviati che richiedono controllo umano;
+\item \texttt{+ void approveData(int stepId, String username):}\\ invia al \textit{server\ped{G}} la richiesta di approvazione dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
+\item \texttt{+ void rejectData(int stepId, String username):}\\ invia al \textit{server\ped{G}} l'esito negativo del controllo dei dati riguardanti il passo con "id" \texttt{stepId} e l'utente con username \texttt{username}.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{IDataAcessObject}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testIDataAcessObject;
+\item \textbf{Descrizione:} Interfaccia che permette di gestire la comunicazione e l'interrogazione con il \textit{database}.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ void setJdbcTemplate(JdbcTemplate jdbcTemplate):}\\ imposta i parametri per l'accesso alla sorgente dei dati;
+\item \texttt{+ ITransferObject getAll():}\\ ritorna tutti i dati di competenza della classe che estende questa interfaccia.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+
+\paragraph{UserDao}
+\label{userdao}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testUserDao;
+\item \textbf{Descrizione:} classe che si occupa delle interrogazioni del \textit{database} relative agli utenti del sistema.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ User getUser(String userName):}\\ ritorna l’utente con il nome utente specificato; 
+\item \texttt{+ List<User> getAllUser():}\\ ritorna tutti gli utenti;
+\item \texttt{+ boolean insertUser(User user) :}\\ aggiunge l'utente passato come parametro;
+\item \texttt{+ public boolean updateUser(User user) :}\\ verifica del corretto aggiornamento dei dati dell'utente con il nome utente corrispondente a quello dell'utente passato, con i dati dell'utente passato.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDao}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessDao;
+\item \textbf{Descrizione:} classe che si occupa delle interrogazioni del \textit{database} relative ai processi.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ Process getProcess(int id)):}\\ ritorna il processo con l'\texttt{id} specificato; 
+\item \texttt{+ List<Process> getAllProcess():}\\ ritorna tutti i processi;
+\item \texttt{+ boolean insertProcess(Process process) :}\\ aggiunge il processo passato come parametro;
+\item \texttt{+ public boolean updateProcess(Process process) :}\\ aggiorna i dati del processo con lo stesso \texttt{id} di quello del processo passato, con i dati del processo passato.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessOwnerDao}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessOwnerDao;
+\item \textbf{Descrizione:} classe che si occupa delle interrogazioni del \textit{database} relative all'autenticazione del \textit{ProcessOwner}.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ Process getProcessOwner(int id)):}\\ ritorna l'oggetto rappresentante il \textit{ProcessOwner}. 
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{StepDao}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testStepDao;
+\item \textbf{Descrizione:} classe che si occupa delle interrogazioni del \textit{database} relative a tutte le operazioni sui passi dei processi.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ Step getStep(int id):}\\ Ritorna il passo con l'\texttt{id} specificato; 
+\item \texttt{+ List<Step> getAllStep():}\\ Ritorna tutti i passi;
+\item \texttt{+ List<Step> getStepOf(int ProcessId):}\\ Ritorna tutti i passi appartenenti al processo di cui si è passato l'\texttt{id};
+\item \texttt{+ boolean insertStep(Step step) :}\\ Aggiunge il passo passato come parametro;
+\item \texttt{+ public boolean updateStep(Step step) :}\\ Aggiorna i dati del passo con l'\texttt{id} corrispondente a quello del passo passato, con i dati del passo passato;
+\item \texttt{+ List<UserStep> userStep(String userName)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso da parte dell'utente di cui si è passato il nome utente;
+\item \texttt{+ List<UserStep> userProcessStep(String userName, processId)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso appartenenti al processo di cui si è passato l'\texttt{id} da parte dell'utente di cui si è passato il nome utente;
+\item \texttt{+ List<DataSent> getData(Step step)}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato;
+\item \texttt{+ List<DataSent> getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
+\item \texttt{+ boolean completeStep(String userName, Step step, List<DataSent> data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{User}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testUser;
+\item \textbf{Descrizione:} verifica della corretta gestione gli utenti del sistema e corretta interazione con il database.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUserName():}\\ Ritorna il nome utente;
+\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente;
+\item \texttt{+ String getPassword():}\\ Ritorna la password dell'utente;
+\item \texttt{+ void setPassword(String password):}\\ Imposta la password dell'utente;
+\item \texttt{+ String getName():}\\ Ritorna il nome anagrafico dell'utente;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome anagrafico dell'utente;
+\item \texttt{+ String getSurName():}\\ Ritorna il cognome dell'utente;
+\item \texttt{+ void setSurName(String surName):}\\ Imposta il cognome dell'utente;
+\item \texttt{+ Date getDateOfBirth():}\\ Ritorna la data di nascita dell'utente;
+\item \texttt{+ void setDateOfBirth(Date dateOfBirth):}\\ Imposta la data di nascita dell'utente;
+\item \texttt{+ String getEmail():}\\ Ritorna l'indirizzo di posta elettronica dell'utente;
+\item \texttt{+ void setEmail(String email):}\\ Imposta l'indirizzo di posta elettronica dell'utente;
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato all'utente;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato all'utente.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Process}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcess;
+\item \textbf{Descrizione:} verifica della corretta gestione dei processi.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getName():}\\ Ritorna il nome del processo;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome del processo;
+\item \texttt{+ String getDescription():}\\ Ritorna la descrizione del processo;
+\item \texttt{+ void setDescription(String description):}\\ Imposta la descrizione del processo;
+\item \texttt{+ int getCompletionsMax():}\\ Restituisce il numero massimo di completamenti del processo;
+\item \texttt{+ void setCompletionsMax(int completionsMax):}\\ Imposta il numero massimo di completamenti del processo;
+\item \texttt{+ Date getDateOfTermination():}\\ Ritorna data di terminazione del processo;
+\item \texttt{+ void setDateOfTermination(Date dateOfTermination):}\\ Imposta la data di terminazione del processo;
+\item \texttt{+ boolean isTerminated():}\\ Ritorna vero se il processo è terminato;
+\item \texttt{+ void setTerminated(boolean terminated):}\\ Imposta vero se il processo è terminato;
+\item \texttt{+ int getMaxTree():}\\ Ritorna il massimo alberi del processo;
+\item \texttt{+ void setMaxtree(int maxTree):}\\ Imposta il massimo alberi del processo;
+\item \texttt{+ List<Integer> getStepsId():}\\ Ritorna lista di codici \texttt{id} relativi ai passi del processo;
+\item \texttt{+ void setStepsId(List<Integer> stepsId):}\\ Imposta lista di codi \texttt{id} relativi ai passi del processo;
+\item \texttt{+int getId():}\\ Ritorna codice identificativo \texttt{id} associato al processo;
+\item \texttt{+void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al processo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Step}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testStep;
+\item \textbf{Descrizione:} Verifica della corretta gestione dei passi.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice identificativo \texttt{id} associato al passo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al passo;
+\item \texttt{+ String getDescription():}\\ Ritorna descrizione del passo;
+\item \texttt{+ void setDescription(String description):}\\ Imposta descrizione del passo;
+\item \texttt{+ List<Data> getData():}\\ Ritorna lista con i campi dato del passo;
+\item \texttt{+ void setData(List<Data> data):}\\ Imposta lista con i campi dato del passo;
+\item \texttt{+ List<Condition> getConditions():}\\ Ritorna lista delle condizioni di avanzamento del passo;
+\item \texttt{+ void setConditions(List<Condition conditions):}\\ Imposta lista delle condizioni di avanzamento del passo;
+\item \texttt{+ int getProcessId():}\\ Ritorna codice \texttt{id} associato al processo padre;
+\item \texttt{+ void setProcessId(int processId):}\\ Imposta codice \texttt{id} associato al processo padre;
+\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il passo è primo per il processo padre;
+\item \texttt{+ void setFirst():}\\ Imposta vero se il passo è primo per il processo padre. 
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Data}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testData;
+\item \textbf{Descrizione:} verifica della corretta gestione dei dati;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getName():}\\ Ritorna il nome del campo dati;
+\item \texttt{+ void setName(String name):}\\ Imposta il nome del campo dati;
+\item \texttt{+ DataType getType():}\\ Ritorna il tipo di dato richiesto dal campo;
+\item \texttt{+ void setType(DataType type):}\\ Imposta il tipo di dato richiesto dal campo;
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato al campo dati;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato al campo dati.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Condition}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testCondition;
+\item \textbf{Descrizione:} verifica della corretta gestione delle condizioni di terminazione passo;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato alla condizione di avanzamento;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato alla condizione di avanzamento;
+\item \texttt{+ boolean isRequiresApproval():}\\ Ritorna vero se è richiesta l'approvazione del \textit{Process Owner};
+\item \texttt{+ void setRequiresApproval(boolean requiresApproval):}\\ Imposta vero se è richiesta l'approvazione del \textit{Process Owner};
+\item \texttt{+ List<Constraint> getConstraints():}\\ ritorna lista di vincoli che soddisfano la condizione di avanzamento;
+\item \texttt{+ void setConstraints(List<Constraint> constraints):}\\ Imposta lista di vincoli che soddisfano la condizione di avanzamento;
+\item \texttt{+ boolean isOptional():}\\ Ritorna vero se la condizione è opzionale per l'avanzamento;
+\item \texttt{+ void setOptional(boolean optional):}\\ Imposta vero se la condizione è opzionale per l'avanzamento;
+\item \texttt{+ int getNextStepId():}\\ Ritorna codice \texttt{id} del passo successivo;
+\item \texttt{+ void setNextStepId(int nextStepId):}\\ Imposta codice \texttt{id} del passo succesivo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Constraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testConstraint;
+\item \textbf{Descrizione:} verifica della corretta gestione dei vincoli di passo;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ Data getAssociatedData():}\\ Ritorna il campo dati su cui è posto il vincolo;
+\item \texttt{+ void setAssociatedData(Data associatedData):}\\ Imposta il campo dati sui cui è posto il vincolo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{NumericConstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testNumeriConstraint;
+\item \textbf{Descrizione:} corretta gestione dei vincoli numerici.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ int getMinDigits():}\\ Ritorna minimo numero di cifre;
+\item \texttt{+ void setMinDigits(int minDigits):}\\ Imposta minimo numero di cifre;
+\item \texttt{+ int getMaxDigits():}\\ Ritorna massimo numero di cifre;
+\item \texttt{+ void setMaxDigits(int maxDigits):}\\ Imposta massimo numero di cifre;
+\item \texttt{+ boolean isDecimal():}\\ Ritorna vero se atteso un decimale;
+\item \texttt{+ void setDecimal(boolean decimal):}\\ Imposta vero se atteso un decimale;
+\item \texttt{+ double getMinValue():}\\ Ritorna valore minimo;
+\item \texttt{+ void setMinValue(double minValue):}\\ Imposta valore minimo;
+\item \texttt{+ double getMaxValue():}\\ Ritorna valore massimo;
+\item \texttt{+ void setMaxValue(double maxValue):}\\ Imposta valore massimo;
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{TemporalConstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testTemporalContraint;
+\item \textbf{Descrizione:} verifica corretta gestione dei vincoli temporali;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ Date getBegin():}\\ Ritorna inizio arco temporale valido;
+\item \texttt{+ void setBegin(Date begin):}\\ Imposta inizio arco temporale valido;
+\item \texttt{+ Date getEnd():}\\ Ritorna fine arco temporale valido;
+\item \texttt{+ void setEnd(Date end):}\ Imposta fine arco temporale valido.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{GeographicConstraint}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testGeographicContraint;
+\item \textbf{Descrizione:} verifica della corretta gestione dei vincoli di posizione.
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} del vincolo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} del vincolo;
+\item \texttt{+ double getLatitude():}\\ Ritorna latitudine richiesta;
+\item \texttt{+ void setLatitude(double latitude):}\\ Imposta latitudine richiesta;
+\item \texttt{+ double getLongitude():}\\ Ritorna longitudine richiesta;
+\item \texttt{+ void setLongitude(double longitude):}\\ Imposta longitudine richiesta;
+\item \texttt{+ double getAltitude():}\\ Ritorna altitudine richiesta;
+\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine richiesta;
+\item \texttt{+ double getRadius():}\\ Ritorna raggio di tolleranza;
+\item \texttt{+ void setRadius(double radius):}\\ Imposta raggio di tolleranza.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{DataSent}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testDataSent;
+\item \textbf{Descrizione:} Verifica della corretta gestione dei dati inseriti dagli utenti;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUser():}\\ Ritorna nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ DataType getType():}\\ Ritorna il tipo del dato inviato;
+\item \texttt{+ void setType(DataType type):}\\ Imposta il tipo del dato inviato;
+\item \texttt{+ IDataValue getValue():}\\ Ritorna oggetto con il valore del dato;
+\item \texttt{+ void setValue(IDataValue value):}\\ Imposta oggetto con il valore del dato;
+\item \texttt{+ int getStepId():}\\ Ritorna codice \texttt{id} del passo richiedente il dato;
+\item \texttt{+ void setStepId(int stepId):}\\ Imposta codice \texttt{id} del passo richiedente il dato.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{IDataValue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testIDataValue;
+\item \textbf{Descrizione:} verifica del corretto ritorno per i dati ricevuti dagli utenti;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{TextualValue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testTextualValue;
+\item \textbf{Descrizione:} verifica del corretto ritorno e importazione dei dati di tipo testuale;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getValue():}\\ Ritorna valore testuale;
+\item \texttt{+ void setValue(String value):}\\ Imposta valore testuale.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{NumericValue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testNumericValue;
+\item \textbf{Descrizione:} verifica del corretto ritorno e importazione dei dati di tipo numerico;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ double getValue():}\\ Ritorna valore numerico;
+\item \texttt{+ void setValue(double value):}\\ Imposta valore numerico.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ImageValue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testImageValue;
+\item \textbf{Descrizione:} verifica del corretto ritorno e importazione dei dati di tipo immagine;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getImageUrl():}\\ Ritorna percorso \textit{URL} dell'immagine;
+\item \texttt{+ void setImageUrl(String imageUrl):}\\ Imposta percorso \textit{URL} dell'immagine.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{GeographicValue}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testGeographicValue;
+\item \textbf{Descrizione:} verifica del corretto ritorno e importazione dei dati di tipo geografico;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ double getLatitude():}\\ Ritorna latitudine;
+\item \texttt{+ void setLatitude(double latitude):}\\ Imposta latitudine;
+\item \texttt{+ double getLongitude():}\\ Ritorna longitudine;
+\item \texttt{+ void setLongitude(double longitude):}\\ Imposta longitudine;
+\item \texttt{+ double getAltitude():}\\ Ritorna altitudine;
+\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{UserStep}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testUserStep;
+\item \textbf{Descrizione:} verifica della corretta gestione dei passi che sono in corso;
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getCurrentStepId():}\\ Ritorna il codice \texttt{id} del passo attuale;
+\item \texttt{+ void setCurrentStepId(int currentStepId):}\\ Imposta il codice \texttt{id} del passo attuale;
+\item \texttt{+ stepStates getState():}\\ Ritorna stato avanzamento;
+\item \texttt{+ void setStates(stepStates state):}\\ Imposta stato avanzamento;
+\item \texttt{+ String getUser():}\\ Restituisce nome utente dell'utente in caso;
+\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente in caso.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessOwner}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Classe utilizzata per i test:} testProcessOwner;
+\item \textbf{Descrizione:} verifica della corretta gestione dell'ambito \textit{process owner};
+\item \textbf{Verifica dei metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getUserName():}\\ Ritorna il nome utente del \textit{Process Owner};
+\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente del \textit{Process Owner};
+\item \texttt{+ String getPassword():}\\ Ritorna la password del \textit{Process Owner};
+\item \texttt{+ void setPassword(String password):}\\ Imposta la password del \textit{Process Owner}. 
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Esito:} Superato;
+\end{itemize}
+\end{flushleft}

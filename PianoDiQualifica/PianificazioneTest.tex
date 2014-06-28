@@ -20,12 +20,21 @@ In questo modo i componenti base vengono testati più volte riducendo la possibi
 Nel diagramma 
 \subsubsection{Descrizione dei test di integrazione}
 Di seguito sono elencati i test di integrazione relativo ai componenti indicati in \infoST.
-\LTXtable{\textwidth}{Dettagliotestintegrazione.tex}
-%da fare
+\input{Dettagliotestintegrazione.tex}
 \subsection{Test di unità}
-I test di unità sulle view sono effettuati creando una nuova classe basata sulla precedente e definita "testnome" ed invocando il metodo test con i rispettivi parametri.
+I test di unità sulle view sono effettuati creando una nuova classe basata sulla precedente denominata \textit{"testnomeclasse"} ed invocando i metodi di test con i rispettivi parametri.
+\subsubsection{Test di unità per view}
+\input{../DefinizioneDiProdotto/PackageCommands.tex}
+Per la \textit{View}, essendo le classi prive di metodi, viene creato un metodo TestView() che riceve come parametro il tipo di dato richiesto e se ne verifica il risultato ottenuto confrontandolo con quello atteso.
 \input{TestUnitaView.tex}
-%\input{TestUnitaPresenter.tex} da fare
+\subsubsection{Test di unità per presenter}
+Per le classi \textit{Presenter} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
+\input{TestUnitaPresenter.tex}
+\subsubsection{Test di unità per model}
+Per le classi \textit{Model} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
+\input{TestUnitaModel.tex}
+\subsubsection{Descrizione dei test di validazione}
+I test di validazione saranno definiti in seguito.
 
 
 
