@@ -1,6 +1,13 @@
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.user}
-\textbf{IMMAGINE PACKAGE}
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./classi/server/presenteruser.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.user}}
+\end{figure}
 \paragraph{UserStepController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/userstepcontroller.png} \caption{Diagramma classe - \texttt{UserStepController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe gestisce la ricezione dei dati di un passo inviati da un utente tramite una richiesta di tipo \textit{POST}, tale passo dovrà essere inserito nel database, ponendo attenzione se è un passo che richiede approvazione o meno;
 	\item \textbf{Mappatura base: } \textit{\textbackslash stepdata\textbackslash user}
@@ -22,6 +29,10 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{UserProcessController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/userprocesscontroller.png} \caption{Diagramma classe - \texttt{UserProcessController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe permette all' utente varie operazioni, innanzitutto l' iscrizione ad un processo, poi restituisce il passo a cui è arrivato e il suo stato per tale processo e infine fornisce una lista di processi con tutti i processi a cui si può iscrivere e i processi per i quali può chiedere di fare il \textit{report};
 	\item \textbf{Mappatura base: } \textit{\textbackslash user\textbackslash \{username\}}
@@ -48,6 +59,10 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{AccountController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/accountcontroller.png} \caption{Diagramma classe - \texttt{AccountController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Classe che fornisce i dati di un utente e ne permette la modifica dei suddetti;
 	\item \textbf{Mappatura base: } \textit{\textbackslash account\textbackslash \{username\}}
@@ -70,6 +85,10 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{ReportController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/reportcontroller.png} \caption{Diagramma classe - \texttt{ReportController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe fornirà al client tutti i dati necessari per creare il report di un utente per un certo processo;
 	\item \textbf{Mappatura base: } \textit{\textbackslash report\textbackslash \{username\}\textbackslash \{processid\}}

@@ -17,9 +17,16 @@ Tale componente è composta dalle classi:
 Nella prossime sessioni verranno trattate in dettaglio le seguenti classi dividendo l' esposizione per \textit{package}, si evidenzia come la voce mappatura base sia l' estensione della mappatura su cui si programma il sistema che sarà \textit{localhost:8080/sequenziatore/} , quindi tutte le mappature base saranno da considerarsi come aggiunte a seguito di /sequenziatore/ e successivamente le varie varianti dei metodi.
 Tutte le classi \textit{controller} del \textit{presenter} dovranno essere marcate come \textit{@Controller} per essere riconosciute in modo corretto da \textit{Spring}.
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.common}
-\textbf{IMMAGINE DEL PACKAGE}
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/presentercommon.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.common}}
+\end{figure}
 All' interno di questa sezione verranno trattate tutte le classi contenute nel package \textit{common}.
-\paragraph{Classe SignUpController}%--------------------------------------------------------%
+\paragraph{SignUpController}%--------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/signupcontroller.png} \caption{Diagramma classe - \texttt{SignUpController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe dovrà gestire tutte le richieste di registrazione al sistema, sarà incaricata di inserire i dati nel database e di avvertire il client della riuscita della registrazione.
 	\item \textbf{Mappatura base: }\textit{\textbackslash signup}
@@ -40,6 +47,10 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 				\end{itemize}
 \end{itemize}
 \paragraph{LoginController}%--------------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/logincontroller.png} \caption{Diagramma classe - \texttt{LoginController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: }Questa classe gestirà le richieste di \textit{log in}, dovrà controllare se l' utente esiste nel sistema e se le credenziali d' accesso sono corrette restituendo il tipo di utente altrimenti un errore se l' utente non esiste nel sistema;
 	\item \textbf{Mappatura base: }\textit{\textbackslash login}
@@ -60,6 +71,10 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 				\end{itemize}
 \end{itemize}
 \paragraph{StepInfoController}%--------------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/stepinfocontroller.png} \caption{Diagramma classe - \texttt{StepInfoController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: }Questa classe restituirà lo scheletro, quindi la composizione del passo richiesto;
 	\item \textbf{Mappatura base: }\textit{\textbackslash step\textbackslash \{id\}}
@@ -80,6 +95,10 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 				\end{itemize}
 \end{itemize}
 \paragraph{ProcessInfoController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/processinfocontroller.png} \caption{Diagramma classe - \texttt{ProcessInfoController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe dovrà restituire a chi lo richiede un processo dato l' \textit{id} con i suoi dati;
 	\item \textbf{Mappatura base: }\textit{\textbackslash process\textbackslash \{id\}}

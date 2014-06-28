@@ -1,6 +1,13 @@
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.processowner}
-\textbf{IMMAGINE PACKAGE}
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./classi/server/presenterprocessowner.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.processowner}}
+\end{figure}
 \paragraph{StepController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/stepcontroller.png} \caption{Diagramma classe - \texttt{StepController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe dovrà fornire al \textit{process owner} tutti i dati inseriti dagli utenti per un dato passo, quindi dovrà restituire una collezione di dati al process owner il quale potrà visionarli;
 	\item \textbf{Mappatura base: } \textit{\textbackslash stepdata\textbackslash \{idstep\}\textbackslash processowner}
@@ -21,6 +28,10 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{ProcessController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/processcontroller.png} \caption{Diagramma classe - \texttt{ProcessController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe permetterà la creazione di un processo da parte del \textit{process owner} e sarà adibita a fornire la lista di tutti i processi esistenti nel sistema;
 	\item \textbf{Mappatura base: } \textit{\textbackslash process\textbackslash processowner}
@@ -44,6 +55,10 @@
 				\end{itemize}
 \end{itemize}
 \paragraph{ApproveStepController}%----------------------------------------------------------------%
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/approvestepcontroller.png} \caption{Diagramma classe - \texttt{ApproveStepController}}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe serve per fornire al \textit{process owner} i dati da approvare e per gestire quali passi siano stati approvati quali no, qualora un passo non venga approvato, verrà rimosso dal \textit{database};
 	\item \textbf{Mappatura base: } \textit{\textbackslash approvedata}
