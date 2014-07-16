@@ -4,8 +4,13 @@
 \newcommand{\doctitle}{\doctitleG}%nome documento
 \newcommand{\info}{\infoG}
 
+
 \input{../modello/layout.tex}% layout
 \begin{document}
+\input{../modello/firstpage.tex} % pagina
+\pagestyle{romano}
+\input{DiarioModifiche.tex}
+\clearpage
 \pagenumbering{arabic}%numeri di pagina arabi
 \input{Definizioni.tex}
 \end{document}
