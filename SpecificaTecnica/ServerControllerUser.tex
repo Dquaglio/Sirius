@@ -1,34 +1,34 @@
 \subsubsection{Package com.sirius.sequenziatore.server.controller.user}
-\paragraph{AccountController}
-	\begin{itemize}
-		\item \textbf{Nome:} \texttt{AccountController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.user
-		\item \textbf{Descrizione:} classe che permette la modifica dei dati di un utente come password o altre informazioni inerenti ai dettagli personali di un utente;
-		\item \textbf{Relazione con altre componenti:} la classe richiama i metodi della classe:
-		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
-		\end{itemize}
-	\end{itemize}
+%\paragraph{AccountController}
+%	\begin{itemize}
+	%	\item \textbf{Nome:} \texttt{AccountController};
+	%	\item \textbf{Package:} com.sirius.sequenziatore.server.controller.user
+	%	\item \textbf{Descrizione:} classe che permette la modifica dei dati di un utente come password o altre informazioni inerenti ai dettagli personali di un utente;
+	%	\item \textbf{Relazione con altre componenti:} la classe richiama i metodi della classe:
+	%	\begin{itemize}
+	%		\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+	%	\end{itemize}
+	%\end{itemize}
 %-----------------------------------------------------------------------------------------------%
 \paragraph{UserProcessController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{UserProcessController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.user
-		\item \textbf{Descrizione:} classe che restituisce all' utente i dati di uno o più processi, può inoltre permettere l' inoltro della richiesta di un utente a iscriversi o disiscriversi a un processo;
+		\item \textbf{Package:} \texttt{com.sirius.sequenziatore.server.controller.user}
+		\item \textbf{Descrizione:} classe che restituisce all' utente i dati di uno o più processi, l' esito della richiesta di un utente a iscriversi o disiscriversi a un processo e lo stato di un utente per un processo;
 		\item \textbf{Relazione con altre componenti:} la classe richiama i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item \texttt{com.sirius.sequenziatore.server.service.UserProcessService;}
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
 \paragraph{UserStepController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{UserStepController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.user
-		\item \textbf{Descrizione:} Gestisce l' esecuzione di un passo da parte di un utente inoltrando la richiesta di inserire i dati nel \textit{database} e in caso sia richiesto, notifica l' amministratore che deve controllare se il passo è stato completato, inoltre è incaricato di restituire i dati inseriti di un passo quando richiesto da un utente;
+		\item \textbf{Package:} \texttt{com.sirius.sequenziatore.server.controller.user}
+		\item \textbf{Descrizione:} riceve la richiesta da parte del client per il salvataggio dei dati di un passo da parte di un utente;
 		\item \textbf{Relazione con altre componenti:} la classe richiama i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item \texttt{com.sirius.sequenziatore.server.service.UserStepService;}
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%
@@ -36,10 +36,10 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ReportController};
 		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.user
-		\item \textbf{Descrizione:} Classe che fornisce i dati per generare il report dell' utente riferito al processo richiesto;
+		\item \textbf{Descrizione:} Classe riceve la richiesta da parte di un utente che vuole ottenere i dati per generare il report di processo richiesto;
 		\item \textbf{Relazione con altre componenti:} la classe richiama i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item com.sirius.sequenziatore.server.service.ReportService;
 		\end{itemize}
 	\end{itemize}
 %-----------------------------------------------------------------------------------------------%

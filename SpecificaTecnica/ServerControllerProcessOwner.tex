@@ -2,32 +2,32 @@
 \paragraph{ProcessController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ProcessController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.processowner
-		\item \textbf{Descrizione:} Classe che riceve le richieste da parte del \textit{process owner} per la gestione dei processi come ad esempio la creazione, la modifica e la eliminazione degli stessi;
+		\item \textbf{Package:} \texttt{com.sirius.sequenziatore.server.controller.processowner}
+		\item \textbf{Descrizione:} Classe che riceve le richieste da parte del \textit{process owner} per la gestione dei processi e ne affida l' elaborazione al rispettivo service;
 		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item \texttt{com.sirius.sequenziatore.server.service.ProcessService;}
 		\end{itemize}
 	\end{itemize}
 %----------------------------------------------------------------------------------------------%
 \paragraph{StepController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{StepController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.processowner
-		\item \textbf{Descrizione:} Classe che permette l' elaborazione delle richieste del \textit{process owner} per quanto concerne la creazione,la rimozione e la modifica di singoli passi, per esempio permetterà di aggiungere o rimuovere dei campi richiesti;
+		\item \textbf{Package:} \texttt{com.sirius.sequenziatore.server.controller.processowner}
+		\item \textbf{Descrizione:} Classe che riceve le richieste del \textit{process owner} per quanto concerne l' ottenere i dati per un dato passo;
 		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item com.sirius.sequenziatore.server.service.StepService;
 		\end{itemize}
 	\end{itemize}
 	%----------------------------------------------------------------------------------------------%
 \paragraph{ApproveStepController}
 	\begin{itemize}
 		\item \textbf{Nome:} \texttt{ApproveStepController};
-		\item \textbf{Package:} com.sirius.sequenziatore.server.controller.processowner
-		\item \textbf{Descrizione:} Classe che permette al process owner la gestione dei passi da approvare, quindi con questa classe si forniranno la lista di passi da approvare e si gestirà la approvazione o il rifiuto dei suddetti in base all' esito del process owner;
+		\item \textbf{Package:} \texttt{com.sirius.sequenziatore.server.controller.processowner}
+		\item \textbf{Descrizione:} Classe che ritorna al process owner la lista di passi da approvare e riceverà le richieste di approvazione o o di rifiuti dei passi delegandone l' elaborazione al service;
 		\item \textbf{Relazione con altre componenti:} la classe invoca i metodi della classe:
 		\begin{itemize}
-			\item com.sirius.sequenziatore.server.model.IDataAccessObject;
+			\item \texttt{com.sirius.sequenziatore.server.service.ApproveStepService;}
 		\end{itemize}
 	\end{itemize}
