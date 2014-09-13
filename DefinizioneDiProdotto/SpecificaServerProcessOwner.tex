@@ -1,7 +1,7 @@
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.processowner}
 \begin{figure}[H] \centering \includegraphics[width=%
 \textwidth]
-{./classi/server/presenterprocessowner.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.processowner}}
+{./classi/server/controllerprocessowner.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.processowner}}
 \end{figure}
 \paragraph{StepController}%----------------------------------------------------------------%
 \
@@ -11,21 +11,18 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe dovrà fornire al \textit{process owner} tutti i dati inseriti dagli utenti per un dato passo, quindi dovrà restituire una collezione di dati al process owner il quale potrà visionarli;
-	\item \textbf{Mappatura base: } \textit{\textbackslash stepdata\textbackslash \{idstep\}\textbackslash processowner}
+	\item \textbf{Mappatura base: } \textit{\slash stepdata\slash \{idstep\}\slash processowner}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
 		\item \texttt{com.sirius.sequenziatore.server.model.DataSent;}
-		\item \texttt{com.sirius.sequenziatore.server.model.StepDao;}
-	\end{itemize}
-	tramite le interfacce:
-	\begin{itemize}
-		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
-		\item \texttt{\sModel .IDataAccessObject;}
+		\item \texttt{com.sirius.sequenziatore.server.service.StepService;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+List<StepData> getStepData():}\\
-					questo metodo gestisce una richiesta di tipo \textbf{GET} che fornisce al \textit{process owner} tutti i dati inviati dagli utenti per un certo passo;
+					\item \texttt{+List<DataSent> getStepData(int idStep):}\\
+					questo metodo gestisce una richiesta di tipo \textbf{GET} che fornisce al \textit{process owner} tutti i dati inviati dagli utenti per un certo passo dopo averli richiesti al service e in caso di errore lancia un' eccezione;
+					 \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
+					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
 				\end{itemize}
 \end{itemize}
 \paragraph{ProcessController}%----------------------------------------------------------------%
@@ -36,24 +33,22 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe permetterà la creazione di un processo da parte del \textit{process owner} e sarà adibita a fornire la lista di tutti i processi esistenti nel sistema;
-	\item \textbf{Mappatura base: } \textit{\textbackslash process\textbackslash processowner}
+	\item \textbf{Mappatura base: } \textit{\slash process\slash processowner}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
 		\item \texttt{com.sirius.sequenziatore.server.model.Process;}
-		\item \texttt{com.sirius.sequenziatore.server.model.ProcessDao;}
-	\end{itemize}
-	tramite le interfacce:
-	\begin{itemize}
-		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
-		\item \texttt{\sModel .IDataAccessObject;}
+		\item \texttt{com.sirius.sequenziatore.server.service.ProcessService;}
+		\item \texttt{com.sirius.sequenziatore.server.controller.utilities.ProcessWrapper;}
 	\end{itemize}
 	\item \textbf{Metodi: }
 				\begin{itemize}
-					\item \texttt{+void createProcess(Process toBeCreated):}\\
-					questo metodo gestisce una richiesta di tipo \textbf{POST} e permette l' inserimento del processo fornito nel \textit{database};
+					\item \texttt{+void createProcess(ProcessWrapper processToBeCreated):}\\
+					questo metodo gestisce una richiesta di tipo \textbf{POST} e incarica il service dell' inserimento del nuovo processo nel database, in caso di errori lancia un' eccezione;
 					\item \texttt{+List<Process> getProcessList():}\\
-					 questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce al \textit{process owner} una lista di processi che può visualizzare;
+					 questo metodo gestisce una richiesta di tipo \textbf{GET} e restituisce al \textit{process owner} una lista di processi che può visualizzare o in caso di errori lancia un' eccezione;
+					  \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
+					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 500.
 				\end{itemize}
 \end{itemize}
 \paragraph{ApproveStepController}%----------------------------------------------------------------%
@@ -64,22 +59,19 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe serve per fornire al \textit{process owner} i dati da approvare e per gestire quali passi siano stati approvati quali no, qualora un passo non venga approvato, verrà rimosso dal \textit{database};
-	\item \textbf{Mappatura base: } \textit{\textbackslash approvedata}
+	\item \textbf{Mappatura base: } \textit{\slash approvedata}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
 		\item \texttt{com.sirius.sequenziatore.server.model.DataSent;}
-		\item \texttt{com.sirius.sequenziatore.server.model.StepDao;}
-	\end{itemize}
-	tramite le interfacce:
-	\begin{itemize}
-		\item \texttt{com.sirius.sequenziatore.server.model.ITransferObject;}
-		\item \texttt{\sModel .IDataAccessObject;}
+		\item \texttt{com.sirius.sequenziatore.server.service.ApproveStepService;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
 					\item \texttt{+List<DataSent> getStepToApprove():}\\
-					 il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo List<DataSent> contenente tutti i dati che richiedono approvazione;
-					\item \texttt{+void approveResponse(int idStep,String usernameww):}\\
-					il metodo gestisce una richiesta di tipo \textit{POST}, riceve i dati di un passo che ha subito la moderazione del \textit{process owner}, tale passo verrà eliminato dal database se il processowner lo ha rifiutato altrimenti verrà approvato definitivamente;  
+					 il metodo gestisce una richiesta di tipo \textit{GET}, e restituirà un oggetto di tipo List<DataSent> contenente tutti i dati che richiedono approvazione, in caso di errore lancia un' eccezione;
+					\item \texttt{+void approveResponse(int idStep,String username):}\\
+					il metodo gestisce una richiesta di tipo \textit{POST}, riceve i dati di un passo che ha subito la moderazione del \textit{process owner} e ne affida al service l' elaborazione, in caso di errore lancia un' eccezione;
+					\item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
+					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
 				\end{itemize}
 \end{itemize}

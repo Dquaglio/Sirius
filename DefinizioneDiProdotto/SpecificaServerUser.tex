@@ -1,17 +1,17 @@
 \subsubsection{Package com.sirius.sequenziatore.server.presenter.user}
-\begin{figure}[H] \centering \includegraphics[width=%
-\textwidth]
-{./classi/server/presenteruser.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.user}}
-\end{figure}
+%\begin{figure}[H] \centering \includegraphics[width=%
+%\textwidth]
+%{./classi/server/controlleruser.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.presenter.user}}
+%\end{figure}
 \paragraph{UserStepController}%----------------------------------------------------------------%
 \
-\begin{figure}[H] \centering
-\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./classi/server/userstepcontroller.png} \caption{Diagramma classe - \texttt{UserStepController}}
-\end{figure}
+%\begin{figure}[H] \centering
+%\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+%{./classi/server/userstepcontroller.png} \caption{Diagramma classe - \texttt{UserStepController}}
+%\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe gestisce la ricezione dei dati di un passo inviati da un utente tramite una richiesta di tipo \textit{POST}, tale passo dovrà essere inserito nel database, ponendo attenzione se è un passo che richiede approvazione o meno;
-	\item \textbf{Mappatura base: } \textit{\textbackslash stepdata\textbackslash user}
+	\item \textbf{Mappatura base: } \textit{\slash stepdata\slash user}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
@@ -37,7 +37,7 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe permette all' utente varie operazioni, innanzitutto l' iscrizione ad un processo, poi restituisce il passo a cui è arrivato e il suo stato per tale processo e infine fornisce una lista di processi con tutti i processi a cui si può iscrivere e i processi per i quali può chiedere di fare il \textit{report};
-	\item \textbf{Mappatura base: } \textit{\textbackslash user\textbackslash \{username\}}
+	\item \textbf{Mappatura base: } \textit{\slash user\slash \{username\}}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
@@ -53,22 +53,22 @@
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
 					\item \texttt{+void processSubscribe()}:\\
-					questo metodo mappa su \textit{\textbackslash subscribe\textbackslash \{processid\}} e gestisce una richiesta di tipo \textbf{POST} che permette ad un utente di iscriversi al processo voluto;
+					questo metodo mappa su \textit{\slash subscribe\slash \{processid\}} e gestisce una richiesta di tipo \textbf{POST} che permette ad un utente di iscriversi al processo voluto;
 					\item \texttt{+List<UserStep> getProcessStatus()}:\\
-					questo metodo mappa su \textit{\textbackslash subscribe\textbackslash \{processid\}} e gestisce una richiesta \textbf{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
+					questo metodo mappa su \textit{\slash subscribe\slash \{processid\}} e gestisce una richiesta \textbf{GET} che restituisce all' utente il proprio status per tale processo, restituendo il passo o i passi che può eseguire e quanti passi ha completato del processo;
 					\item \texttt{+List<Process> getListProcess()}:\\
-					questo processo mappa su \textit{\textbackslash processlist} e gestisce una richiesta di tipo \textbf{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
+					questo processo mappa su \textit{\slash processlist} e gestisce una richiesta di tipo \textbf{GET} andando e restituire una lista di processi che contiene tutti i processi  a cui è iscritto e quelli a cui si può iscrivere;
 				\end{itemize}
 \end{itemize}
 \paragraph{AccountController}%----------------------------------------------------------------%
 \
-\begin{figure}[H] \centering
-\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./classi/server/accountcontroller.png} \caption{Diagramma classe - \texttt{AccountController}}
-\end{figure}
+%\begin{figure}[H] \centering
+%\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+%{./classi/server/accountcontroller.png} \caption{Diagramma classe - \texttt{AccountController}}
+%\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Classe che fornisce i dati di un utente e ne permette la modifica dei suddetti;
-	\item \textbf{Mappatura base: } \textit{\textbackslash account\textbackslash \{username\}}
+	\item \textbf{Mappatura base: } \textit{\slash account\slash \{username\}}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
@@ -89,13 +89,13 @@
 \end{itemize}
 \paragraph{ReportController}%----------------------------------------------------------------%
 \
-\begin{figure}[H] \centering
-\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./classi/server/reportcontroller.png} \caption{Diagramma classe - \texttt{ReportController}}
-\end{figure}
+%\begin{figure}[H] \centering
+%\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+%{./classi/server/reportcontroller.png} \caption{Diagramma classe - \texttt{ReportController}}
+%\end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione: } Questa classe fornirà al client tutti i dati necessari per creare il report di un utente per un certo processo;
-	\item \textbf{Mappatura base: } \textit{\textbackslash report\textbackslash \{username\}\textbackslash \{processid\}}
+	\item \textbf{Mappatura base: } \textit{\slash report\slash \{username\}\slash \{processid\}}
 	\item \textbf{Relazioni con altri componenti: }
 	La classe utilizzerà le seguenti classi:
 	\begin{itemize}
