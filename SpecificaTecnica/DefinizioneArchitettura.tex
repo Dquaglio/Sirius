@@ -32,9 +32,9 @@ Il \textit{presenter} andrà a rappresentare la \textit{application logic} del s
 \subsubsection{Componente Model}
 Questa componente andrà a rappresentare la \textit{business logic} del sistema, e sarà suddivisa tra \textit{client} in minima parte e \textit{server}.
 I ruoli del componente lato \textit{client} saranno di mantenere traccia dell' utente autenticato e di salvare, qualora si decida di implementare questa funzionalità, i dati come per esempio coordinate gps e immagini quando il dispositivo non disporrà di connessione internet.
-\subsection{Componente Service}
+\subsubsection{Componente Service}
 Questa componente risiede nel server, tali classi saranno adibite a svolgere varie operazioni che il \textit{client} non è in grado di eseguire, come controllo della \textit{login} o la creazione di un nuovo utente nel sistema. Una volta eseguite le operazioni passerà l' esito di tali elaborazioni alla componente \textit{Controller}.
-\subsection{Componente Controller}
+\subsubsection{Componente Controller}
 Questa componente è incaricata di ricevere le richieste dal \textit{client} e delegarne l' elaborazione alla componente \textit{service} e di ritornare l' esito dei calcoli al \textit{client}.
 \begin{figure}[H] \centering \includegraphics[width=%
 \textwidth]
