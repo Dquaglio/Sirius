@@ -74,6 +74,8 @@ Al termine di questo periodo il team \emph{Sirius} ha speso di più di quanto pi
 Innanzitutto dalla tabella si nota subito che il ruolo del \emph{progettista} è stato il più richiesto dell' intero periodo e il suo numero di ore effettive del periodo si distacca largamente da quanto pianificato; questo perchè è stato  necessario modificare la specifica tecnica in vari punti in quanto non erano stati considerati molti fattori legati all' utilizzo dei \textit{framework} \emph{Spring} e \emph{Backbone}, infatti a causa di tutto ciò è stato  necessario apportare grandi modifiche ai presenter lato client e server, nate anche dalle considerazioni riportate nella correzione del periodo di progettazione architetturale.
 Il ruolo di \emph{responsabile} non è stato coinvolto come quanto pianificato, infatti la sua necessità è stata sovrastimata durante la pianificazione delle attività in quanto si pensava ci sarebbe stato maggior bisogno del suo intervento.
 Anche il ruolo di \emph{verificatore} è stato poco utilizzato, ma questo non è dovuto a un errore di sovrastima, infatti c'è ancora una grande necessità di eseguire attività di verifica, ma in quanto è stato necessario rivedere l' architettura del sistema in modo quanto più ottimale possibile, si è deciso di utilizzare maggiormente le risorse nella stesura dei documenti di \DefinizioneDiProdotto  e di \SpecificaTecnica  sperando di ridurre così nel periodo di Validazione la necessità di \emph{progettisti}, andando a utilizzare le risorse risparmiate in \emph{verificatori}.
+\subsubsection{Conclusioni}
+Il gruppo \emph{Sirius} nei precedenti periodi ha risparmiato 192\euro , aggiungendo a tale cifra i 197\euro di negativo di questo periodo si ottiene che il budget è in negativo di 5\euro , anche se tale cifra non è elevata, è comunque un indice negativo e i soldi risparmiati in precedenza non possono essere più usati per attività di verifica e validazione ulteriori sul prodotto; ad ogni modo avendo realizzato un' architettura di dettaglio quanto più ottimale possibile, non dovrebbe essere necessario nel prossimo periodo apportarci grandi modifiche, quindi sarà possibile incentrare le risorse del team in attività di verifica e validazione andando così a migliorare la qualità del software realizzato.
 \subsection{Validazione}
 Qui di seguito viene riportata la tabella del consuntivo riguardante il periodo di validazione.
 \begin{center}
@@ -86,15 +88,71 @@ Qui di seguito viene riportata la tabella del consuntivo riguardante il periodo 
 Responsabile & 33 & 990 & 2 & 60 \\
 Amministratore & 20 & 400 & 2 & 40 \\
 Analista & 0 & 0 & 0 & 0 \\
-Progettista & 24 & 528 & 4 & 88 \\
+Progettista & 24 & 528 & 8 & 176 \\
 Verificatore & 77 & 1155 & 125 & 1875 \\
-Programmatore & 15 & 225 & 26 & 390 \\
+Programmatore & 15 & 225 & 24 & 360 \\
 \hline
-\textbf{Totale} & 169 & 3298 & 159 & 2453 \\
+\textbf{Totale} & 169 & 3298 & 161 & 2511 \\
 \hline
 \end{tabular}
 \\
 Tabella 15: Tabella di confronto tra preventivo e consuntivo per il periodo di VV.
 \end{center}
-\subsection{Preventivo a finire}
-Il gruppo \emph{Sirius} nei precedenti periodi ha risparmiato 192\euro , aggiungendo a tale cifra i 197\euro di negativo di questo periodo si ottiene che il budget è in negativo di 5\euro , anche se tale cifra non è elevata, è comunque un indice negativo e i soldi risparmiati in precedenza non possono essere più usati per attività di verifica e validazione ulteriori sul prodotto; ad ogni modo avendo realizzato un' architettura di dettaglio quanto più ottimale possibile, non dovrebbe essere necessario nel prossimo periodo apportarci grandi modifiche, quindi sarà possibile incentrare le risorse del team in attività di verifica e validazione andando così a migliorare la qualità del software realizzato.
+Come si può subito notare le ore, ma in particolare il costo di questo periodo, si discostano molto da quanto preventivato e andremo ora a esaminare i ruoli più rilevanti e il loro utilizzo durante questo periodo.
+\subsubsection{Verificatore}
+Certamente il ruolo più attivo dell' intero periodo, infatti è stato necessario eseguire una grande quantità di test sia nella parte server, sia nella parte client dopo aver modificato buona parte dell' architettura nel periodo precedente. Il condensarsi di tutte queste ore in questo periodo è dato dal fatto che il gruppo non era stato in grado di dedicare abbastanza ore ai test nel periodo precedente in quanto aveva dovuto concentrarsi sulla stesura di una architettura solida e a sviluppare una \textit{demo} funzionante. Certamente tutto si sarebbe potuto evitare realizzando una architettura sana in principio.
+\subsubsection{Programmatore}
+La differenza di ore non è molta, ciononostante sono state necessarie ore extra rispetto a quanto preventivato, questo è stato dato dal fatto che dopo l' incontro con Gregorio Piccoli, è stato necessario apportare piccole modifiche all ' interfaccia grafica e anche al server. Certamente se un incontro con il proponente fosse stato fissato prima si sarebbe potuto ottenere un \textit{feedback} che avrebbe permesso al gruppo di risparmiare queste ore.
+\subsubsection{Progettista}
+L' architettura sviluppata nel precedente periodo è stata sviluppata abbastanza bene e a parte errori nella documentazione, non è stato necessario modificare quasi nulla nell' architettura. Certamente le ore risparmiate in questo periodo sono un magro compenso rispetto all' enorme quantità di ore in eccesso nel precedente periodo.
+\subsection{Totale}
+Viene riportato di seguito il consuntivo dell' intero sviluppo del progetto.\\
+Qui di seguito viene riportata la tabella che riporta le ore preventivate e effettive al termine dello sviluppo del progetto, senza prendere in considerazione il periodo di Analisi.
+\begin{center}
+\begin{tabular}{| l | c | c | c | c |}
+\hline
+\multicolumn{1}{| c |}{Ruoli} & \multicolumn{2}{c}{Preventivo} & \multicolumn{2}{ c|}{Consuntivo}\\
+\cline{2-5}
+& Ore & Costo (\euro) & Ore & Costo(\euro) \\
+\hline
+Responsabile & 106 & 3180 & 29 & 870 \\
+Amministratore & 34 & 680 & 37 & 740 \\
+Analista & 53 & 1325 & 35 & 875 \\
+Progettista & 172 & 3784 & 266 & 5852 \\
+Verificatore & 192 & 2880 & 191 & 2865 \\
+Programmatore & 79 & 1185 & 72 & 1080 \\
+\hline
+\textbf{Totale} & 636 & 13034 & 630 & 12282 \\
+\hline
+\end{tabular}
+\\
+Tabella 16: Tabella di confronto tra preventivo e consuntivo per l' intero periodo di sviluppo(analisi esclusa).
+\end{center}
+\begin{center}
+\begin{tabular}{| l | c | c | c | c | c | c | c |}
+\hline
+Membro & Re & Am & An & Pt & Ve & Pr & ore totali \\
+\hline
+Botter Marco & 4 & 4 & 4 & 52 & 29 & 12 & 105 \\
+
+Giachin Vanni & 8 & 8 & 9 & 48 & 19 & 13 & 105 \\
+
+Marcomin Gabriele & 6 & 7 & 2 & 53 & 24 & 13 & 105 \\
+
+Quaglio Davide & 5 & 9 & 9 & 45 & 25 & 12 & 105 \\
+
+Santangelo Davide & 2 & 7 & 3 & 33 & 50 & 10 & 105 \\
+
+Seresin Davide & 4 & 2 & 8 & 35 & 44 & 12 & 105 \\
+\hline
+\end{tabular}
+\\
+Tabella 17: Ore per membro,senza periodo di analisi.
+\end{center}
+Il seguente grafico riporta le ore effettivamente impiegate da ciascun componente per lo sviluppo del progetto senza prendere in considerazione il periodo di analisi
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{../modello/img/totruoli.png} \caption{ore impiegate da ciascun componente}
+\end{figure}
+\subsubsection{Conclusioni}
+Come si può notare da quanto riportato sopra, sono state impiegate \textbf{105} ore per ciascun componente determinando un costo totale di \textbf{12282\euro} . Rispetto a quanto preventivato il gruppo è riuscito a risparmiare 752\euro , ciononostante, dati i problemi avuti durante il periodo di progettazione di dettaglio e codifica che poi hanno avuto effetto anche nell' ultimo periodo, andando a variare in modo rilevante le ore e le attività pianificate, sarebbe stato possibile ottenere un ben più largo guadagno, che con il senno di poi si sarebbe facilmente ottenuto con una pianificazione dalla grana più fine, e ponendo una particolare attenzione alle singole esigenze dei singoli componenti del gruppo.
