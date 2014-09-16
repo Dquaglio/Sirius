@@ -1,6 +1,6 @@
 \section{Argomenti trattati}
 
-A seguito dell'incontro avvenuto con il rappresentante della Zucchetti \textit{S.p.a}, sono venute alla luce mancanze e incomprensioni da parte del team \emph{Sirius}. L'incontro si può considerare prolifico e sono state suggerite migliorie da portare al prodotto finale
+A seguito dell'incontro avvenuto con il rappresentante dell'azienda  \textit{Zucchetti S.p.a}, sono venute alla luce mancanze e incomprensioni da parte del team \textit{Sirius}. L'incontro si può considerare prolifico e sono state identificate migliorie da portare al prodotto finale.
 
 \subsection{Struttura di un processo}
 
@@ -12,29 +12,29 @@ I blocchi possono essere di due tipi:
 	\item blocchi di passi non ordinati.
 \end{itemize}
 I blocchi non ordinati possono richiedere il completamento di uno, alcuni, o tutti i passi di quest'ultimo.
-Per gestire i collegamenti tra i passi, ci è stato consigliato di utilizzare la possibilità di effettuare il trascinamento degli elementi HTML\ped{G}.
+Per gestire i collegamenti tra i passi, ci è stato consigliato di utilizzare la possibilità di effettuare il trascinamento degli elementi  \textit{HTML\ped{G}}.
 
 
 \subsection{Usabilità}
 Per migliorare l'usabilità del prodotto finale, sono stati suggerite le seguenti caratteristiche:
 \begin{itemize}
-	\item il process owner\ped{G}, per ogni processo, deve poter ricercare i dati filtrando per passo o per utente	
+	\item l'utente \textit{process owner}\ped{G}, per ogni processo, deve poter ricercare i dati filtrando per passo o per utente;
 	\item la navigazione nei passi da controllare deve essere espansa;
 	\item aggiungere help per comprendere tutte le funzionalità;
 	\item aggiungere colori per suddividere logicamente le tipologie di blocchi e passi;
-	\item espandere le possibilità di navigazione del process owner nella gestione dei processi.
+	\item espandere le possibilità di navigazione dell'utente \textit{process owner}\ped{G} nella gestione dei processi.
 \end{itemize}
 
 \subsection{Notifiche}
-Il process owner deve poter essere avvisato della presenza di nuovi processi che richiedono intervento umano. È apprezzato l'utilizzo di avvisi grafici come colorazioni del pulsante di \textit{controllo passi}, e la segnalazione del numero di passi in attesa.
+L'utente \textit{process owner}\ped{G} deve poter essere avvisato della presenza di nuovi processi che richiedono intervento umano. È apprezzato l'utilizzo di avvisi grafici come colorazioni del pulsante di \textit{controllo passi}, e la segnalazione del numero di passi in attesa.
 
 \subsection{Requisiti opzionali}
 É apprezzato il soddisfacimento dei seguenti requisiti suggeriti durante l'incontro:
 \begin{itemize}
 	\item Sarebbe apprezzata la funzionalità di generazione di report in formato PDF\ped{G}. A riguardo il 	proponente ha consigliato l'utilizzo della libreria JSPDF\ped{G};
-	\item La possibilità di eseguire passi anche in assenza di connessione è apprezzata dal proponente 			che, tuttavia, lascia al gruppo la scelta di implementare o meno tale funzionalità.
+	\item La possibilità di eseguire passi anche in assenza di connessione è apprezzata dal proponente che, tuttavia, lascia al gruppo la scelta di implementare o meno tale funzionalità.
 \end{itemize}
 
 
 \subsection{Requisiti tecnologici}
-Per quanto riguarda la funzionalità di ricezione dei processi in attesa di approvazione da parte dell'utente process owner, è stato consigliato di effettuare le chiamate al server tramite la tecnica pooling con un intervallo di circa 30 secondi, piuttosto che tramite Web Socket\ped{G}. É apprezzato  anche l'aggiunta di un pulsante \textit{aggiorna} per forzare il recupero dei dati.
+Per quanto riguarda la funzionalità di ricezione dei processi in attesa di approvazione da parte dell'utente \textit{process owner}\ped{G}, è stato consigliato di effettuare le chiamate al server tramite la tecnica \textit{polling}\ped{G} con un intervallo di circa 30 secondi, piuttosto che tramite \textit{Web Socket}\ped{G}. É apprezzato  anche l'aggiunta di un pulsante \textit{aggiorna} per forzare il recupero dei dati dal \textit{server}\ped{G}.
