@@ -1,4 +1,4 @@
-\subsection{Package sequenziatore.server.model}
+\subsection{Package com.sirius.sequenziatore.server.model}
 \begin{figure}[H] \centering \includegraphics[width=%
 \textwidth]
 {./pack/ClassiServerSoloModel.png} \caption{Diagramma model server}
@@ -44,7 +44,13 @@
 		\end{itemize}
 		La classe invoca i metodi della classe:
 		\begin{itemize}
-			\item \smodel{}.Process.
+			\item \smodel{}.Process;
+			\item \smodel{}.Block;
+			\item \smodel{}.Step;
+			\item \smodel{}.TextualData;
+			\item \smodel{}.NumericData;
+			\item \smodel{}.GeographicData;
+			\item \smodel{}.ImageData.
 		\end{itemize}
 \end{itemize}
 
@@ -77,6 +83,11 @@
 			\item \smodel{}.Step;
 			\item \smodel{}.UserStep;
 			\item \smodel{}.DataSent.
+			\item \smodel{}.Block;
+			\item \smodel{}.TextualValue;
+			\item \smodel{}.NumericValue;
+			\item \smodel{}.GeographicValue;
+			\item \smodel{}.ImageValue.			
 		\end{itemize}
 \end{itemize}
 
@@ -113,6 +124,21 @@
 		\end{itemize}
 \end{itemize}
 
+\paragraph{Block}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{Block};
+\item \textbf{Package:} \texttt{\smodel{}};
+\item \textbf{Descrizione:} Classe che modella i blocchi di passi del sistema e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+		La classe contiene istanze di:
+		\begin{itemize}
+			\item \smodel{}.Step.
+		\end{itemize}
+\end{itemize}
+
 \paragraph{Step}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{Step};
@@ -124,8 +150,10 @@
 		\end{itemize}
 		La classe contiene istanze di:
 		\begin{itemize}
-			\item \smodel{}.Condition;
-			\item \smodel{}.Data.
+			\item \smodel{}.TextualData;
+			\item \smodel{}.NumericData;
+			\item \smodel{}.GeograpgicData;
+			\item \smodel{}.ImageData.
 		\end{itemize}
 \end{itemize}
 
@@ -138,7 +166,7 @@
 		\begin{itemize}
 			\item \smodel{}.ITransferObject.
 		\end{itemize}
-				La classe invoca i metodi della classe:
+				La classe 
 		\begin{itemize}
 			\item \smodel{}.IDataValue.
 		\end{itemize}
