@@ -1,5 +1,23 @@
 \subsection{Package \logic{}}
 
+\paragraph{BaseDispatcher}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{BaseDispatcher};
+\item \textbf{Package:} \texttt{\logic{}};
+\item \textbf{Descrizione:} Classe astratta per le classi delegate al \texttt{dispatching} degli eventi, implementa il pattern Observer.
+\end{itemize}
+\end{flushleft}
+
+\paragraph{BasePresenter}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{BasePresenter};
+\item \textbf{Package:} \texttt{\logic{}};
+\item \textbf{Descrizione:} Classe astratta per le classi \texttt{Presenter} degli eventi.
+\end{itemize}
+\end{flushleft}
+
 \paragraph{Router}
 \begin{flushleft}
 \begin{itemize}
@@ -11,6 +29,7 @@
 La classe reperisce le informazioni di sessione dalla classe \texttt{\model{}::U\fshyp{}ser\fshyp{}Mo\fshyp{}del} e comunica con le seguenti classi se l'utente dispone dei diritti d'accesso necessari:
 \begin{itemize}
 \item \texttt{\logic{}Lo\fshyp{}gin};
+\item \texttt{\logic{}Ba\fshyp{}se\fshyp{}Di\fshyp{}spat\fshyp{}cher};
 \item \texttt{\logicUser{}Re\fshyp{}gis\fshyp{}ter};
 \item \texttt{\logicUser{}Ma\fshyp{}in\fshyp{}Us\fshyp{}er};
 \item \texttt{\logicUser{}Us\fshyp{}er\fshyp{}Da\fshyp{}ta};

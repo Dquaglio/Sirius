@@ -1,41 +1,15 @@
 \subsection{Package \model{}}
+\begin{figure}[H]
+\centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./pack/clientmodel.png} \caption{Diagramma modello lato \texttt{user}}
+\end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./pack/clientmodel.png} \caption{Diagramma modello lato \textit{client}}
+{./pack/clientmodelPO.png} \caption{Diagramma modello lato \texttt{process owner}}
 \end{figure}
-
-\paragraph{ProcessModel}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{ProcessModel};
-\item \textbf{Package:} \texttt{\model{}};
-\item \textbf{Descrizione:} Classe che permette di gestire i dati di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}};
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe contiene un oggetto di tipo \texttt{\collection{}.Step\fshyp{}Col\fshyp{}lec\fshyp{}tion}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{ProcessDataModel}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{ProcessDataModel};
-\item \textbf{Package:} \texttt{\model{}};
-\item \textbf{Descrizione:} Classe che permette di gestire i dati inviati da un utente relativi ad un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
-\end{itemize}
-\end{flushleft}
-
-\paragraph{StepModel}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{StepModel};
-\item \textbf{Package:} \texttt{\model{}};
-\item \textbf{Descrizione:} Classe che permette di gestire i dati di un passo di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
-\end{itemize}
-\end{flushleft}
 
 \paragraph{UserModel}
 \begin{flushleft}
@@ -46,17 +20,51 @@ La classe contiene un oggetto di tipo \texttt{\collection{}.Step\fshyp{}Col\fshy
 \end{itemize}
 \end{flushleft}
 
-\subsubsection{Package \collection{}}
+\subsubsection{Package \modelUser}
+\paragraph{ProcessModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessModel};
+\item \textbf{Package:} \texttt{\modelUser{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe contiene un oggetto di tipo \texttt{\collectionu{}.Step\fshyp{}Col\fshyp{}lec\fshyp{}tion}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDataModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessDataModel};
+\item \textbf{Package:} \texttt{\modelUser{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati inviati da un utente relativi ad un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
+\end{itemize}
+\end{flushleft}
+
+\paragraph{StepModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{StepModel};
+\item \textbf{Package:} \texttt{\modelUser{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di un passo di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
+\end{itemize}
+\end{flushleft}
+
+
+
+\subsubsection{Package \collectionu{}}
 
 \paragraph{ProcessCollection}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ProcessCollection};
-\item \textbf{Package:} \texttt{\collection{}};
+\item \textbf{Package:} \texttt{\collectionu{}};
 \item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati da un utente relativi ad un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Mo\fshyp{}del}.
+La classe definisce una collezione di \texttt{\modelUser{}.Process\fshyp{}Mo\fshyp{}del}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -65,11 +73,11 @@ La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Mo\fshyp{}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{ProcessDataCollection};
-\item \textbf{Package:} \texttt{\collection{}};
+\item \textbf{Package:} \texttt{\collectionu{}};
 \item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati dagli utenti;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del}.
+La classe definisce una collezione di \texttt{\modelUser{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -78,11 +86,85 @@ La classe definisce una collezione di \texttt{\model{}.Process\fshyp{}Da\fshyp{}
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{StepCollection};
-\item \textbf{Package:} \texttt{\collection{}};
+\item \textbf{Package:} \texttt{\collectionu{}};
 \item \textbf{Descrizione:} Classe che permette di gestire un insieme di passi di un processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe definisce una collezione di \texttt{\model{}.Step\fshyp{}Mo\fshyp{}del}.
+La classe definisce una collezione di \texttt{\modelUser{}.Step\fshyp{}Mo\fshyp{}del}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\subsubsection{\modelAdmin}
+
+\paragraph{ProcessModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessModel};
+\item \textbf{Package:} \texttt{\modelAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe contiene un oggetto di tipo \texttt{\collectionp{}.Step\fshyp{}Col\fshyp{}lec\fshyp{}tion}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDataModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessDataModel};
+\item \textbf{Package:} \texttt{\modelAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati inviati da un utente relativi ad un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
+\end{itemize}
+\end{flushleft}
+
+\paragraph{StepModel}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{StepModel};
+\item \textbf{Package:} \texttt{\modelAdmin{}};
+\item \textbf{Descrizione:} Classe che permette di gestire i dati di un passo di un processo, e di salvarli o recuperarli dal \textit{server\ped{G}}.
+\end{itemize}
+\end{flushleft}
+
+\subsubsection{Package \collectionp{}}
+
+\paragraph{ProcessCollection}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessCollection};
+\item \textbf{Package:} \texttt{\collectionp{}};
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati da un utente relativi ad un processo;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe definisce una collezione di \texttt{\modelAdmin{}.Process\fshyp{}Mo\fshyp{}del}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{ProcessDataCollection}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ProcessDataCollection};
+\item \textbf{Package:} \texttt{\collectionp{}};
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di dati inviati dagli utenti;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe definisce una collezione di \texttt{\modelAdmin{}.Process\fshyp{}Da\fshyp{}ta\fshyp{}Mo\fshyp{}del}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{StepCollection}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{StepCollection};
+\item \textbf{Package:} \texttt{\collectionp{}};
+\item \textbf{Descrizione:} Classe che permette di gestire un insieme di passi di un processo;
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe definisce una collezione di \texttt{\modelAdmin{}.Step\fshyp{}Mo\fshyp{}del}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
