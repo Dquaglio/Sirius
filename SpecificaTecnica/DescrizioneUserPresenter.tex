@@ -3,14 +3,27 @@
 \begin{figure}[H]
 \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./pack/UserViewA.png} \caption{Diagramma principale \textit{presenter} utente}
+{./pack/UserPresenterA.png} \caption{Diagramma principale \textit{presenter} utente}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
-{./pack/UserViewA.png} \caption{Diagramma \textit{presenter} utente - gestione processi}
+{./pack/UserPresenterB.png} \caption{Diagramma \textit{presenter} utente - gestione processi}
 \end{figure}
+
+\paragraph{EventDispatcher}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{EventDispatcher};
+\item \textbf{Package:} \texttt{\logicUser};
+\item \textbf{Descrizione:} Classe che gestisce il dispatching degli eventi per la parte \texttt{user};
+\item \textbf{Relazioni con altri componenti:}
+\begin{sloppypar}
+La classe estende la classe \texttt{\logic{}.Ba\fshyp{}se\fshyp{}Do\fshyp{}spat\fshyp{}cher}.
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
 
 \paragraph{MainUser}
 \begin{flushleft}
@@ -21,6 +34,7 @@
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
 La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Main\fshyp{}U\fshyp{}ser} per la realizzazione dell'interfaccia grafica.
+La classe estende la classe \texttt{\logic{}.Ba\fshyp{}se\fshyp{}Pre\fshyp{}sen\fshyp{}ter}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -35,7 +49,7 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Main\fshyp{}U\
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
 La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Re\fshyp{}gi\fshyp{}ster} per la realizzazione dei \textit{widget} per la registrazione, e con la classe \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} per comunicare col il \textit{server\ped{G}}.
-\end{sloppypar}
+La classe estende la classe \texttt{\logic{}.Ba\fshyp{}se\fshyp{}Pre\fshyp{}sen\fshyp{}ter}.\end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
@@ -48,7 +62,7 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Re\fshyp{}gi\f
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
 La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Us\fshyp{}er\fshyp{}Da\fshyp{}ta} per realizzare il \textit{widget} preposto alla visualizzazione e modifica dei dati dell'utente, e con la classe \texttt{\model{}.U\fshyp{}ser\fshyp{}Mo\fshyp{}del} per comunicare col il \textit{server\ped{G}}.
-\end{sloppypar}
+La classe estende la classe \texttt{\logic{}.Ba\fshyp{}se\fshyp{}Pre\fshyp{}sen\fshyp{}ter}.\end{sloppypar}
 \end{itemize}
 \end{flushleft}
 
@@ -60,7 +74,8 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Us\fshyp{}er\f
 \item \textbf{Descrizione:} Classe che ha il compito di selezionare, ricercare e aprire un processo fra quelli eseguibili;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe realizza e modifica l'opportuno \textit{widget} mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Op\fshyp{}en\fshyp{}Pro\fshyp{}cess} e utilizza la classe \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe realizza e modifica l'opportuno \textit{widget} mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Op\fshyp{}en\fshyp{}Pro\fshyp{}cess} e utilizza la classe \texttt{\collectionu{}.Pro\fshyp{}cess\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe estende la classe \texttt{\logic{}.Ba\fshyp{}se\fshyp{}Pre\fshyp{}sen\fshyp{}ter}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -73,7 +88,8 @@ La classe realizza e modifica l'opportuno \textit{widget} mediante l'interfaccia
 \item \textbf{Descrizione:} Classe che ha il compito di gestire e accedere alle informazioni relative allo stato del processo selezionato.;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess} per realizzare il \textit{widget} che permette la gestione del processo selezionato, utilizza la classe \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}, e provvede ad invocare le seguenti classi in base alle decisioni dell'utente:
+La classe estende la classe \texttt{\viewUser{}.Ba\fshyp{}se\fshyp{}Pre\fshyp{}sen\fshyp{}ter}.
+La classe inoltre comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Ma\fshyp{}na\fshyp{}gment\fshyp{}Pro\fshyp{}cess} per realizzare il \textit{widget} che permette la gestione del processo selezionato, utilizza la classe \texttt{\model{}.Pro\fshyp{}cess\fshyp{}Mo\fshyp{}del} per gestire e ottenere i dati dal \textit{server\ped{G}}, e provvede ad invocare le seguenti classi in base alle decisioni dell'utente:
 \begin{itemize}
 \item \texttt{\logicUser{}.Print\fshyp{}Re\fshyp{}port};
 \item \texttt{\logicUser{}.Send\fshyp{}Da\fshyp{}ta}.
@@ -90,7 +106,7 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Ma\fshyp{}na\f
 \item \textbf{Descrizione:} Classe che ha il compito di gestire la creazione del report di fine processo;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}Re\fshyp{}port} per realizzare il \textit{widget} per creare il report di fine processo, e utilizza la classe \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
+La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}Re\fshyp{}port} per realizzare il \textit{widget} per creare il report di fine processo, e utilizza la classe \texttt{\collectionu{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}.
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
@@ -103,7 +119,7 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}R
 \item \textbf{Descrizione:} Classe che ha il compito di gestire l'inserimento e l'invio di dati da parte degli utenti, per completare il passo corrente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da\fshyp{}ta} per creare il \textit{widget} che consente di inviare i dati, utilizza la classe \texttt{\collection{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}, e infine invoca le seguenti classi che gestiscono l'invio di un tipo di dato specifico:
+La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da\fshyp{}ta} per creare il \textit{widget} che consente di inviare i dati, utilizza la classe \texttt{\collectionu{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}, e infine invoca le seguenti classi che gestiscono l'invio di un tipo di dato specifico:
 \begin{itemize}
 	\item \texttt{\logicUser{}.SendText};
 	\item \texttt{\logicUser{}.SendNumb};

@@ -44,7 +44,13 @@ aggiorna la parte grafica dell'utente process owner;
 \paragraph{Package \model{}}
 Il package \model{} contiene tutte le classi della componente Model. Ogni classe del package \model{} possiede gli opportuni metodi per poter
 comunicare col server e poter accedere, modificare e salvare in modo persistente questi ultimi.
-Il package è contiene inoltre il package:
+Il package è contiene inoltre i sequenti \texttt{package}:
 \begin{itemize}
-	\item \collection{}: è composto da classi che implementano collezioni di classi del package \model{}.
+	\item \modelAdmin, che contiene le classi Model per l'utente \texttt{process owner};
+	\item \modelUser, che contiene le classi Model per la parte \texttt{user}.
+\end{itemize}
+Inoltre ciascuno dei sopracitati sottopackage possiede il il corrispettivo sottopackage:
+\begin{itemize}
+	\item \collectionu: è composto da classi che implementano collezioni di classi Model del \texttt{package} \modelUser;
+	\item \collectionp: è composto da classi che implementano collezioni di classi Model del \texttt{package} \modelAdmin.
 \end{itemize} 

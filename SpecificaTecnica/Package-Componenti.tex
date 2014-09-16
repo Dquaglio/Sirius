@@ -43,6 +43,8 @@
 \midrule
 \logic{} &P1 - \texttt{Router}\\ 
 &P2 - \texttt{Login}\\ 
+&P3 - \texttt{BaseDispatcher}\\
+&P4 - \texttt{BasePresenter}\\  
 \logicUser{}&PU1 - \texttt{MainUser}\\ 
 &PU2 - \texttt{Register}\\ 
 &PU3 - \texttt{UserData}\\ 
@@ -53,7 +55,8 @@
 &PU8 - \texttt{SendText}\\ 
 &PU9 - \texttt{SendImage}\\ 
 &PU10 - \texttt{SendPosition}\\ 
-&PU11 - \texttt{SendNumber}\\ 
+&PU11 - \texttt{SendNumber}\\
+&PU12 - \texttt{EventDispatcher}\\
 \midrule
 \logicAdmin{}&PA1 - \texttt{MainProcessOwner}\\
 &PA2 - \texttt{NewProcess}\\ 
@@ -61,16 +64,32 @@
 &PA4 - \texttt{OpenProcess}\\ 
 &PA5 - \texttt{ManageProcess}\\ 
 &PA6 - \texttt{CheckStep}\\ 
+&PA7 - \texttt{EventDispatcher}\\ 
+
 \midrule
-\model{}&M1 - \texttt{ProcessModel}\\
+\model{}&MP1 - \texttt{UserModel}\\
+\midrule
+
+\modelUser{}&M1 - \texttt{ProcessModel}\\
 &M2 - \texttt{ProcessDataModel}\\
 &M3 - \texttt{StepModel}\\
-&M4 - \texttt{UserModel}\\
+&M4 - \texttt{ProcessModel}\\
 \midrule
-\collection{}&MC1 - \texttt{{ProcessCollection}}\\
+\collectionu{}&MC1 - \texttt{{ProcessCollection}}\\
 &MC2 - \texttt{{ProcessDataCollection}}\\
 &MC3 - \texttt{{StepCollection}}\\
 \midrule
+
+\modelAdmin{}&MP1 - \texttt{ProcessModel}\\
+&MP2 - \texttt{ProcessDataModel}\\
+&MP3 - \texttt{StepModel}\\
+\midrule
+\collectionp{}&MCP1 - \texttt{{ProcessCollection}}\\
+&MCP2 - \texttt{{ProcessDataCollection}}\\
+&MCP3 - \texttt{{StepCollection}}\\
+\midrule
+
+
 \sCommon{}&SPC1 - \texttt{StepInfoController}\\
 		&SPC2 - \texttt{ProcessInfoController}\\
 		&SPC3 - \texttt{LoginController}\\
