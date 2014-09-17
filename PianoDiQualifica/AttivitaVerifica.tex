@@ -275,13 +275,31 @@ La copertura non è risultata accettabile in quanto si dovrebbe stabilizzare sop
 %
 %
 \subsection{Riassunto dell'attività di verifica su RA} 
-Al momento tutti per gli opzionali ci mancano gestione del profilo e del PDF per i tecnici il caricamento su sourceforge
 \gruppo, ha deciso di valorizzare sopratutto i requisiti desiderabili per fare in modo di tenere alto l'indice di efficienza\ped{G}.
-Nel periodo di tempo che ha portato \gruppo ~alla consegna di questa revisione sono stati verificati i \textbf{documenti} ed i \textbf{processi}.\\
-I \textbf{documenti} sono stati verificati anche durante le operazioni di redazione per portare a conoscenza dei contenuti tutti i componenti del gruppo di lavoro e per essere pronti per la consegna al committente.
-L'analisi statica, in primo luogo utilizzando la tecnica del \textit{walkthrough}, ha portato alla redazione  di una lista di controllo che verrà poi incrementata ed utilizzata nell'analisi finale del documento prima di procedere alla consegna. Una volta rilevati gli errori questi sono stati notificati al redattore che ha proceduto alla correzione, evidenziando gli errori frequenti che sono stati utilizzati per migliorare il processo di verifica. \gruppo ~adotta il ciclo PDCA per rendere più efficiente\ped{G} ed efficace\ped{G} nel tempo il processo di verifica.\\
+Per capire l'efficienza del prodotto ottenuto il team è partito dal soddisfacimento dei requisiti individuati.
+Nella tabella sottostante sono riportati, suddivisi per ambito, i requisiti soddisfatti su quelli definiti (soddisfatti/definiti).
+\begin{longtable}{lllXr}
+\toprule
+\textbf{Ambito} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Opzionali} \\
+\toprule
+Requisiti User & 58/58 & 7/7 & 4/20\\
+\midrule
+Requisiti Processowner & 25/25 & 27/28 & 8/14\\
+\midrule
+Requisiti di qualità & 3/3 &  & \\
+\midrule
+Requisiti di vincolo & 8/8 & 4/5 & 1/1\\
+\midrule
+Totale & 103/103 & 45/46 & 13/35\\
+\bottomrule
+\caption{Resoconto del soddisfacimento dei requisiti}
+\end{longtable}
+Dall'analisi riportata sopra si nota che sono stati soddisfatti 161 requisiti su 184. I requisiti che non sono stati soddisfatti appartengono alla categoria dei desiderabili o opzioni e quindi non obbligatori alla conformità del prodotto.
+La revisione di accettazione ha portato alla chiusura di tutta la documentazione e ad una versione definitiva e stabile del prodotto. Inoltre il prodotto è stato testato in modo preciso tramite i test descritti sopra, in particolare è stata posta particolare attenzione ai test di integrazione e ad aumentare la copertura dei test una volta terminata la fase di codifica. La percentuale di copertura attuale si è definita sul 82\%
+I \textbf{documenti} sono stati verificati anche durante la redazione, facendo in modo che tutti i componenti del team fossero a conoscenza dei contenuti e per agevolare il periodo finale antecedente la consegna al committente.
+Alcuni test non sono stati eseguiti per 
 L'avanzamento dei processi, dettato dal \infoPDP, è stato mantenuto in controllo tramite una costante verifica delle metriche definite in questo documento e di cui troviamo una rappresentazione grafica in seguito.
-Inoltre, in questo periodo l'attività di testing ha occupato gran parte delle ore disponibili. Le unità sono state testate tramite i test di unità descritti sopra e attraverso l'utilizzo di strumenti definiti in\infoNDP. 
+Inoltre, in questo periodo l'attività di testing e validazione ha occupato gran parte delle ore disponibili. La maggior parte dei test definiti e programmati durante la Revisione di Qualifica sono stati eseguiti: le specifiche di quali test sono stati eseguiti e quali no fa parte dei contenuti di questo documento.
 \subsection{Dettaglio dell'attività di verifica su RA}
 \subsubsection{Documenti}
 Indice di \textit{Gulpease} per i documenti redatti:\\
@@ -332,10 +350,9 @@ Manuale Utente & 17 H & 15 H & 2 H & $>$ -1 H\\
 \midrule
 Attività di Verifica & 93 H & 40 H & 53 H & $>$ -5 H\\
 \bottomrule
-\caption{Indice SV per le attività per RQ.}
+\caption{Indice SV per le attività per RA.}
 \end{longtable}
-Dall'analisi della tabella sopra si denota come la pianificazione del periodo sia stata poco efficace. Questo è dovuto ad una attività di progettazione svolta in modo non preciso, che ha portato ad una correzione e nuova stesura di alcuni documenti. Inoltre, si vede come la pianificazione dei test e la progettazione di dettaglio siano state sottovalutate nella pianificazione del periodo.
-Del resto l'attività di verifica e di codifica, sulla quale si era pianificato un notevole monte ore, sono risultate essere attività sopravalutate.
+La pianificazione e l'allocazione delle risorse durante il periodo di validazione è stata efficacie. Le attività di progettazione e codifica sono state svolte in modo soddisfacente e a seguito di un incontro dimostrativo al committente, le caratteristiche che erano state definite al momento non hanno subito particolari cambiamenti o sono stati posti a nuova progettazione.
 \begin{itemize}
 \item SV-totale = 4 H;
 \end{itemize}
@@ -369,7 +386,7 @@ Complessivamente \gruppo ~ha ottenuto:
 \item BV-totale = -197.00 €.
 \end{itemize}
 \subsubsection{Risultati delle misurazioni sul codice}
-Di seguito i risultati dei test di analisi statica effettuati sul codice fin'ora prodotto. Si è deciso di non effettuare i test sulla parte HTML in quanto statica e priva di metodi da analizzare. Per ogni metrica viene indicata la media e il valore massimo, rilevati dall'analisi sul codice prodotto, sia parte server che parte client.
+Di seguito i risultati dei test di analisi statica effettuati sul codice del prodotto consegnato. Il team ha deciso di non effettuare i test sulla parte HTML in quanto parte statica e priva di metodi da analizzare. Per ogni metrica viene indicata la media e il valore massimo, rilevati dall'analisi sul codice prodotto, sia parte server che parte client.
 Il livello di accettabilità è valutato sul valore medio della metrica.\\
 I valori fuori range saranno commentati di seguito.\\
 \begin{longtable}{llllXr}
@@ -380,14 +397,14 @@ Complessità ciclomatica & 4 & 13 & Acc.\\%1-15
 \midrule
 Livelli di annidamento & 1,46 & 3 & Acc.\\%1-6
 \midrule
-Attributi per classe & 2,3 & 8 & Acc.\\%0-16
+Attributi per classe & 3,1 & 8 & Acc.\\%0-16
 \midrule
-Parametri per metodo & 3 & 7 & Acc.\\%0-8
+Parametri per metodo & 4 & 9 & Acc.\\%0-8
 \midrule
-Linee di codice per linee commento & 32\% & 44\% & Acc.\\%>0,25
+Linee di codice per linee commento & 37\% & 48\% & Acc.\\%>0,25
 \midrule
-Copertura & 53\% &  & \textbf{N. Acc.}\\%80 percento
+Copertura & 82\% &  & \textbf{N. Acc.}\\%80 percento
 \bottomrule
 \caption{Risultati delle misurazioni sul codice}
 \end{longtable}
-La copertura non è risultata accettabile in quanto si dovrebbe stabilizzare sopra al 80\%, questo sarà l'obiettivo dei antecedente i test di validazione aumentare la copertura dei test per fare in modo di limitare il codice non testato.
+Il periodo di validazione che ha portato alla revisione di accettazione ha visto lavoro sopratutto atto ad aumentare la copertura del codice per portarla ad un valore accettabile, che è stato raggiunto seppur in poca misura sopra il livello minimo di accettazione. I valori rilevati sulle altre metriche sono comunque un indice di quanto il prodotto possa essere ancora migliorato al fine di raggiungere i parametri ottimali definiti e auspicati dal team.
