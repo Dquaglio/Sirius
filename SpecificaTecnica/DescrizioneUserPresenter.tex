@@ -119,61 +119,7 @@ La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Print\fshyp{}R
 \item \textbf{Descrizione:} Classe che ha il compito di gestire l'inserimento e l'invio di dati da parte degli utenti, per completare il passo corrente;
 \item \textbf{Relazioni con altri componenti:}
 \begin{sloppypar}
-La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da\fshyp{}ta} per creare il \textit{widget} che consente di inviare i dati, utilizza la classe \texttt{\collectionu{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}, e infine invoca le seguenti classi che gestiscono l'invio di un tipo di dato specifico:
-\begin{itemize}
-	\item \texttt{\logicUser{}.SendText};
-	\item \texttt{\logicUser{}.SendNumb};
-	\item \texttt{\logicUser{}.SendImage};
-	\item \texttt{\logicUser{}.SendPosition}.
-\end{itemize}
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{SendText}
-\label{sendText}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Descrizione:} Classe che permette l'inserimento e il controllo di dati testuali inseriti dagli utenti;
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Text}, realizza e aggiorna l'opportuno \textit{widget}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{SendNumb}
-\label{sendNumb}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Descrizione:} Classe che ha il compito di permettere l'inserimento e il controllo di dati numerici inseriti dagli utenti;
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Numb}, realizza e aggiorna l'opportuno \textit{widget}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{SendImage}
-\label{sendImage}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Descrizione:} Classe che gestisce l'inserimento e il controllo di immagini inserite dagli degli utenti;
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Ima\fshyp{}ge}, realizza e aggiorna l'opportuno \textit{widget}.
-\end{sloppypar}
-\end{itemize}
-\end{flushleft}
-
-\paragraph{SendPosition}
-\label{sendPosition}
-\begin{flushleft}
-\begin{itemize}
-\item \textbf{Descrizione:} Classe che ha il compito di gestire il calcolo e il controllo della posizione geografica dell'utente;
-\item \textbf{Relazioni con altri componenti:}
-\begin{sloppypar}
-La classe, mediante l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Po\fshyp{}si\fshyp{}tion}, realizza e aggiorna l'opportuno \textit{widget}.
+La classe comunica con l'interfaccia \texttt{\viewUser{}.I\fshyp{}Send\fshyp{}Da\fshyp{}ta} per creare il \textit{widget} che consente di inviare i dati, utilizza la classe \texttt{\collectionu{}.Pro\fshyp{}cess\fshyp{}Data\fshyp{}Col\fshyp{}lec\fshyp{}tion} per gestire e ottenere i dati dal \textit{server\ped{G}}. e infine invoca le seguenti classi che gestiscono l'invio di un tipo di dato specifico:
 \end{sloppypar}
 \end{itemize}
 \end{flushleft}
