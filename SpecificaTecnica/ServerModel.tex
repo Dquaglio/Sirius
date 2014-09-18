@@ -157,6 +157,34 @@
 		\end{itemize}
 \end{itemize}
 
+\paragraph{TextualData}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{TextualData};
+\item \textbf{Package:} \texttt{\smodel{}};
+\item \textbf{Descrizione:} Classe che modella le informazioni, come la descrizione dei dati testuali che possono essere richiesti da un passo.
+\end{itemize}
+
+\paragraph{NumericData}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{NumericData};
+\item \textbf{Package:} \texttt{\smodel{}};
+\item \textbf{Descrizione:} Classe che modella le informazioni, come descrizione e vincoli dei dati numerici che possono essere richiesti da un passo.
+\end{itemize}
+
+\paragraph{GeographicData}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{GeographicData};
+\item \textbf{Package:} \texttt{\smodel{}};
+\item \textbf{Descrizione:} Classe che modella le informazioni, come descrizione e vincoli dei dati geografici che possono essere richiesti da un passo.
+\end{itemize}
+
+\paragraph{ImageData}
+\begin{itemize}
+\item \textbf{Nome:} \texttt{ImageData};
+\item \textbf{Package:} \texttt{\smodel{}};
+\item \textbf{Descrizione:} Classe che modella le informazioni, come descrizione delle immagini che possono essere richieste da un passo.
+\end{itemize}
+
 \paragraph{DataSent}
 \begin{itemize}
 \item \textbf{Nome:} \texttt{DataSent};
@@ -166,7 +194,7 @@
 		\begin{itemize}
 			\item \smodel{}.ITransferObject.
 		\end{itemize}
-				La classe 
+				La classe contiene una lista di istanze di classi che estendono l'interfaccia:
 		\begin{itemize}
 			\item \smodel{}.IDataValue.
 		\end{itemize}
@@ -180,64 +208,6 @@
 \item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
 		\begin{itemize}
 			\item \smodel{}.ITransferObject.
-		\end{itemize}
-\end{itemize}
-
-\paragraph{Condition}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{Condition};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe che modella le condizioni di avanzamento di un passo.
-\item \textbf{Relazione con altre componenti:}La classe contiene istanze di:
-		\begin{itemize}
-			\item \smodel{}.Constraint;
-		\end{itemize}
-\end{itemize}
-
-\paragraph{Data}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{Data};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe che modella i campi dato richiesti.
-\end{itemize}
-
-\paragraph{Constraint}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{Constraint};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe astratta che modella i vincoli.
-\end{itemize}
-
-\paragraph{NumericConstraint}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{NumericConstraint};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe che modella i vincoli numerici.
-\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
-		\begin{itemize}
-			\item \smodel{}.Constraint.
-		\end{itemize}
-\end{itemize}
-
-\paragraph{TemporalConstraint}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{TemporalConstraint};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe che modella i vincoli temporali.
-\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
-		\begin{itemize}
-			\item \smodel{}.Constraint.
-		\end{itemize}
-\end{itemize}
-
-\paragraph{GeographicConstraint}
-\begin{itemize}
-\item \textbf{Nome:} \texttt{GeographicConstraint};
-\item \textbf{Package:} \texttt{\smodel{}};
-\item \textbf{Descrizione:} Classe che modella i vincoli geografici.
-\item \textbf{Relazione con altre componenti:} la classe estende la seguente classe:
-		\begin{itemize}
-			\item \smodel{}.Constraint.
 		\end{itemize}
 \end{itemize}
 
