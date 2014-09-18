@@ -1,9 +1,9 @@
 \section{Specifica della componente presenter}
-Questa componente consente la gestione della logica principale dell'applicazione \progetto{} e viene suddivisa in due parti: \textit{client} e \textit{server}.
+Questa componente consente la gestione della logica principale dell'applicazione \progetto{} .
 
 \subsection{Client}
 
-Il \textit{presenter} lato \textit{client} consente di gestire la logica delle pagine dell'applicazione.
+Il \textit{presenter} consente di gestire la logica delle pagine dell'applicazione.
 La inizializzazione delle classi e la gestione degli eventi di cambio pagina, avviene tramite la classe principale \texttt{Router}, che estende la classe \texttt{Backbone.Router} fornita dal \textit{framework\ped{G} Backbone}.
 Le altre classi della componente, consentono di renderizzare le viste utilizzando i \textit{template} della componente \textit{view}, di gestire gli eventi generati dagli utenti, e di gestire la comunicazione con il server tramite le classi della componente \textit{model}.
 Ogni classe presenter, tranne le classi derivate da BaseDispatcher, è figlia di BasePresenter.
