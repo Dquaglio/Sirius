@@ -1,5 +1,5 @@
-\subsection{Server}
-Questa componente è incaricata di gestire la comunicazione con il client e di elaborarne le richieste restituendo i dati richiesti e quando necessario interroga la componente model per ottenere i dati dal database.
+\section{Specifica della componente Controller}
+Questa componente è incaricata di gestire la comunicazione con il client restituendo i dati richiesti o lanciando delle opportune eccezioni.
 Tale componente è composta dalle classi:
 \begin{itemize}
 	\item \texttt{com.sirius.sequenziatore.server.controller.common.SignUpController}
@@ -9,7 +9,6 @@ Tale componente è composta dalle classi:
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.StepController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.ProcessController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.ApproveStepController}
-	\item \texttt{com.sirius.sequenziatore.server.controller.user.AccountController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.UserStepController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.UserProcessController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.ReportController}
@@ -69,7 +68,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 				oggetto di tipo com.sirius.sequenziatore.server.service.LoginService a cui viene affidata l' elaborazione della login;
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+String checkLogin(User toBeLogged)}:\\
+					\item \texttt{+String receiveLoginRequest(User toBeLogged)}:\\
 					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà lanciare un' eccezione di tipo \texttt{HttpError} qualora ci siano stati problemi nella login;
 					  \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
@@ -91,7 +90,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{com.sirius.sequenziatore.server.service.StepInfoService;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+Step getStepInformation()}:\\
+					\item \texttt{+Step getStepInformation(int idStep)}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla richiesta al service;
 					  \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 404.
@@ -116,7 +115,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con l' id processo richiesto;
 					 \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
-					 \item \texttt{+void uploadImage(MultipartFile image)}:\\
+					 \item \texttt{+boolean uploadImage(MultipartFile image)}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{POST} in \textit{\slash process\slash \{id\}\slash saveimage}  e affida al service l' incarico di salvare l' immagine.
 				\end{itemize}
 \end{itemize}
