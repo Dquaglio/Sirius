@@ -1,8 +1,7 @@
 \section{Pianificazione dei test}
-Di seguito elenchiamo tutti i test di validazione, sistema ed integrazione previsti, prevedendo però ad un successivo aggiornamento per i test di unità. Per quanto riguarda le tempistiche di esecuzione dei test si faccia riferimento a \infoPDP.
-Il valore \textbf{N.A} è da intendersi come non applicato, in quanto tali test saranno eseguiti successivamente nello svolgimento del progetto.
+Di seguito elenchiamo tutti i test di validazione, sistema ed integrazione previsti e per questi sono indicati quelli che sono stati superati. 
 \subsection{Test di sistema}
-In questa sezione vengono descritti i test di sistema che consentiranno a \gruppo ~di verificare il comportamento dinamico del sistema rispetto ai requisiti descritti in \infoAR. I test sotto riportati sono relativi ai requisiti software individuati e meritevoli di test.
+In questa sezione vengono descritti i test di sistema che hanno consentito a \gruppo ~di verificare il comportamento dinamico del sistema rispetto ai requisiti descritti in \infoAR. I test sotto riportati sono relativi ai requisiti software individuati e meritevoli di test.
 \subsubsection{Descrizione dei test di sistema}
 \subsubsection{Ambito utente}
 \LTXtable{\textwidth}{RequisitiUtente.tex}
@@ -11,30 +10,44 @@ In questa sezione vengono descritti i test di sistema che consentiranno a \grupp
 \subsection{Requisiti di vincolo}
 \LTXtable{\textwidth}{RequisitiVincolo.tex}
 \subsection{Test di integrazione}
-In questa sezione verranno descritti i test di integrazione, da utilizzare per i vari componenti descritti nella progettazione ad alto livello, che permettono di verificare la corretta integrazione ed il corretto flusso dei dati all’interno del sistema.
+In questa sezione sono descritti i test di integrazione, da utilizzare per i vari componenti descritti nella progettazione ad alto livello, che permettono di verificare la corretta integrazione ed il corretto flusso dei dati all'interno del sistema.
 Si è deciso di utilizzare una strategia di integrazione incrementale bottom-up che permette di sviluppare e verificare le componenti in parallelo.\\
 Assemblando le componenti in modo incrementale i difetti rilevati da un test sono da
-attribuirsi, con maggior probabilità, all’ultima parte aggiunta e si rende ogni passo di
+attribuirsi, con maggior probabilità, all'ultima parte aggiunta e si rende ogni passo di
 integrazione reversibile consentendo di retrocedere verso uno stato noto e sicuro.
-In questo modo i componenti base vengono testati più volte riducendo la possibile presenza di errori.\\
-Nel diagramma 
 \subsubsection{Descrizione dei test di integrazione}
 Di seguito sono elencati i test di integrazione relativo ai componenti indicati in \infoST. I test di integrazione valutano l'integrazione dei vari componenti mano a mano che vengono aggregati al progetto, facendo in modo di non perdere le funzionalità acquisite fino a quel momento.
 \input{Dettagliotestintegrazione.tex}
 \subsection{Test di unità}
-I test di unità sono effettuati creando una nuova classe basata sulla precedente denominata \textit{"testnomeclasse"} ed invocando i metodi di test con i rispettivi parametri. Per la definizione delle classi si faccia riferimento a \infoDP.
-\subsubsection{Test di unità per view}
+I test di unità sono effettuati creando una nuova classe basata sulla precedente denominata \textit{"nomeclasseTest"} ed invocando i metodi di test con i rispettivi parametri. 
+Non tutte le classi sono state testate in quanto molte classi sono state generate in modo automatico, inoltre ci sono altre classi che sono solamente utilizzate come interfacce. All'interno di queste classi, per la parte server, è presente un metodo che si ripete in ognuna di esse e quindi una volta che ne è stata stabilita la correttezza è stato tralasciato per i test delle successive unità.
+Per la definizione delle classi si faccia riferimento a \infoDP.
+\subsubsection{Test di unità}
 \input{../DefinizioneDiProdotto/PackageCommands.tex}
 Per la \textit{View}, essendo le classi prive di metodi, viene creato un metodo TestView() che riceve come parametro il tipo di dato richiesto e se ne verifica il risultato ottenuto confrontandolo con quello atteso.
-\input{TestUnitaView.tex}
-\subsubsection{Test di unità per presenter}
-Per le classi \textit{Presenter} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
-\input{TestUnitaPresenter.tex}
-\subsubsection{Test di unità per model}
-Per le classi \textit{Model} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
-\input{TestUnitaModel.tex}
+Per le classi \textit{Controller} e \textit{Model} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
+\input{TestUnita.tex}
 \subsubsection{Descrizione dei test di validazione}
-I test di validazione saranno definiti in seguito.
+\begin{longtable}{lllll}
+\toprule
+\textbf{ID Test} & \textbf{Descrizione del test} & \textbf{Stato}\\
+\toprule
+TV1& Login process owner & superato\\
+\midrule
+TV2& Creazione processo&superato\\
+\midrule
+TV3& VisualizzaProcesso&superato\\
+\midrule
+TV4& Approvazione passo&superato\\
+\midrule
+TV5& Iscrizione/disiscrizione&superato\\
+\midrule
+TV6& Gestione dati&superato\\
+\midrule
+TV7& Esecuzione passo&superato\\
+\bottomrule
+\caption{Tabella dei test di integrazione}
+\end{longtable}
 
 
 
