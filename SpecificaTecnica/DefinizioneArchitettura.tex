@@ -1,22 +1,22 @@
 \section{Definizione dell' architettura}
 \subsection{Metodo e formalismo di specifica}
 L' architettura del sistema è la struttura del sistema, che comprende gli elementi \textit{software}, la visibilità esterna di questi elementi e la relazione tra loro.
-Questo documento andrà ad esporre le componenti di alto livello del sistema che verranno poi approfondite nel periodo di Progettazione di dettaglio e codifica, per analizzare l' architettura del sistema il \progetto si seguirà l' approccio \textit{top-down}, quindi innanzitutto si analizzerà il sistema fornendone una descrizione generale per poi scomporre le varie parti andando sempre più in dettaglio analizzando le singole componenti.
+Questo documento andrà ad esporre le componenti di alto livello del sistema che verranno poi approfondite nel periodo di Progettazione di dettaglio e codifica, per analizzare l' architettura del sistema il \progetto  si seguirà l' approccio \textit{top-down}, quindi innanzitutto si analizzerà il sistema fornendone una descrizione generale per poi scomporre le varie parti andando sempre più in dettaglio analizzando le singole componenti.
 Successivamente si analizzeranno i \textit{design pattern} adottati e come verranno implementati.
 Per esporre al meglio l architettura del sistema e il suo funzionamento di alto livello si utilizzeranno diagrammi dei \textit{package}, delle classi, di attività e di sequenza seguendo quanto imposto dalle \NormeDiProgetto{}.
 \subsection{Architettura generale}
-Il sistema \progetto{} è composto innanzitutto da due parti principali, un lato \textit{Client} e un lato \textit{Server}, per la loro progettazione si è tenuto conto dei principi della \textbf{riusabilità} e del \textbf{basso accoppiamento}, quindi si cercherà di progettare le due parti distintamente e senza dipendenze mantenendo all' oscuro il funzionamento del \textbf{server} al \textbf{client} e viceversa.\\
-Dopo un' attenta analisi si è deciso di adottare il \textit{design pattern} architetturale \textbf{MVP} per quanto riguarda il client, seguendo la variante \textit{Passive View}. Tale scelta è stata fatta per i seguenti motivi:
+Il sistema \progetto{} è composto innanzitutto da due parti principali, un lato \textit{Client} e un lato \textit{Server}, per la loro progettazione si è tenuto conto dei principi della \textbf{riusabilità} e del \textbf{basso accoppiamento}, quindi si è cercato di progettare le due parti distintamente e senza dipendenze mantenendo all' oscuro il funzionamento del \textbf{server} al \textbf{client} e viceversa.\\
+Dopo un' attenta analisi si è deciso di adottare il \textit{design pattern} architetturale \textbf{MVP} per quanto riguarda il \textit{client}, seguendo la variante \textit{Passive View}. Tale scelta è stata fatta per i seguenti motivi:
 \begin{itemize}
 %490.317 visualizzazioni
 	\item ottenere una \textit{view} priva di \textit{application logic} che verrà delegata al \textit{presenter}, questo semplificherà i test, infatti la vista sarà un semplice \textit{mockup} e il \textit{presenter} può essere testato separatamente dalla vista;
 	\item offre un' architettura solida e mantenibile attraverso il disaccoppiamento massimo tra viste e modelli.
 \end{itemize}
-Per quanto riguarda il server si è implementato il design pattern \textbf{\textit{Three Tier}}, permettendo di sviluppare i singoli livelli come moduli indipendenti. Utilizzando questo design pattern abbiamo ottenuto la seguente divisione:
+Per quanto riguarda il \textit{server} si è implementato il design pattern \textbf{\textit{Three Tier}}, permettendo di sviluppare i singoli livelli come moduli indipendenti andando cosi ad ottenere un basso accoppiamento. Utilizzando questo design pattern abbiamo ottenuto la seguente divisione:
 \begin{itemize}
 	\item \textbf{Data Tier: } In questo livello verranno conservate le informazioni e recuperate dal database MySql. Le informazioni recuperate verranno poi passate al \textit{Logic Tier} per essere processate. 
-	\item \textbf{Logic Tier: } Qui risiede l' \textit{application logic}, vengono eseguiti i comandi, vengono prese decisioni logiche e vengono eseguite le operazioni. Tutte le classi di questo \textit{tier} sono le classi \textit{service}.
-	\item \textbf{Presentatin Tier: } Le operazioni eseguite dal precedente livello vengono passate ai controller, i quali passano al client l' esito delle operazioni che dovrà trasformare questi risultati per fornirli all' utente in modo che possa comprenderli, questo sarà lo scopo di questo livello.
+	\item \textbf{Logic Tier: } Qui risiede l' \textit{application logic}, vengono eseguiti i comandi, vengono prese decisioni logiche e vengono eseguite le operazioni. Tutte le classi di questo \textit{tier} sono le classi \textit{service} che sono contenute nell' omonimo \textit{package}.
+	\item \textbf{Presentatin Tier: } Questo livello è composto dai \textit{controller} i quali ricevono le richieste dal client, e lasciano l' elaborazione delle suddette ai service, per poi ritornare l' esito delle operazioni al \textit{client}.
 \end{itemize}
 \subsubsection{Componente View}
 Questa componente andrà a costituire la \textbf{GUI} del sistema e sarà divisa in due parti, lato amministratore e quello utente. Entrambe le parti non dovranno fare altro che offrire un' interfaccia agli utenti del sistema utilizzando HTML5, CSS e Javascript.

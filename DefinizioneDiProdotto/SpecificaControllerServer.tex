@@ -9,10 +9,19 @@ Tale componente è composta dalle classi:
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.StepController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.ProcessController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.processowner.ApproveStepController}
-	\item \texttt{com.sirius.sequenziatore.server.controller.user.AccountController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.UserStepController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.UserProcessController}
 	\item \texttt{com.sirius.sequenziatore.server.controller.user.ReportController}
+	\item \texttt{com.sirius.sequenziatore.server.service.SignUpService}
+	\item \texttt{com.sirius.sequenziatore.server.service.LoginService}
+	\item \texttt{com.sirius.sequenziatore.server.service.StepInfoService}
+	\item \texttt{com.sirius.sequenziatore.server.service.ProcessInfoService}
+	\item \texttt{com.sirius.sequenziatore.server.service.StepService}
+	\item \texttt{com.sirius.sequenziatore.server.service.ProcessService}
+	\item \texttt{com.sirius.sequenziatore.server.service.ApproveStepService}
+	\item \texttt{com.sirius.sequenziatore.server.service.UserStepService}
+	\item \texttt{com.sirius.sequenziatore.server.service.UserProcessService}
+	\item \texttt{com.sirius.sequenziatore.server.service.ReportService}
 \end{itemize}
 Nella prossime sezioni verranno trattate in dettaglio le seguenti classi dividendo l' esposizione per \textit{package}, si evidenzia come la voce mappatura base sia l' estensione della mappatura su cui si programma il sistema che sarà \textit{localhost:8080/sequenziatore/} , quindi tutte le mappature base saranno da considerarsi come aggiunte a seguito di /sequenziatore/ e successivamente le varie varianti dei metodi.
 Tutte le classi \textit{controller} dovranno essere marcate come \textit{@Controller} per essere riconosciute in modo corretto da \textit{Spring}.
@@ -69,7 +78,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 				oggetto di tipo com.sirius.sequenziatore.server.service.LoginService a cui viene affidata l' elaborazione della login;
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+String checkLogin(User toBeLogged)}:\\
+					\item \texttt{+String receiveLoginRequest(User toBeLogged)}:\\
 					 questo metodo gestirà un metodo di tipo \textbf{POST} , controllerà le credenziali di accesso e dovrà lanciare un' eccezione di tipo \texttt{HttpError} qualora ci siano stati problemi nella login;
 					  \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
@@ -91,7 +100,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 		\item \texttt{com.sirius.sequenziatore.server.service.StepInfoService;}
 	\end{itemize}
 	\item \textbf{Metodi: }\begin{itemize}
-					\item \texttt{+Step getStepInformation()}:\\
+					\item \texttt{+Step getStepInformation(int idStep)}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{GET} restituendo la struttura del passo con id uguale all' id fornito dopo averla richiesta al service;
 					  \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 404.
@@ -116,7 +125,7 @@ All' interno di questa sezione verranno trattate tutte le classi contenute nel p
 					il metodo gestisce una richiesta di tipo \textbf{GET} e restituisce la struttura di un processo con l' id processo richiesto;
 					 \item \texttt{+void handleException(IllegalStateException,HttpServletResponse response)}:\\
 					 questo metodo è un gestore delle eccezioni e sarà incaricato di lanciare al client un errore 422.
-					 \item \texttt{+void uploadImage(MultipartFile image)}:\\
+					 \item \texttt{+boolean uploadImage(MultipartFile image)}:\\
 					 il metodo gestisce una richiesta di tipo \textbf{POST} in \textit{\slash process\slash \{id\}\slash saveimage}  e affida al service l' incarico di salvare l' immagine.
 				\end{itemize}
 \end{itemize}

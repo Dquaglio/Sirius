@@ -1,0 +1,28 @@
+\subsubsection{Package com.sirius.sequenziatore.server.service}
+\begin{figure}[H] \centering \includegraphics[width=%
+\textwidth]
+{./classi/server/serverservice.png} \caption{Diagramma package - \texttt{com.sirius.sequenziatore.server.service}}
+\end{figure}
+\paragraph{SignUpService}%--------------------------------------------------------%
+\
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/signupservice.png} \caption{Diagramma classe - \texttt{SignUpService}}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione: } Questa classe dovrà elaborare tutte le richieste di registrazione al sistema ricevute dal client, sarà incaricata di inserire i dati nel database.
+	\item \textbf{Relazioni con altri componenti: }
+	La classe utilizzerà le seguenti classi:
+	\begin{itemize}
+		\item \texttt{com.sirius.sequenziatore.server.model.UserDao;}
+		\item \texttt{com.sirius.sequenziatore.server.model.User;}
+	\end{itemize}
+	\item \textbf{Attributi:}\begin{itemize}
+					\item \texttt{-UserDao userDao}:\\
+					oggetto usato per inserire il nuovo utente nel database;
+	\end{itemize}
+	\item \textbf{Metodi: }\begin{itemize}
+					\item \texttt{+void registerUser(User toBeRegistered)}:\\
+					 questo metodo gestirà una richiesta di tipo \textbf{POST} e dovrà lanciare un' eccezione di tipo \texttt{HttpError} qual' ora ci siano stati problemi nella registrazione;
+				\end{itemize}
+\end{itemize}
