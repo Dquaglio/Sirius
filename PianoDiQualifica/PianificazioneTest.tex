@@ -9,6 +9,7 @@ In questa sezione vengono descritti i test di sistema che hanno consentito a \gr
 \LTXtable{\textwidth}{RequisitiAmministratore.tex}
 \subsection{Requisiti di vincolo}
 \LTXtable{\textwidth}{RequisitiVincolo.tex}
+I test di sistema rono risultati utili in quanto hanno evidenziato un bug. La disiscrizione non funzionava in modo corretto. Da un'attenta analisi si è evidenziato che il metodo fetch di \textit{backbone} non resettava correttamente i dati caricati in precedenza. Il bug è stato risolto.
 \subsection{Test di integrazione}
 In questa sezione sono descritti i test di integrazione, da utilizzare per i vari componenti descritti nella progettazione ad alto livello, che permettono di verificare la corretta integrazione ed il corretto flusso dei dati all'interno del sistema.
 Si è deciso di utilizzare una strategia di integrazione incrementale bottom-up che permette di sviluppare e verificare le componenti in parallelo.\\
@@ -28,26 +29,23 @@ Per la \textit{View}, essendo le classi prive di metodi, viene creato un metodo 
 Per le classi \textit{Controller} e \textit{Model} vengono verificati i metodi della classe, per controllare che ritornino il valore atteso.
 \input{TestUnita.tex}
 \subsubsection{Descrizione dei test di validazione}
-\begin{longtable}{lllll}
-\toprule
+\begin{small}\centering
+\begin{tabular}{|c|p{8.0cm}|p{2.0cm}|}
+\hline
 \textbf{ID Test} & \textbf{Descrizione del test} & \textbf{Stato}\\
-\toprule
-TV1& Login process owner & superato\\
-\midrule
-TV2& Creazione processo&superato\\
-\midrule
-TV3& VisualizzaProcesso&superato\\
-\midrule
-TV4& Approvazione passo&superato\\
-\midrule
-TV5& Iscrizione/disiscrizione&superato\\
-\midrule
-TV6& Gestione dati&superato\\
-\midrule
-TV7& Esecuzione passo&superato\\
-\bottomrule
-\caption{Tabella dei test di integrazione}
-\end{longtable}
+\hline
+TV1& Verifica del corretto funzionamento della parte login per quanto riguarda lo user e il process owner & superato\\
+\hline
+TV2& Il process owner può creare un processo, visualizzarlo e renderlo visibile agli user&superato\\
+\hline
+TV3& Il process owner dichiara la validazione di un passo e lo user ne riceve la notifica di avvenuta accettazione&superato\\
+\hline
+TV4& User deve potersi iscrivere e disiscrivere correttamente, dandone corrispondenza al process owner&superato\\
+\hline
+TV5& Lo user può effettuare un passo tramite dato geolocalizzazione, immagine o numerico. Verifica con dato corretto e con dato errato. Verifica inoltre che il process owner ne riceva la notifica di passo avvenuto, ed in caso di richiesta di conferma sia possibile accettare o meno il superamento del passo&superato\\
+\hline
+\end{tabular}\\
+\end{small}
 
 
 
