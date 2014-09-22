@@ -12,6 +12,7 @@ La componente è formata dalle seguenti \textit{classi}:
 	\item \hyperref[stepdao]{\smodel{}.StepDao};
 	\item \hyperref[botuser]{\smodel{}.User};
 	\item \hyperref[botprocess]{\smodel{}.Process};
+	\item \hyperref[botblock]{\smodel{}.Block};
 	\item \hyperref[botstep]{\smodel{}.Step};
 	\item \hyperref[botdatasent]{\smodel{}.DataSent};
 	\item \hyperref[botidatavalue]{\smodel{}.IDataValue};
@@ -21,6 +22,8 @@ La componente è formata dalle seguenti \textit{classi}:
 	\item \hyperref[botgeographicvalue]{\smodel{}.GeographicValue};
 	\item \hyperref[botuserstep]{\smodel{}.UserStep};
 	\item \hyperref[botpowner]{\smodel{}.ProcessOwner};
+	\item \hyperref[bottextualdata]{\smodel{}.TextualData};
+	\item \hyperref[botnumericdata]{\smodel{}.NumericData};
 \end{itemize}
 
 \subsubsection{Package \model{}}
@@ -68,8 +71,7 @@ La componente è formata dalle seguenti \textit{classi}:
 		La classe invoca i metodi della classe:
 		\begin{itemize}
 			\item \smodel{}.User.
-		\end{itemize}
-\item \textbf{Attributi:}
+		\end{itemize}\item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
@@ -78,10 +80,13 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
+\item \texttt{+ setJdbcTemplate(JdbcTemplate jdbcTemplate):}\\ Imposta i parametri per l'accesso alla sorgente dei dati;
+\item \texttt{+ List<ITransferObject> getAll():}\\ Ritorna tutti gli utenti come ITransferObject; 
 \item \texttt{+ User getUser(String userName):}\\ Ritorna l’utente con il nome utente specificato; 
 \item \texttt{+ List<User> getAllUser():}\\ Ritorna tutti gli utenti;
 \item \texttt{+ boolean insertUser(User user) :}\\ Aggiunge l'utente passato come parametro;
-\item \texttt{+ public boolean updateUser(User user) :}\\ Aggiorna i dati dell'utente con il nome utente corrispondente a quello dell'utente passato, con i dati dell'utente passato.
+\item \texttt{+ boolean updateUser(User user) :}\\ Aggiorna i dati dell'utente con il nome utente corrispondente a quello dell'utente passato, con i dati dell'utente passato.
+\item \texttt{+ List<User> getUserByProcess(int idProcess):}\\ Ritorna la lista degli utenti iscritti al  processo con l'id specificato.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -102,9 +107,14 @@ La componente è formata dalle seguenti \textit{classi}:
 		\end{itemize}
 		La classe invoca i metodi della classe:
 		\begin{itemize}
-			\item \smodel{}.Process.
-		\end{itemize}
-\item \textbf{Attributi:}
+			\item \smodel{}.Process;
+			\item \smodel{}.Block;
+			\item \smodel{}.Step;
+			\item \smodel{}.TextualData;
+			\item \smodel{}.NumericData;
+			\item \smodel{}.GeographicData;
+			\item \smodel{}.ImageData.
+		\end{itemize}\item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{- JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
@@ -113,10 +123,18 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
+\item \texttt{+ setJdbcTemplate(JdbcTemplate jdbcTemplate):}\\ Imposta i parametri per l'accesso alla sorgente dei dati;
+\item \texttt{+ List<ITransferObject> getAll():}\\ Ritorna tutti i processi come ITransferObject; 
 \item \texttt{+ Process getProcess(int id)):}\\ Ritorna il processo con l'\texttt{id} specificato; 
 \item \texttt{+ List<Process> getAllProcess():}\\ Ritorna tutti i processi;
-\item \texttt{+ boolean insertProcess(Process process) :}\\ Aggiunge il processo passato come parametro;
-\item \texttt{+ public boolean updateProcess(Process process) :}\\ Aggiorna i dati del processo con lo stesso \texttt{id} di quello del processo passato, con i dati del processo passato.
+\item \texttt{+ boolean insertProcess(Process process, List<Block> blocks):}\\ Aggiunge il processo passato come parametro inserendovi i blocchi di passi passati come parametri.
+\item \texttt{+ public boolean updateProcess(Process process) :}\\ Aggiorna i dati del processo con lo stesso \texttt{id} di quello del processo passato, con i dati del processo passato;
+\item \texttt{+ boolean deleteProcess(Process process):}\\ Pianifica l'eliminazione di un processo passato, il quale viene rimosso definitivamente qualora nessun utente via sia più iscritto;
+\item \texttt{+ List<Process> getNotEliminated():}\\ Restituisce la lista dei processi per i quali non è ancora stata pianificata l'eliminazione;
+\item \texttt{+ List<Process> getProcesses(String username): }\\ Restituisce la lista di processi a cui è iscritto l'utente con il nome specificato;
+\item \texttt{+ List<Process> getSubscribableProcesses(String username):}\\ Restituisce la lista dei processi a cui può iscriversi l'utente con il nome specificato;
+\item \texttt{+ boolean subscribe(String username, int processId):}\\ Iscrive l'utente con il nome specificato al processo con l'\texttt{id} specificato;
+\item \texttt{+boolean unsubscribe(String username, int processId):}\\ Disiscrive l'utente con il nome specificato dal processo con l'\texttt{id} specificato;
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -148,6 +166,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
+\item \texttt{+ setJdbcTemplate(JdbcTemplate jdbcTemplate):}\\ Imposta i parametri per l'accesso alla sorgente dei dati;
+\item \texttt{+ List<ITransferObject> getAll():}\\ Ritorna tutto come ITransferObject; 
 \item \texttt{+ Process getProcessOwner():}\\ Ritorna l'oggetto rappresentante il \textit{ProcessOwner}. 
 \end{itemize}
 \end{sloppypar}
@@ -172,8 +192,12 @@ La componente è formata dalle seguenti \textit{classi}:
 			\item \smodel{}.Step;
 			\item \smodel{}.UserStep;
 			\item \smodel{}.DataSent.
-		\end{itemize}
-\item \textbf{Attributi:}
+			\item \smodel{}.Block;
+			\item \smodel{}.TextualValue;
+			\item \smodel{}.NumericValue;
+			\item \smodel{}.GeographicValue;
+			\item \smodel{}.ImageValue.			
+		\end{itemize}\item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{- JdbcTemplate jdbcTemplate:}\\ Oggetto che fornisce l'accesso alla sorgente dei dati;
@@ -182,18 +206,24 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
+\item \texttt{+ setJdbcTemplate(JdbcTemplate jdbcTemplate):}\\ Imposta i parametri per l'accesso alla sorgente dei dati;
+\item \texttt{+ List<ITransferObject> getAll():}\\ Ritorna tutti i processi come ITransferObject; 
 \item \texttt{+ Step getStep(int id):}\\ Ritorna il passo con l'\texttt{id} specificato; 
 \item \texttt{+ List<Step> getAllStep():}\\ Ritorna tutti i passi;
 \item \texttt{+ List<Step> getStepOf(int ProcessId):}\\ Ritorna tutti i passi appartenenti al processo di cui si è passato l'\texttt{id};
-\item \texttt{+ boolean insertStep(Step step) :}\\ Aggiunge il passo passato come parametro;
-\item \texttt{+ public boolean updateStep(Step step) :}\\ Aggiorna i dati del passo con l'\texttt{id} corrispondente a quello del passo passato, con i dati del passo passato;
-\item \texttt{+ List<UserStep> userStep(String userName)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso da parte dell'utente di cui si è passato il nome utente;
+\item \texttt{+ List<Step> getStespOf(int processId):} \\Ritorna la lista dei passi appartenenti al processo con l'\texttt{id} specificato;
+\item \texttt{+ List<UserStep> userSteps(String userName)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso da parte dell'utente di cui si è passato il nome utente;
 \item \texttt{+ List<UserStep> userProcessStep(String userName, processId)}\\ Ritorna una lista di oggetti informativi sullo stato dei passi in corso appartenenti al processo di cui si è passato l'\texttt{id} da parte dell'utente di cui si è passato il nome utente;
+\item \texttt{+ List<UserStep> getApprovedOrRejected(String username)}\\ Ritorna una lista di oggetti informativi relativi ai passi richiedenti approvazioni che sono stati rifiutati o accettati dal \texttt{Process Owner} per l'utente specificato;
 \item \texttt{+ boolean updateUserStep(UserStep userStep):}\\ Aggiornato lo stato del passo per l'utente in questione.
-\item \texttt{+ List<DataSent> getData(Step step)}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato;
-\item \texttt{+ DataSent getData(String userName, Step step)}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo passato;
-\item \texttt{+ List<DataSent> getWaitingData()}\\ Ritorna tutti i dati di tutti i passi in attesa di approvazione;
-\item \texttt{+ boolean completeStep(String userName, Step step, DataSent data, Step next)}\\Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo.
+\item \texttt{+ List<DataSent> getData(int stepId):}\\ Ritorna tutti i dati da tutti gli utenti relativi al passo passato con l'\texttt{id} passato;
+\item \texttt{+ DataSent getData(String userName, int stepId):}\\ Ritorna tutti i dati inviati dall'utente di cui si è passato il nome utente relativi al passo con l'\texttt{id} passato;
+\item \texttt{+ List<DataSent> getProcessData(String username, int processId):} Ritorna tutti i dati inviati dall'utente con il nome specificato per il processo con l'\texttt{id} specificato;
+\item \texttt{+ List<DataSent> getWaitingData():}\\ Ritorna tutti i dati di tutti i passi in attesa di approvazione;
+\item \texttt{+ boolean delete(String username, int processId):}\\ Elimina tutte le informazioni su passi in corso dell'utente con il nome specificato appartenenti al processo con l'\texttt{id} specificato;
+\item \texttt{+ boolean deleteUserStep(UserStep userStep):}\\ Elimina l'oggetto informativo sui passi in corso passato come parametro;
+\item \texttt{+ boolean completeStep(String userName, Step step, DataSent data, Step next):}\\ Notifica e aggiorna nel \textit{database} lo stato dell'utente quando completa o tenta di completare un passo;
+\item \texttt{- boolean nextBlock(String username, int actualBlockId):}\\ Metodo accessorio utilizzato dal  metodo precedente per l'avanzamento tra blocchi di passi.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -215,20 +245,19 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- String userName:}\\ Nome utente;
+\item \texttt{- String username:}\\ Nome utente;
 \item \texttt{- String password:}\\ Password dell'utente;
 \item \texttt{- String name:}\\Nome anagrafico dell'utente;
 \item \texttt{- String surName:}\\Cognome dell'utente;
 \item \texttt{- Date dateOfBirth:}\\Data di nascita dell'utente;
-\item \texttt{- String email:}\\Indirizzo di posta elettronica dell'utente;
-\item \texttt{- int id:}\\Codice identificativo \texttt{id} associato all'utente.
+\item \texttt{- String email:}\\Indirizzo di posta elettronica dell'utente.
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ String getUserName():}\\ Ritorna il nome utente;
-\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente;
+\item \texttt{+ String getUsername():}\\ Ritorna il nome utente;
+\item \texttt{+ void setUsername(String username):}\\ Imposta il nome utente;
 \item \texttt{+ String getPassword():}\\ Ritorna la password dell'utente;
 \item \texttt{+ void setPassword(String password):}\\ Imposta la password dell'utente;
 \item \texttt{+ String getName():}\\ Ritorna il nome anagrafico dell'utente;
@@ -238,9 +267,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ Date getDateOfBirth():}\\ Ritorna la data di nascita dell'utente;
 \item \texttt{+ void setDateOfBirth(Date dateOfBirth):}\\ Imposta la data di nascita dell'utente;
 \item \texttt{+ String getEmail():}\\ Ritorna l'indirizzo di posta elettronica dell'utente;
-\item \texttt{+ void setEmail(String email):}\\ Imposta l'indirizzo di posta elettronica dell'utente;
-\item \texttt{+ int getId():}\\ Ritorna il codice \texttt{id} associato all'utente;
-\item \texttt{+ void setId(int id):}\\ Imposta il codice \texttt{id} associato all'utente.
+\item \texttt{+ void setEmail(String email):}\\ Imposta l'indirizzo di posta elettronica dell'utente.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -266,9 +293,9 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{- String description:}\\ Descrizione del processo;
 \item \texttt{- int completionsMax:}\\ Numero massimo di completamenti del processo;
 \item \texttt{- Date dateOfTermination:}\\ Data di terminazione del processo;
-\item \texttt{- boolean terminated:}\\ Boolano vero quando il processo è terminato;
-\item \texttt{- int maxTree:}\\ Massimo alberi del processo;
-\item \texttt{- List<Integer> stepsId:}\\ Lista di codici \texttt{id} relativi ai passi del processo;
+\item \texttt{- boolean terminated:}\\ Booleano vero quando il processo è terminato;
+\item \texttt{- boolean eliminated:}\\ Booleano vero se pianificata l'eliminazione del processo;
+\item \texttt{- String imageUrl:} \\Indirizzo dell'immagine associata al processo; 
 \item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al processo.
 \end{itemize}
 \end{sloppypar}
@@ -285,12 +312,58 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ void setDateOfTermination(Date dateOfTermination):}\\ Imposta la data di terminazione del processo;
 \item \texttt{+ boolean isTerminated():}\\ Ritorna vero se il processo è terminato;
 \item \texttt{+ void setTerminated(boolean terminated):}\\ Imposta vero se il processo è terminato;
-\item \texttt{+ int getMaxTree():}\\ Ritorna il massimo alberi del processo;
-\item \texttt{+ void setMaxtree(int maxTree):}\\ Imposta il massimo alberi del processo;
-\item \texttt{+ List<Integer> getStepsId():}\\ Ritorna lista di codici \texttt{id} relativi ai passi del processo;
-\item \texttt{+ void setStepsId(List<Integer> stepsId):}\\ Imposta lista di codi \texttt{id} relativi ai passi del processo;
-\item \texttt{+int getId():}\\ Ritorna codice identificativo \texttt{id} associato al processo;
-\item \texttt{+void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al processo.
+\item \texttt{+ boolean isEliminated():}\\ Ritorna vero se è pianificata l'eliminazione;
+\item \texttt{+ void setEliminated():} \\Pianifica l'eliminazione del progetto;
+\item \texttt{+ int getId():}\\ Ritorna codice identificativo \texttt{id} associato al processo;
+\item \texttt{+ void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al processo.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{Block}\
+\label{botblock}
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/model/Block.png} \caption{Diagramma classe Block}
+\end{figure}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
+		\begin{itemize}
+			\item \smodel{}.ITransferObject.
+		\end{itemize}
+		La classe contiene istanze di:
+		\begin{itemize}
+			\item \smodel{}.Step.
+		\end{itemize}
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ public enum BlockTypes{SEQUENTIAL, UNORDERED}:}\\ Enumerazione relativa al tipo di blocco;
+\item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al blocco;
+\item \texttt{- BlockTypes type:}\\ Tipo del blocco;
+\item \texttt{- int requiredSteps:}\\ Numero minimo di passi richiesti se il blocco è non ordinato;
+\item \texttt{- boolean first:}\\ Vero se il blocco è il primo del processo;
+\item \texttt{- int nextBlockId:}\\ Codice identificativo \texttt{id} dell'eventuale blocco successivo;
+\item \texttt{- List<Step> steps:}\\ Lista dei passi del blocco.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ int getId():}\\ Ritorna il codice identificativo \texttt{id} associato al blocco;
+\item \texttt{+ void setId(int id):}\\ Imposta il codice identificativo \texttt{id} associato al blocco;
+\item \texttt{+ BlockTypes getType():}\\ Ritorna il tipo del blocco;
+\item \texttt{+ void setType(BlockTypes type):}\\ Imposta il tipo del blocco;
+\item \texttt{+ int getRequiredSteps():}\\ Ritorna il numero minimo di passi richiesti;
+\item \texttt{+ void setRequiredSteps(int requiredSteps):}\\ Imposta il numero minimo di passi richiesti;
+\item \texttt{+ int getNextBlockId():}\\ Ritorna il codice identificativo \texttt{id} dell'eventuale blocco successivo;
+\item \texttt{+ void setNextBlockId(int nextBlockId):}\\ Imposta il codice identificativo \texttt{id} dell'eventuale blocco successivo;
+\item \texttt{+ List<Step> getSteps():}\\ Ritorna la lista dei passi del blocco;
+\item \texttt{+ void setSteps(List<Step> steps):}\\ Imposta la lista dei passi del blocco;
+\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il blocco è il primo del processo;
+\item \texttt{+ void setFirst(boolean first):}\\ Imposta vero se il blocco è il primo del processo;
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -304,25 +377,31 @@ La componente è formata dalle seguenti \textit{classi}:
 \end{figure}
 \begin{flushleft}
 \begin{itemize}
-\item \textbf{Descrizione:} Classe che modella i passi del sistema e che funge da interscambio dei dati di quest'ultimi con il \textit{database}.
 \item \textbf{Relazione con altre componenti:} la classe implementa la seguente interfaccia:
 		\begin{itemize}
 			\item \smodel{}.ITransferObject.
 		\end{itemize}
 		La classe contiene istanze di:
 		\begin{itemize}
-			\item \smodel{}.Condition;
-			\item \smodel{}.Data.
+			\item \smodel{}.TextualData;
+			\item \smodel{}.NumericData;
+			\item \smodel{}.GeograpgicData;
+			\item \smodel{}.ImageData.
 		\end{itemize}
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{- int id:}\\ Codice identificativo \texttt{id} associato al passo;
-\item \texttt{- String description:}\\ Descrizione del passo;
-\item \texttt{- List<Data> data:}\\ Lista con i campi dato del passo;
-\item \texttt{- List<Condition> conditions:}\\ Lista delle condizioni di avanzamento del passo;
-\item \texttt{- int processId:}\\ Codice identificativo \texttt{id} associato al processo padre;
 \item \texttt{- boolean first:}\\ Booleano vero se il passo è primo per il processo padre.
+\item \texttt{- String description:}\\ Descrizione del passo;
+\item \texttt{- int nextStepId:}\\ Codice identificativo \texttt{id} dell'eventuale passo successivo;
+\item \texttt{- boolean requiresApproval:}\\ Booleano vero se il passo richiede l'approvazione del \texttt{Process Owner};
+\item \texttt{- boolean optional:}\\ Booleano vero se il passo può essere saltato;
+\item \texttt{- int processId:}\\ Codice identificativo \texttt{id} del processo a cui appartiene il passo;
+\item \texttt{- List<NumericData> numericData:}\\ Lista di eventuali dati numerici richiesti per il superamento del passo;
+\item \texttt{- List<TextualData> textualData:}\\ Lista di eventuali dati testuali richiesti per il superamento del passo;
+\item \texttt{- List<ImageData> imageData:}\\ Lista di eventuali immagini richieste per il superamento del passo;
+\item \texttt{- GeographicData geographicData:}\\ Eventuale dato geografico richiesto per il superamento del passo.
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
@@ -330,16 +409,28 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{itemize}
 \item \texttt{+ int getId():}\\ Ritorna codice identificativo \texttt{id} associato al passo;
 \item \texttt{+ void setId(int id):}\\ Imposta codice identificativo \texttt{id} associato al passo;
+\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il passo è primo per il processo padre;
+\item \texttt{+ void setFirst():}\\ Imposta vero se il passo è primo per il processo padre;
 \item \texttt{+ String getDescription():}\\ Ritorna descrizione del passo;
 \item \texttt{+ void setDescription(String description):}\\ Imposta descrizione del passo;
-\item \texttt{+ List<Data> getData():}\\ Ritorna lista con i campi dato del passo;
-\item \texttt{+ void setData(List<Data> data):}\\ Imposta lista con i campi dato del passo;
-\item \texttt{+ List<Condition> getConditions():}\\ Ritorna lista delle condizioni di avanzamento del passo;
-\item \texttt{+ void setConditions(List<Condition conditions):}\\ Imposta lista delle condizioni di avanzamento del passo;
-\item \texttt{+ int getProcessId():}\\ Ritorna codice \texttt{id} associato al processo padre;
-\item \texttt{+ void setProcessId(int processId):}\\ Imposta codice \texttt{id} associato al processo padre;
-\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il passo è primo per il processo padre;
-\item \texttt{+ void setFirst():}\\ Imposta vero se il passo è primo per il processo padre. 
+\item \texttt{+ int getNextStepId():}\\ Ritorna il codice identificativo \texttt{id} dell'eventuale passo successivo;
+\item \texttt{+ void setNextStepId(int nextStepId):}\\ Imposta il codice identificativo \texttt{id} dell'eventuale passo successivo;
+\item \texttt{+ boolean requiresApproval():}\\ Ritorna vero se il passo richiede approvazione;
+\item \texttt{+ void setRequiresApproval(boolean requiresApproval):}\\ Impostare a vero se il passo richiede approvazione;
+\item \texttt{+ boolean isOptional():}\\ Ritorna vero se il passo è saltabile;
+\item \texttt{+ void setOptional(boolean optional):}\\ Impostare a vero se il passo è saltabile;
+\item \texttt{+ int getProcessId():}\\ Ritorna il codice identificativo \texttt{id} del processo di cui il passo fa parte;
+\item \texttt{+ void setProcessId(int processId):}\\ Imposta il codice identificativo \texttt{id} del processo di cui il passo fa parte;
+\item \texttt{+ List<NumericData> getNumericData():}\\ Ritorna la lista degli eventuali dati numerici richiesti per superare il passo;
+\item \texttt{+ void setNumericData(List<NumericData> numericData):}\\ Imposta la lista degli eventuali dati numerici richiesti per superare il passo;
+\item \texttt{+ List<TextualData> getTextualData():}\\ Ritorna la lista degli eventuali dati testuali richiesti per superare il passo;
+\item \texttt{+ void setTextualData(List<TextualData> textualData):}\\ Imposta la lista degli eventuali dati testuali richiesti per superare il passo;
+\item \texttt{+ List<ImageData> getImageData():}\\ Ritorna la lista delle eventuali immagini richieste per superare il passo;
+\item \texttt{+ void setImageData(List<ImageData> imageData):}\\ Imposta la lista delle eventuali immagini richieste per superare il passo;
+\item \texttt{+ GeographicData getRequiredPosition():}\\ Ritorna l'eventuale dato geografico richiesto per il superamento del passo;
+\item \texttt{+ void setRequiredPosition(GeographicData requiredPosition):}\\ Imposta l'eventuale dato geografico richiesto per il superamento del passo;
+\item \texttt{+ boolean isFirst():}\\ Ritorna vero se il passo è il primo di un blocco sequenziale;
+\item \texttt{+ void setFirst(boolean first):}\\ Impostare a vero se il passo è il primo di un blocco sequenziale.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -365,18 +456,21 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- String user:}\\ Nome utente dell'utente che ha inviato il dato;
+\item \texttt{- String username:}\\ Nome utente dell'utente che ha inviato il dato;
 \item \texttt{- List<IDataValue> values:}\\ Oggetti con il valori dei dati;
-\item \texttt{- int stepId:}\\Codice \texttt{id} del passo richiedente il dato.
+\item \texttt{- Date sentTime:}\\ Data e ora di consegna dei dati;
+\item \texttt{- int stepId:}\\ Codice \texttt{id} del passo richiedente il dato.
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ String getUser():}\\ Ritorna nome utente dell'utente che ha inviato il dato;
-\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ String getUsername():}\\ Ritorna nome utente dell'utente che ha inviato il dato;
+\item \texttt{+ void setUsername(String username):}\\ Imposta nome utente dell'utente che ha inviato il dato;
 \item \texttt{+ List<IDataValue> getValues():}\\ Ritorna lista di oggetti con il valori dei dati;
 \item \texttt{+ void setValues(List<IDataValue> values):}\\ Imposta lista di oggetti con il valori dei dati;
+\item \texttt{+ Date getSentTime():}\\ Ritorna data e ora di consegna dei dati;
+\item \texttt{+ void setSentTime(Date sentTime):}\\ Imposta data e ora di consegna dei dati;
 \item \texttt{+ int getStepId():}\\ Ritorna codice \texttt{id} del passo richiedente il dato;
 \item \texttt{+ void setStepId(int stepId):}\\ Imposta codice \texttt{id} del passo richiedente il dato.
 \end{itemize}
@@ -393,12 +487,19 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{flushleft}
 \begin{itemize}
 \item \textbf{Descrizione:} Interfaccia che modella i valori dei dati ricevuti.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ enum DataTypes{NUMERIC, TEXTUAL, IMAGE, GEOGRAPHIC}:}\\ Enumerazione riguardante il tipo di dato;
+\end{itemize}
+\end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ int getId():}\\ Ritorna codice \texttt{id} associato al valore;
-\item \texttt{+ void setId(int id):}\\ Imposta codice \texttt{id} associato al valore.
-\item \texttt{+ DataType getType():}\\ Ritorna il tipo del valore.
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del valore;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -420,7 +521,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- DataTypes type;}\\ Tipo del valore;
 \item \texttt{- String value:}\\ Valore testuale.
 \end{itemize}
 \end{sloppypar}
@@ -428,7 +530,11 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{+ String getValue():}\\ Ritorna valore testuale;
-\item \texttt{+ void setValue(String value):}\\ Imposta valore testuale.
+\item \texttt{+ void setValue(String value):}\\ Imposta valore testuale;
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del valore;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -450,7 +556,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- DataTypes type;}\\ Tipo del valore;
 \item \texttt{- double value:}\\ Valore numerico.
 \end{itemize}
 \end{sloppypar}
@@ -459,6 +566,10 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{itemize}
 \item \texttt{+ double getValue():}\\ Ritorna valore numerico;
 \item \texttt{+ void setValue(double value):}\\ Imposta valore numerico.
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del valore;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -480,7 +591,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- DataTypes type;}\\ Tipo del valore;
 \item \texttt{- String imageUrl:}\\ Percorso \textit{URL} dell'immagine.
 \end{itemize}
 \end{sloppypar}
@@ -488,7 +600,11 @@ La componente è formata dalle seguenti \textit{classi}:
 \begin{sloppypar}
 \begin{itemize}
 \item \texttt{+ String getImageUrl():}\\ Ritorna percorso \textit{URL} dell'immagine;
-\item \texttt{+ void setImageUrl(String imageUrl):}\\ Imposta percorso \textit{URL} dell'immagine.
+\item \texttt{+ void setImageUrl(String imageUrl):}\\ Imposta percorso \textit{URL} dell'immagine;
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del valore;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -510,7 +626,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- int id:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al valore;
+\item \texttt{- DataTypes type;}\\ Tipo del valore;
 \item \texttt{- double latitude:}\\ Latitudine;
 \item \texttt{- double longitude:}\\ Longitudine;
 \item \texttt{- double altitude:}\\ Altitudine.
@@ -524,7 +641,11 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ double getLongitude():}\\ Ritorna longitudine;
 \item \texttt{+ void setLongitude(double longitude):}\\ Imposta longitudine;
 \item \texttt{+ double getAltitude():}\\ Ritorna altitudine;
-\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine.
+\item \texttt{+ void setAltitude(double altitude):}\\ Imposta altitudine;
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al valore;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al valore.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del valore;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del valore.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -549,7 +670,7 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ enum stepStates\{ONGOING, EXPECTANT, REJECTED, APPROVED\}:}\\ Enumerazione stato avanzamento;
 \item \texttt{- int currentStepId:}\\ Codice \texttt{id} del passo attuale;
 \item \texttt{- stepStates state:}\\ Stato avanzamento;
-\item \texttt{- String user:}\\ Nome utente dell'utente del caso.
+\item \texttt{- String username:}\\ Nome utente dell'utente del caso.
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
@@ -559,8 +680,8 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \texttt{+ void setCurrentStepId(int currentStepId):}\\ Imposta il codice \texttt{id} del passo attuale;
 \item \texttt{+ stepStates getState():}\\ Ritorna stato avanzamento;
 \item \texttt{+ void setStates(stepStates state):}\\ Imposta stato avanzamento;
-\item \texttt{+ String getUser():}\\ Restituisce nome utente dell'utente in caso;
-\item \texttt{+ void setUser(String user):}\\ Imposta nome utente dell'utente in caso.
+\item \texttt{+ String getUsername():}\\ Restituisce nome utente dell'utente in caso;
+\item \texttt{+ void setUsername(String username):}\\ Imposta nome utente dell'utente in caso.
 \end{itemize}
 \end{sloppypar}
 \end{itemize}
@@ -582,18 +703,71 @@ La componente è formata dalle seguenti \textit{classi}:
 \item \textbf{Attributi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{- String userName:}\\ Nome utente \textit{Process Owner};
+\item \texttt{- String username:}\\ Nome utente \textit{Process Owner};
 \item \texttt{- String password:}\\ Password \textit{Process Owner}.
 \end{itemize}
 \end{sloppypar}
 \item \textbf{Metodi:}
 \begin{sloppypar}
 \begin{itemize}
-\item \texttt{+ String getUserName():}\\ Ritorna il nome utente del \textit{Process Owner};
-\item \texttt{+ void setUserName(String userName):}\\ Imposta il nome utente del \textit{Process Owner};
+\item \texttt{+ String getUsername():}\\ Ritorna il nome utente del \textit{Process Owner};
+\item \texttt{+ void setUsername(String username):}\\ Imposta il nome utente del \textit{Process Owner};
 \item \texttt{+ String getPassword():}\\ Ritorna la password del \textit{Process Owner};
 \item \texttt{+ void setPassword(String password):}\\ Imposta la password del \textit{Process Owner}. 
 \end{itemize}
 \end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{TextualData}\
+\label{bottextualdata}
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/model/TextualData.png} \caption{Diagramma classe TextualData}
+\end{figure}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati testuali.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al dato;
+\item \texttt{- DataTypes type;}\\ Tipo del valore;
+\item \texttt{- String description:}\\ Valore testuale.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{+ String getDescription():}\\ Ritorna descrizione;
+\item \texttt{+ void setDescription(String value):}\\ Imposta descrizione;
+\item \texttt{+ int getDataId():}\\ Ritorna codice \texttt{id} associato al dato;
+\item \texttt{+ void setDataId(int id):}\\ Imposta codice \texttt{id} associato al dato.
+\item \texttt{+ DataTypes getType():}\\ Ritorna il tipo del dato;
+\item \texttt{+ void setType(DataTypes type):}\\ Imposta il tipo del dato.
+\end{itemize}
+\end{sloppypar}
+\end{itemize}
+\end{flushleft}
+
+\paragraph{NumericData}\
+\label{botnumericdata}
+\begin{figure}[H] \centering
+\includegraphics[trim=0cm 0.8cm 0cm 0cm,clip=true,scale=0.75]%
+{./classi/server/model/NumericData.png} \caption{Diagramma classe NumericData}
+\end{figure}
+\begin{flushleft}
+\begin{itemize}
+\item \textbf{Descrizione:} Classe che modella i valori dei dati numerici.
+\item \textbf{Attributi:}
+\begin{sloppypar}
+\begin{itemize}
+\item \texttt{- int dataId:}\\ Codice \texttt{id} associato al datp;
+\item \texttt{- DataTypes type;}\\ Tipo del dato;
+\item \texttt{- double maxValue:}\\ Valore massimo;
+\item \texttt{- double minValue:}\\ Valore minimo.
+\end{itemize}
+\end{sloppypar}
+\item \textbf{Metodi:}
 \end{itemize}
 \end{flushleft}
